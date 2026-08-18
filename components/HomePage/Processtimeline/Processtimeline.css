@@ -1,0 +1,314 @@
+/* ============================================
+   ProcessTimeline.css
+   Relies on the tokens already defined in your
+   global.css (--color-gold, --font-family-heading,
+   --container-padding, etc.) — nothing is redefined
+   here, this file only styles the component.
+   All class names are prefixed with "aj-process-"
+   so they won't collide with anything else.
+   ============================================ */
+
+.aj-process-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+}
+
+.aj-process-section::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  right: -10%;
+  width: 560px;
+  height: 560px;
+  background: radial-gradient(circle, var(--color-gold-light) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.aj-process-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative;
+}
+
+/* ---------- Head ---------- */
+
+.aj-process-head {
+  margin-bottom: 64px;
+}
+
+.aj-process-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm); /* MATCHED WITH OTHER COMPONENTS */
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+
+.aj-process-title {
+  font-size: var(--font-size-4xl); /* MATCHED: Big & Bold like WhyChooseUs */
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  margin-bottom: 18px;
+  font-family: var(--font-family-gotham);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.aj-process-title-accent {
+  color: var(--color-gold);
+}
+
+.aj-process-desc {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-base); /* MATCHED: Base size */
+  line-height: 1.4;
+  color: var(--color-beige);
+  font-weight: var(--font-weight-light);
+  /* max-width: 600px; */
+}
+
+/* ---------- Track ----------
+   Fixed-height row. The line sits dead-center (top: 50%)
+   and every dot is absolutely centered on that same line,
+   regardless of whether its card sits above or below —
+   card position never moves the dot. */
+
+.aj-process-track {
+  --pt-height: 260px;
+  --pt-item-width: 220px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--pt-height);
+}
+
+.aj-process-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, var(--color-gold-medium), rgba(255, 255, 255, 0.08));
+  z-index: 0;
+}
+
+.aj-process-line-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-gold), #e8cd8a);
+  box-shadow: 0 0 12px var(--color-gold-medium);
+  transition: width 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aj-process-track.in-view .aj-process-line-fill {
+  width: 100%;
+}
+
+.aj-process-item {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+}
+
+/* the dot — always dead-center on the line */
+.aj-process-node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background: var(--color-black);
+  border: 2px solid var(--color-gold);
+  transition: box-shadow var(--transition-normal);
+  z-index: 2;
+}
+
+.aj-process-node::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: var(--radius-full);
+  background: var(--color-gold);
+  transform: scale(0);
+  transition: transform var(--transition-normal) 0.2s;
+}
+
+.aj-process-track.in-view .aj-process-node::after {
+  transform: scale(1);
+}
+
+.aj-process-item:hover .aj-process-node {
+  box-shadow: 0 0 0 6px var(--color-gold-light);
+}
+
+/* the card — floats above or below the line, dot never moves */
+.aj-process-card {
+  position: absolute;
+  left: 50%;
+  width: var(--pt-item-width);
+  max-width: 90vw;
+  transform: translateX(-50%);
+  background: var(--color-black-light);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 18px 18px 20px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color var(--transition-normal);
+}
+
+.aj-process-card.is-above {
+  bottom: calc(50% + 22px);
+  transform: translate(-50%, 10px);
+}
+
+.aj-process-card.is-below {
+  top: calc(50% + 22px);
+  transform: translate(-50%, -10px);
+}
+
+.aj-process-track.in-view .aj-process-card.is-above {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.aj-process-track.in-view .aj-process-card.is-below {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.aj-process-item:hover .aj-process-card {
+  border-color: var(--color-gold-medium);
+}
+
+/* small connector between the card and the dot */
+.aj-process-stub {
+  position: absolute;
+  left: 50%;
+  width: 1px;
+  height: 22px;
+  background: var(--color-gold-medium);
+  transform: translateX(-50%);
+}
+
+.aj-process-stub.is-above {
+  bottom: -22px;
+}
+
+.aj-process-stub.is-below {
+  top: -22px;
+}
+
+.aj-process-num {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-2xl);
+  color: var(--color-gold);
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.aj-process-card-title {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-base); /* MATCHED: Base size for card titles */
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+.aj-process-card-desc {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  line-height: 1.6;
+  color: var(--color-beige);
+}
+
+/* ============ RESPONSIVE ============
+   The line + dots stay perfectly horizontal at every
+   width, 300px through 3000px. Below 767px the track
+   becomes a horizontally-scrollable, snap-aligned rail
+   so cards never collide — the line and dots scroll
+   along with it, never breaking into a vertical stack. */
+
+@media (min-width: 1440px) {
+  .aj-process-section { padding: 100px 0; }
+  .aj-process-track { --pt-height: 280px; }
+}
+
+@media (max-width: 1023px) {
+  .aj-process-track { --pt-item-width: 190px; --pt-height: 240px; }
+  .aj-process-card { padding: 14px 14px 16px; }
+}
+
+@media (max-width: 767px) {
+  .aj-process-section { padding: 48px 0; }
+  .aj-process-head { margin-bottom: 40px; }
+  
+  /* Adjust font sizes for mobile */
+  .aj-process-title { font-size: var(--font-size-3xl); }
+  .aj-process-desc { font-size: var(--font-size-sm); }
+
+  .aj-process-track {
+    --pt-height: 220px;
+    --pt-item-width: 160px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 0 4px;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .aj-process-item {
+    flex: 0 0 auto;
+    width: 168px;
+    scroll-snap-align: center;
+  }
+
+  .aj-process-card {
+    max-width: none;
+    padding: 12px 12px 14px;
+  }
+  
+  .aj-process-card-title { font-size: var(--font-size-sm); }
+  .aj-process-card-desc { font-size: 10px; }
+}
+
+@media (max-width: 479px) {
+  .aj-process-track { --pt-height: 200px; --pt-item-width: 136px; }
+  .aj-process-item { width: 140px; }
+  .aj-process-card { padding: 10px 10px 12px; }
+  
+  .aj-process-title { font-size: var(--font-size-2xl); }
+  .aj-process-card-title { font-size: 11px; }
+  .aj-process-card-desc { font-size: 9px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .aj-process-line-fill,
+  .aj-process-card,
+  .aj-process-node::after {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: translate(-50%, 0) !important;
+    width: 100% !important;
+  }
+}
