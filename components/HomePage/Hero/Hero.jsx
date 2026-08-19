@@ -61,7 +61,7 @@ const Hero = () => {
       <div className="hero-overlay" />
 
       {/* Content */}
-      <div className="container">
+      <div className="container2">
         <motion.div 
           className="hero-content"
           initial={{ opacity: 0, y: 50 }}

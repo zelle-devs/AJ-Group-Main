@@ -1,0 +1,125 @@
+/* ============================================
+   CapabilitiesSection.css
+   Styling strictly mimics ProcessTimeline.css
+   for absolute design consistency.
+   ============================================ */
+
+.aj-cap-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+  width: 100%;
+}
+
+.aj-cap-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  position: relative;
+}
+
+.aj-cap-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* ---------- Typography (EXACTLY MIRRORED FROM PROCESS TIMELINE) ---------- */
+
+/* Eyebrow - Poppins, 13px, semibold, gold, uppercase */
+.aj-cap-eyebrow {
+  display: inline-block;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm); 
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+
+/* Title - Gotham, 32px, medium, white */
+.aj-cap-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  margin-bottom: 18px;
+  font-family: var(--font-family-gotham);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+/* Body Text - Manrope, 15px, light, beige */
+.aj-cap-body {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-beige);
+  font-weight: var(--font-weight-light);
+  max-width: 800px;
+  margin-bottom: 32px; /* Space before button */
+}
+
+/* Button - Exact positioning as global btn */
+.aj-cap-btn {
+  margin-top: 0;
+  text-shadow: var(---text-shadow-btn);
+}
+
+/* ============ RESPONSIVE LAYOUT (MIRRORED) ============ */
+
+/* Large Desktop (1440px to 3000px) */
+@media (min-width: 1440px) {
+  .aj-cap-section { padding: 60px 0; }
+  .aj-cap-title { font-size: var(--font-size-4xl); } /* Scales up on big screens */
+}
+
+/* Desktop (1024px to 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .aj-cap-section { padding: 80px 0; }
+}
+
+/* Tablet (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aj-cap-section { padding: 60px 0; }
+  .aj-cap-title { font-size: var(--font-size-4xl); } /* Exact match */
+  .aj-cap-body { font-size: var(--font-size-sm); padding: 0 20px; }
+}
+
+/* Mobile Large (480px to 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  .aj-cap-section { padding: 48px 0; }
+  .aj-cap-eyebrow { font-size: var(--font-size-xs); }
+  .aj-cap-title { font-size: var(--font-size-3xl); }
+  .aj-cap-body { font-size: 11px; /* Exact match from Timeline mobile */ }
+  .aj-cap-btn { width: 100%; justify-content: center; }
+}
+
+/* Mobile Small (300px to 479px) */
+@media (max-width: 479px) {
+  .aj-cap-section { padding: 40px 0; }
+  .aj-cap-eyebrow { font-size: 10px; margin-bottom: 12px; }
+  .aj-cap-title { font-size: var(--font-size-2xl); margin-bottom: 16px; }
+  .aj-cap-body { font-size: 10px; padding: 0 5px; }
+  .aj-cap-btn { width: 100%; justify-content: center; font-size: 10px; }
+}
+
+/* Ultra Small (300px to 350px) */
+@media (max-width: 350px) {
+  .aj-cap-section { padding: 32px 0; }
+  .aj-cap-title { font-size: var(--font-size-xl); }
+  .aj-cap-body { font-size: 9px; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .aj-cap-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

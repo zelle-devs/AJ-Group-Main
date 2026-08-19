@@ -1,0 +1,466 @@
+/* ============================================
+   TeamScrollSlider
+   Uses only global.css design tokens.
+   Breakpoints mirror global.css exactly:
+   300-350 / 351-479 / 480-767 / 768-1023 / 1024-1439 / 1440-3000
+   ============================================ */
+
+.tss-wrapper {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-black);
+}
+
+.tss-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(120% 100% at 15% 20%, var(--color-black-light) 0%, var(--color-black) 60%);
+}
+
+.tss-grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  z-index: 1;
+}
+
+.tss-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ---------------- text column ---------------- */
+.tss-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 460px;
+}
+
+/* Eyebrow - Poppins, 13px, semibold, gold, uppercase */
+.tss-eyebrow {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* Title - Gotham, 32px, medium, white */
+.tss-title {
+  font-size: var(--font-size-4xl);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-gotham);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+
+.tss-title-line {
+  color: var(--color-white);
+}
+
+.tss-title-line--accent {
+  color: var(--color-gold);
+}
+
+/* Body Text - Manrope, 15px, light, beige */
+.tss-body-text {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-base);
+  color: var(--color-beige);
+  line-height: 1.5;
+  font-weight: var(--font-weight-light);
+  margin-top: 8px;
+}
+
+/* Button - Manrope, 11px, medium */
+.tss-btn {
+  padding: 12px 24px;
+  font-size: var(--font-size-xs);
+  letter-spacing: 1px;
+  border-radius: var(--radius-full);
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family-body2);
+  font-weight: var(--font-weight-medium);
+  margin-top: 8px;
+  text-shadow: var(---text-shadow-btn);
+}
+
+/* ============ DOTS - Centered Below Scroll Hint ============ */
+.tss-dots {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 3;
+  margin: 0;
+}
+
+.tss-dot-btn {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.tss-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.25);
+  transition: background-color var(--transition-fast);
+}
+
+.tss-dot--active {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: var(--color-gold);
+}
+
+/* ---------------- stage / 3D track ---------------- */
+.tss-stage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1600px;
+  --tss-card-w: 240px;
+  --tss-card-h: 300px;
+  --tss-step: 190px;
+  height: calc(var(--tss-card-h) + 64px);
+}
+
+.tss-track {
+  position: relative;
+  width: var(--tss-card-w);
+  height: var(--tss-card-h);
+  transform-style: preserve-3d;
+}
+
+.tss-card {
+  position: absolute;
+  inset: 0;
+  width: var(--tss-card-w);
+  height: var(--tss-card-h);
+  will-change: transform, filter, opacity;
+  transform-style: preserve-3d;
+}
+
+.tss-card-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--color-gold);
+  background-color: var(--color-black-light);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+.tss-card.is-active .tss-card-frame {
+  border-color: var(--color-gold);
+  border-style: solid;
+}
+
+.tss-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============ CARD INDICATOR - Green when active, White when inactive ============ */
+.tss-card-dot {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 10px!important;
+  height: 10px!important;
+  border-radius: var(--radius-full);
+  background-color: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2);
+  transition: all var(--transition-normal);
+}
+
+.tss-card:not(.is-active) .tss-card-dot {
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.18);
+}
+
+.tss-card-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0) 0%, rgba(13, 13, 13, 0.92) 78%);
+  text-align: left;
+}
+
+/* Card Name - Gotham, 15px, medium, white (Consistent with FeaturedProjects) */
+.tss-card-name {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+/* Card Role - Manrope, 11px, gold, uppercase (Consistent with FeaturedProjects) */
+.tss-card-role {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--font-weight-regular);
+}
+
+/* ---------------- scroll hint ---------------- */
+.tss-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  letter-spacing: 2px;
+  color: var(--color-beige);
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.tss-hint-icon {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-beige);
+  font-size: 12px;
+  animation: tss-bounce 1.8s ease-in-out infinite;
+}
+@keyframes tss-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
+
+/* ============ RESPONSIVE LAYOUT ============ */
+
+/* Mobile Small 300px - 350px */
+@media (max-width: 350px) {
+  .tss-inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tss-title {
+    font-size: var(--font-size-xl);
+  }
+  /* Card Name - 13px on small mobile */
+  .tss-card-name {
+    font-size: var(--font-size-sm)!important;
+  }
+  /* Card Role - 10px on small mobile */
+  .tss-card-role {
+    font-size: 10px!important;
+  }
+  .tss-stage {
+    --tss-card-w: 168px;
+    --tss-card-h: 210px;
+    --tss-step: 118px;
+  }
+  .tss-body-text { font-size: var(--font-size-xs); }
+  .tss-btn { padding: 8px 16px; font-size: 10px; }
+  .tss-hint { bottom: 12px; }
+  .tss-dots { bottom: 36px; }
+}
+
+/* Mobile 351px - 479px */
+@media (min-width: 351px) and (max-width: 479px) {
+  .tss-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .tss-title {
+    font-size: var(--font-size-2xl);
+  }
+  /* Card Name - 15px on mobile */
+  .tss-card-name {
+    font-size: var(--font-size-base)!important;
+  }
+  /* Card Role - 11px on mobile */
+  .tss-card-role {
+    font-size: var(--font-size-xs)!important;
+  }
+  .tss-stage {
+    --tss-card-w: 190px;
+    --tss-card-h: 236px;
+    --tss-step: 132px;
+  }
+  .tss-body-text { font-size: var(--font-size-sm); }
+}
+
+/* Mobile Large 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .tss-inner {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .tss-title {
+    font-size: var(--font-size-2xl);
+  }
+  /* Card Name - 15px */
+  .tss-card-name {
+    font-size: var(--font-size-base)!important;
+  }
+  /* Card Role - 11px */
+  .tss-card-role {
+    font-size: var(--font-size-xs)!important;
+  }
+  .tss-stage {
+    --tss-card-w: 230px;
+    --tss-card-h: 288px;
+    --tss-step: 160px;
+  }
+}
+
+/* Tablet 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .tss-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tss-title {
+    font-size: var(--font-size-3xl);
+  }
+  .tss-text { max-width: 280px; }
+  /* Card Name - 15px */
+  .tss-card-name {
+    font-size: var(--font-size-base)!important;
+  }
+  /* Card Role - 11px */
+  .tss-card-role {
+    font-size: var(--font-size-xs)!important;
+  }
+  .tss-stage {
+    flex: 1;
+    --tss-card-w: 280px;
+    --tss-card-h: 350px;
+    --tss-step: 200px;
+  }
+  .tss-body-text { font-size: var(--font-size-xs); }
+  .tss-btn { padding: 10px 18px; font-size: 10px; }
+}
+
+/* Desktop 1024px - 1439px */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .tss-title {
+    font-size: var(--font-size-4xl);
+  }
+  .tss-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Card Name - 15px */
+  .tss-card-name {
+    font-size: var(--font-size-base)!important;
+  }
+  /* Card Role - 11px */
+  .tss-card-role {
+    font-size: var(--font-size-xs)!important;
+  }
+  .tss-text { max-width: 380px; }
+  .tss-stage {
+    flex: 1;
+    --tss-card-w: 340px;
+    --tss-card-h: 420px;
+    --tss-step: 240px;
+  }
+}
+
+/* Large Desktop 1440px - 3000px */
+@media (min-width: 1440px) {
+  .tss-title {
+    font-size: var(--font-size-4xl);
+  }
+  .tss-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Card Name - 17px on large desktop */
+  .tss-card-name {
+    font-size: var(--font-size-lg)!important;
+  }
+  /* Card Role - 13px on large desktop */
+  .tss-card-role {
+    font-size: var(--font-size-sm)!important;
+  }
+  .tss-text { max-width: 460px; }
+  .tss-stage {
+    flex: 1;
+    --tss-card-w: 420px;
+    --tss-card-h: 500px;
+    --tss-step: 300px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .tss-title {
+    font-size: var(--font-size-4xl);
+  }
+  /* Card Name - 17px */
+  .tss-card-name {
+    font-size: var(--font-size-lg)!important;
+  }
+  /* Card Role - 13px */
+  .tss-card-role {
+    font-size: var(--font-size-sm)!important;
+  }
+  .tss-stage {
+    --tss-card-w: 480px;
+    --tss-card-h: 560px;
+    --tss-step: 340px;
+  }
+  .tss-text { max-width: 520px; }
+}
+
+/* ---------------- reduced motion ---------------- */
+@media (prefers-reduced-motion: reduce) {
+  .tss-card { transition: none; }
+  .tss-hint-icon { animation: none; }
+}

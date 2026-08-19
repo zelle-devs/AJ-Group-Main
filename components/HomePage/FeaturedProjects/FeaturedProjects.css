@@ -69,20 +69,17 @@
 
 /* Individual Image Columns */
 .img-col {
-  /* flex: 1; */
   flex: 1;
   position: relative;
 }
 
 /* Column 2 - Big Card */
 .col-2 {
-  /* flex: 1.4; */
-  flex: 1;
+  flex: 1.1;
 }
 
 /* Column 3 - 2 Stacked Cards */
 .col-3 {
-  /* flex: 0.9; */
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -114,21 +111,31 @@
 .small-card { flex: 1; height: calc(50% - 8px); }
 .medium-card { height: 100%; }
 
-/* Overlay */
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 120%);
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* Text Info */
+/* ============ INFO CONTAINER - FLOATING WITH GAPS ============ */
 .project-info {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  z-index: 2;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 3;
+  background: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1.5px solid var(--color-gold);
+  border-radius: var(--radius-lg);
+  padding: 16px 16px;
+  transform: translateY(calc(100% + 24px));
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: auto;
+  will-change: transform;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover/Tap par slide up - Floating effect */
+.project-card:hover .project-info,
+.project-card:focus .project-info,
+.project-card:active .project-info {
+  transform: translateY(0);
 }
 
 .project-info h3 {
@@ -136,30 +143,29 @@
   font-weight: var(--font-weight-medium);
   color: var(--color-gold);
   font-family: var(--font-family-gotham);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  line-height: 1.2;
 }
 
 .project-info span {
-  font-size: var(--font-size-sm);
-  /* color: var(--color-beige); */
+  font-size: var(--font-size-xs);
   color: rgba(255, 255, 255, 0.85);
   font-family: var(--font-family-body2);
   display: -webkit-box;
-  /* -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden; */
-  max-width: 90%;
+  overflow: hidden;
   line-height: 1.4;
 }
 
-/* Gold Circle Icon (ArrowRight) */
+/* ============ GOLD CIRCLE ICON - PERMANENTLY VISIBLE ============ */
 .project-icon {
   position: absolute;
-  top: 16px;
-  right: 10px;
-  z-index: 2;
-  width: 30px;
-  height: 30px;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   color: var(--color-black);
   display: flex;
@@ -167,15 +173,25 @@
   justify-content: center;
   border: none;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  background: var(--color-gold);
+  transition: all var(--transition-normal);
   transform: rotate(-30deg);
-  background: var(--color-white);
+  opacity: 1;
 }
 
-.project-card:hover .project-icon {
-  background: var(--color-gold);
-  transform: scale(1.1) rotate(0deg);
+.project-card:hover .project-icon,
+.project-card:focus .project-icon,
+.project-card:active .project-icon {
+  transform: rotate(0deg) scale(1.1);
+  opacity: 1;
+   background: var(--color-white);
+  /* transform: rotate(0deg) scale(1.15); */
 }
+
+/* .project-icon:hover {
+  background: var(--color-white);
+  transform: rotate(0deg) scale(1.15);
+} */
 
 /* ============ RESPONSIVENESS (300px to 3000px) ============ */
 
@@ -183,11 +199,40 @@
 @media (min-width: 2000px) {
   .featured-projects-images { min-height: 500px; gap: 24px; }
   .col-3 { gap: 24px; }
+  
+  .project-info {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 20px 24px;
+  }
+  
+  .project-info h3 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .project-info span {
+    font-size: var(--font-size-sm);
+  }
+  
+  .project-icon {
+    width: 36px;
+    height: 36px;
+    top: 14px;
+    right: 14px;
+  }
 }
 
 /* Standard Desktop */
 @media (min-width: 1024px) and (max-width: 1999px) {
   .featured-projects-images { min-height: 400px; }
+  
+  .project-info {
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    padding: 16px 18px;
+  }
 }
 
 /* ======== TABLET (768px to 1023px) ======== */
@@ -205,7 +250,6 @@
   .featured-projects-description { max-width: 500px; }
   .featured-projects-btn { margin: 0 auto; }
   
-  /* Same 3 columns, just smaller */
   .featured-projects-images {
     flex-wrap: nowrap;
     min-height: auto;
@@ -218,17 +262,25 @@
   
   .small-card { height: calc(50% - 6px); }
   
-  .project-info h3 { font-size: var(--font-size-base); }
-  .project-icon { width: 28px; height: 28px; }
+  .project-info {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    padding: 14px 12px;
+  }
+  
+  .project-info h3 { font-size: var(--font-size-sm); }
+  .project-info span { font-size: 10px; -webkit-line-clamp: 2; }
+  
+  .project-icon { width: 28px; height: 28px; top: 10px; right: 10px; }
 }
 
-/* ======== MOBILE (300px to 767px) ======== */
-@media (max-width: 767px) {
+/* ======== MOBILE (480px to 767px) ======== */
+@media (min-width: 480px) and (max-width: 767px) {
   .featured-projects { padding: 32px 0; }
   .featured-projects-content { gap: 10px; }
   .featured-projects-headline { font-size: var(--font-size-3xl); }
   
-  /* COMPLETELY SAME 3-COLUMN LAYOUT AS DESKTOP, BUT COMPRESSED */
   .featured-projects-wrapper {
     flex-direction: column;
     gap: 20px;
@@ -246,7 +298,6 @@
   .featured-projects-description { max-width: 100%; font-size: var(--font-size-sm); }
   .featured-projects-btn { margin: 0 auto; padding: 8px 16px; font-size: 10px; }
   
-  /* SAME 3 COLUMNS AS DESKTOP */
   .featured-projects-images {
     flex-wrap: nowrap;
     flex-direction: row;
@@ -258,38 +309,142 @@
   .col-3 { flex: 0.9; min-height: 220px; gap: 8px; }
   .col-4 { flex: 1.1; min-height: 220px; }
   
-  /* Adjust stacked cards inside col-3 */
   .small-card { height: calc(50% - 4px); }
   
-  /* Scale down text and icons */
-  .project-info { bottom: 10px; left: 10px; }
-  .project-info h3 { font-size: var(--font-size-sm); }
-  .project-info span { font-size: 11px;
-     /* -webkit-line-clamp: 1;  */
-    }
+  .project-info { 
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    padding: 10px 8px;
+  }
+  
+  .project-info h3 { 
+    font-size: var(--font-size-xs); 
+    margin-bottom: 4px;
+  }
+  
+  .project-info span { 
+    font-size: 9px; 
+    -webkit-line-clamp: 2; 
+  }
+  
   .project-icon { 
-    width: 22px; 
-    height: 22px; 
-    bottom: 10px; 
+    width: 24px; 
+    height: 24px; 
+    top: 8px; 
     right: 8px; 
   }
   .project-icon svg { width: 14px; height: 14px; }
 }
 
-/* ======== ULTRA SMALL (300px - 350px) ======== */
-@media (max-width: 350px) {
-  .featured-projects { padding: 20px 0; }
+/* ======== MOBILE SMALL (300px to 479px) ======== */
+@media (max-width: 479px) {
+  .featured-projects { padding: 24px 0; }
+  .featured-projects-content { gap: 8px; }
   .featured-projects-headline { font-size: var(--font-size-2xl); }
   
-  /* SAME 3 COLUMNS, EVEN SMALLER */
-  .col-2 { min-height: 160px; }
-  .col-3 { min-height: 160px; gap: 6px; }
-  .col-4 { min-height: 160px; }
+  .featured-projects-wrapper {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .featured-projects-content {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding-right: 0;
+    gap: 6px;
+  }
+  
+  .featured-projects-label { font-size: 10px; letter-spacing: 2px; }
+  .featured-projects-description { max-width: 100%; font-size: var(--font-size-xs); }
+  .featured-projects-btn { margin: 0 auto; padding: 6px 12px; font-size: 9px; }
+  
+  .featured-projects-images {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 6px;
+    min-height: auto;
+  }
+  
+  .col-2 { flex: 1.4; min-height: 180px; }
+  .col-3 { flex: 0.9; min-height: 180px; gap: 6px; }
+  .col-4 { flex: 1.1; min-height: 180px; }
   
   .small-card { height: calc(50% - 3px); }
   
-  .project-info h3 { font-size: var(--font-size-xs); }
-  .project-info span { font-size: 10px; }
-  .project-icon { width: 20px; height: 20px; }
+  .project-info { 
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    padding: 8px 6px;
+  }
+  
+  .project-info h3 { 
+    font-size: 10px; 
+    margin-bottom: 3px;
+  }
+  
+  .project-info span { 
+    font-size: 8px; 
+    -webkit-line-clamp: 1; 
+  }
+  
+  .project-icon { 
+    width: 20px; 
+    height: 20px; 
+    top: 6px; 
+    right: 6px; 
+  }
   .project-icon svg { width: 12px; height: 12px; }
+}
+
+/* ======== ULTRA SMALL (300px - 350px) ======== */
+@media (max-width: 350px) {
+  .featured-projects { padding: 20px 0; }
+  .featured-projects-headline { font-size: var(--font-size-xl); }
+  
+  .col-2 { min-height: 140px; }
+  .col-3 { min-height: 140px; gap: 4px; }
+  .col-4 { min-height: 140px; }
+  
+  .small-card { height: calc(50% - 2px); }
+  
+  .project-info {
+    bottom: 4px;
+    left: 4px;
+    right: 4px;
+    padding: 6px 4px;
+  }
+  
+  .project-info h3 { font-size: 9px; }
+  .project-info span { font-size: 7px; -webkit-line-clamp: 1; }
+  
+  .project-icon { width: 18px; height: 18px; top: 5px; right: 5px; }
+  .project-icon svg { width: 10px; height: 10px; }
+}
+
+/* ============ TOUCH DEVICES - TAP FIX ============ */
+@media (hover: none) {
+  .project-info {
+    transform: translateY(calc(100% + 24px));
+  }
+  
+  .project-icon {
+    transform: rotate(-30deg);
+    opacity: 1;
+  }
+  
+  /* Tap state */
+  .project-card:active .project-info,
+  .project-card:focus .project-info {
+    transform: translateY(0);
+  }
+  
+  .project-card:active .project-icon,
+  .project-card:focus .project-icon {
+    transform: rotate(0deg) scale(1.1);
+    opacity: 1;
+  }
 }

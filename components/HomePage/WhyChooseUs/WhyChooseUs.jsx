@@ -79,9 +79,9 @@ const WhyChooseUs = () => {
               })}
             </div>
             
-            <div className="why-choose-stats-signature">
+            {/* <div className="why-choose-stats-signature">
               <span>The Mark of Excellence</span>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Column - Image with Gradient Overlay */}

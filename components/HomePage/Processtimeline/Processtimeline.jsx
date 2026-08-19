@@ -65,7 +65,7 @@ export default function ProcessTimeline({
 
   return (
     <section className="aj-process-section">
-      <div className="aj-process-container">
+      <div className="container2">
         <div className="aj-process-head">
           <span className="aj-process-eyebrow">{eyebrow}</span>
           <h2 className="aj-process-title">

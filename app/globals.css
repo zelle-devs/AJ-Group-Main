@@ -92,7 +92,7 @@
   
   /* ============ CONTAINER ============ */
   --container-padding: 24px;
-  
+  --container-padding2: 44px;
   /* ============ TRANSITIONS ============ */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
@@ -236,7 +236,11 @@ p {
   margin: 0 auto;
   padding: 0 var(--container-padding);
 }
-
+.container2 {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding2);
+}
 /* ============ BUTTONS ============ */
 .btn {
   display: inline-flex;
@@ -441,6 +445,7 @@ p {
 @media (min-width: 1440px) {
   :root {
     --container-padding: 32px;
+    --container-padding2: 52px;
     --font-size-6xl: 52px;
     --font-size-5xl: 42px;
   }
@@ -465,6 +470,7 @@ p {
 @media (min-width: 768px) and (max-width: 1023px) {
   :root {
     --container-padding: 20px;
+    --container-padding2: 40px;
     --font-size-6xl: 40px;
     --font-size-5xl: 34px;
     --font-size-4xl: 28px;
@@ -485,6 +491,7 @@ p {
 @media (min-width: 480px) and (max-width: 767px) {
   :root {
     --container-padding: 16px;
+    --container-padding2: 36px;
     --font-size-6xl: 32px;
     --font-size-5xl: 28px;
     --font-size-4xl: 24px;
@@ -511,6 +518,7 @@ p {
 @media (max-width: 479px) {
   :root {
     --container-padding: 12px;
+    --container-padding2: 32px;
     --font-size-xs: 10px;
     --font-size-sm: 12px;
     --font-size-base: 14px;
@@ -549,6 +557,7 @@ p {
 @media (max-width: 350px) {
   :root {
     --container-padding: 10px;
+    --container-padding2: 30px;
     --font-size-xs: 9px;
     --font-size-sm: 10px;
     --font-size-base: 12px;

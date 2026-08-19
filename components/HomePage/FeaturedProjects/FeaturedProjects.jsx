@@ -38,7 +38,7 @@ const FeaturedProjects = () => {
 
   return (
     <section className="featured-projects">
-      <div className="container">
+      <div className="container2">
         <div className="featured-projects-wrapper">
           
           {/* LEFT COLUMN - Content */}
