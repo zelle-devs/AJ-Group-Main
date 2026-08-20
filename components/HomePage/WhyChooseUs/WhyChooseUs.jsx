@@ -1,9 +1,67 @@
 'use client'
 import { motion } from 'framer-motion'
+import { useRef, useEffect, useState } from 'react';
 import { Users, Globe, Home, Award } from 'lucide-react'
 import Image from 'next/image'
 import './WhyChooseUs.css'
 
+
+// Counter Component - Fixed Version
+const CounterValue = ({ value }) => {
+  const [displayValue, setDisplayValue] = useState('0');
+  const ref = useRef(null);
+  
+  // Manual IntersectionObserver use karo
+  useEffect(() => {
+    const element = ref.current;
+    if (!element) return;
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Counter start karo
+            const match = value.match(/^(\d+)(\+?)$/);
+            if (!match) {
+              setDisplayValue(value);
+              return;
+            }
+            
+            const target = parseInt(match[1]);
+            const suffix = match[2] || '';
+            const duration = 2000;
+            const startTime = performance.now();
+            
+            const animate = (currentTime) => {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              const current = Math.floor(eased * target);
+              
+              setDisplayValue(current + suffix);
+              
+              if (progress < 1) {
+                requestAnimationFrame(animate);
+              } else {
+                setDisplayValue(target + suffix);
+              }
+            };
+            
+            requestAnimationFrame(animate);
+            observer.unobserve(element); // Sirf ek baar chalega
+          }
+        });
+      },
+      { threshold: 0.3 } // 30% visible hone par trigger hoga
+    );
+    
+    observer.observe(element);
+    
+    return () => observer.disconnect();
+  }, [value]);
+  
+  return <span ref={ref} className="stat-number">{displayValue}</span>;
+};
 const WhyChooseUs = () => {
   const stats = [
     {
@@ -64,17 +122,21 @@ const WhyChooseUs = () => {
               {stats.map((stat, index) => {
                 const Icon = stat.icon
                 return (
-                  <div 
+                 <motion.div 
   key={index} 
   className="stat-item"
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: '-10%' }}
+  transition={{ duration: 0.5, delay: index * 0.15 }}
 >
   <Icon className="stat-icon" size={30} strokeWidth={1.5} />
 
   <div className="stat-content">
-    <span className="stat-number">{stat.number}</span>
+    <CounterValue value={stat.number} />
     <span className="stat-label">{stat.label}</span>
   </div>
-</div>
+</motion.div>
                 )
               })}
             </div>

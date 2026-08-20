@@ -7,7 +7,7 @@
 
 .aj-why-section {
   position: relative;
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--color-black);
   overflow: hidden;
 }
@@ -301,6 +301,7 @@
 }
 
 @media (max-width: 1023px) {
+  .aj-why-section { padding: 50px 0; }
   .aj-why-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -313,7 +314,7 @@
 }
 
 @media (max-width: 767px) {
-  .aj-why-section { padding: 48px 0; }
+  .aj-why-section { padding: 40px 0; }
   .aj-why-head { margin-bottom: 36px; }
   .aj-why-title { font-size: var(--font-size-3xl); }
   .aj-why-intro { font-size: var(--font-size-sm); }
@@ -334,6 +335,7 @@
 }
 
 @media (max-width: 479px) {
+  .aj-why-section { padding: 32 px 0; }
   .aj-why-title { font-size: var(--font-size-2xl); }
   .aj-why-card-wrap { aspect-ratio: 4 / 3.8; }
   .aj-why-card-inner { padding: 18px 16px 18px; }

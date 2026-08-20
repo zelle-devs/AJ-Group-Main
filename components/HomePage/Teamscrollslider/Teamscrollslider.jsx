@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import * as THREE from "three";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import "./Teamscrollslider.css";
 
 /**
@@ -337,7 +337,7 @@ export default function TeamScrollSlider({
             transition={{ duration: 0.35 }}
           >
             <span className="tss-hint-icon" aria-hidden="true">
-              ⌄
+              <ChevronDown size={15}/>
             </span>
             SCROLL TO CONTINUE
           </motion.div>

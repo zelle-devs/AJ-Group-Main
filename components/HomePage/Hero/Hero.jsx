@@ -7,9 +7,8 @@ import './Hero.css'
 const Hero = () => {
   // Slider images - Industrial manufacturing shots
   const heroImages = [
-    '/hero-1.jpg', // CNC sparks
-    '/hero-2.jpg', // Large-format printing
-    '/hero-3.jpg', // Finished installation
+    '/hero2.png', 
+    '/hero1.jpeg', 
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)

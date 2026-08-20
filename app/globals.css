@@ -99,7 +99,7 @@
   --transition-slow: 0.5s ease;
 
     /* *************text-shadow************* */
-  ---text-shadow-btn: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  --text-shadow-btn: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* ============ RESET & BASE STYLES ============ */

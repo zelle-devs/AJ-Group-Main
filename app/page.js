@@ -1,12 +1,16 @@
 import CapabilitiesSection from '@/components/HomePage/CapabilitiesSection/CapabilitiesSection'
+import CapabilitiesSectionLeft from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionLeft'
 import FeaturedProjects from '@/components/HomePage/FeaturedProjects/FeaturedProjects'
+import FocusCompanies from '@/components/HomePage/FocusCompanies/FocusCompanies'
 import GroupAtGlance from '@/components/HomePage/Groupatglance/Groupatglance'
 import Hero from '@/components/HomePage/Hero/Hero'
 import ProcessTimeline from '@/components/HomePage/Processtimeline/Processtimeline'
 import TeamScrollSlider from '@/components/HomePage/Teamscrollslider/Teamscrollslider'
 import WhyAJGroup from '@/components/HomePage/Whyajgroup/Whyajgroup'
 import WhyChooseUs from '@/components/HomePage/WhyChooseUs/WhyChooseUs'
-
+import { companiesData } from '@/components/HomePage/FocusCompanies/FocusCompanies'
+import CTASection from '@/components/HomePage/CTASection/CTASection'
+import CTASection2 from '@/components/HomePage/CTASection/CTASection2'
 export default function Home() {
   return (
     <>
@@ -16,13 +20,23 @@ export default function Home() {
       <ProcessTimeline/>
       <CapabilitiesSection/>
       <WhyAJGroup/>
-       <CapabilitiesSection 
+      <CapabilitiesSectionLeft
+      eyebrow = 'How we work'
+  title = 'A considered process, start to finish.'
+  body = "Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end."
+  buttonText = 'Explore Our Approach'
+  buttonLink = '/approach'
+  imageSrc = '/ceo.jpg'
+  imageAlt = 'Capabilities Image'
+  />
+       {/* <CapabilitiesSection 
         eyebrow="How we work"
         title="A considered process, start to finish."
         body="Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end."
         buttonText="Explore Our Approach"
         buttonLink="/leadership"
-      />
+        align='left'
+      /> */}
       <GroupAtGlance/>
       <TeamScrollSlider/>
        {/* <CapabilitiesSection 
@@ -32,6 +46,13 @@ export default function Home() {
         buttonText="Meet Our Leadership"
         buttonLink="/leadership"
       /> */}
+       <FocusCompanies 
+        eyebrow="In focus"
+        headline="Two companies. Two disciplines. One standard."
+        companies={companiesData}
+      />
+      {/* <CTASection/> */}
+<CTASection2/>
     </>
   )
 }

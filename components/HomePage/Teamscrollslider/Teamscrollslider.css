@@ -262,9 +262,10 @@
 }
 
 .tss-hint-icon {
-  display: inline-flex;
-  align-items: flex-start;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  line-height: 0;
   width: 22px;
   height: 22px;
   border-radius: var(--radius-full);
@@ -464,3 +465,4 @@
   .tss-card { transition: none; }
   .tss-hint-icon { animation: none; }
 }
+

@@ -4,7 +4,7 @@
 
   .aj-process-section {
     position: relative;
-    padding: 80px 0;
+    padding: 60px 0;
     background-color: var(--color-black);
     overflow: hidden;
   }
@@ -296,12 +296,13 @@
   }
 
   @media (max-width: 1023px) {
+    .aj-process-section { padding: 50px 0; }
     .aj-process-track { --pt-item-width: 190px; --pt-height: 240px; }
     .aj-process-card { padding: 14px 14px 16px; }
   }
 
   @media (max-width: 767px) {
-    .aj-process-section { padding: 48px 0; }
+    .aj-process-section { padding: 40px 0; }
     .aj-process-head { margin-bottom: 40px; }
 
     .aj-process-title { font-size: var(--font-size-3xl); }
@@ -403,6 +404,7 @@
   }
 
   @media (max-width: 479px) {
+    .aj-process-section { padding: 32px 0; }
     .aj-process-title { font-size: var(--font-size-2xl); }
 
     .aj-process-track { gap: 26px; }

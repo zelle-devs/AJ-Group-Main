@@ -1,22 +1,127 @@
 /* ============================================
    CapabilitiesSection.css
-   Styling strictly mimics ProcessTimeline.css
-   for absolute design consistency.
+   Premium 3D Golden Background
    ============================================ */
 
 .aj-cap-section {
   position: relative;
-  padding: 80px 0;
+  padding: 60px 0;
   background-color: var(--color-black);
   overflow: hidden;
   width: 100%;
+  isolation: isolate;
 }
 
+/* Premium 3D Golden Background Layers */
+.aj-cap-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(200, 165, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(200, 165, 74, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 40%, #1a1610 60%, #0D0D0D 100%);
+}
+
+/* Subtle golden grid pattern - Top/Bottom light, Center dark */
+.aj-cap-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: 
+    linear-gradient(rgba(200, 165, 74, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 165, 74, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 15%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.8) 85%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 15%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.8) 85%,
+    transparent 100%
+  );
+}
+
+/* .aj-cap-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: 
+    linear-gradient(rgba(200, 165, 74, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 165, 74, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.2) 55%,
+    rgba(0, 0, 0, 1) 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.2) 55%,
+    rgba(0, 0, 0, 1) 80%,
+    transparent 100%
+  );
+} */
+
+/* Floating golden particles/glow */
 .aj-cap-container {
   width: 100%;
   margin: 0 auto;
   padding: 0 var(--container-padding);
   position: relative;
+}
+
+.aj-cap-container::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(200, 165, 74, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.aj-cap-container::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(200, 165, 74, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .aj-cap-wrapper {
@@ -25,11 +130,12 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  max-width: 900px;
-  margin: 0 auto; /* Center horizontally */
+  /* max-width: 900px; */
+  margin: 0 auto;
+  position: relative;
 }
 
-/* ---------- Typography (EXACTLY MIRRORED FROM PROCESS TIMELINE) ---------- */
+/* ---------- Typography ---------- */
 
 /* Eyebrow - Poppins, 13px, semibold, gold, uppercase */
 .aj-cap-eyebrow {
@@ -40,8 +146,34 @@
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: var(--color-gold);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+  position: relative;
+  text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
 }
+
+/* .aj-cap-eyebrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 1px;
+  background: var(--color-gold);
+  box-shadow: 0 0 10px rgba(200, 165, 74, 0.5);
+} */
+
+/* .aj-cap-eyebrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 1px;
+  background: var(--color-gold);
+  box-shadow: 0 0 10px rgba(200, 165, 74, 0.5);
+} */
 
 /* Title - Gotham, 32px, medium, white */
 .aj-cap-title {
@@ -52,7 +184,20 @@
   font-family: var(--font-family-gotham);
   line-height: 1.1;
   letter-spacing: -0.5px;
+  position: relative;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
+
+/* Gold gradient underline */
+/* .aj-cap-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 16px auto 0;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  box-shadow: 0 0 15px rgba(200, 165, 74, 0.5);
+} */
 
 /* Body Text - Manrope, 15px, light, beige */
 .aj-cap-body {
@@ -62,56 +207,72 @@
   color: var(--color-beige);
   font-weight: var(--font-weight-light);
   max-width: 800px;
-  margin-bottom: 32px; /* Space before button */
+  margin-bottom: 32px;
+  position: relative;
 }
 
-/* Button - Exact positioning as global btn */
+/* Button */
 .aj-cap-btn {
   margin-top: 0;
-  text-shadow: var(---text-shadow-btn);
+  text-shadow: var(--text-shadow-btn);
+  position: relative;
+  transition: all var(--transition-normal);
 }
 
-/* ============ RESPONSIVE LAYOUT (MIRRORED) ============ */
+.aj-cap-btn:hover {
+  box-shadow: 0 0 30px rgba(200, 165, 74, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ============ RESPONSIVE LAYOUT ============ */
 
 /* Large Desktop (1440px to 3000px) */
 @media (min-width: 1440px) {
   .aj-cap-section { padding: 60px 0; }
-  .aj-cap-title { font-size: var(--font-size-4xl); } /* Scales up on big screens */
+  .aj-cap-title { font-size: var(--font-size-4xl); }
+  .aj-cap-container::before { width: 400px; height: 400px; }
+  .aj-cap-container::after { width: 450px; height: 450px; }
 }
 
 /* Desktop (1024px to 1439px) */
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .aj-cap-section { padding: 80px 0; }
+  .aj-cap-section { padding: 50px 0; }
 }
 
 /* Tablet (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .aj-cap-section { padding: 60px 0; }
-  .aj-cap-title { font-size: var(--font-size-4xl); } /* Exact match */
+  .aj-cap-section { padding: 40px 0; }
+  .aj-cap-title { font-size: var(--font-size-4xl); }
   .aj-cap-body { font-size: var(--font-size-sm); padding: 0 20px; }
+  .aj-cap-eyebrow::before,
+  .aj-cap-eyebrow::after { width: 20px; }
 }
 
 /* Mobile Large (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
-  .aj-cap-section { padding: 48px 0; }
+  .aj-cap-section { padding: 32px 0; }
   .aj-cap-eyebrow { font-size: var(--font-size-xs); }
   .aj-cap-title { font-size: var(--font-size-3xl); }
-  .aj-cap-body { font-size: 11px; /* Exact match from Timeline mobile */ }
+  .aj-cap-body { font-size: 11px; }
   .aj-cap-btn { width: 100%; justify-content: center; }
+  .aj-cap-eyebrow::before,
+  .aj-cap-eyebrow::after { display: none; }
 }
 
 /* Mobile Small (300px to 479px) */
 @media (max-width: 479px) {
-  .aj-cap-section { padding: 40px 0; }
+  .aj-cap-section { padding: 24px 0; }
   .aj-cap-eyebrow { font-size: 10px; margin-bottom: 12px; }
   .aj-cap-title { font-size: var(--font-size-2xl); margin-bottom: 16px; }
   .aj-cap-body { font-size: 10px; padding: 0 5px; }
   .aj-cap-btn { width: 100%; justify-content: center; font-size: 10px; }
+  .aj-cap-eyebrow::before,
+  .aj-cap-eyebrow::after { display: none; }
 }
 
 /* Ultra Small (300px to 350px) */
 @media (max-width: 350px) {
-  .aj-cap-section { padding: 32px 0; }
+  .aj-cap-section { padding: 20px 0; }
   .aj-cap-title { font-size: var(--font-size-xl); }
   .aj-cap-body { font-size: 9px; }
 }

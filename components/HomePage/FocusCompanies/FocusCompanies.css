@@ -1,0 +1,287 @@
+/* ============================================
+   FocusCompanies.css
+   Premium Split Layout - Next Level Animation
+   ============================================ */
+
+.aj-focus-section {
+  position: relative;
+  padding: 60px 0;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Premium Background Enhancement */
+.aj-focus-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(200, 165, 74, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 50%, var(--color-black) 100%);
+}
+
+/* Header */
+.aj-focus-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.aj-focus-eyebrow {
+  display: inline-block;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+}
+
+.aj-focus-headline {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+
+.aj-focus-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.aj-focus-card:first-child {
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+}
+
+.aj-focus-card:last-child {
+  border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+}
+
+/* Card Layout */
+.aj-focus-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid rgba(200, 165, 74, 0.15);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(200, 165, 74, 0.05);
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(200, 165, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(200, 165, 74, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 40%, #1a1610 60%, #0D0D0D 100%);
+  height: auto;
+  min-height: 0;
+  transition: box-shadow 0.5s ease;
+}
+.aj-focus-card:hover{
+    background: none;
+    transition: box-shadow 0.5s ease;
+}
+/* Hover: Card glow enhance - No movement */
+/* .aj-focus-card:hover {
+  box-shadow: 
+    0 20px 80px rgba(0, 0, 0, 0.6),
+    0 0 50px rgba(200, 165, 74, 0.15),
+    inset 0 0 50px rgba(200, 165, 74, 0.02);
+  border-color: rgba(200, 165, 74, 0.3);
+} */
+
+/* Hover: Card shadow - Image color ka shadow */
+.aj-focus-card:hover {
+  box-shadow: 
+    0 20px 80px rgba(0, 0, 0, 0.6),
+    0 0 50px var(--aj-shadow-color, rgba(200, 165, 74, 0.15)),
+    inset 0 0 50px var(--aj-shadow-color, rgba(200, 165, 74, 0.02));
+  border-color: var(--aj-shadow-color, rgba(200, 165, 74, 0.3));
+}
+
+.aj-focus-card.image-left .aj-focus-image-col { order: 1; }
+.aj-focus-card.image-left .aj-focus-content-col { order: 2; }
+
+.aj-focus-card.image-right .aj-focus-image-col { order: 2; }
+.aj-focus-card.image-right .aj-focus-content-col { order: 1; }
+
+/* Image Column */
+.aj-focus-image-col {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  overflow: hidden;
+  background: var(--color-black-light);
+}
+
+.aj-focus-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+.aj-focus-image {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+/* Image hover subtle zoom */
+.aj-focus-image-col img {
+  transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.aj-focus-card:hover .aj-focus-image-col img {
+  transform: scale(1.05);
+}
+
+/* Content Column */
+.aj-focus-content-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 40px;
+  background: rgba(255, 255, 255, 0.02);
+  position: relative;
+}
+
+.aj-focus-content-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.aj-focus-logo-wrapper { margin-bottom: 4px; }
+.aj-focus-logo { width: 300px; height: auto; }
+
+.aj-focus-description {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-light);
+  color: var(--color-beige);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.aj-focus-btn {
+  margin-top: 8px;
+  text-shadow: var(--text-shadow-btn);
+  transition: all 0.3s ease;
+}
+
+.aj-focus-btn:hover {
+  box-shadow: 0 0 30px rgba(200, 165, 74, 0.3);
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (min-width: 1440px) {
+  .aj-focus-section { padding: 60px 0; }
+  .aj-focus-header { margin-bottom: 64px; }
+  .aj-focus-headline { font-size: var(--font-size-4xl); }
+  .aj-focus-content-col { padding: 60px 80px; }
+  .aj-focus-image-col { min-height: 400px; }
+  .aj-focus-image-wrapper { min-height: 400px; }
+  .aj-focus-description { font-size: var(--font-size-lg); }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .aj-focus-section { padding: 60px 0; }
+  .aj-focus-header { margin-bottom: 40px; }
+  .aj-focus-headline { font-size: var(--font-size-4xl); }
+  .aj-focus-content-col { padding: 40px 50px; }
+  .aj-focus-image-col { min-height: 360px; }
+  .aj-focus-image-wrapper { min-height: 360px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .aj-focus-section { padding: 50px 0; }
+  .aj-focus-header { margin-bottom: 32px; }
+  .aj-focus-headline { font-size: var(--font-size-3xl); }
+  .aj-focus-card { grid-template-columns: 1fr 1fr; }
+  .aj-focus-content-col { padding: 30px 30px; }
+  .aj-focus-image-col { min-height: 300px; }
+  .aj-focus-image-wrapper { min-height: 300px; }
+  .aj-focus-description { font-size: var(--font-size-sm); }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .aj-focus-section { padding: 40px 0; }
+  .aj-focus-header { margin-bottom: 28px; }
+  .aj-focus-headline { font-size: var(--font-size-2xl); }
+  .aj-focus-card {
+    grid-template-columns: 1fr;
+    border-radius: 0;
+  }
+  .aj-focus-card:first-child {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .aj-focus-card:last-child {
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+  .aj-focus-image-col { order: 0 !important; min-height: 220px; }
+  .aj-focus-image-wrapper { min-height: 220px; }
+  .aj-focus-content-col { order: 1 !important; padding: 30px 24px; align-items: center; text-align: center; }
+  .aj-focus-content-inner { align-items: center; }
+  .aj-focus-description { font-size: var(--font-size-sm); }
+  .aj-focus-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 479px) {
+  .aj-focus-section { padding: 30px 0; }
+  .aj-focus-header { margin-bottom: 24px; }
+  .aj-focus-headline { font-size: var(--font-size-xl); }
+  .aj-focus-card {
+    grid-template-columns: 1fr;
+    border-radius: 0;
+  }
+  .aj-focus-card:first-child {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .aj-focus-card:last-child {
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  }
+  .aj-focus-image-col { order: 0 !important; min-height: 180px; }
+  .aj-focus-image-wrapper { min-height: 180px; }
+  .aj-focus-content-col { order: 1 !important; padding: 24px 16px; align-items: center; text-align: center; }
+  .aj-focus-content-inner { align-items: center; gap: 12px; }
+  .aj-focus-description { font-size: var(--font-size-xs); }
+  .aj-focus-btn { width: 100%; justify-content: center; font-size: 10px; padding: 10px 20px; }
+}
+
+@media (max-width: 350px) {
+  .aj-focus-section { padding: 24px 0; }
+  .aj-focus-header { margin-bottom: 20px; }
+  .aj-focus-headline { font-size: var(--font-size-lg); }
+  .aj-focus-image-col { min-height: 140px; }
+  .aj-focus-image-wrapper { min-height: 140px; }
+  .aj-focus-content-col { padding: 20px 12px; }
+  .aj-focus-description { font-size: 10px; }
+  .aj-focus-btn { font-size: 9px; padding: 8px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aj-focus-header, .aj-focus-card,
+  .aj-focus-image-col, .aj-focus-content-col {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
