@@ -13,7 +13,7 @@ const DEFAULT_COMPANIES = [
   'Imprint Galerie',
 ];
 
-const DEFAULT_LINKS = ['About', 'Capabilities', 'Industries', 'Approach', 'Careers', 'Contact'];
+const DEFAULT_LINKS = ['About', 'Capabilities', 'Industries', 'Approach'];
 
 const DEFAULT_SOCIALS = [
   { icon: BsLinkedin, href: '#', label: 'LinkedIn' },
@@ -72,8 +72,8 @@ export default function Footer({
           <div className="aj-footer-col aj-footer-brand">
             <div className="aj-footer-logo">
               <Image
-              src= "Aj Main Logo V2.png"
-                // src="/AJ Icon+Wordmark Logo V2 .png"
+              src= "logo2.png"
+                // src="/logo.png"
                 alt="A.J Group of Companies"
                 width={220}
                 height={80}
@@ -188,6 +188,10 @@ export default function Footer({
             © {year} A.J Group of Companies. All rights reserved.
           </p>
           <div className="aj-footer-bottom-links">
+             <a href="#">Careers</a>
+            <span className="aj-footer-dot">|</span>
+            <a href="#">Contact</a>
+            <span className="aj-footer-dot">|</span>
             <a href="#">Privacy Policy</a>
             <span className="aj-footer-dot">|</span>
             <a href="#">Terms</a>

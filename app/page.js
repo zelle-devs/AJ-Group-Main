@@ -11,10 +11,13 @@ import WhyChooseUs from '@/components/HomePage/WhyChooseUs/WhyChooseUs'
 import { companiesData } from '@/components/HomePage/FocusCompanies/FocusCompanies'
 import CTASection from '@/components/HomePage/CTASection/CTASection'
 import CTASection2 from '@/components/HomePage/CTASection/CTASection2'
+import CapabilitiesSectionChart from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionChart'
+import CapabilitiesSectionChart2 from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionChart2'
 export default function Home() {
   return (
     <>
       <Hero />
+      <div className="scroll-content-wrapper">
       <WhyChooseUs/>
       <FeaturedProjects/>
       <ProcessTimeline/>
@@ -29,6 +32,9 @@ export default function Home() {
   imageSrc = '/ceo.jpg'
   imageAlt = 'Capabilities Image'
   />
+
+  {/* <CapabilitiesSectionChart/> */}
+  <CapabilitiesSectionChart2/>
        {/* <CapabilitiesSection 
         eyebrow="How we work"
         title="A considered process, start to finish."
@@ -53,6 +59,7 @@ export default function Home() {
       />
       {/* <CTASection/> */}
 <CTASection2/>
+</div>
     </>
   )
 }

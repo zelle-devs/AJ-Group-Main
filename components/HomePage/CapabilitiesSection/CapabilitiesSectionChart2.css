@@ -1,0 +1,171 @@
+/* ============================================
+   CapabilitiesSectionChart2.css
+   Premium Animated Line Chart - Clean
+   ============================================ */
+
+.aj-cap2-section {
+  position: relative;
+  padding: 60px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+  width: 100%;
+  isolation: isolate;
+}
+
+.aj-cap2-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(200, 165, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 40%, #1a1610 60%, #0D0D0D 100%);
+}
+
+.aj-cap2-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: 
+    linear-gradient(rgba(200, 165, 74, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 165, 74, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 85%, transparent 100%);
+}
+
+.aj-cap2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* ============ LEFT CONTENT ============ */
+
+.aj-cap2-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.aj-cap2-eyebrow {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+  text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
+}
+
+.aj-cap2-title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  font-family: var(--font-family-gotham);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+}
+
+.aj-cap2-body {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--color-beige);
+  font-weight: var(--font-weight-light);
+  margin-bottom: 32px;
+}
+
+.aj-cap2-btn {
+  margin: 0;
+  text-shadow: var(--text-shadow-btn);
+  transition: all var(--transition-normal);
+}
+
+.aj-cap2-btn:hover {
+  box-shadow: 0 0 30px rgba(200, 165, 74, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ============ RIGHT - CHART ============ */
+
+.aj-cap2-chart-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.aj-cap2-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.aj-cap2-chart-svg text {
+  font-family: var(--font-family-body2);
+}
+
+.aj-cap2-tooltip rect {
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (min-width: 1440px) {
+  .aj-cap2-section { padding: 60px 0; }
+  .aj-cap2-grid { gap: 50px; }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .aj-cap2-section { padding: 50px 0; }
+  .aj-cap2-grid { gap: 30px; }
+}
+
+@media (max-width: 1023px) {
+  .aj-cap2-section { padding: 40px 0; }
+  .aj-cap2-grid { gap: 25px; }
+  .aj-cap2-title { font-size: var(--font-size-3xl); }
+  .aj-cap2-body { font-size: var(--font-size-sm); }
+}
+
+@media (max-width: 767px) {
+  .aj-cap2-section { padding: 32px 0; }
+  .aj-cap2-grid { grid-template-columns: 1fr; gap: 30px; }
+  .aj-cap2-content { align-items: center; text-align: center; }
+  .aj-cap2-body { max-width: 100%; }
+  .aj-cap2-btn { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 479px) {
+  .aj-cap2-section { padding: 24px 0; }
+  .aj-cap2-title { font-size: var(--font-size-2xl); }
+  .aj-cap2-body { font-size: var(--font-size-xs); }
+  .aj-cap2-btn { font-size: 10px; }
+}
+
+@media (max-width: 350px) {
+  .aj-cap2-section { padding: 20px 0; }
+  .aj-cap2-title { font-size: var(--font-size-xl); }
+  .aj-cap2-body { font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aj-cap2-chart-svg path,
+  .aj-cap2-chart-svg circle {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

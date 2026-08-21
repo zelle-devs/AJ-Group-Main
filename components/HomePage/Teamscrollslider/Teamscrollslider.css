@@ -248,7 +248,7 @@
 .tss-hint {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -5%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;

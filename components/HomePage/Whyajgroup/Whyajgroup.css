@@ -313,38 +313,168 @@
   .aj-why-card-icon svg { width: 32px; height: 32px; }
 }
 
-@media (max-width: 767px) {
+/* ============ RESPONSIVE ============ */
+
+/* Mobile Large (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
   .aj-why-section { padding: 40px 0; }
-  .aj-why-head { margin-bottom: 36px; }
+  .aj-why-head { margin-bottom: 30px; }
   .aj-why-title { font-size: var(--font-size-3xl); }
   .aj-why-intro { font-size: var(--font-size-sm); }
 
   .aj-why-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
+    grid-template-columns: 1fr 1fr; /* 2 columns mobile par bhi */
+    gap: 14px;
   }
 
-  .aj-why-card-wrap { aspect-ratio: 4 / 3.4; }
-  .aj-why-card-inner { padding: 22px 20px 20px; }
-  .aj-why-card-num { font-size: var(--font-size-4xl); }
-  .aj-why-num-dash { width: 26px; }
-  .aj-why-card-icon { width: 50px; height: 50px; }
-  .aj-why-card-icon svg { width: 28px; height: 28px; }
-  .aj-why-card-title { font-size: var(--font-size-base); }
-  .aj-why-card-desc { font-size: var(--font-size-xs); max-width: 100%; }
+  .aj-why-card-wrap { 
+    aspect-ratio: 3 / 3.2; /* Chota aspect ratio */
+  }
+  
+  .aj-why-card-inner { 
+    padding: 16px 14px 14px;
+  }
+  
+  .aj-why-card-top {
+    margin-bottom: 12px; /* Kam gap */
+  }
+  
+  .aj-why-card-num { 
+    font-size: var(--font-size-2xl); /* Chota number */
+    gap: 8px;
+  }
+  
+  .aj-why-num-dash { 
+    width: 20px; 
+  }
+  
+  .aj-why-card-icon { 
+    width: 36px; 
+    height: 36px; 
+  }
+  
+  .aj-why-card-icon svg { 
+    width: 20px; 
+    height: 20px; 
+  }
+  
+  .aj-why-card-title { 
+    font-size: var(--font-size-xs); /* Chota title */
+    margin-bottom: 6px;
+  }
+  
+  .aj-why-card-divider {
+    width: 24px;
+    margin-bottom: 6px;
+  }
+  
+  .aj-why-card-desc { 
+    font-size: 9px; /* Chota description */
+    line-height: 1.4;
+    max-width: 100%;
+  }
 }
 
+/* Mobile Small (300px - 479px) */
 @media (max-width: 479px) {
-  .aj-why-section { padding: 32 px 0; }
+  .aj-why-section { padding: 24px 0; }
+  .aj-why-head { margin-bottom: 24px; }
   .aj-why-title { font-size: var(--font-size-2xl); }
-  .aj-why-card-wrap { aspect-ratio: 4 / 3.8; }
-  .aj-why-card-inner { padding: 18px 16px 18px; }
-  .aj-why-card-num { font-size: var(--font-size-3xl); }
-  .aj-why-num-dash { width: 20px; }
-  .aj-why-card-icon { width: 44px; height: 44px; }
-  .aj-why-card-icon svg { width: 24px; height: 24px; }
-  .aj-why-card-title { font-size: var(--font-size-sm); margin-bottom: 8px; }
-  .aj-why-card-desc { font-size: 11px; }
+  .aj-why-intro { font-size: var(--font-size-xs); }
+
+  .aj-why-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 10px;
+  }
+
+  .aj-why-card-wrap { 
+    aspect-ratio: 3 / 3; /* Square-ish compact */
+  }
+  
+  .aj-why-card-inner { 
+    padding: 12px 10px 10px;
+  }
+  
+  .aj-why-card-top {
+    margin-bottom: 8px;
+  }
+  
+  .aj-why-card-num { 
+    font-size: var(--font-size-xl); /* Aur chota */
+    gap: 5px;
+  }
+  
+  .aj-why-num-dash { 
+    width: 14px; 
+    height: 1.5px;
+  }
+  
+  .aj-why-card-icon { 
+    width: 28px; 
+    height: 28px; 
+  }
+  
+  .aj-why-card-icon svg { 
+    width: 16px; 
+    height: 16px; 
+  }
+  
+  .aj-why-card-title { 
+    font-size: 10px; /* Bahut chota */
+    margin-bottom: 4px;
+    letter-spacing: 0.2px;
+  }
+  
+  .aj-why-card-divider {
+    width: 18px;
+    height: 1.5px;
+    margin-bottom: 4px;
+  }
+  
+  .aj-why-card-desc { 
+    font-size: 8px; /* Bahut chota */
+    line-height: 1.3;
+    max-width: 100%;
+  }
+}
+
+/* Ultra Small (300px - 350px) */
+@media (max-width: 350px) {
+  .aj-why-section { padding: 20px 0; }
+  
+  .aj-why-grid {
+    gap: 8px;
+  }
+  
+  .aj-why-card-wrap { 
+    aspect-ratio: 3 / 2.8;
+  }
+  
+  .aj-why-card-inner { 
+    padding: 10px 8px 8px;
+  }
+  
+  .aj-why-card-num { 
+    font-size: var(--font-size-lg);
+  }
+  
+  .aj-why-card-icon { 
+    width: 24px; 
+    height: 24px; 
+  }
+  
+  .aj-why-card-icon svg { 
+    width: 14px; 
+    height: 14px; 
+  }
+  
+  .aj-why-card-title { 
+    font-size: 9px;
+  }
+  
+  .aj-why-card-desc { 
+    font-size: 7px;
+  }
 }
 
 /* Respect reduced motion */

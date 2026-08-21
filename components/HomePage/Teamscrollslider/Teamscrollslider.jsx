@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
-import * as THREE from "three";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import "./Teamscrollslider.css";
 
@@ -98,139 +97,195 @@ export default function TeamScrollSlider({
     };
   }, [measure, onScroll, setWrapperHeight]);
 
+  // /* ---------------- GSAP driven per-frame transform loop ---------------- */
+  // useEffect(() => {
+  //   const ease = reducedMotion.current ? 1 : 0.085;
+
+  //   const applyTransforms = (p) => {
+  //     const track = trackRef.current;
+  //     if (!track) return;
+  //     const { step } = dims.current;
+  //     const children = track.children;
+
+  //     for (let i = 0; i < children.length; i++) {
+  //       const el = children[i];
+  //       const dist = i - p;
+  //       const abs = Math.abs(dist);
+
+  //       const x = dist * step;
+  //       const scale = gsap.utils.clamp(0.6, 1, 1 - abs * 0.22);
+  //       const rotateY = gsap.utils.clamp(-26, 26, dist * -16);
+  //       const translateZ = -abs * 90;
+  //       const opacity = gsap.utils.clamp(0, 1, 1 - abs * 0.45);
+  //       const blur = Math.min(6, abs * 2.6);
+
+  //       gsap.set(el, {
+  //         x,
+  //         scale,
+  //         rotateY,
+  //         z: translateZ,
+  //         opacity,
+  //         filter: `blur(${blur}px)`,
+  //         zIndex: 200 - Math.round(abs * 10),
+  //       });
+  //     }
+  //   };
+
+  //   const tick = () => {
+  //     smoothProgress.current = gsap.utils.interpolate(
+  //       smoothProgress.current,
+  //       targetProgress.current,
+  //       ease
+  //     );
+  //     if (Math.abs(smoothProgress.current - targetProgress.current) < 0.0008) {
+  //       smoothProgress.current = targetProgress.current;
+  //     }
+  //     applyTransforms(smoothProgress.current);
+
+  //     const idx = Math.round(smoothProgress.current);
+  //     setActiveIndex((prev) => (prev !== idx ? idx : prev));
+
+  //     rafId.current = requestAnimationFrame(tick);
+  //   };
+
+  //   rafId.current = requestAnimationFrame(tick);
+  //   return () => cancelAnimationFrame(rafId.current);
+  // }, [count]);
+
+
   /* ---------------- GSAP driven per-frame transform loop ---------------- */
-  useEffect(() => {
-    const ease = reducedMotion.current ? 1 : 0.085;
+useEffect(() => {
+  const ease = reducedMotion.current ? 1 : 0.085;
 
-    const applyTransforms = (p) => {
-      const track = trackRef.current;
-      if (!track) return;
-      const { step } = dims.current;
-      const children = track.children;
+  const applyTransforms = (p) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const { step } = dims.current;
+    const children = track.children;
 
-      for (let i = 0; i < children.length; i++) {
-        const el = children[i];
-        const dist = i - p;
-        const abs = Math.abs(dist);
+    for (let i = 0; i < children.length; i++) {
+      const el = children[i];
+      const dist = i - p;
+      const abs = Math.abs(dist);
 
-        const x = dist * step;
-        const scale = gsap.utils.clamp(0.6, 1, 1 - abs * 0.22);
-        const rotateY = gsap.utils.clamp(-26, 26, dist * -16);
-        const translateZ = -abs * 90;
-        const opacity = gsap.utils.clamp(0, 1, 1 - abs * 0.45);
-        const blur = Math.min(6, abs * 2.6);
+      const x = dist * step;
+      const scale = gsap.utils.clamp(0.6, 1, 1 - abs * 0.22);
+      const rotateY = gsap.utils.clamp(-26, 26, dist * -16);
+      const translateZ = -abs * 90;
+      const opacity = gsap.utils.clamp(0, 1, 1 - abs * 0.45);
+      const blur = Math.min(6, abs * 2.6);
 
-        gsap.set(el, {
-          x,
-          scale,
-          rotateY,
-          z: translateZ,
-          opacity,
-          filter: `blur(${blur}px)`,
-          zIndex: 200 - Math.round(abs * 10),
-        });
-      }
-    };
+      gsap.set(el, {
+        x,
+        scale,
+        rotateY,
+        z: translateZ,
+        opacity,
+        filter: `blur(${blur}px)`,
+        zIndex: 200 - Math.round(abs * 10),
+      });
+    }
+  };
 
-    const tick = () => {
-      smoothProgress.current = gsap.utils.interpolate(
-        smoothProgress.current,
-        targetProgress.current,
-        ease
-      );
-      if (Math.abs(smoothProgress.current - targetProgress.current) < 0.0008) {
-        smoothProgress.current = targetProgress.current;
-      }
-      applyTransforms(smoothProgress.current);
+  const tick = () => {
+    smoothProgress.current = gsap.utils.interpolate(
+      smoothProgress.current,
+      targetProgress.current,
+      ease
+    );
+    if (Math.abs(smoothProgress.current - targetProgress.current) < 0.0008) {
+      smoothProgress.current = targetProgress.current;
+    }
+    applyTransforms(smoothProgress.current);
 
-      const idx = Math.round(smoothProgress.current);
-      setActiveIndex((prev) => (prev !== idx ? idx : prev));
-
-      rafId.current = requestAnimationFrame(tick);
-    };
+    const idx = Math.round(smoothProgress.current);
+    setActiveIndex((prev) => (prev !== idx ? idx : prev));
 
     rafId.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafId.current);
-  }, [count]);
+  };
 
-  /* ---------------- Three.js ambient grain (ultra-light) ---------------- */
-  useEffect(() => {
-    if (reducedMotion.current) return;
-    const canvas = canvasRef.current;
-    const stage = stageRef.current;
-    if (!canvas || !stage) return;
+  rafId.current = requestAnimationFrame(tick);
+  return () => cancelAnimationFrame(rafId.current);
+}, [count]);
 
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false });
-    renderer.setPixelRatio(Math.min(1, window.devicePixelRatio || 1));
+  /* ---------------- Optimized per-frame transform loop ---------------- */
+// useEffect(() => {
+//   const ease = reducedMotion.current ? 1 : 0.085;
+//   let lastUpdate = 0;
+//   const UPDATE_INTERVAL = 16; // ~60fps throttle
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+//   const applyTransforms = (p) => {
+//     const track = trackRef.current;
+//     if (!track) return;
+//     const { step } = dims.current;
+//     const children = track.children;
 
-    const material = new THREE.ShaderMaterial({
-      transparent: true,
-      uniforms: { uTime: { value: 0 } },
-      vertexShader: `
-        varying vec2 vUv;
-        void main() {
-          vUv = uv;
-          gl_Position = vec4(position, 1.0);
-        }
-      `,
-      fragmentShader: `
-        precision mediump float;
-        varying vec2 vUv;
-        uniform float uTime;
-        float random(vec2 p) {
-          return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453);
-        }
-        void main() {
-          float n = random(vUv * (uTime * 0.6 + 1.0));
-          gl_FragColor = vec4(vec3(n), 0.035);
-        }
-      `,
-    });
+//     for (let i = 0; i < children.length; i++) {
+//       const el = children[i];
+//       const dist = i - p;
+//       const abs = Math.abs(dist);
 
-    const geometry = new THREE.PlaneGeometry(2, 2);
-    const mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
+//       const x = dist * step;
+//       const scale = gsap.utils.clamp(0.6, 1, 1 - abs * 0.22);
+//       const rotateY = gsap.utils.clamp(-26, 26, dist * -16);
+//       const translateZ = -abs * 90;
+//       const opacity = gsap.utils.clamp(0, 1, 1 - abs * 0.45);
+//       const blur = Math.min(6, abs * 2.6);
 
-    let frame;
-    const resize = () => {
-      const w = stage.clientWidth;
-      const h = stage.clientHeight;
-      renderer.setSize(w, h, false);
-    };
-    resize();
+//       // Use CSS custom properties instead of direct style manipulation
+//       el.style.setProperty('--tss-x', `${x}px`);
+//       el.style.setProperty('--tss-scale', scale);
+//       el.style.setProperty('--tss-rotateY', `${rotateY}deg`);
+//       el.style.setProperty('--tss-z', `${translateZ}px`);
+//       el.style.setProperty('--tss-opacity', opacity);
+//       el.style.setProperty('--tss-blur', `${blur}px`);
+//       el.style.setProperty('--tss-zIndex', Math.round(200 - abs * 10));
+//     }
+//   };
 
-    const clock = new THREE.Clock();
-    const animate = () => {
-      material.uniforms.uTime.value = clock.getElapsedTime();
-      renderer.render(scene, camera);
-      frame = requestAnimationFrame(animate);
-    };
-    animate();
+//   const tick = (timestamp) => {
+//     // Throttle updates to 60fps max
+//     if (timestamp - lastUpdate >= UPDATE_INTERVAL) {
+//       lastUpdate = timestamp;
+      
+//       smoothProgress.current = gsap.utils.interpolate(
+//         smoothProgress.current,
+//         targetProgress.current,
+//         ease
+//       );
+      
+//       if (Math.abs(smoothProgress.current - targetProgress.current) < 0.0008) {
+//         smoothProgress.current = targetProgress.current;
+//       }
+      
+//       applyTransforms(smoothProgress.current);
 
-    const ro = new ResizeObserver(resize);
-    ro.observe(stage);
+//       const idx = Math.round(smoothProgress.current);
+//       setActiveIndex((prev) => (prev !== idx ? idx : prev));
+//     }
 
-    return () => {
-      cancelAnimationFrame(frame);
-      ro.disconnect();
-      geometry.dispose();
-      material.dispose();
-      renderer.dispose();
-    };
-  }, []);
+//     rafId.current = requestAnimationFrame(tick);
+//   };
+
+//   rafId.current = requestAnimationFrame(tick);
+//   return () => cancelAnimationFrame(rafId.current);
+// }, [count]);
+
 
   /* ---------------- click a side card to jump to it ---------------- */
   const goToIndex = (i) => {
-    const wrapper = wrapperRef.current;
-    if (!wrapper) return;
-    const total = wrapper.offsetHeight - window.innerHeight;
-    const p = count > 1 ? i / (count - 1) : 0;
-    const top = wrapper.offsetTop + p * total;
-    window.scrollTo({ top, behavior: "smooth" });
-  };
+  const wrapper = wrapperRef.current;
+  if (!wrapper) return;
+  const rect = wrapper.getBoundingClientRect();
+  const wrapperTop = rect.top + window.scrollY;
+  const total = wrapper.offsetHeight - window.innerHeight;
+  const p = count > 1 ? i / (count - 1) : 0;
+
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const top = Math.min(wrapperTop + p * total, maxScroll);
+
+  window.scrollTo({ top, behavior: "smooth" });
+};
 
   const active = cards[activeIndex] || cards[0];
 

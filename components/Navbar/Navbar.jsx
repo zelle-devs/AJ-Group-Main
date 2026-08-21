@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
+import { motion } from 'framer-motion';
 import './Navbar.css'
 
 const Navbar = () => {
@@ -45,12 +46,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
+      <motion.nav 
+  className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}
+  initial={{ y: -80, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+>
         <div className="navbar-container">
           {/* Logo */}
           <Link href="/" className="navbar-logo" onClick={closeSidebar}>
             <Image 
-              src="/AJ Icon+Wordmark Logo V2 .png"
+              src="/logo.png"
               alt="AJ Group Logo" 
               className="navbar-logo-img"
               width={240}
@@ -62,16 +68,26 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="navbar-menu">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
-                href={link.href}
-                className="navbar-link"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
+  {navLinks.map((link, index) => (
+    <motion.div
+      key={link.href}
+      initial={{ y: 40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ 
+        duration: 0.5, 
+        delay: 0.9 + index * 0.07,
+        ease: [0.22, 1, 0.36, 1] 
+      }}
+    >
+      <Link 
+        href={link.href}
+        className="navbar-link"
+      >
+        {link.label}
+      </Link>
+    </motion.div>
+  ))}
+</div>
 
           {/* Right Actions */}
           <div className="navbar-actions">
@@ -88,7 +104,7 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Overlay */}
       <div 
@@ -101,7 +117,7 @@ const Navbar = () => {
         <div className="sidebar-header">
           <Link href="/" className="navbar-logo" onClick={closeSidebar}>
             <Image 
-              src="/AJ Icon+Wordmark Logo V2 .png"
+              src="/logo.png"
               alt="AJ Group Logo" 
               className="navbar-logo-img"
               width={140}

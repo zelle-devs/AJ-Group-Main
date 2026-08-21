@@ -3,7 +3,7 @@
   padding: 60px 0;
   background: var(--color-black);
   position: relative;
-  overflow: hidden;
+  border-radius: 40px 40px 0 0;
 }
 
 .why-choose-us .container {
@@ -496,7 +496,7 @@
   .why-choose-stats {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    padding-bottom: 90px;
+    /* padding-bottom: 90px; */
   }
   
   .why-choose-stats-signature {

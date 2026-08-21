@@ -6,7 +6,7 @@ export const metadata = {
   title: 'AJ Group - Built to Specification',
   description: 'A diversified manufacturing group: precision metalwork, high-definition print and packaging, and consumer design brands.',
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
   },
 }
 
