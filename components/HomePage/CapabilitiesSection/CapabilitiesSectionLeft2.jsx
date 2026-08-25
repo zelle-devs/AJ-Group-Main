@@ -9,50 +9,51 @@ import {
   Package,
   Truck,
   CheckCircle2,
+  Check,
 } from 'lucide-react';
 
-import './CapabilitiesSectionLeft.css';
+import './CapabilitiesSectionLeft2.css';
 
 const PROCESS_STEPS = [
   {
     icon: Lightbulb,
     title: 'Brief',
-    desc: 'Understanding your vision',
+    desc: 'Understanding the requirment.',
     color: '#C8A54A',
   },
   {
     icon: PenTool,
-    title: 'Design',
-    desc: 'Planning & prototyping',
+    title: 'Define',
+    desc: 'Shape the right solution.',
     color: '#C8A54A',
   },
   {
     icon: Cog,
-    title: 'Production',
-    desc: 'Precision manufacturing',
+    title: 'Create',
+    desc: 'Design, engineer or develop.',
     color: '#C8A54A',
   },
   {
     icon: Package,
-    title: 'Finishing',
-    desc: 'Quality control',
+    title: 'Make',
+    desc: 'Produce with precision.',
     color: '#C8A54A',
   },
   {
-    icon: Truck,
-    title: 'Delivery',
-    desc: 'On-time handover',
+    icon: Check,
+    title: 'Deliver',
+    desc: 'Finish, Review & deliver exellence.',
     color: '#C8A54A',
   },
-  {
-    icon: CheckCircle2,
-    title: 'Support',
-    desc: 'After-sales care',
-    color: '#C8A54A',
-  },
+//   {
+//     icon: CheckCircle2,
+//     title: 'Support',
+//     desc: 'After-sales care',
+//     color: '#C8A54A',
+//   },
 ];
 
-export default function CapabilitiesSectionLeft({
+export default function CapabilitiesSectionLeft2({
   eyebrow = 'How we work',
   title = 'A considered process, start to finish.',
   body = "Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end.",
@@ -60,17 +61,17 @@ export default function CapabilitiesSectionLeft({
   buttonLink = '/process',
 }) {
   return (
-    <section className="old-aj-process-section">
+    <section className="aj-process-sections">
       <div className="container2">
 
-        <div className="old-aj-process-grid">
+        <div className="aj-process-grid">
 
           {/* ==============================
               LEFT CONTENT
           ============================== */}
 
           <motion.div
-            className="old-aj-process-content"
+            className="aj-process-content"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{
@@ -82,21 +83,21 @@ export default function CapabilitiesSectionLeft({
               ease: [0.22, 1, 0.36, 1],
             }}
           >
-            <span className="old-aj-process-eyebrow">
+            <span className="aj-process-eyebrow">
               {eyebrow}
             </span>
 
-            <h2 className="old-aj-process-title">
+            <h2 className="aj-process-title">
               {title}
             </h2>
 
-            <p className="old-aj-process-body">
+            <p className="aj-process-body">
               {body}
             </p>
 
             <a
               href={buttonLink}
-              className="btn btn-outline-gold old-aj-process-btn"
+              className="btn btn-outline-gold aj-process-btn"
             >
               {buttonText}
               <ArrowRight size={16} />
@@ -109,7 +110,7 @@ export default function CapabilitiesSectionLeft({
           ============================== */}
 
           <motion.div
-            className="old-aj-process-visual"
+            className="aj-process-visual"
             initial={{
               opacity: 0,
               x: 40,
@@ -129,14 +130,14 @@ export default function CapabilitiesSectionLeft({
             }}
           >
 
-            <div className="old-aj-process-timeline">
+            <div className="aj-process-timeline">
 
               {/* ==============================
                   CONNECTING LINE
               ============================== */}
 
               <motion.div
-                className="old-aj-process-timeline-line"
+                className="aj-process-timeline-line"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
@@ -160,7 +161,7 @@ export default function CapabilitiesSectionLeft({
                 return (
                   <motion.div
                     key={index}
-                    className={`old-aj-process-timeline-step step-${index + 1}`}
+                    className={`aj-process-timeline-step step-${index + 1}`}
                     initial={{ opacity: 0, x: -30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -174,35 +175,44 @@ export default function CapabilitiesSectionLeft({
                     {/* Circle */}
 
                     <motion.div
-                      className="old-aj-process-step-icon-wrap"
+                      className="aj-process-step-icon-wrap"
                       style={{
                         '--step-color': step.color,
                       }}
+                      initial={{ opacity: 0, rotateY: -90, scale: 0.6 }}
+                      whileInView={{ opacity: 1, rotateY: 0, scale: 1 }}
+                      viewport={{ once: true }}
+                      whileHover={{
+                        // y: -4,
+                        rotateY: 10,
+                        scale: 1.07,
+                      }}
                       transition={{
-                        type: 'spring',
-                        stiffness: 300,
+                        duration: 0.65,
+                        delay: delay + 0.1,
+                        ease: [0.22, 1, 0.36, 1],
                       }}
                     >
                       <Icon
-                        size={22}
-                        className="old-aj-process-step-icon"
+                        size={25}
+                        className="aj-process-step-icon"
                       />
                     </motion.div>
 
 
                     {/* Step Content */}
 
-                    <div className="old-aj-process-step-content">
+                    <div className="aj-process-step-content">
 
-                      <span className="old-aj-process-step-number">
+                      <span className="aj-process-step-number">
                         {String(index + 1).padStart(2, '0')}
                       </span>
 
-                      <h3 className="old-aj-process-step-title">
+                      <h3 className="aj-process-step-title">
                         {step.title}
                       </h3>
 
-                      <p className="old-aj-process-step-desc">
+                      <p className="aj-process-step-desc">
                         {step.desc}
                       </p>
 

@@ -9,35 +9,6 @@
 
 /* *****************for top glowing*********** */
 
-/* ***************************1************** */
-/* .scroll-content-wrapper {
-  position: relative;
-  z-index: 2;
-  background: var(--color-black);
-  box-shadow: 
-    0 -10px 30px rgba(200, 165, 74, 0.15),
-    0 -5px 15px rgba(200, 165, 74, 0.25),
-    0 -2px 8px rgba(200, 165, 74, 0.35),
-    0 0 1px rgba(200, 165, 74, 0.4);
-}
-
-.scroll-content-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(200, 165, 74, 0.6) 25%, 
-    rgba(200, 165, 74, 0.8) 50%, 
-    rgba(200, 165, 74, 0.6) 75%, 
-    transparent 100%
-  );
-  z-index: 3;
-} */
-/* ************************2 ************************* */
 .scroll-content-wrapper {
   position: relative;
   z-index: 2;
@@ -57,6 +28,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  border-radius: 40px 40px 0 0;
   height: 2px;
   background: linear-gradient(90deg, 
     transparent 0%, 
@@ -77,39 +49,6 @@
     opacity: 1;
   }
 }
-/* *****************************3**************************** */
-/* .scroll-content-wrapper {
-  position: relative;
-  z-index: 2;
-  background: var(--color-black);
-  box-shadow: 
-    0 -20px 50px rgba(200, 165, 74, 0.08),
-    0 -15px 35px rgba(200, 165, 74, 0.12),
-    0 -10px 25px rgba(200, 165, 74, 0.2),
-    0 -5px 15px rgba(200, 165, 74, 0.3),
-    0 -2px 8px rgba(200, 165, 74, 0.4),
-    0 -1px 4px rgba(200, 165, 74, 0.5);
-}
-
-.scroll-content-wrapper::before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(200, 165, 74, 0.3) 20%, 
-    rgba(200, 165, 74, 0.6) 40%, 
-    rgba(200, 165, 74, 0.8) 50%, 
-    rgba(200, 165, 74, 0.6) 60%, 
-    rgba(200, 165, 74, 0.3) 80%, 
-    transparent 100%
-  );
-  z-index: 3;
-  filter: blur(1px);
-} */
 
 
 @font-face {
@@ -598,11 +537,11 @@ p {
 /* Mobile Large (480px to 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
   .scroll-content-wrapper {
-  border-radius: 30px 30px 0 0;
+  border-radius: 30px 30px 0 0!important;
   }
   
 .scroll-content-wrapper::before {
-  border-radius: 30px 30px 0 0;
+  border-radius: 30px 30px 0 0!important;
 }
   :root {
     --container-padding: 16px;
@@ -632,11 +571,11 @@ p {
 /* Mobile Small (300px to 479px) */
 @media (max-width: 479px) {
    .scroll-content-wrapper {
-  border-radius: 25px 25px 0 0;
+  border-radius: 25px 25px 0 0!important;
   }
   
 .scroll-content-wrapper::before {
-  border-radius: 25px 25px 0 0;
+  border-radius: 25px 25px 0 0!important;
 }
   :root {
     --container-padding: 12px;

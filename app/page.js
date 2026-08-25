@@ -13,6 +13,7 @@ import CTASection from '@/components/HomePage/CTASection/CTASection'
 import CTASection2 from '@/components/HomePage/CTASection/CTASection2'
 import CapabilitiesSectionChart from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionChart'
 import CapabilitiesSectionChart2 from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionChart2'
+import CapabilitiesSectionLeft2 from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionLeft2'
 export default function Home() {
   return (
     <>
@@ -23,18 +24,11 @@ export default function Home() {
       <ProcessTimeline/>
       <CapabilitiesSection/>
       <WhyAJGroup/>
-      <CapabilitiesSectionLeft
-      eyebrow = 'How we work'
-  title = 'A considered process, start to finish.'
-  body = "Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end."
-  buttonText = 'Explore Our Approach'
-  buttonLink = '/approach'
-  imageSrc = '/ceo.jpg'
-  imageAlt = 'Capabilities Image'
-  />
+      {/* <CapabilitiesSectionLeft/> */}
+      <CapabilitiesSectionLeft2/>
 
   {/* <CapabilitiesSectionChart/> */}
-  <CapabilitiesSectionChart2/>
+  {/* <CapabilitiesSectionChart2/> */}
        {/* <CapabilitiesSection 
         eyebrow="How we work"
         title="A considered process, start to finish."

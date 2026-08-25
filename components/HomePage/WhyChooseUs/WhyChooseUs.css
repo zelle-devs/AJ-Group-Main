@@ -494,7 +494,7 @@
   }
   
   .why-choose-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     /* padding-bottom: 90px; */
   }

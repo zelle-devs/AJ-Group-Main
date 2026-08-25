@@ -1,34 +1,33 @@
 /* ============================================
    CapabilitiesSectionLeft.css
-   Premium Horizontal Process Timeline
+   Premium Process Timeline - Production Ready
    ============================================ */
 
-.aj-process-section {
+.old-aj-process-section {
   position: relative;
   padding: 60px 0;
-  background-color: var(--color-black);
+  background: var(--color-black);
   overflow: hidden;
-  width: 100%;
   isolation: isolate;
 }
 
-.aj-process-section::before {
+.old-aj-process-section::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: 
+  background:
     radial-gradient(ellipse at 20% 50%, rgba(200, 165, 74, 0.08) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
     linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 40%, #1a1610 60%, #0D0D0D 100%);
 }
 
-.aj-process-section::after {
+.old-aj-process-section::after {
   content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background-image: 
+  background-image:
     linear-gradient(rgba(200, 165, 74, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(200, 165, 74, 0.05) 1px, transparent 1px);
   background-size: 60px 60px;
@@ -37,24 +36,23 @@
   mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 85%, transparent 100%);
 }
 
-.aj-process-grid {
+.old-aj-process-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
   gap: 50px;
   align-items: center;
-  margin: 0 auto;
 }
 
 /* ============ LEFT CONTENT ============ */
 
-.aj-process-content {
+.old-aj-process-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
 
-.aj-process-eyebrow {
+.old-aj-process-eyebrow {
   font-family: var(--font-family-body);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
@@ -65,7 +63,7 @@
   text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
 }
 
-.aj-process-title {
+.old-aj-process-title {
   font-size: var(--font-size-4xl);
   font-weight: var(--font-weight-medium);
   color: var(--color-white);
@@ -75,7 +73,7 @@
   margin-bottom: 18px;
 }
 
-.aj-process-body {
+.old-aj-process-body {
   font-family: var(--font-family-body2);
   font-size: var(--font-size-base);
   line-height: 1.6;
@@ -84,204 +82,358 @@
   margin-bottom: 32px;
 }
 
-.aj-process-btn {
+.old-aj-process-btn {
   margin: 0;
   text-shadow: var(--text-shadow-btn);
   transition: all var(--transition-normal);
 }
 
-.aj-process-btn:hover {
+.old-aj-process-btn:hover {
   box-shadow: 0 0 30px rgba(200, 165, 74, 0.3);
-  transform: translateY(-2px);
 }
 
-/* ============ RIGHT - TIMELINE (Compact) ============ */
+/* ============ RIGHT - TIMELINE (default: horizontal, desktop/tablet) ============ */
 
-.aj-process-visual {
+.old-aj-process-visual {
   position: relative;
-  padding-left: 20px;
+  width: 100%;
 }
 
-.aj-process-timeline {
+.old-aj-process-timeline {
   position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 12px; /* 28px se 12px - Steps ke beech gap kam */
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 40px;
 }
 
-/* Animated Timeline Line */
-.aj-process-timeline-line {
+/* Connecting line - shimmering gold gradient */
+.old-aj-process-timeline-line {
   position: absolute;
-  left: 22px;
-  top: 0;
-  width: 2px;
-  height: 0;
-  background: linear-gradient(180deg, 
-    #0B9FE3 0%, 
-    #D32867 25%, 
-    #F4B033 50%, 
-    #C8A54A 75%, 
-    #0B9FE3 100%);
-  box-shadow: 0 0 15px rgba(200, 165, 74, 0.3);
+  left: 15px!important;
+  right: 15px!important;
+  top: 66px;
+  height: 2px;
+  background: linear-gradient(90deg, #8f7228, #c8a54a, #f0d47a, #c8a54a, #8f7228);
+  background-size: 200% 100%!important;
+  border-radius: 50px;
+  transform-origin: left center;
   z-index: 0;
+  box-shadow: 0 0 15px rgba(200, 165, 74, 0.3);
+  animation: old-aj-line-shimmer 5s linear infinite;
+}
+/* ADD THIS - Left end dot */
+.old-aj-process-timeline-line::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f0d47a;
+  box-shadow: 0 0 12px rgba(200, 165, 74, 0.6);
+  z-index: 2;
 }
 
-/* Individual Step - Compact */
-.aj-process-timeline-step {
+/* ADD THIS - Right end dot */
+.old-aj-process-timeline-line::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f0d47a;
+  box-shadow: 0 0 12px rgba(200, 165, 74, 0.6);
+  z-index: 2;
+}
+@keyframes old-aj-line-shimmer {
+  0% { background-position: 0% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Individual Step */
+.old-aj-process-timeline-step {
   position: relative;
   z-index: 1;
+  flex: 1;
   display: flex;
-  align-items: center; /* flex-start se center - Icon content ke center mein */
-  gap: 12px; /* 16px se 12px */
-  padding: 8px 14px; /* 16px 20px se 8px 14px - Chota padding */
-  border-radius: var(--radius-md); /* lg se md */
-  background: rgba(13, 13, 13, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(200, 165, 74, 0.15);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  min-width: 0;
 }
 
-.aj-process-timeline-step:hover {
-  border-color: var(--step-color, var(--color-gold));
-  box-shadow: 0 0 20px color-mix(in srgb, var(--step-color, var(--color-gold)) 25%, transparent);
-  transform: translateX(3px);
-}
-
-/* Step Icon - Chota */
-.aj-process-step-icon-wrap {
-  width: 32px; /* 44px se 32px */
-  height: 32px;
+/* Icon Circle - layered 3D depth */
+.old-aj-process-step-icon-wrap {
+  position: relative;
+  width: 52px!important;
+  height: 52px!important;
+  flex-shrink: 0;
   border-radius: 50%;
-  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(40, 40, 40, 0.9));
-  border: 1.5px solid var(--step-color, var(--color-gold));
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(40, 40, 40, 0.9));
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold);
   box-shadow: 
-    0 4px 10px rgba(0, 0, 0, 0.5),
-    0 0 10px color-mix(in srgb, var(--step-color, var(--color-gold)) 25%, transparent),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(200, 165, 74, 0.2),
+    inset 0 2px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  /* transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease; */
 }
 
-.aj-process-step-icon {
+.old-aj-process-step-icon-wrap::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 25%;
+  height: 20%;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.old-aj-process-timeline-step:hover .old-aj-process-step-icon-wrap {
+  border-color: #e8cd8a;
+  transform: scale(1.06);
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.75),
+    0 0 0 4px rgba(200, 165, 74, 0.14),
+    0 0 40px rgba(200, 165, 74, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.old-aj-process-step-icon {
   color: var(--step-color, var(--color-gold));
-  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--step-color, var(--color-gold)) 50%, transparent));
+  filter: drop-shadow(0 0 4px rgba(200, 165, 74, 0.4));
 }
 
-/* Step Content - Compact */
-.aj-process-step-content {
+/* Step Content */
+.old-aj-process-step-content {
   display: flex;
-  flex-direction: row; /* column se row - Sab ek line mein */
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  flex: 1;
-  flex-wrap: wrap; /* Choti screen par wrap */
+  text-align: center;
+  gap: 4px;
 }
 
-.aj-process-step-number {
+.old-aj-process-step-number {
   font-family: var(--font-family-gotham);
-  font-size: 9px; /* xs se 9px */
-  font-weight: var(--font-weight-semibold);
-  color: var(--step-color, var(--color-gold));
-  letter-spacing: 0.5px;
-  min-width: 20px;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  background: linear-gradient(135deg, #f0d47a, var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.aj-process-step-title {
+.old-aj-process-step-title {
   font-family: var(--font-family-gotham);
-  font-size: var(--font-size-xs); /* base se xs */
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
   color: var(--color-white);
-  line-height: 1.2;
+  text-transform: uppercase;
   white-space: nowrap;
+  margin: 0;
+  letter-spacing: 0.5px;
 }
 
-.aj-process-step-desc {
+.old-aj-process-step-desc {
   font-family: var(--font-family-body2);
-  font-size: 9px; /* xs se 9px */
+  font-size: var(--font-size-xs);
   color: var(--color-beige);
-  line-height: 1.3;
+  line-height: 1.4;
+  margin: 0;
 }
+
 /* ============ RESPONSIVE ============ */
 
 /* Large Desktop (1440px+) */
 @media (min-width: 1440px) {
-  .aj-process-section { padding: 60px 0; }
-  .aj-process-grid { gap: 60px; }
-  .aj-process-timeline { gap: 32px; }
-  .aj-process-timeline-step { padding: 18px 24px; }
+  .old-aj-process-section { padding: 70px 0; }
+  .old-aj-process-grid { gap: 60px; }
+  .old-aj-process-timeline { padding-top: 45px; }
+  .old-aj-process-timeline-line { top: 72px; left: 15px!important; right: 15px!important; }
+  .old-aj-process-step-icon-wrap { width: 56px; height: 56px; }
+  .old-aj-process-step-title { font-size: var(--font-size-base); }
+  .old-aj-process-step-desc { font-size: var(--font-size-sm); }
 }
 
 /* Desktop (1024px - 1439px) */
 @media (min-width: 1024px) and (max-width: 1439px) {
-  .aj-process-section { padding: 50px 0; }
-  .aj-process-grid { gap: 40px; }
+  .old-aj-process-section { padding: 50px 0; }
+  .old-aj-process-grid { gap: 40px; }
+  .old-aj-process-timeline { padding-top: 35px; }
+  .old-aj-process-timeline-line { top: 61px; left: 12px!important; right: 12px!important; }
+  .old-aj-process-step-icon-wrap { width: 48px; height: 48px; }
+  .old-aj-process-step-title { font-size: var(--font-size-xs); }
+  .old-aj-process-step-desc { font-size: 10px; }
 }
 
-/* Tablet (768px - 1023px) */
-@media (max-width: 1023px) {
-  .aj-process-section { padding: 40px 0; }
-  .aj-process-grid { gap: 30px; }
-  .aj-process-title { font-size: var(--font-size-3xl); }
-  .aj-process-body { font-size: var(--font-size-sm); }
-    .aj-process-timeline { gap: 8px; }
-  .aj-process-timeline-step { padding: 6px 10px; gap: 8px; }
-  .aj-process-step-icon-wrap { width: 28px; height: 28px; }
-  .aj-process-step-icon { width: 14px; height: 14px; }
-  .aj-process-step-title { font-size: 10px; }
-  .aj-process-step-desc { font-size: 8px; }
+/* Tablet (768px - 1023px) — horizontal, scaled down */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .old-aj-process-section { padding: 40px 0; }
+  .old-aj-process-grid { gap: 30px; }
+  .old-aj-process-title { font-size: var(--font-size-3xl); }
+  .old-aj-process-body { font-size: var(--font-size-sm); }
+  .old-aj-process-timeline { padding-top: 30px; }
+  .old-aj-process-timeline-line { top: 58px!important; left: 0px!important; right: 0px!important; }
+  .old-aj-process-step-icon-wrap { width: 38px; height: 38px; }
+  .old-aj-process-step-icon { width: 16px; height: 16px; }
+  .old-aj-process-step-number { font-size: var(--font-size-base); }
+  .old-aj-process-step-title { font-size: 9px; }
+  .old-aj-process-step-desc { font-size: 8px; }
+}
+
+/* ============================================
+   MOBILE (300px - 767px)
+   Vertical stepper — icon left, content right,
+   single connecting line down the left edge.
+   Replaces the old zigzag layout: that approach
+   positioned content absolutely at a fixed width
+   wider than each step's own flex share, which is
+   what was causing the overlap + line jitter.
+   ============================================ */
+@media (max-width: 767px) {
+  .old-aj-process-section { padding: 32px 0 50px; }
+
+  .old-aj-process-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .old-aj-process-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .old-aj-process-body { max-width: 100%; }
+
+  .old-aj-process-btn { width: 100%; justify-content: center; }
+
+  .old-aj-process-timeline {
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 4px;
+    gap: 0;
+  }
+
+  .old-aj-process-timeline-line {
+    left: 24px!important;
+    right: auto;
+    top: 0px!important;
+    bottom: 0px!important;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg, #8f7228, #c8a54a, #f0d47a, #c8a54a, #8f7228);
+    animation: none;
+    box-shadow: 0 0 12px rgba(200, 165, 74, 0.25);
+  }
+
+  .old-aj-process-timeline-line::before {
+    left: 50%;
+    top: -5px;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+  }
+  
+  .old-aj-process-timeline-line::after {
+    left: 50%;
+    bottom: -5px;
+    top: auto;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+  }
+
+  .old-aj-process-timeline-step {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 18px;
+    padding: 13px 0;
+  }
+
+  .old-aj-process-step-icon-wrap {
+    width: 48px;
+    height: 48px;
+  }
+
+  .old-aj-process-step-content {
+    align-items: flex-start;
+    text-align: left;
+    gap: 3px;
+    padding-top: 5px;
+    max-width: none;
+  }
+
+  .old-aj-process-step-title { white-space: normal; }
 }
 
 /* Mobile Large (480px - 767px) */
-@media (max-width: 767px) {
-  .aj-process-section { padding: 32px 0; }
-  .aj-process-grid { grid-template-columns: 1fr; gap: 30px; }
-  .aj-process-content { align-items: center; text-align: center; }
-  .aj-process-body { max-width: 100%; }
-  .aj-process-btn { width: 100%; justify-content: center; }
-  .aj-process-visual { padding-left: 0; }
-  .aj-process-timeline-line { left: 18px; }
-  .aj-process-timeline-step { padding: 10px 14px; }
-   .aj-process-timeline { gap: 6px; }
-  /* .aj-process-timeline-step { padding: 5px 8px; } */
-  .aj-process-step-content { gap: 6px; }
+@media (min-width: 480px) and (max-width: 767px) {
+  .old-aj-process-step-number { font-size: var(--font-size-base); }
+  .old-aj-process-step-title { font-size: var(--font-size-sm); }
+  .old-aj-process-step-desc { font-size: var(--font-size-xs); }
 }
 
-/* Mobile Small (300px - 479px) */
-@media (max-width: 479px) {
-  .aj-process-section { padding: 24px 0; }
-  .aj-process-title { font-size: var(--font-size-2xl); }
-  .aj-process-body { font-size: var(--font-size-xs); }
-  .aj-process-btn { font-size: 10px; }
-   .aj-process-timeline { gap: 4px; }
-  .aj-process-timeline-step { padding: 4px 6px; gap: 6px; }
-  .aj-process-step-icon-wrap { width: 24px; height: 24px; }
-  .aj-process-step-icon { width: 12px; height: 12px; }
-  .aj-process-step-number { font-size: 8px; min-width: 16px; }
-  .aj-process-step-title { font-size: 9px; }
-  .aj-process-step-desc { font-size: 7px; }
+/* Mobile Small (351px - 479px) */
+@media (min-width: 351px) and (max-width: 479px) {
+  .old-aj-process-title { font-size: var(--font-size-2xl); }
+  .old-aj-process-body { font-size: var(--font-size-xs); }
+
+  .old-aj-process-timeline-line { left: 22px; }
+  .old-aj-process-step-icon-wrap { width: 42px; height: 42px; }
+  .old-aj-process-timeline-step { gap: 14px; padding: 11px 0; }
+
+  .old-aj-process-step-number { font-size: var(--font-size-sm); }
+  .old-aj-process-step-title { font-size: var(--font-size-xs); }
+  .old-aj-process-step-desc { font-size: 10px; }
 }
 
 /* Ultra Small (300px - 350px) */
 @media (max-width: 350px) {
-  .aj-process-section { padding: 20px 0; }
-  .aj-process-title { font-size: var(--font-size-xl); }
-  .aj-process-body { font-size: 9px; }
-  .aj-process-timeline-step { gap: 8px; }
-  .aj-process-step-icon-wrap { width: 26px; height: 26px; }
-  .aj-process-step-icon { width: 12px; height: 12px; }
-  .aj-process-step-title { font-size: 10px; }
-  .aj-process-step-desc { font-size: 8px; }
+  .old-aj-process-section { padding: 24px 0 40px; }
+  .old-aj-process-title { font-size: var(--font-size-xl); }
+  .old-aj-process-body { font-size: 9px; }
+  .old-aj-process-btn { font-size: 10px; }
+
+  .old-aj-process-timeline-line { left: 19px; top:-10px!important; bottom: -10px!important; }
+  .old-aj-process-step-icon-wrap { width: 38px; height: 38px; }
+  .old-aj-process-step-icon { width: 15px; height: 15px; }
+  .old-aj-process-timeline-step { gap: 12px; padding: 9px 0; }
+
+  .old-aj-process-step-number { font-size: var(--font-size-xs); }
+  .old-aj-process-step-title { font-size: 9px; letter-spacing: 0.3px; }
+  .old-aj-process-step-desc { font-size: 8px; line-height: 1.3; }
 }
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  .aj-process-timeline-line,
-  .aj-process-timeline-step {
+  .old-aj-process-timeline-line {
     animation: none !important;
+  }
+  .old-aj-process-step-icon-wrap {
+    transition: none !important;
+  }
+  .old-aj-process-timeline-step {
     opacity: 1 !important;
     transform: none !important;
   }
