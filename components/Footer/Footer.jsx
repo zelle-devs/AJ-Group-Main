@@ -4,29 +4,39 @@ import { useState } from 'react';
 import { ArrowRight, ChevronRight, ChevronDown, Mail, MapPin, Phone } from 'lucide-react';
 import './Footer.css';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
 
+// Companies with proper routes
 const DEFAULT_COMPANIES = [
-  'Forgentis Fabrications',
-  'Print Pack Advertising',
-  'Beyvora Decor',
-  'Imprint Galerie',
+  { name: 'Forgentis Fabrications', href: '/forgentis' },
+  { name: 'Print Pack Advertising', href: '/ppa' },
+  { name: 'Beyvora Decor', href: '/beyvora' },
+  { name: 'Imprint Galerie', href: '/imprint' },
 ];
 
-const DEFAULT_LINKS = ['About', 'Capabilities', 'Industries', 'Approach'];
+// Quick links with proper routes
+const DEFAULT_LINKS = [
+  { name: 'About', href: '/about' },
+  { name: 'Capabilities', href: '#' },
+  { name: 'Industries', href: '#' },
+  { name: 'Approach', href: '/approach' },
+  { name: 'Leadership', href: '/leadership' },
+  { name: 'Careers', href: '/careers' },
+];
 
 const DEFAULT_SOCIALS = [
-  { icon: BsLinkedin, href: '#', label: 'LinkedIn' },
-  { icon: BsInstagram, href: '#', label: 'Instagram' },
-  { icon: BsFacebook, href: '#', label: 'Facebook' },
-  { icon: BsYoutube, href: '#', label: 'YouTube' },
+  { icon: BsLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+  { icon: BsInstagram, href: 'https://instagram.com', label: 'Instagram' },
+  { icon: BsFacebook, href: 'https://facebook.com', label: 'Facebook' },
+  { icon: BsYoutube, href: 'https://youtube.com', label: 'YouTube' },
 ];
 
 const DEFAULT_BUTTONS = [
-  { label: 'Start a Project', href: '#', variant: 'gold' },
-  { label: 'Explore Our Companies', href: '#', variant: 'outline' },
-  { label: 'Talk To Our Team', href: '#', variant: 'outline' },
-  { label: 'Contact Us', href: '#', variant: 'outline' },
+  { label: 'Start a Project', href: '/contact', variant: 'gold' },
+  { label: 'Explore Our Companies', href: '/companies', variant: 'outline' },
+  { label: 'Talk To Our Team', href: '/contact', variant: 'outline' },
+  { label: 'Contact Us', href: '/contact', variant: 'outline' },
 ];
 
 export default function Footer({
@@ -40,104 +50,92 @@ export default function Footer({
   buttons = DEFAULT_BUTTONS,
 }) {
   const year = new Date().getFullYear();
-
-  // State for Mobile Accordions
   const [openSection, setOpenSection] = useState(null);
 
   const toggleSection = (section) => {
     if (openSection === section) {
-      setOpenSection(null); // Close if already open
+      setOpenSection(null);
     } else {
-      setOpenSection(section); // Open clicked section
+      setOpenSection(section);
     }
   };
 
   return (
     <footer className="aj-footer">
-      {/* decorative angled panel — purely visual, sits behind the CTA column */}
+      {/* Diagonal Image Panel */}
       <div className="aj-footer-diagonal-image" aria-hidden="true">
-  <Image
-    src="/footer-bg.png"
-    alt=""
-    fill
-    priority
-    sizes="(max-width: 640px) 70vw, (max-width: 900px) 55vw, (max-width: 1279px) 45vw, 33vw"
-    className="aj-footer-diagonal-image-img"
-  />
-</div>
+        <Image
+          src="/footer-bg.png"
+          alt=""
+          fill
+          priority
+          sizes="(max-width: 640px) 70vw, (max-width: 900px) 55vw, (max-width: 1279px) 45vw, 33vw"
+          className="aj-footer-diagonal-image-img"
+        />
+      </div>
 
       <div className="container">
         <div className="aj-footer-top">
-          {/* ---- Brand ---- */}
+          {/* Brand */}
           <div className="aj-footer-col aj-footer-brand">
-            <div className="aj-footer-logo">
+            <Link href="/" className="aj-footer-logo">
               <Image
-              src= "logo2.png"
-                // src="/logo.png"
+                src="logo2.png"
                 alt="A.J Group of Companies"
                 width={220}
                 height={80}
                 className="aj-footer-logo-image"
                 unoptimized={true}
               />
-            </div>
+            </Link>
             <p className="aj-footer-desc">{description}</p>
           </div>
 
-          {/* ---- Our Companies (Accordion on Mobile) ---- */}
+          {/* Our Companies */}
           <div className="aj-footer-col">
             <div className="aj-footer-heading-wrapper" onClick={() => toggleSection('companies')}>
               <span className="aj-footer-heading">Our Companies</span>
-              <button 
-                className="aj-footer-toggle" 
-                
-              >
+              <button className="aj-footer-toggle">
                 <ChevronDown size={16} className={`aj-toggle-icon ${openSection === 'companies' ? 'open' : ''}`} />
               </button>
             </div>
             <ul className={`aj-footer-list ${openSection === 'companies' ? 'open' : ''}`}>
               {companies.map((c) => (
-                <li key={c}>
-                  <a href="#">
+                <li key={c.name || c}>
+                  <Link href={c.href || '/companies'}>
                     <ChevronRight size={13} />
-                    <span>{c}</span>
-                  </a>
+                    <span>{c.name || c}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* ---- Quick Links (Accordion on Mobile) ---- */}
+          {/* Quick Links */}
           <div className="aj-footer-col">
             <div className="aj-footer-heading-wrapper" onClick={() => toggleSection('links')}>
               <span className="aj-footer-heading">Quick Links</span>
-              <button 
-                className="aj-footer-toggle" 
-                
-              >
+              <button className="aj-footer-toggle">
                 <ChevronDown size={16} className={`aj-toggle-icon ${openSection === 'links' ? 'open' : ''}`} />
               </button>
             </div>
             <ul className={`aj-footer-list ${openSection === 'links' ? 'open' : ''}`}>
               {links.map((l) => (
-                <li key={l}>
-                  <a href="#">
+                <li key={l.name || l}>
+                  <Link href={l.href || '/'}>
                     <ChevronRight size={13} />
-                    <span>{l}</span>
-                  </a>
+                    <span>{l.name || l}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* ---- Get In Touch (Accordion on Mobile) ---- */}
+          {/* Get In Touch */}
           <div className="aj-footer-col aj-footer-contact">
             <div className="aj-footer-heading-wrapper" onClick={() => toggleSection('contact')}>
               <span className="aj-footer-heading">Get In Touch</span>
-              <button 
-                className="aj-footer-toggle" 
-                
-              >
+              <button className="aj-footer-toggle">
                 <ChevronDown size={16} className={`aj-toggle-icon ${openSection === 'contact' ? 'open' : ''}`} />
               </button>
             </div>
@@ -157,11 +155,11 @@ export default function Footer({
             </ul>
           </div>
 
-          {/* ---- CTA (sits over the diagonal panel) ---- */}
+          {/* CTA */}
           <div className="aj-footer-col aj-footer-cta">
             <div className="aj-footer-socials">
               {socials.map(({ icon: Icon, href, label }) => (
-                <a key={label} href={href} aria-label={label} className="aj-footer-social-btn">
+                <a key={label} href={href} aria-label={label} className="aj-footer-social-btn" target="_blank" rel="noopener noreferrer">
                   <Icon size={16} />
                 </a>
               ))}
@@ -169,32 +167,32 @@ export default function Footer({
 
             <div className="aj-footer-buttons">
               {buttons.map((b) => (
-                <a
+                <Link
                   key={b.label}
                   href={b.href}
                   className={`aj-footer-btn ${b.variant === 'gold' ? 'is-gold' : 'is-outline'}`}
                 >
                   <span>{b.label}</span>
                   <ArrowRight size={15} />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
         </div>
 
-        {/* ---- Bottom bar ---- */}
+        {/* Bottom Bar */}
         <div className="aj-footer-bottom">
           <p className="aj-footer-copyright">
             © {year} A.J Group of Companies. All rights reserved.
           </p>
           <div className="aj-footer-bottom-links">
-             <a href="#">Careers</a>
+            <Link href="/careers">Careers</Link>
             <span className="aj-footer-dot">|</span>
-            <a href="#">Contact</a>
+            <Link href="/contact">Contact</Link>
             <span className="aj-footer-dot">|</span>
-            <a href="#">Privacy Policy</a>
+            <Link href="/privacy">Privacy Policy</Link>
             <span className="aj-footer-dot">|</span>
-            <a href="#">Terms</a>
+            <Link href="/terms">Terms</Link>
           </div>
         </div>
       </div>

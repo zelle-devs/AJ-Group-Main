@@ -1,0 +1,393 @@
+/* ============================================
+   ApproachSteps.css
+   Premium Vertical Alternating Stepper
+   ============================================ */
+
+.aj-approach-steps-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.aj-approach-steps-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(200, 165, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 40%, #1a1610 60%, #0D0D0D 100%);
+}
+
+.aj-approach-steps-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: 
+    linear-gradient(rgba(200, 165, 74, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 165, 74, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 85%, transparent 100%);
+}
+
+.aj-approach-steps-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Vertical Line - Center */
+.aj-approach-steps-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  height: 0;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg,
+    #8f7228,
+    #c8a54a,
+    #f0d47a,
+    #c8a54a,
+    #8f7228
+  );
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(200, 165, 74, 0.3);
+  z-index: 0;
+}
+
+/* ============ TOP DECORATIVE CIRCLE ============ */
+.aj-approach-steps-line::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-black);
+  border: 2px solid var(--color-gold);
+  box-shadow: 
+    0 0 15px rgba(200, 165, 74, 0.5),
+    0 0 0 3px var(--color-black),
+    inset 0 0 6px rgba(200, 165, 74, 0.3);
+  z-index: 2;
+}
+
+/* Top circle inner dot */
+.aj-approach-steps-line::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--color-black);
+  border: 2px solid var(--color-gold);
+  box-shadow: 
+    0 0 15px rgba(200, 165, 74, 0.5),
+    0 0 0 3px var(--color-black),
+    inset 0 0 6px rgba(200, 165, 74, 0.3);
+  z-index: 2;
+}
+
+/* Inner dot for top circle */
+.aj-approach-steps-line::before {
+  box-shadow: 
+    0 0 15px rgba(200, 165, 74, 0.5),
+    0 0 0 3px var(--color-black);
+}
+
+/* Individual Step */
+.aj-approach-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  min-height: 60px;
+}
+
+.aj-approach-step:last-child {
+  margin-bottom: 0;
+}
+
+/* ============ LEFT STEP (1, 3, 5, 7) ============ */
+.aj-approach-step.step-left {
+  justify-content: flex-start;
+}
+
+.aj-approach-step.step-left .aj-approach-step-circle {
+  position: absolute;
+  left: 46.7%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.aj-approach-step.step-left .aj-approach-step-card {
+  margin-right: calc(50% + 40px);
+  text-align: right;
+  align-items: flex-end;
+}
+
+/* ============ RIGHT STEP (2, 4, 6) ============ */
+.aj-approach-step.step-right {
+  justify-content: flex-end;
+}
+
+.aj-approach-step.step-right .aj-approach-step-circle {
+  position: absolute;
+  left: 46.7%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.aj-approach-step.step-right .aj-approach-step-card {
+  margin-left: calc(50% + 40px);
+  text-align: left;
+  align-items: flex-start;
+}
+
+/* Circle - Perfectly on line */
+.aj-approach-step-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(40, 40, 40, 0.9));
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  flex-shrink: 0;
+  z-index: 2;
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(200, 165, 74, 0.2),
+    0 0 0 4px var(--color-black),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.aj-approach-step:hover .aj-approach-step-circle {
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(200, 165, 74, 0.4),
+    0 0 0 6px var(--color-black),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-color: #e8cd8a;
+}
+
+.aj-approach-step-icon {
+  width: 26px;
+  height: 26px;
+  color: var(--color-gold);
+  filter: drop-shadow(0 0 4px rgba(200, 165, 74, 0.4));
+}
+
+/* Card */
+.aj-approach-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 24px;
+  background: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(200, 165, 74, 0.15);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  width: calc(50% - 40px);
+  max-width: 400px;
+}
+
+.aj-approach-step:hover .aj-approach-step-card {
+  border-color: rgba(200, 165, 74, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.aj-approach-step-number {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gold);
+  letter-spacing: 1px;
+}
+
+.aj-approach-step-title {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+.aj-approach-step-desc {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-beige);
+  margin: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .aj-approach-steps-section { padding: 100px 0; }
+  .aj-approach-steps-wrapper { padding: 50px 0; }
+  .aj-approach-step-card { max-width: 450px; padding: 24px 28px; width: calc(50% - 50px); }
+  .aj-approach-step-circle { width: 68px; height: 68px; }
+  .aj-approach-step-icon { width: 30px; height: 30px; }
+  
+  .aj-approach-step.step-left .aj-approach-step-card { margin-right: calc(50% + 50px); }
+  .aj-approach-step.step-right .aj-approach-step-card { margin-left: calc(50% + 50px); }
+  
+  .aj-approach-steps-line::before,
+  .aj-approach-steps-line::after {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .aj-approach-steps-section { padding: 70px 0; }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .aj-approach-steps-section { padding: 50px 0; }
+  .aj-approach-step-card { max-width: 300px; padding: 16px 20px; width: calc(50% - 30px); }
+  .aj-approach-step-circle { width: 50px; height: 50px; }
+  .aj-approach-step-icon { width: 22px; height: 22px; }
+  .aj-approach-step-title { font-size: var(--font-size-lg); }
+  .aj-approach-step-desc { font-size: var(--font-size-xs); }
+  
+  .aj-approach-step.step-left .aj-approach-step-card {
+    margin-right: calc(50% + 30px);
+  }
+  
+  .aj-approach-step.step-right .aj-approach-step-card {
+    margin-left: calc(50% + 30px);
+  }
+}
+
+/* Mobile (300px - 767px) - All Left Aligned */
+@media (max-width: 767px) {
+  .aj-approach-steps-section { padding: 40px 0; }
+  
+  .aj-approach-steps-wrapper {
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  /* Line left side */
+  .aj-approach-steps-line {
+    left: 25px;
+    transform: none;
+  }
+  
+  .aj-approach-steps-line::before {
+    top: -8px;
+    left: 0;
+    transform: translateX(-50%);
+  }
+  
+  .aj-approach-steps-line::after {
+    bottom: -8px;
+    left: 0;
+    transform: translateX(-50%);
+  }
+  
+  .aj-approach-step,
+  .aj-approach-step.step-left,
+  .aj-approach-step.step-right {
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  /* Circle left side - on line */
+  .aj-approach-step.step-left .aj-approach-step-circle,
+  .aj-approach-step.step-right .aj-approach-step-circle {
+    position: relative;
+    left: -25px;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  
+  /* Card right side - full width */
+  .aj-approach-step.step-left .aj-approach-step-card,
+  .aj-approach-step.step-right .aj-approach-step-card {
+    margin-left: -10px;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: left;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .aj-approach-step-circle { width: 44px; height: 44px; }
+  .aj-approach-step-icon { width: 20px; height: 20px; }
+  .aj-approach-step-card { padding: 14px 16px; }
+  .aj-approach-step-title { font-size: var(--font-size-base); }
+  .aj-approach-step-desc { font-size: var(--font-size-xs); }
+}
+
+/* Mobile Small (300px - 479px) */
+@media (max-width: 479px) {
+  .aj-approach-steps-section { padding: 30px 0; }
+  .aj-approach-steps-wrapper { padding-left: 25px; }
+  .aj-approach-steps-line { left: 22px; }
+  
+  .aj-approach-step.step-left .aj-approach-step-circle,
+  .aj-approach-step.step-right .aj-approach-step-circle {
+    left: -20px;
+  }
+  
+  .aj-approach-step-circle { width: 38px; height: 38px; }
+  .aj-approach-step-icon { width: 18px; height: 18px; }
+  .aj-approach-step-card { padding: 12px 14px; }
+  .aj-approach-step-title { font-size: var(--font-size-sm); }
+  .aj-approach-step-desc { font-size: 10px; }
+}
+
+/* Ultra Small (300px - 350px) */
+@media (max-width: 350px) {
+  .aj-approach-steps-section { padding: 20px 0; }
+  .aj-approach-step-circle { width: 34px; height: 34px; }
+  .aj-approach-step-icon { width: 16px; height: 16px; }
+  .aj-approach-step-title { font-size: 12px; }
+  .aj-approach-step-desc { font-size: 9px; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .aj-approach-steps-line,
+  .aj-approach-step {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .aj-approach-steps-line {
+    height: 100% !important;
+  }
+}

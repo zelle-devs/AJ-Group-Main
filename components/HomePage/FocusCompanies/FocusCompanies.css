@@ -100,6 +100,15 @@
     inset 0 0 50px rgba(200, 165, 74, 0.02);
   border-color: rgba(200, 165, 74, 0.3);
 } */
+/* Subtitle - New */
+.aj-focus-subtitle {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
 /* Hover: Card shadow - Image color ka shadow */
 .aj-focus-card:hover {

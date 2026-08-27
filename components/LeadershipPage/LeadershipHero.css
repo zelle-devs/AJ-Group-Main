@@ -1,0 +1,157 @@
+/* ============================================
+   LeadershipHero.css
+   Premium Leadership Hero
+   ============================================ */
+
+.aj-leadership-hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: var(--color-black);
+}
+
+.aj-leadership-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.aj-leadership-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.aj-leadership-eyebrow {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 16px;
+  text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
+}
+
+.aj-leadership-headline {
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  font-family: var(--font-family-gotham);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.aj-leadership-body {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  color: var(--color-beige);
+  font-weight: var(--font-weight-light);
+  margin-bottom: 28px;
+}
+
+.aj-leadership-image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aj-leadership-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4/5;
+}
+
+.aj-leadership-image-main {
+  position: absolute;
+  inset: 20px;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(200, 165, 74, 0.15);
+}
+
+.aj-leadership-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.aj-leadership-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(200, 165, 74, 0.2) 0%,
+    transparent 40%,
+    transparent 70%,
+    rgba(13, 13, 13, 0.6) 100%
+  );
+  pointer-events: none;
+}
+
+.aj-leadership-frame {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid rgba(200, 165, 74, 0.4);
+  border-radius: var(--radius-2xl);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (min-width: 1440px) {
+  .aj-leadership-grid { gap: 80px; }
+  .aj-leadership-headline { font-size: var(--font-size-7xl); }
+  .aj-leadership-image-container { max-width: 450px; }
+}
+
+@media (max-width: 1023px) {
+  .aj-leadership-grid { gap: 40px; }
+  .aj-leadership-headline { font-size: var(--font-size-5xl); }
+  .aj-leadership-image-container { max-width: 300px; }
+}
+
+@media (max-width: 767px) {
+  .aj-leadership-grid { grid-template-columns: 1fr; gap: 50px; }
+  .aj-leadership-content { align-items: center; text-align: center; }
+  .aj-leadership-image-container { max-width: 300px; margin: 0 auto; }
+}
+
+@media (max-width: 479px) {
+  .aj-leadership-headline { font-size: var(--font-size-4xl); }
+  .aj-leadership-body { font-size: var(--font-size-xs); }
+  .aj-leadership-image-container { max-width: 300px; }
+  .aj-leadership-image-main { inset: 15px; }
+}
+
+@media (max-width: 350px) {
+  .aj-leadership-headline { font-size: var(--font-size-3xl); }
+  .aj-leadership-image-container { max-width: 260px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aj-leadership-content,
+  .aj-leadership-image-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}

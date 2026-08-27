@@ -1,0 +1,270 @@
+/* ============================================
+   ContactForm.css
+   Premium 3D Contact Form
+   ============================================ */
+
+.aj-contact-form-section {
+  position: relative;
+  padding: 60px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.aj-contact-form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 30% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(200, 165, 74, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 50%, var(--color-black) 100%);
+}
+
+.aj-contact-form-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.aj-contact-form-eyebrow {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
+}
+
+.aj-contact-form-headline {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  font-family: var(--font-family-gotham);
+  letter-spacing: -0.5px;
+}
+
+/* Form */
+.aj-contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 35px;
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(200, 165, 74, 0.25);
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(30, 30, 30, 0.8));
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(200, 165, 74, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.aj-contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.aj-contact-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.aj-contact-form-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+  font-weight: var(--font-weight-medium);
+}
+
+.aj-contact-form-label svg {
+  color: var(--color-gold);
+}
+
+.aj-contact-form-input,
+.aj-contact-form-select,
+.aj-contact-form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.aj-contact-form-input:focus,
+.aj-contact-form-select:focus,
+.aj-contact-form-textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-light);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ============ SELECT DROPDOWN - PREMIUM ============ */
+
+.aj-contact-form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  
+  width: 100%;
+  padding: 12px 40px 12px 14px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  
+  background-color: rgba(255, 255, 255, 0.05);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C8A54A' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px 8px;
+  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aj-contact-form-select:hover {
+  border-color: rgba(200, 165, 74, 0.4);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.aj-contact-form-select:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-light);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Options */
+.aj-contact-form-select option {
+  background-color: #1a1a1a;
+  color: var(--color-white);
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  padding: 12px;
+}
+
+.aj-contact-form-select option:hover,
+.aj-contact-form-select option:focus,
+.aj-contact-form-select option:checked {
+  background-color: rgba(200, 165, 74, 0.15);
+  color: var(--color-gold);
+}
+
+.aj-contact-form-textarea {
+  resize: vertical;
+}
+
+/* Consent */
+.aj-contact-form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.aj-contact-form-checkbox {
+  margin-top: 4px;
+  accent-color: var(--color-gold);
+  cursor: pointer;
+}
+
+.aj-contact-form-consent-text {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+}
+
+/* Submit */
+.aj-contact-form-submit {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: var(--font-size-sm);
+}
+
+/* Success */
+.aj-contact-form-success {
+  text-align: center;
+  padding: 50px 30px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-gold);
+  background: linear-gradient(145deg, rgba(200, 165, 74, 0.1), rgba(13, 13, 13, 0.9));
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(200, 165, 74, 0.15);
+}
+
+.aj-contact-form-success-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.aj-contact-form-success h3 {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  margin: 0 0 8px;
+}
+
+.aj-contact-form-success p {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-beige);
+  margin: 0 0 20px;
+}
+
+.aj-contact-form-reset {
+  margin: 0 auto;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (min-width: 1440px) {
+  .aj-contact-form-section { padding: 70px 0; }
+}
+
+@media (max-width: 767px) {
+  .aj-contact-form-section { padding: 40px 0; }
+  .aj-contact-form-row { grid-template-columns: 1fr; }
+  .aj-contact-form { padding: 24px 20px; }
+}
+
+@media (max-width: 479px) {
+  .aj-contact-form-section { padding: 30px 0; }
+  .aj-contact-form-headline { font-size: var(--font-size-2xl); }
+  .aj-contact-form { padding: 20px 16px; }
+}
+
+@media (max-width: 350px) {
+  .aj-contact-form-section { padding: 20px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aj-contact-form,
+  .aj-contact-form-success {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

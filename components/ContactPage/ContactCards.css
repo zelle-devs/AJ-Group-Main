@@ -1,0 +1,176 @@
+/* ============================================
+   ContactCards.css
+   Premium 3D Routing Cards
+   ============================================ */
+
+.aj-contact-cards-section {
+  position: relative;
+  padding: 60px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.aj-contact-cards-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(200, 165, 74, 0.04) 0%, transparent 60%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 50%, var(--color-black) 100%);
+}
+
+.aj-contact-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  perspective: 1000px;
+}
+
+/* Card */
+.aj-contact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 24px;
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(200, 165, 74, 0.2);
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(30, 30, 30, 0.8));
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(200, 165, 74, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.aj-contact-card:hover {
+  border-color: rgba(200, 165, 74, 0.4);
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(200, 165, 74, 0.12);
+}
+
+/* Primary Card - Gold Highlight */
+.aj-contact-card.is-primary {
+  border-color: var(--color-gold);
+  background: linear-gradient(145deg, rgba(200, 165, 74, 0.15), rgba(13, 13, 13, 0.9));
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(200, 165, 74, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.aj-contact-card.is-primary:hover {
+  box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(200, 165, 74, 0.25);
+}
+
+/* Glow */
+.aj-contact-card-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(200, 165, 74, 0.08) 0%,
+    transparent 50%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.aj-contact-card:hover .aj-contact-card-glow {
+  opacity: 1;
+}
+
+/* Icon */
+.aj-contact-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(40, 40, 40, 0.9));
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  box-shadow: 
+    0 0 0 4px rgba(200, 165, 74, 0.1),
+    0 0 20px rgba(200, 165, 74, 0.2);
+  transition: all 0.4s ease;
+}
+
+.aj-contact-card:hover .aj-contact-card-icon {
+  box-shadow: 
+    0 0 0 6px rgba(200, 165, 74, 0.15),
+    0 0 30px rgba(200, 165, 74, 0.35);
+  transform: scale(1.05);
+}
+
+/* Title */
+.aj-contact-card-title {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* Description */
+.aj-contact-card-desc {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+/* Button */
+.aj-contact-card-btn {
+  padding: 10px 16px;
+  font-size: var(--font-size-xs);
+  width: 100%;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (min-width: 1440px) {
+  .aj-contact-cards-section { padding: 70px 0; }
+  .aj-contact-cards-grid { gap: 24px; }
+  .aj-contact-card { padding: 32px 28px; }
+}
+
+@media (max-width: 1023px) {
+  .aj-contact-cards-section { padding: 50px 0; }
+  .aj-contact-cards-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+
+@media (max-width: 479px) {
+  .aj-contact-cards-section { padding: 30px 0; }
+  .aj-contact-cards-grid { grid-template-columns: 1fr; gap: 12px; }
+  .aj-contact-card { padding: 24px 20px; }
+  .aj-contact-card-icon { width: 48px; height: 48px; }
+}
+
+@media (max-width: 350px) {
+  .aj-contact-cards-section { padding: 20px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aj-contact-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,640 @@
+/* ==================== DATE STEP ==================== */
+
+.step-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    min-height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.split-layout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* ==================== CALENDAR CARD (60%) ==================== */
+.separate-calendar-card {
+    flex: 0 0 60%;
+    min-width: 0;
+    background: #F7EFE7;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 6px 6px 12px #d1d1d1, -6px -6px 12px #FFFFFF;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.calendar-header .step-title {
+    margin-bottom: 0;
+    flex: 1;
+    font-size: 24px;
+}
+
+.step-title {
+    color: #1A1A1A;
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.nav-btns {
+    display: flex;
+    gap: 8px;
+}
+
+/* ==================== CIRCLE BUTTONS ==================== */
+.circle-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: #F7EFE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 6px #d1d1d1, -3px -3px 6px #FFFFFF;
+    transition: all 0.3s ease-in-out;
+}
+
+.circle-btn:active {
+    box-shadow: inset 2px 2px 4px #d1d1d1, inset -2px -2px 4px #FFFFFF;
+}
+
+/* ==================== PILL SELECTORS (Month/Year) ==================== */
+.selectors {
+    display: flex;
+    gap: 8px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pill-select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 12px;
+    background: #F7EFE7;
+    border-radius: 40px;
+    box-shadow: 3px 3px 6px #d1d1d1, -3px -3px 6px #FFFFFF;
+    cursor: pointer;
+    min-width: 90px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A1A1A;
+    line-height: 1.2;
+}
+
+.pill-select:active {
+    box-shadow: inset 2px 2px 4px #d1d1d1, inset -2px -2px 4px #FFFFFF;
+}
+
+.pill-dropdown-list {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    background: #F7EFE7;
+    border-radius: 12px;
+    padding: 4px;
+    z-index: 1100;
+    box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #FFFFFF;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+.pill-option {
+    padding: 5px 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.pill-option:hover {
+    box-shadow: inset 2px 2px 4px #d1d1d1, inset -2px -2px 4px #FFFFFF;
+    color: #c57a6b;
+}
+
+.chevron {
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+/* ==================== CALENDAR GRID ==================== */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0px;
+    margin-top: 8px;
+}
+
+.day-name {
+    font-weight: 600;
+    color: #c57a6b;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.day-btn {
+    width: 100%;
+    max-width: 34px;
+    aspect-ratio: 1;
+    height: auto;
+    border: none;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.1s ease-out;
+    font-size: 14px;
+    line-height: 1.2;
+    padding: 0;
+}
+
+.selected-day {
+    color: #c57a6b !important;
+    background: #F7EFE7 !important;
+    font-weight: 800;
+    box-shadow: inset 2px 2px 5px #d1d1d1, inset -2px -2px 5px #FFFFFF;
+}
+
+.other-month-day {
+    color: #b8b9be !important;
+    opacity: 0.6;
+}
+
+.disabled-day {
+    cursor: not-allowed !important;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.selected-dot {
+    width: 3px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #c57a6b;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 3px;
+}
+
+/* ==================== TIME CARD (25%) ==================== */
+.separate-time-card {
+    flex: 0 0 25%;
+    background: #F7EFE7;
+    padding: 20px 16px;
+    border-radius: 30px;
+    box-shadow: 6px 6px 12px #d1d1d1, -6px -6px 12px #FFFFFF;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-label {
+    font-size: 24px;
+    color: #1A1A1A;
+    margin-bottom: 12px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.time-grid-wrapper {
+    flex: 1;
+    overflow: visible;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    margin-top: 12px;
+    padding: 0px;
+}
+
+.time-btn {
+    padding: 6px 5px;
+    border-radius: 12px;
+    border: none;
+    background: #F7EFE7;
+    box-shadow: 2px 2px 5px #d1d1d1, -2px -2px 4px #FFFFFF;
+    font-weight: 700;
+    color: #c57a6b;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active-time {
+    box-shadow: inset 2px 2px 5px #d1d1d1, inset -2px -2px 5px #FFFFFF;
+    color: #1A1A1A;
+}
+
+.time-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.time-grid {
+    scrollbar-width: none;
+}
+
+.pill-dropdown-list::-webkit-scrollbar {
+    width: 3px;
+}
+
+.pill-dropdown-list::-webkit-scrollbar-thumb {
+    background: #c57a6b;
+    border-radius: 30px;
+}
+
+/* ==================== MEETING PLATFORM SECTION ==================== */
+.platform-section {
+    width: 87%;
+    max-width: 100%;
+    background: #F7EFE7;
+    padding: 24px 20px;
+    border-radius: 30px;
+    box-shadow: 
+        8px 8px 16px #d1ccc9, 
+        -8px -8px 16px #ffffff,
+        inset 0 0 0 rgba(0,0,0,0);
+    margin: 0 auto;
+    margin-top: 36px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.platform-section-title {
+    color: #1A1A1A;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 1.2;
+    text-align: left;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.platform-grid-two {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.platform-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 24px 12px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    background: #F7EFE7;
+    box-shadow: 
+        6px 6px 12px #d1ccc9, 
+        -6px -6px 12px #ffffff;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.platform-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%);
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.platform-card:hover {
+    box-shadow: 
+        10px 10px 20px #c8bfb9, 
+        -10px -10px 20px #ffffff;
+    transform: translateY(-4px);
+    border-color: rgba(197, 122, 107, 0.15);
+}
+
+.platform-card:hover::before {
+    opacity: 1;
+}
+
+.platform-selected {
+    border-width: 2px;
+    box-shadow: 
+        inset 4px 4px 8px rgba(0,0,0,0.06), 
+        inset -4px -4px 8px #ffffff,
+        8px 8px 16px rgba(0,0,0,0.04) !important;
+    transform: translateY(-2px);
+}
+
+.platform-selected:hover {
+    box-shadow: 
+        inset 4px 4px 8px rgba(0,0,0,0.08), 
+        inset -4px -4px 8px #ffffff,
+        8px 8px 16px rgba(0,0,0,0.06) !important;
+}
+
+.platform-logo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 20px;
+    background: #F7EFE7;
+    box-shadow: 
+        inset 3px 3px 6px #d1ccc9, 
+        inset -3px -3px 6px #ffffff;
+    transition: all 0.4s ease;
+}
+
+.platform-selected .platform-logo {
+    box-shadow: 
+        inset 4px 4px 8px rgba(0,0,0,0.1), 
+        inset -4px -4px 8px #ffffff;
+    transform: scale(1.05);
+}
+
+.platform-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A4A4A;
+    text-align: center;
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.platform-check {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.platform-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.platform-section-header .platform-section-title {
+    margin-bottom: 0;
+}
+
+.back-to-modes-btn {
+    background: transparent;
+    border: none;
+    color: #c57a6b;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 4px #d1ccc9, -2px -2px 4px #ffffff;
+}
+
+.back-to-modes-btn:hover {
+    box-shadow: inset 2px 2px 4px #d1ccc9, inset -2px -2px 4px #ffffff;
+}
+
+.backbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (min-width: 1600px) {
+    .day-btn {
+        max-width: 45px;
+        font-size: 13px;
+    }
+    
+    .circle-btn {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .step-container {
+        width: 95%;
+    }
+    .split-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .separate-calendar-card,
+    .separate-time-card {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+    
+    .platform-section {
+        width: 100%;
+        padding: 20px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-btns {
+        align-self: flex-end;
+    }
+    
+    .selectors {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 13px;
+    }
+    
+    .platform-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 11px;
+    }
+    
+    .platform-logo {
+        width: 48px;
+        height: 48px;
+        border-radius: 16px;
+    }
+    
+    .platform-logo svg {
+        width: 26px;
+        height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .separate-calendar-card,
+    .separate-time-card {
+        padding: 24px;
+        border-radius: 22px;
+    }
+    
+    .day-btn {
+        max-width: 26px;
+        font-size: 14px;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .platform-section {
+        padding: 16px 12px;
+        border-radius: 22px;
+    }
+    
+    .platform-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .platform-card {
+        flex-direction: row;
+        padding: 12px 12px;
+        gap: 12px;
+    }
+    
+    .platform-logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+    }
+    
+    .platform-name {
+        flex: 1;
+        text-align: left;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 390px) {
+    .day-btn {
+        max-width: 22px;
+        font-size: 14px;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .platform-logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .split-layout {
+        flex-direction: row;
+    }
+    
+    .separate-calendar-card {
+        flex: 0 0 60%;
+    }
+    
+    .separate-time-card {
+        flex: 0 0 35%;
+    }
+    
+    .time-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}

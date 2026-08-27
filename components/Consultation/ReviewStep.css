@@ -1,0 +1,426 @@
+/* ==================== REVIEW STEP ==================== */
+
+.main {
+    max-width: 3000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+.review-single-card {
+    display: flex;
+    justify-content: center;
+    gap: 44px;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+    background: #F7EFE7;
+    border-radius: 30px;
+    padding: 20px 6px;
+    box-shadow: 6px 6px 12px #d1d1d1, -6px -6px 12px #FFFFFF;
+    min-height: auto !important;
+}
+
+/* ==================== LEFT CONTENT (60%) ==================== */
+.review-left-content {
+    flex: 0 0 60%;
+    min-width: 0;
+}
+
+/* ==================== RIGHT CONTENT (30%) ==================== */
+.review-right-content {
+    flex: 0 0 30%;
+    min-width: 0;
+}
+
+/* ==================== VERTICAL DIVIDER ==================== */
+.vertical-divider-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.vertical-line {
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #c57a6b, #c57a6b, transparent);
+    height: auto;
+    min-height: 250px;
+    opacity: 0.4;
+    border-radius: 1px;
+}
+
+/* ==================== TITLES ==================== */
+.step-title {
+    font-size: 24px !important;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.section-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1A1A1A;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+    margin-top: 14px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(197, 122, 107, 0.2);
+}
+
+.section-label:first-of-type {
+    margin-top: 4px;
+}
+
+.side-label {
+    font-size: 24px;
+    color: #1A1A1A;
+    margin-bottom: 12px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* ==================== SECTION HEADER WITH EDIT ==================== */
+.section-header-with-edit {
+    margin-bottom: 16px;
+}
+
+.section-header-with-edit .step-title,
+.section-header-with-edit .side-label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.edit-icon-inline {
+    background: transparent;
+    border: none;
+    color: #c57a6b;
+    cursor: pointer;
+    padding: 3px 6px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-icon-inline:hover {
+    color: #1A1A1A;
+    transform: scale(1.05);
+}
+
+.edit-icon-small {
+    font-size: 14px;
+}
+
+/* ==================== REVIEW GRID ==================== */
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.review-item-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.review-item-wrapper span {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #c57a6b;
+    letter-spacing: 0.5px;
+    margin-left: 4px;
+}
+
+.review-item {
+    padding: 8px;
+    background: #F7EFE7;
+    border-radius: 12px;
+    box-shadow: inset 2px 2px 4px #d1d1d1, inset -2px -2px 4px #FFFFFF;
+    box-sizing: border-box;
+}
+
+.review-item p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1A1A1A;
+    margin: 0;
+    word-break: break-word;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+/* ==================== SELECTION INFO (Right Side) ==================== */
+.selection-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 12px;
+    background: #F7EFE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c57a6b;
+    box-shadow: 3px 3px 6px #d1d1d1, -3px -3px 6px #FFFFFF;
+    flex-shrink: 0;
+}
+
+.info-text span {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #888;
+}
+
+.info-text p {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+/* ==================== NOTE ==================== */
+.selection-note {
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+.note-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.note-icon {
+    width: 18px;
+    height: 18px;
+    color: #c57a6b;
+    flex-shrink: 0;
+}
+
+.note-content span {
+    font-size: 14px;
+    font-style: italic;
+    color: #4A4A4A;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (min-width: 2200px) {
+    .main {
+        max-width: 3000px;
+        margin: 0 auto;
+        padding: 0 160px !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 3000px;
+        margin: 0 auto;
+        padding: 0 125px;
+    }
+}
+
+@media (max-width: 1599px) and (min-width: 1200px) {
+    .main {
+        max-width: 3000px;
+        margin: 0 auto;
+        padding: 0 95px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 1025px) {
+    .main {
+        max-width: 3000px;
+        margin: 0 auto;
+        padding: 0 62px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main {
+        max-width: 3000px;
+        margin: 0 auto;
+        padding: 0 0px;
+        width: 95%;
+    }
+    
+    .review-single-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .review-left-content {
+        order: 1;
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
+    .review-right-content {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+    
+    .vertical-divider-container {
+        display: none;
+    }
+    
+    .selection-info {
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .info-row {
+        flex: 1;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 97%;
+    }
+    
+    .review-single-card {
+        padding: 18px;
+        gap: 14px;
+    }
+    
+    .info-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .review-item {
+        padding: 6px;
+    }
+    
+    .review-item p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .review-single-card {
+        padding: 16px;
+        gap: 10px;
+        border-radius: 22px;
+    }
+    
+    .review-item {
+        padding: 5px;
+        border-radius: 10px;
+    }
+    
+    .review-item p {
+        font-size: 10px;
+    }
+    
+    .review-item-wrapper span {
+        font-size: 10px;
+        letter-spacing: 0.3px;
+    }
+    
+    .info-icon {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .note-content {
+        padding: 6px;
+        flex-direction: column;
+        text-align: center;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 390px) {
+    .review-single-card {
+        padding: 14px;
+        gap: 8px;
+        border-radius: 18px;
+    }
+    
+    .review-item p {
+        font-size: 9px;
+    }
+    
+    .review-item-wrapper span {
+        font-size: 9px;
+    }
+    
+    .info-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+    .main {
+        padding: 0 15px;
+    }
+    
+    .review-single-card {
+        flex-direction: row;
+        padding: 16px;
+        gap: 12px;
+    }
+    
+    .review-left-content {
+        flex: 0 0 60%;
+        order: 0;
+    }
+    
+    .review-right-content {
+        flex: 0 0 35%;
+    }
+    
+    .vertical-divider-container {
+        display: flex;
+    }
+    
+    .selection-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .vertical-line {
+        min-height: 150px;
+    }
+}

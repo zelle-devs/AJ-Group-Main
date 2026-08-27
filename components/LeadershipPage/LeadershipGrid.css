@@ -1,0 +1,292 @@
+/* ============================================
+   LeadershipGrid.css
+   Premium Leadership Cards - Outclass 3D
+   ============================================ */
+
+.aj-leadership-grid-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.aj-leadership-grid-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(200, 165, 74, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 40%, #1a1610 60%, #0D0D0D 100%);
+}
+
+.aj-leadership-grid-section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: 
+    linear-gradient(rgba(200, 165, 74, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 165, 74, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 15%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.8) 85%, transparent 100%);
+}
+
+/* Header */
+.aj-leadership-grid-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.aj-leadership-grid-eyebrow {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
+}
+
+.aj-leadership-grid-headline {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  font-family: var(--font-family-gotham);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+
+.aj-leadership-grid-body {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-base);
+  color: var(--color-beige);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.aj-leadership-grid-cards {
+  display: grid;
+  gap: 24px;
+  width: 100%;
+  perspective: 1200px;
+}
+
+/* Card - Premium 3D Outclass */
+.aj-leadership-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(200, 165, 74, 0.2);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 25px rgba(200, 165, 74, 0.06);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(30, 30, 30, 0.9));
+  transform-style: preserve-3d;
+}
+
+.aj-leadership-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 0.6),
+    0 0 50px rgba(200, 165, 74, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateY(-8px) rotateX(2deg);
+}
+
+/* Image Container - Fixed Height for Portrait */
+.aj-leadership-card-image {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: rgba(13, 13, 13, 0.3);
+}
+
+/* Image - Perfect Cover */
+.aj-leadership-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.aj-leadership-card:hover .aj-leadership-card-img {
+  transform: scale(1.08);
+}
+
+/* Gradient Overlay */
+.aj-leadership-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(200, 165, 74, 0.15) 0%,
+    transparent 25%,
+    transparent 55%,
+    rgba(13, 13, 13, 0.9) 100%
+  );
+  pointer-events: none;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+
+.aj-leadership-card:hover .aj-leadership-card-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(200, 165, 74, 0.25) 0%,
+    transparent 20%,
+    transparent 50%,
+    rgba(13, 13, 13, 0.95) 100%
+  );
+}
+
+/* Shine Sweep Effect */
+.aj-leadership-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(200, 165, 74, 0.06) 45%,
+    rgba(200, 165, 74, 0.12) 50%,
+    rgba(200, 165, 74, 0.06) 55%,
+    transparent 60%
+  );
+  z-index: 3;
+  pointer-events: none;
+  transform: translateX(-100%);
+  transition: transform 0.9s ease;
+}
+
+.aj-leadership-card:hover::before {
+  transform: translateX(100%);
+}
+
+/* Content */
+.aj-leadership-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: linear-gradient(180deg, rgba(13, 13, 13, 0.5) 0%, rgba(13, 13, 13, 0.9) 100%);
+}
+
+.aj-leadership-card-name {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.aj-leadership-card-title {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+}
+
+.aj-leadership-card-bio {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+  line-height: 1.4;
+  margin: 4px 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .aj-leadership-grid-section { padding: 100px 0; }
+  .aj-leadership-grid-cards { gap: 28px; }
+  .aj-leadership-card-image { height: 380px; }
+  .aj-leadership-card-content { padding: 20px 24px; }
+  .aj-leadership-card-name { font-size: var(--font-size-xl); }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .aj-leadership-grid-section { padding: 70px 0; }
+  .aj-leadership-grid-cards { gap: 20px; }
+  .aj-leadership-card-image { height: 300px; }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+  .aj-leadership-grid-section { padding: 50px 0; }
+  .aj-leadership-grid-cards { grid-template-columns: repeat(2, 1fr) !important; gap: 18px; }
+  .aj-leadership-card-image { height: 280px; }
+  .aj-leadership-card-content { padding: 16px 18px; }
+  .aj-leadership-card-name { font-size: var(--font-size-base); }
+}
+
+/* Mobile Large (480px - 767px) */
+@media (max-width: 767px) {
+  .aj-leadership-grid-section { padding: 40px 0; }
+  .aj-leadership-grid-cards { grid-template-columns: repeat(2, 1fr) !important; gap: 14px; }
+  .aj-leadership-card-image { height: 240px; }
+  .aj-leadership-card-content { padding: 14px 16px; }
+  .aj-leadership-card-name { font-size: var(--font-size-sm); }
+  .aj-leadership-card-title { font-size: 9px; }
+  .aj-leadership-card-bio { display: none; }
+}
+
+/* Mobile Small (300px - 479px) */
+@media (max-width: 479px) {
+  .aj-leadership-grid-section { padding: 30px 0; }
+  .aj-leadership-grid-cards { gap: 12px; }
+  .aj-leadership-grid-headline { font-size: var(--font-size-2xl); }
+  .aj-leadership-card-image { height: 200px; }
+  .aj-leadership-card-content { padding: 12px 14px; }
+  .aj-leadership-card-name { font-size: var(--font-size-xs); }
+  .aj-leadership-card-title { font-size: 8px; letter-spacing: 0.8px; }
+}
+
+/* Ultra Small (300px - 350px) */
+@media (max-width: 350px) {
+  .aj-leadership-grid-section { padding: 20px 0; }
+  .aj-leadership-grid-cards { gap: 10px; }
+  .aj-leadership-card-image { height: 170px; }
+  .aj-leadership-card-content { padding: 10px 12px; }
+  .aj-leadership-card-name { font-size: 10px; }
+  .aj-leadership-card-title { font-size: 7px; }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .aj-leadership-card {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .aj-leadership-card::before {
+    display: none;
+  }
+}

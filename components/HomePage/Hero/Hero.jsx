@@ -210,7 +210,7 @@ import './Hero.css'
 const Hero = () => {
   const heroImages = [
     '/hero2.png', 
-    '/hero1.jpeg', 
+    '/step4.png', 
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)
