@@ -2,7 +2,11 @@
    Footer.css
    Relies on tokens from your global.css
    ============================================ */
-
+.zelle{
+  color: var(--color-gold);
+  font-weight: bold;
+  cursor: pointer;
+}
 .aj-footer {
   position: relative;
   background-color: var(--color-black);

@@ -183,7 +183,10 @@ export default function Footer({
         {/* Bottom Bar */}
         <div className="aj-footer-bottom">
           <p className="aj-footer-copyright">
-            © {year} A.J Group of Companies. All rights reserved.
+            © {year} A.J Group of Companies. All Rights Reserved.
+          </p>
+           <p className="aj-footer-copyright">
+            Designed and Managed by <span className='zelle'><a href='https://zellesolutions.com' target='blank'>Zelle Solutions Pvt. Ltd.</a></span>
           </p>
           <div className="aj-footer-bottom-links">
             <Link href="/careers">Careers</Link>
