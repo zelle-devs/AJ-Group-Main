@@ -17,8 +17,8 @@ const DEFAULT_CARDS = [
 export default function TeamScrollSlider({
   // Content Props
   eyebrow = "Leadership",
-  titleLine1 = "Led by people who",
-  titleLine2 = "know how things are made.",
+  titleLine1 = "Led By People Who",
+  titleLine2 = "Know How Things Are Made",
   body = "A.J Group is guided by a leadership team with deep roots in manufacturing, design, and commercial delivery. Their focus is simple: keep raising the standard of what the group makes, and build companies clients return to.",
   buttonText = "Meet Our Leadership",
   buttonLink = "/leadership",

@@ -227,6 +227,21 @@
   display: block;
   opacity: 1;
 }
+/* Desktop Active Link */
+.navbar-link.active {
+  color: var(--color-gold);
+}
+
+.navbar-link.active::after {
+  transform: scaleX(1);
+}
+
+/* Sidebar Active Link */
+.sidebar-link.active {
+  color: var(--color-gold);
+  padding-left: 8px;
+  border-bottom-color: var(--color-gold);
+}
 
 /* ============ RESPONSIVE ============ */
 /* Large Desktop (1440px+) */

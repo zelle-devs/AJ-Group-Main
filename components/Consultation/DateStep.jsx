@@ -10,8 +10,8 @@ const platforms = [
     { 
         id: 'google-meet', 
         name: 'Google Meet', 
-        color: '#4285F4',
-        bgLight: '#E8F0FE',
+        color: '#c8a44a',
+        bgLight: '#c8a44a23',
         logo: (
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                 <path d="M2 6C2 4.89543 2.89543 4 4 4H16C17.1046 4 18 4.89543 18 6V18C18 19.1046 17.1046 20 16 20H4C2.89543 20 2 19.1046 2 18V6Z" fill="#4285F4"/>
@@ -25,8 +25,8 @@ const platforms = [
     { 
         id: 'teams', 
         name: 'Microsoft Teams', 
-        color: '#6264A7',
-        bgLight: '#EDEBF6',
+        color: '#c8a44a',
+        bgLight: '#c8a44a23',
         logo: (
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                 <rect x="1" y="5" width="12" height="14" rx="3" fill="#6264A7"/>
@@ -38,8 +38,8 @@ const platforms = [
     { 
         id: 'zoom', 
         name: 'Zoom', 
-        color: '#2D8CFF',
-        bgLight: '#E6F2FF',
+        color: '#c8a44a',
+        bgLight: '#c8a44a23',
         logo: (
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                 <rect x="1" y="3" width="16" height="18" rx="3.5" fill="#2D8CFF"/>
@@ -57,23 +57,23 @@ const meetingModes = [
     {
         id: 'onsite',
         name: 'Onsite',
-        color: '#C57A6B',
-        bgLight: '#F7ECE9',
+        color: '#C8A54A',
+        bgLight: '#c8a44a23',
         logo: (
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <path d="M4 21V8L12 3L20 8V21H14V14H10V21H4Z" fill="#C57A6B"/>
+                <path d="M4 21V8L12 3L20 8V21H14V14H10V21H4Z" fill="#C8A54A"/>
             </svg>
         )
     },
     {
         id: 'online',
         name: 'Online',
-        color: '#4CAF93',
+        color: '#C8A54A',
         bgLight: '#E8F6F1',
         logo: (
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="9" fill="#C57A6B"/>
-                <path d="M3 12H21M12 3C14.5 5.5 15.8 8.5 15.8 12C15.8 15.5 14.5 18.5 12 21C9.5 18.5 8.2 15.5 8.2 12C8.2 8.5 9.5 5.5 12 3Z" stroke="white" strokeWidth="1.2" fill="none"/>
+                <circle cx="12" cy="12" r="9" fill="#C8A54A"/>
+                <path d="M3 12H21M12 3C14.5 5.5 15.8 8.5 15.8 12C15.8 15.5 14.5 18.5 12 21C9.5 18.5 8.2 15.5 8.2 12C8.2 8.5 9.5 5.5 12 3Z" stroke="black" strokeWidth="1.2" fill="none"/>
             </svg>
         )
     }

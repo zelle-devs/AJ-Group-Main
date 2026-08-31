@@ -6,10 +6,10 @@ import './CTASection.css';
 
 export default function CTASection({
   eyebrow = 'Get In Touch',
-  headline = 'Have a project in mind?',
+  headline = 'Have a Project in Mind?',
   body = "Tell us what you're building. Whether it's a single commission or a multi-company program, we'll point you to the right team and get moving.",
   primaryButtonText = 'Start a Project',
-  primaryButtonLink = '/contact',
+  primaryButtonLink = '/consultation',
   secondaryButtonText = 'Contact the Group',
   secondaryButtonLink = '/contact',
 }) {

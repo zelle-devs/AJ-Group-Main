@@ -1,0 +1,209 @@
+/* ============================================
+   DynamicButton.css
+   AJ Group Theme - Premium Gold Button
+   ============================================ */
+
+.db-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  border: none;
+  font-family: var(--font-family-body);
+  padding: 0 24px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ============ SIZE PRESETS ============ */
+.db-sm {
+  height: 36px;
+}
+.db-sm .db-btn-text {
+  font-size: var(--font-size-xs);
+}
+
+.db-md {
+  height: 44px;
+}
+.db-md .db-btn-text {
+  font-size: var(--font-size-sm);
+}
+
+.db-lg {
+  height: 52px;
+}
+.db-lg .db-btn-text {
+  font-size: var(--font-size-base);
+}
+
+/* ============ SOLID VARIANT - Gold ============ */
+.db-solid {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+  border: 2px solid var(--color-gold);
+  box-shadow: 
+    0 10px 25px rgba(200, 165, 74, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.db-solid::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 45%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.15) 55%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.db-solid:hover::before {
+  transform: translateX(100%);
+}
+
+.db-solid .db-btn-text {
+  color: var(--color-white);
+}
+
+.db-solid:hover {
+  background-color: transparent;
+  border-color: var(--color-gold);
+  box-shadow: 
+    0 15px 30px rgba(200, 165, 74, 0.4),
+    0 0 40px rgba(200, 165, 74, 0.2);
+}
+
+.db-solid:hover .db-btn-text {
+  color: var(--color-gold);
+}
+
+/* ============ OUTLINE VARIANT - Gold Outline ============ */
+.db-outline {
+  background-color: transparent;
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+}
+
+.db-outline .db-btn-text {
+  color: var(--color-gold);
+}
+
+.db-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.db-outline:hover::before {
+  transform: scaleX(1);
+}
+
+.db-outline .db-btn-text {
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.db-outline:hover {
+  box-shadow: 
+    0 0 30px rgba(200, 165, 74, 0.3),
+    0 0 60px rgba(200, 165, 74, 0.15);
+}
+
+.db-outline:hover .db-btn-text {
+  color: var(--color-black);
+}
+
+/* ============ DISABLED STATE ============ */
+.db-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.db-btn:disabled:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.db-btn:disabled::before {
+  display: none;
+}
+
+.db-btn:disabled:hover .db-btn-text {
+  color: inherit;
+}
+
+/* ============ TEXT STYLE ============ */
+.db-btn-text {
+  position: relative;
+  z-index: 2;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: all var(--transition-normal);
+  text-shadow: var(--text-shadow-btn);
+}
+
+/* ============ ICON ============ */
+.db-btn-icon {
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width: 1440px) {
+  .db-md { height: 48px; }
+  .db-lg { height: 56px; }
+}
+
+@media (max-width: 768px) {
+  .db-md { height: 40px; }
+  .db-lg { height: 48px; }
+}
+
+@media (max-width: 479px) {
+  .db-sm { height: 32px; }
+  .db-md { height: 38px; }
+  .db-lg { height: 44px; }
+  .db-btn { padding: 0 18px; }
+}
+
+@media (max-width: 350px) {
+  .db-sm { height: 28px; }
+  .db-md { height: 34px; }
+  .db-lg { height: 40px; }
+  .db-btn { padding: 0 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .db-btn,
+  .db-btn::before,
+  .db-btn-text {
+    transition: none !important;
+  }
+}

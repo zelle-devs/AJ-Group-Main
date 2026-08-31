@@ -16,7 +16,7 @@ export default function Leadership() {
   body="A.J Group is led by a team focused on building strong businesses and developing the capabilities behind them. That means looking beyond individual projects to the people, equipment, processes and opportunities that will shape the Group over the long term."
   
   // Image - Leadership portrait
-  imageSrc="/ceo.jpg"
+  imageSrc="/Group_Growing_Image.jpeg"
   imageAlt="A.J Group Leadership"
   
   // Features - Leadership focused
@@ -63,11 +63,11 @@ export default function Leadership() {
           intro="The leadership team's work spans the whole Group, not any single business."
           columns={5}
           items={[
-            { num: '01', icon: Target, title: 'Strategy', desc: 'Setting direction for the Group.', image:'/turkey.jpg' },
-            { num: '02', icon: TrendingUp, title: 'Growth', desc: 'Building new capabilities.', image:'/malaysia.jpg' },
-            { num: '03', icon: Award, title: 'Standards', desc: 'Holding quality across all.', image:'/usa.jpg' },
-            { num: '04', icon: Eye, title: 'Investment', desc: 'Allocating resources wisely.', image:'/australia.jpg' },
-            { num: '05', icon: Shield, title: 'People', desc: 'Developing talent and teams.', image:'/turkey.jpg' },
+            { num: '01', icon: Target, title: 'Strategy', desc: 'Setting direction for the Group.', image:'/Startegy_Responsibilities_Cards.jpeg' },
+            { num: '02', icon: TrendingUp, title: 'Growth', desc: 'Building new capabilities.', image:'/Growth_Responsibilities_Cards.jpeg' },
+            { num: '03', icon: Award, title: 'Standards', desc: 'Holding quality across all.', image:'/Standerds_Responsibilities_Cards.jpeg' },
+            { num: '04', icon: Eye, title: 'Investment', desc: 'Allocating resources wisely.', image:'/Peoples_Responsibilities_Cards.jpeg' },
+            { num: '05', icon: Shield, title: 'People', desc: 'Developing talent and teams.', image:'/Investment_Responsibilities_Cards.jpeg' },
           ]}
         />
 
@@ -86,7 +86,7 @@ export default function Leadership() {
           headline="Work With the Group."
           body="Whether you have a project to discuss or want to understand how A.J Group works, the team is glad to talk."
           primaryButtonText="Start a Project"
-          primaryButtonLink="/contact"
+          primaryButtonLink="/consultation"
           secondaryButtonText="Contact the Group"
           secondaryButtonLink="/contact"
         />

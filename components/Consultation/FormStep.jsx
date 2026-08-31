@@ -7,7 +7,7 @@ const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, select
     const [emailError, setEmailError] = useState('');
     const [focusedField, setFocusedField] = useState(null);
 
-    const CustomSelect = ({ label, value, options, fieldName, placeholder, required = true }) => {
+    const CustomSelect = ({ label, value, options, fieldName, placeholder, required = false }) => {
         const isOpen = openDropdown === fieldName;
         const isFocused = focusedField === fieldName;
         
@@ -138,20 +138,17 @@ const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, select
         setFocusedField(null);
     };
 
-    const jobTitleOptions = ["Founder", "CEO", "HR Manager", "HR Executive", "Operations Manager", "Director", "IT Manager", "Other"];
+    const jobTitleOptions = ["Founder", "CEO", "Manager", "Executive", "Operations Manager", "Director", "IT Manager", "Other"];
     const companySizeOptions = ["1–10", "11–50", "51–100", "101–250", "251–500", "500+"];
     const industryOptions = ["IT & Software", "Education", "Healthcare", "Construction", "Manufacturing", "Retail", "Finance", "Logistics", "Real Estate", "Other"];
-    const hrSoftwareOptions = ["Manual", "Excel", "Zoho People", "BambooHR", "SAP", "Oracle", "Workday", "Other"];
-    const modulesOptions = ["Attendance", "Leave Management", "Payroll", "Recruitment", "Performance Management", "Employee Self Service", "Biometric Integration", "Shift Management", "Reports & Analytics", "Mobile App"];
-    const demoGoalOptions = ["Attendance", "Payroll", "Automation", "Recruitment", "Performance", "Employee Portal", "Everything"];
-    const primaryGoalOptions = ["Replace current HR software", "Automate HR processes", "Reduce paperwork", "Improve employee experience", "Evaluate HR software"];
+    const primaryGoalOptions = ["Goal 1", "Goal 2", "Goal 3", "Goal 4"];
 
     return (
         <div className="split-layout-form">
             <div className="form-container-left">
                 <div className="form-card">
                     <h2 className="step-title">Let&apos;s Get to Know You</h2>
-                    <p className="form-subtitle">Please share a few details so we can personalize your HRMS demo.</p>
+                    <p className="form-subtitle">Please share a few details so we can personalize your demo.</p>
 
                     <div className="section-label">Personal Information</div>
                     <div className="row2">
@@ -219,10 +216,10 @@ const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, select
                         </div>
                     </div>
 
-                    <div className="section-label">Company Information</div>
+                    <div className="section-label">Company Information (Optional)</div>
                     <div className="row2">
                         <div className="input-group">
-                            <label>Company Name <span className="required-star">*</span></label>
+                            <label>Company Name</label>
                             <input 
                                 type="text" 
                                 placeholder={focusedField === 'companyName' ? '' : "Acme Inc."}
@@ -231,36 +228,24 @@ const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, select
                                 onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                                 onFocus={() => handleInputFocus('companyName')}
                                 onBlur={handleInputBlur}
-                                required 
                             />
                         </div>
-                        <CustomSelect label="Designation" value={formData.jobTitle} fieldName="jobTitle" placeholder="Select Designation" options={jobTitleOptions} required={true} />
+                        <CustomSelect label="Designation" value={formData.jobTitle} fieldName="jobTitle" placeholder="Select Designation" options={jobTitleOptions} required={false} />
                     </div>
 
                     <div className="row2">
-                        <CustomSelect label="Company Size" value={formData.companySize} fieldName="companySize" placeholder="Select Company Size" options={companySizeOptions} required={true} />
-                        <CustomSelect label="Industry" value={formData.industry} fieldName="industry" placeholder="Select Industry" options={industryOptions} required={true} />
+                        <CustomSelect label="Company Size" value={formData.companySize} fieldName="companySize" placeholder="Select Company Size" options={companySizeOptions} required={false} />
+                        <CustomSelect label="Industry" value={formData.industry} fieldName="industry" placeholder="Select Industry" options={industryOptions} required={false} />
                     </div>
-
-                    <div className="section-label">Product Information</div>
-                    <div className="row2">
-                        <CustomSelect label="Current HR Software" value={formData.currentHRSoftware} fieldName="currentHRSoftware" placeholder="Select Current Software" options={hrSoftwareOptions} required={false} />
-                    </div>
-
-                    <MultiSelectChips label="Interested Modules" options={modulesOptions} fieldName="interestedModules" />
 
                     <div className="section-label">Business Needs</div>
-                    <div className="row2">
-                        <CustomSelect label="Demo Goal" value={formData.demoGoal} fieldName="demoGoal" placeholder="Select Demo Goal" options={demoGoalOptions} required={false} />
-                    </div>
-
                     <RadioGroup label="Primary Goal" options={primaryGoalOptions} fieldName="primaryGoal" required={false} />
 
                     <div className="input-group">
                         <label>Tell us about your requirements</label>
                         <textarea
                             rows="3"
-                            placeholder={focusedField === 'notes' ? '' : "Describe your HR challenges or what you'd like to see during the demo..."}
+                            placeholder={focusedField === 'notes' ? '' : "Describe your challenges or what you'd like to see during the demo..."}
                             value={formData.notes || ''}
                             className="neu-input"
                             onChange={(e) => setFormData({ ...formData, notes: e.target.value })}

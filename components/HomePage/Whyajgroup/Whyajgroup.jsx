@@ -35,33 +35,33 @@ const DEFAULT_ITEMS = [
   {
     num: '01',
     icon: Home,
-    title: 'End-to-end under one roof.',
+    title: 'End-To-End Under One Roof',
     desc: 'Design, fabrication, print, packaging, and finishing in one group: fewer suppliers, fewer handoffs, less risk.',
-    image: '/turkey.jpg',
+    image: '/End_to_end_roof_cards.png',
     clip: SHAPE_A,
   },
   {
     num: '02',
     icon: PenTool,
-    title: 'Engineering-led.',
+    title: 'Engineering-Led',
     desc: 'We plan and prototype before production, so what leaves the floor matches what was promised.',
-    image: '/usa.jpg',
+    image: '/Engineering_LED_Cards.jpeg',
     clip: SHAPE_B,
   },
   {
     num: '03',
     icon: Search,
-    title: 'Finish that survives scrutiny.',
+    title: 'Finish That Survives Scrutiny',
     desc: 'Our reputation lives in the details: clean welds, crisp print, considered edges.',
-    image: '/malaysia.jpg',
+    image: '/Finish_survives_Cards.png',
     clip: SHAPE_C,
   },
   {
     num: '04',
     icon: BarChart3,
-    title: 'Scale with control.',
+    title: 'Scale With Control',
     desc: 'Capacity for volume, with the discipline to hold quality across every unit.',
-    image: '/australia.jpg',
+    image: '/Scale_With_Control_Cards.png',
     clip: SHAPE_D,
   },
 ];
@@ -69,7 +69,7 @@ const DEFAULT_ITEMS = [
 export default function WhyAJGroup({
   // Content Props
   eyebrow = 'Why A.J Group',
-  title = 'The advantages of one group.',
+  title = 'The Advantages of One Group',
   intro = "Clients come to A.J Group when a project is too important, or too complex, to split across vendors who don't talk to each other.",
   items = DEFAULT_ITEMS,
   

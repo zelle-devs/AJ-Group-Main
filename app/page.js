@@ -48,7 +48,7 @@ export default function Home() {
       /> */}
        <FocusCompanies 
         eyebrow="In focus"
-        headline="Two companies. Two disciplines. One standard."
+        headline="Two Companies Two Disciplines One Standard."
         companies={companiesData}
       />
       {/* <CTASection/> */}

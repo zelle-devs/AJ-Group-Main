@@ -7,8 +7,8 @@ import DateStep from './DateStep';
 import FormStep from './FormStep';
 import ReviewStep from './ReviewStep';
 import { updateStepInURL, getStepFromPath } from '@/app/utils/urlParams';
-import DynamicButton from '../Contact/DynamicButton';
-import LoadingSpinner from '../LoadingSpinner';
+import DynamicButton from '../DynamicButton/DynamicButton';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const stepperVariants = {
   hidden: {},
@@ -150,8 +150,7 @@ useEffect(() => {
    const [formData, setFormData] = useState({
     Fname: '', Lname: '', workEmail: '', phone: '',
     companyName: '', jobTitle: '', companySize: '', industry: '',
-    currentHRSoftware: '', interestedModules: [],
-    demoGoal: '', primaryGoal: '', notes: ''
+    primaryGoal: '', notes: ''
 });
 
 
@@ -169,11 +168,7 @@ useEffect(() => {
         formData.Lname && formData.Lname.trim() !== '' &&
         formData.workEmail && formData.workEmail.trim() !== '' &&
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.workEmail) &&
-        formData.phone && formData.phone.trim() !== '' &&
-        formData.companyName && formData.companyName.trim() !== '' &&
-        formData.jobTitle && formData.jobTitle !== '' &&
-        formData.companySize && formData.companySize !== '' &&
-        formData.industry && formData.industry !== '';
+        formData.phone && formData.phone.trim() !== '';
 
     setStep2Valid(isValid);
     return isValid;
@@ -312,7 +307,6 @@ useEffect(() => {
     }, [formData]);
 
     if (isConfirmed) {
-        const interestedModules = formData.interestedModules || [];
         
         return (
             
@@ -370,62 +364,46 @@ useEffect(() => {
                         </div>
                     </div>
 
-                    <div className="success-info-section">
-                        <h3 className="success-info-title">Company Information</h3>
-                        <div className="success-info-grid">
-                            <div className="success-info-item">
-                                <span>Company Name</span>
-                                <p>{formData.companyName}</p>
-                            </div>
-                            <div className="success-info-item">
-                                <span>Designation</span>
-                                <p>{formData.jobTitle}</p>
-                            </div>
-                            <div className="success-info-item">
-                                <span>Company Size</span>
-                                <p>{formData.companySize}</p>
-                            </div>
-                            <div className="success-info-item">
-                                <span>Industry</span>
-                                <p>{formData.industry}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {formData.currentHRSoftware && (
+                    {formData.companyName && (
                         <div className="success-info-section">
-                            <h3 className="success-info-title">Product Information</h3>
+                            <h3 className="success-info-title">Company Information</h3>
                             <div className="success-info-grid">
-                                <div className="success-info-item">
-                                    <span>Current HR Software</span>
-                                    <p>{formData.currentHRSoftware}</p>
-                                </div>
-                                {interestedModules.length > 0 && (
+                                {formData.companyName && (
                                     <div className="success-info-item">
-                                        <span>Interested Modules</span>
-                                        <p>{interestedModules.join(', ')}</p>
+                                        <span>Company Name</span>
+                                        <p>{formData.companyName}</p>
+                                    </div>
+                                )}
+                                {formData.jobTitle && (
+                                    <div className="success-info-item">
+                                        <span>Designation</span>
+                                        <p>{formData.jobTitle}</p>
+                                    </div>
+                                )}
+                                {formData.companySize && (
+                                    <div className="success-info-item">
+                                        <span>Company Size</span>
+                                        <p>{formData.companySize}</p>
+                                    </div>
+                                )}
+                                {formData.industry && (
+                                    <div className="success-info-item">
+                                        <span>Industry</span>
+                                        <p>{formData.industry}</p>
                                     </div>
                                 )}
                             </div>
                         </div>
                     )}
 
-                    {(formData.demoGoal || formData.primaryGoal) && (
+                    {formData.primaryGoal && (
                         <div className="success-info-section">
                             <h3 className="success-info-title">Business Needs</h3>
                             <div className="success-info-grid">
-                                {formData.demoGoal && (
-                                    <div className="success-info-item">
-                                        <span>Demo Goal</span>
-                                        <p>{formData.demoGoal}</p>
-                                    </div>
-                                )}
-                                {formData.primaryGoal && (
-                                    <div className="success-info-item">
-                                        <span>Primary Goal</span>
-                                        <p>{formData.primaryGoal}</p>
-                                    </div>
-                                )}
+                                <div className="success-info-item">
+                                    <span>Primary Goal</span>
+                                    <p>{formData.primaryGoal}</p>
+                                </div>
                             </div>
                         </div>
                     )}

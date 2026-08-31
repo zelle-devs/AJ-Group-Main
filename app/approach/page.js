@@ -14,7 +14,7 @@ export default function Approach() {
   body="Good work starts with understanding what is actually required. A.J Group follows the same considered process on every project, so expectations are set early, progress stays visible and the finished work reflects what was agreed at the beginning."
   
   // Image
-  imageSrc="/usa.jpg"
+  imageSrc="/Clear_Process_STF.jpeg"
   imageAlt="A.J Group Process"
   
   // Features - Process highlights
@@ -48,7 +48,7 @@ export default function Approach() {
           headline="Start Your Project Today."
           body="For A.J Group, delivery isn't the end. The clients we value most come back, for the next project and the one after, because they know the Group delivers."
           primaryButtonText="Start a Project"
-          primaryButtonLink="/contact"
+          primaryButtonLink="/consultation"
           secondaryButtonText="Talk to Our Team"
           secondaryButtonLink="/contact"
         />

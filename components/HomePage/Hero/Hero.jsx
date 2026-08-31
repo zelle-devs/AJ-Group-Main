@@ -158,7 +158,7 @@
 //               <a href="/contact" className="btn btn-gold hero-primary-btn">
 //                 Start a Project <ArrowRight size={16} />
 //               </a>
-//               <a href="/companies" className="btn btn-outline-light hero-secondary-btn">
+//               <a href="/our-companies" className="btn btn-outline-light hero-secondary-btn">
 //                 Explore Our Companies
 //               </a>
 //             </motion.div>
@@ -364,7 +364,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              Built to <span>Specification.</span> Delivered to Standard.
+              Building  <span>Sustainable</span> Enterprise.
             </motion.h1>
             
             <motion.p 
@@ -373,9 +373,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              A diversified manufacturing group: precision metalwork, high-definition 
-              print and packaging, and consumer design brands. Whatever the medium, 
-              the standard holds.
+             A.J Group is a diversified business group of expert companies working across manufacturing, industrial solutions, print, packaging, advertising and consumer products, with real estate and emerging sectors part of a growing footprint. We bring different businesses and capabilities together under one vision, and build strong companies and distinctive brands designed to grow.
+
             </motion.p>
             
             <motion.div 
@@ -384,10 +383,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <a href="/contact" className="btn btn-gold hero-primary-btn">
+              <a href="/consultation" className="btn btn-gold hero-primary-btn">
                 Start a Project <ArrowRight size={16} />
               </a>
-              <a href="/companies" className="btn btn-outline-light hero-secondary-btn">
+              <a href="/our-companies" className="btn btn-outline-light hero-secondary-btn">
                 Explore Our Companies
               </a>
             </motion.div>
@@ -536,7 +535,7 @@ export default Hero
 //               <a href="/contact" className="btn btn-gold hero-primary-btn">
 //                 Start a Project <ArrowRight size={16} />
 //               </a>
-//               <a href="/companies" className="btn btn-outline-light hero-secondary-btn">
+//               <a href="/our-companies" className="btn btn-outline-light hero-secondary-btn">
 //                 Explore Our Companies
 //               </a>
 //             </motion.div>

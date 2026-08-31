@@ -8,35 +8,35 @@ const DEFAULT_STEPS = [
   {
     num: '01',
     title: 'Fabrication & Manufacturing',
-    desc: 'architectural and structural metalwork.',
+    desc: 'Architectural and Structural Metalwork',
   },
   {
     num: '02',
     title: 'Printing & Production',
-    desc: 'large-format, high-definition commercial print.',
+    desc: 'Large-Format High-Definition Commercial Print',
   },
   {
     num: '03',
     title: 'Packaging',
-    desc: 'rigid boxes, presentation cases, retail-ready packs.',
+    desc: 'Rigid Boxes Presentation Cases Retail-Ready Packs ',
   },
   {
     num: '04',
     title: 'Advertising & Branding',
-    desc: 'POSM, exhibitions, and environmental branding.',
+    desc: 'POSM Exhibitions and Environmental Branding ',
   },
   {
     num: '05',
     title: 'Design Brands',
-    desc: 'finished products for the home and personal life.',
+    desc: 'Finished Products for the Home and Personal Life',
   },
 ];
 
 export default function ProcessTimeline({
   // Content Props
   eyebrow = 'What We Do',
-  title = 'Five disciplines, one production culture.',
-  description = 'We work across five disciplines under a single production culture. Because they sit inside one group, a project can move between them (a fabricated structure that carries printed graphics, a product that arrives in bespoke packaging) with no handoff and no dropped detail.',
+  title = 'Broad Capabilities Under One Group.',
+  description = 'Across the Group we work in manufacturing and industrial solutions, commercial print, packaging, advertising and branding, and consumer products, with real estate and emerging sectors part of a growing footprint. Because these capabilities sit within one Group, a project or a new venture can move between them without leaving A.J Group, combining operational expertise, production, creative thinking and commercial insight to build things that last.',
   steps = DEFAULT_STEPS,
   
   // Layout Control

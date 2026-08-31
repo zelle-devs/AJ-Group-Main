@@ -10,28 +10,28 @@ const DEFAULT_PROJECTS = [
     id: 1,
     title: 'Forgentis Fabrications',
     description: 'Architectural metal fabrication: 5-axis CNC milling, fiber laser cutting, structural signage, and facade cladding for developers, architects, and engineers.',
-    image: '/malaysia.jpg',
+    image: '/Specialist_Forgentis_Fabrications.jpeg',
     link: '/forgentis',
   },
   {
     id: 2,
     title: 'Imprint Galerie',
     description: 'A direct-to-consumer design house for personal objects and considered gifting: premium cases, gallery wall art, and bespoke keepsakes.',
-    image: '/turkey.jpg',
+    image: '/Imprint_Galerie_grid.png',
     link: '/imprint',
   },
   {
     id: 3,
     title: 'Beyvora Decor',
     description: 'A direct-to-consumer design brand: textured, LED, and metal wall art, plus customizable statement pieces for the home.',
-    image: '/usa.jpg',
+    image: '/Beyvora_Decor.png',
     link: '/beyvora',
   },
   {
     id: 4,
     title: 'Print Pack Advertising (PPA)',
     description: 'Print, packaging, and advertising production: large-format UV printing, custom rigid-box packaging, presentation cases, and exhibition displays for brands and agencies.',
-    image: '/australia.jpg',
+    image: '/Print_Pack_Advertising.jpeg',
     link: '/ppa',
   },
 ];
@@ -39,10 +39,10 @@ const DEFAULT_PROJECTS = [
 export default function FeaturedProjects({
   // Content Props
   eyebrow = 'Our Companies',
-  headline = 'Specialists, not generalists.',
-  description = "Each company is built around deep expertise in a single discipline. Together they span metal, print, packaging, advertising, and consumer design.",
-  buttonText = 'View All Companies',
-  buttonLink = '/companies',
+  headline = 'Different Businesses. Shared Direction.',
+  description = "Each company in A.J Group leads in its own field, while drawing on the resources and standards of the wider Group.",
+  buttonText = 'Explore Our Companies',
+  buttonLink = '/our-companies',
   
   // Projects Data
   projects = DEFAULT_PROJECTS,
@@ -261,7 +261,7 @@ export default function FeaturedProjects({
 //             </p>
             
 //             {/* ONLY CHANGE HERE: Link and Text */}
-//             <a href="/companies" className="btn btn-outline-gold featured-projects-btn">
+//             <a href="/our-companies" className="btn btn-outline-gold featured-projects-btn">
 //               View All Companies <ArrowRight size={16} />
 //             </a>
 //           </motion.div>

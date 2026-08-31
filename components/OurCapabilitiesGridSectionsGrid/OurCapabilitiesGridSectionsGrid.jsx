@@ -1,0 +1,133 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import { ArrowRight, ShoppingBag, Building2, Hotel, Calendar, Home, Factory, Megaphone } from 'lucide-react';
+import '../../components/IndustriesPage/IndustriesGrid.css';
+
+const INDUSTRIES_DATA = [
+  {
+    icon: ShoppingBag,
+    title: 'Fabrication & Manufacturing',
+    description: "Precision metalwork is where the group's engineering discipline shows clearest. Through Forgentis Fabrications, we design and manufacture architectural, structural, and decorative metal, cut, milled, welded, and finished to exacting tolerances.",
+    points: ['5-axis CNC milling','Fiber laser cutting', 'Architectural metalworking','Structural signage', ' Facade cladding', 'Backlit spatial installations' ],
+    image: '/step1.png',
+    // company: 'Forgentis',
+  },
+  {
+    icon: Building2,
+    title: 'Packaging Solutions',
+    description: "Packaging is engineering and presentation at once. We design and produce custom rigid boxes, luxury presentation cases, and retail-ready packaging that protects the product and elevates the moment it's opened.",
+    points: ['Custom rigid-box packaging', ' Luxury presentation cases', 'Structural packaging design', 'Premium finishes & foiling', 'Retail-ready packs'],
+    image: '/step2.png',
+    // company: 'Print Pack Advertising',
+  },
+  {
+    icon: Hotel,
+    title: ' Printing & Production',
+    description: "Through Print Pack Advertising, the group prints at commercial scale without losing detail. Large-format UV flatbed technology delivers sharp, durable, high-definition output across rigid and flexible materials, for brands that care how their work looks up close.",
+    points: [' Large-format UV flatbed printing', 'High-definition graphics', 'substrates ', 'Color-accurate reproduction', 'Volume production runs'],
+    image: '/step3.png',
+    // company: 'Forgentis Fabrications',
+  },
+  {
+    icon: Calendar,
+    title: 'Advertising & Branding',
+    description: "We produce the physical side of brand presence: the displays, signage, and environments that put a brand in front of people. From point-of-sale media to full exhibition builds, we make brands impossible to miss and consistent everywhere they appear.",
+    points: ['Point-of-sale media (POSM)', ' Exhibition displays & stands ', 'Retail fixtures', 'Environmental & structural branding', 'Event production support'],
+    image: '/step4.png',
+    // company: 'Print Pack Advertising',
+  },
+//   {
+//     icon: Home,
+//     title: 'Real Estate & Development',
+//     description: "Developers and property teams need work that is engineered to specification and built to last for the life of a building. A.J Group produces the architectural metalwork, facade elements, signage and wayfinding that define a built environment, delivered through Forgentis Fabrications. Real estate is also a sector where the Group is growing its own footprint.",
+//     points: ['Facade cladding', 'Architectural metal', 'Wayfinding', 'Structural signage'],
+//     image: '/step5.png',
+//     company: 'Forgentis Fabrications',
+//   },
+//   {
+//     icon: Factory,
+//     title: 'Manufacturing',
+//     description: "A.J Group supports other manufacturers and industrial clients with precision fabrication, machined components and volume production, bringing 5-axis CNC and fiber laser capability to briefs that demand tight tolerances and repeatable quality. This work is delivered through Forgentis Fabrications.",
+//     points: ['Precision fabrication', 'Machined components', 'Volume production', 'Laser cutting'],
+//     image: '/forgentis.jpeg',
+//     company: 'Forgentis Fabrications',
+//   },
+//   {
+//     icon: Megaphone,
+//     title: 'Advertising & Marketing',
+//     description: "For agencies and marketing teams, A.J Group is the production partner that turns creative into physical reality: large-format print, POSM, displays and packaging, produced at the quality and scale a campaign needs. This is delivered through Print Pack Advertising.",
+//     points: ['Large-format print', 'POSM', 'Packaging', 'Campaign production'],
+//     image: '/step1.png',
+//     company: 'Print Pack Advertising',
+//   },
+];
+
+export default function OurCapabilitiesGridSectionsGrid({
+  industries = INDUSTRIES_DATA,
+  showCompany = true,
+  showPoints = true,
+}) {
+  return (
+    <section className="aj-industries-grid-section">
+      <div className="container2">
+        <div className="aj-industries-cards">
+          {industries.map((industry, index) => {
+            const Icon = industry.icon;
+            const isEven = index % 2 === 0;
+            
+            return (
+              <motion.div
+                key={index}
+                className={`aj-industry-card ${isEven ? 'image-left' : 'image-right'}`}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-10%' }}
+                transition={{ duration: 0.8, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {/* Image */}
+                <div className="aj-industry-card-image">
+                  <Image
+                    src={industry.image}
+                    alt={industry.title}
+                    fill
+                    className="aj-industry-card-img"
+                  />
+                  <div className="aj-industry-card-overlay" />
+                </div>
+
+                {/* Content */}
+                <div className="aj-industry-card-content">
+                  <div className="aj-industry-card-icon">
+                    <Icon size={24} />
+                  </div>
+                  
+                  <h3 className="aj-industry-card-title">{industry.title}</h3>
+                  
+                  <p className="aj-industry-card-desc">{industry.description}</p>
+                  
+                  {showPoints && industry.points && (
+                    <div className="aj-industry-card-points">
+                      {industry.points.map((point, i) => (
+                        <span key={i} className="aj-industry-point">
+                          {point}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {showCompany && industry.company && (
+                    <span className="aj-industry-card-company">
+                      Delivered through: <strong>{industry.company}</strong>
+                    </span>
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

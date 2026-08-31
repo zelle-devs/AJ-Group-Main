@@ -29,11 +29,11 @@ export default function Careers() {
           intro="A.J Group holds a high bar for the work, and expects people to be treated well while meeting it. The culture rewards skill, initiative and care, across every business in the Group."
           columns={5}
           items={[
-            { num: '01', icon: Award, title: 'Skill', desc: 'Expertise is respected and rewarded.', image:'turkey.jpg' },
-            { num: '02', icon: TrendingUp, title: 'Initiative', desc: 'Ideas are welcomed at every level.', image:'usa.jpg' },
-            { num: '03', icon: Heart, title: 'Care', desc: 'People are treated with respect.', image:'malaysia.jpg' },
-            { num: '04', icon: Shield, title: 'Standards', desc: 'Quality never compromised.', image:'australia.jpg' },
-            { num: '05', icon: Users, title: 'Teamwork', desc: 'Experts working together.', image:'turkey.jpg' },
+            { num: '01', icon: Award, title: 'Skill', desc: 'Expertise is respected and rewarded.', image:'Skills_Careers_Cards.jpeg' },
+            { num: '02', icon: TrendingUp, title: 'Initiative', desc: 'Ideas are welcomed at every level.', image:'Inisiative_Careers_Cards.jpeg' },
+            { num: '03', icon: Heart, title: 'Care', desc: 'People are treated with respect.', image:'Care_Careers_Cards.jpeg' },
+            { num: '04', icon: Shield, title: 'Standards', desc: 'Quality never compromised.', image:'Standerds_Responsibilities_Cards.jpeg' },
+            { num: '05', icon: Users, title: 'Teamwork', desc: 'Experts working together.', image:'TeamWork_Careers_Cards.jpeg' },
           ]}
         />
 

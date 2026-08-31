@@ -62,10 +62,10 @@ const DEFAULT_PROCESS_STEPS = [
 export default function CapabilitiesSectionLeft2({
   // Content Props
   eyebrow = 'How we work',
-  title = 'A considered process, start to finish.',
+  title = 'A Considered Process Start To Finish',
   body = "Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end.",
   buttonText = 'Explore Our Process',
-  buttonLink = '/process',
+  buttonLink = '/approach',
   
   // Steps Props
   steps = DEFAULT_PROCESS_STEPS,
@@ -256,7 +256,7 @@ export default function CapabilitiesSectionLeft2({
 //   title = 'A considered process, start to finish.',
 //   body = "Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end.",
 //   buttonText = 'Explore Our Process',
-//   buttonLink = '/process',
+//   buttonLink = '/approach',
 // }) {
 //   return (
 //     <section className="aj-process-sections">

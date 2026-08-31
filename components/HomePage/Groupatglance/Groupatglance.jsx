@@ -98,7 +98,7 @@ const CounterValue = ({ value }) => {
 export default function GroupAtGlance({
   // Content Props
   eyebrow = 'Group at a glance',
-  headline = 'The measure of the group.',
+  headline = 'The Measure of The Group',
   stats = DEFAULT_STATS,
   orbitIcons = DEFAULT_ORBIT_ICONS,
   orbitDuration = 26,

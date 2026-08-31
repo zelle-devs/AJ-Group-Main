@@ -1,0 +1,445 @@
+/* =========================================================
+   FULL SCREEN INTRO
+   ========================================================= */
+
+.logo-reveal {
+  position: fixed;
+
+  inset: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999999;
+
+  isolation: isolate;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  /* No transition here — the split strips handle
+     their own exit animation. A transition on the
+     container itself would hide everything early. */
+}
+
+
+/* =========================================================
+   WHEN INTRO FINISHES CLOSING
+
+   Background goes transparent so the gaps left by the
+   collapsing strips reveal the real website underneath.
+   Container itself stays visible/interactive-blocked
+   until React unmounts it at finishTimer.
+   ========================================================= */
+
+.logo-reveal.intro-closing {
+  background: transparent;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOGO LOCKUP — ICON THEN WORDMARK
+
+   .logo-lockup is a centered flex row. The icon starts
+   alone (wordmark has zero width), so it sits dead center
+   of the screen. When the wordmark's width grows in, the
+   whole row gets wider — and because the row itself stays
+   horizontally centered inside .logo-reveal, growing it
+   pushes the icon (first child) visually to the left while
+   the wordmark reveals itself in the space that opens up
+   on the right. No manual translateX math needed.
+   ========================================================= */
+
+.logo-lockup {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* =========================================================
+   ICON — starts as a tiny dot, scales + rotates in with
+   a slight overshoot ("settling" bounce), while a ring
+   briefly pulses outward and fades — like a camera
+   aperture clicking open.
+   ========================================================= */
+
+.icon-wrap {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.icon-mark {
+  position: relative;
+
+  z-index: 10;
+
+  width:
+    min(
+      150px,
+      22vw
+    );
+
+  height: auto;
+
+  flex-shrink: 0;
+
+  display: block;
+
+  opacity: 0;
+
+  transform:
+    scale(0.08)
+    rotate(-70deg);
+
+  transition:
+    opacity 0.6s ease-out,
+
+    transform 0.85s
+      cubic-bezier(
+        0.34,
+        1.56,
+        0.64,
+        1
+      );
+}
+
+.icon-mark-show {
+  opacity: 1;
+
+  transform:
+    scale(1)
+    rotate(0deg);
+}
+
+
+/* =========================================================
+   ICON RING — a thin circle that pulses outward from the
+   icon's center and fades away, like a shutter-click flash
+   ========================================================= */
+
+.icon-ring {
+  position: absolute;
+
+  z-index: 9;
+
+  top: 50%;
+  left: 50%;
+
+  width:
+    min(
+      150px,
+      22vw
+    );
+
+  height:
+    min(
+      150px,
+      22vw
+    );
+
+  border-radius: 50%;
+
+  border: 2px solid
+    rgba(
+      218,
+      165,
+      72,
+      0.85
+    );
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.35);
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.icon-ring-pulse {
+  animation:
+    ringPulse
+    0.85s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    forwards;
+}
+
+@keyframes ringPulse {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(0.35);
+  }
+
+  35% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1.7);
+  }
+
+}
+
+
+/* =========================================================
+   WORDMARK — grows in from zero width, revealing itself
+   in the space opened up as the icon shifts left
+   ========================================================= */
+
+.wordmark {
+  height: auto;
+
+  flex-shrink: 0;
+
+  display: block;
+
+  overflow: hidden;
+
+  width: 0;
+
+  margin-left: 0;
+
+  opacity: 0;
+
+  transition:
+    width 0.9s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+
+    margin-left 0.9s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+
+    opacity 0.6s ease-out;
+}
+
+.wordmark-show {
+  width:
+    min(
+      420px,
+      52vw
+    );
+
+  margin-left:
+    min(
+      18px,
+      2.2vw
+    );
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   SPLIT — 4 ROWS OF VERTICAL BLINDS,
+   ALTERNATING LEFT/RIGHT SWEEP
+
+   The screen is divided into ROW_COUNT horizontal bands.
+   Each band is further divided into vertical strips.
+
+   Every strip is a clipped "window" onto a full-viewport
+   black background carrying a centered copy of the
+   FINISHED lockup (icon + wordmark, static), shifted
+   left/up by its own column and row offset so all strips
+   line up perfectly with the original scene before
+   anything moves.
+
+   Within a row, strips collapse (scaleX 1 -> 0) as a
+   rolling wave — even rows sweep left -> right, odd rows
+   sweep right -> left — revealing the real website
+   underneath through the gaps.
+   ========================================================= */
+
+.split-container {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+}
+
+.split-row {
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.split-strip {
+  position: absolute;
+
+  top: 0;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  transform-origin: center center;
+
+  animation:
+    stripCollapse
+    0.7s
+    cubic-bezier(0.45, 0, 0.55, 1)
+    forwards;
+
+  will-change: transform;
+}
+
+.split-strip-inner {
+  position: absolute;
+
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background-color: #000;
+}
+
+@keyframes stripCollapse {
+
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+
+}
+
+
+/* =========================================================
+   FROZEN LOCKUP — static copy of the finished icon +
+   wordmark shown inside each split strip, positioned the
+   same way as the entrance lockup so the split reads as
+   one continuous piece breaking apart.
+   ========================================================= */
+
+.frozen-logo-lockup {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.frozen-icon-mark {
+  position: relative;
+  z-index: 10;
+  width: min(150px, 22vw);
+  height: auto;
+  flex-shrink: 0;
+  display: block;
+}
+
+.frozen-wordmark {
+  height: auto;
+  width: min(420px, 52vw);
+  margin-left: min(18px, 2.2vw);
+  flex-shrink: 0;
+  display: block;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .icon-mark {
+    width: 26vw;
+  }
+
+  .icon-ring {
+    width: 26vw;
+    height: 26vw;
+  }
+
+  .frozen-icon-mark {
+    width: 26vw;
+  }
+
+  .wordmark-show {
+    width: 60vw;
+  }
+
+  .frozen-wordmark {
+    width: 60vw;
+  }
+}
+
+
+@media (max-width: 480px) {
+
+  .icon-mark {
+    width: 24vw;
+  }
+
+  .icon-ring {
+    width: 28vw;
+    height: 28vw;
+  }
+
+  .frozen-icon-mark {
+    width: 32vw;
+  }
+
+  .wordmark-show {
+    width: 62vw;
+  }
+
+  .frozen-wordmark {
+    width: 62vw;
+  }
+}

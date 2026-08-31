@@ -1,6 +1,7 @@
 import Footer from '@/components/Footer/Footer'
 import './globals.css'
 import Navbar from '@/components/Navbar/Navbar'
+import MainAnimation2 from '@/components/MainAnimation2/mainAnimation'
 
 export const metadata = {
   title: 'AJ Group - Built to Specification',
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navbar />
+        <MainAnimation2/>
         <main>{children}</main>
         <Footer/>
       </body>

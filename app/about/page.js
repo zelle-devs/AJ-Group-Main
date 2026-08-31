@@ -42,11 +42,11 @@ export default function About() {
           intro="The same values apply across every business in A.J Group."
           columns={5}
           items={[
-            { num: '01', icon: Shield, title: 'Integrity', desc: 'Honest work, clear communication.', image: '/australia.jpg' },
-            { num: '02', icon: Award, title: 'Excellence', desc: 'Never compromise on quality.', image: '/turkey.jpg' },
-            { num: '03', icon: Handshake, title: 'Accountability', desc: 'We own the whole outcome.', image: '/usa.jpg' },
-            { num: '04', icon: Star, title: 'Craftsmanship', desc: 'Every detail matters.', image: '/malaysia.jpg' },
-            { num: '05', icon: Eye, title: 'Vision', desc: 'Building for the long term.', image: '/turkey.jpg' },
+            { num: '01', icon: Shield, title: 'Integrity', desc: 'Honest work, clear communication.', image: '/Integrity_cards_whyAJ.jpeg' },
+            { num: '02', icon: Award, title: 'Excellence', desc: 'Never compromise on quality.', image: '/Excellence_cards_whyAJ.jpeg' },
+            { num: '03', icon: Handshake, title: 'Accountability', desc: 'We own the whole outcome.', image: '/Accountability_cards_whyAJ.jpeg' },
+            { num: '04', icon: Star, title: 'Craftsmanship', desc: 'Every detail matters.', image: '/Craftmanship_cards_whyAJ.jpeg' },
+            { num: '05', icon: Eye, title: 'Vision', desc: 'Building for the long term.', image: '/Vision_cards_whyAJ.jpeg' },
           ]}
         />
 
@@ -111,7 +111,7 @@ export default function About() {
               description: 'Print, packaging, and advertising production: large-format UV printing, custom rigid-box packaging.',
               buttonText: 'Explore PPA',
               buttonLink: '/ppa',
-              image: '/turkey.jpg',
+              image: '/PPA_Infocus.png',
               imagePosition: 'right',
               shadowColor: 'rgba(234, 179, 8, 0.4)',
             },
@@ -121,7 +121,7 @@ export default function About() {
               description: 'Direct-to-consumer design brands: textured, LED, and metal wall art for the home.',
               buttonText: 'Explore Beyvora',
               buttonLink: '/beyvora',
-              image: '/malaysia.jpg',
+              image: '/Beyvora_Decor.png',
               imagePosition: 'left',
               shadowColor: 'rgba(200, 165, 74, 0.4)',
             },
@@ -131,7 +131,8 @@ export default function About() {
               description: 'Design house for personal objects and considered gifting: premium cases and bespoke keepsakes.',
               buttonText: 'Explore Imprint',
               buttonLink: '/imprint',
-              image: '/usa.jpg',
+              
+              image: '/Imprint_Galerie_grid.png',
               imagePosition: 'right',
               shadowColor: 'rgba(168, 159, 145, 0.4)',
             },
@@ -174,7 +175,7 @@ export default function About() {
           headline="Want to Know What the Group Can Do?"
           body="Whether you have a defined project or are just exploring, A.J Group is glad to talk."
           primaryButtonText="Start a Project"
-          primaryButtonLink="/contact"
+          primaryButtonLink="/consultation"
           secondaryButtonText="Contact the Group"
           secondaryButtonLink="/contact"
         />

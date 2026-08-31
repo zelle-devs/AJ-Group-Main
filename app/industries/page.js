@@ -14,7 +14,7 @@ export default function Industries() {
   body="A.J Group works across industries where quality, precision and presentation matter. As a diversified business group, we know different sectors need different things, a retail rollout, a structural facade and a hospitality fit-out are not the same job, and the Group brings the right capability and business to each."
   
   // Image
-  imageSrc="/australia.jpg"
+  imageSrc="/Capability_suited_sector.jpeg"
   imageAlt="A.J Group Industries"
   
   // Features - Industry sectors

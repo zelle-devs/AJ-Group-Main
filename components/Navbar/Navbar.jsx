@@ -4,9 +4,11 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation'
 import './Navbar.css'
 
 const Navbar = () => {
+    const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -34,7 +36,7 @@ const Navbar = () => {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/companies', label: 'Our Companies' },
+    { href: '/our-companies', label: 'Our Companies' },
     { href: '/capabilities', label: 'Capabilities' },
     { href: '/industries', label: 'Industries' },
     { href: '/approach', label: 'Approach' },
@@ -68,7 +70,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="navbar-menu">
-  {navLinks.map((link, index) => (
+  {/* {navLinks.map((link, index) => (
     <motion.div
       key={link.href}
       initial={{ y: 40, opacity: 0 }}
@@ -86,12 +88,36 @@ const Navbar = () => {
         {link.label}
       </Link>
     </motion.div>
-  ))}
+  ))} */}
+
+  {navLinks.map((link, index) => {
+  const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
+  
+  return (
+    <motion.div
+      key={link.href}
+      initial={{ y: 40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ 
+        duration: 0.5, 
+        delay: 0.9 + index * 0.07,
+        ease: [0.22, 1, 0.36, 1] 
+      }}
+    >
+      <Link 
+        href={link.href}
+        className={`navbar-link ${isActive ? 'active' : ''}`}
+      >
+        {link.label}
+      </Link>
+    </motion.div>
+  )
+})}
 </div>
 
           {/* Right Actions */}
           <div className="navbar-actions">
-            <Link href="/contact" className="btn btn-gold navbar-cta">
+            <Link href="/consultation" className="btn btn-gold navbar-cta">
               Start a Project
             </Link>
             
@@ -136,7 +162,7 @@ const Navbar = () => {
         </div>
 
         <div className="sidebar-links">
-          {navLinks.map((link) => (
+          {/* {navLinks.map((link) => (
             <Link 
               key={link.href} 
               href={link.href}
@@ -145,9 +171,24 @@ const Navbar = () => {
             >
               {link.label}
             </Link>
-          ))}
+          ))} */}
+          {navLinks.map((link) => {
+  const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
+  
+  return (
+    <Link 
+      key={link.href} 
+      href={link.href}
+      className={`sidebar-link ${isActive ? 'active' : ''}`}
+      onClick={closeSidebar}
+    >
+      {link.label}
+    </Link>
+  )
+})}
+
           <Link 
-            href="/contact" 
+            href="/consultation" 
             className="btn btn-gold sidebar-cta"
             onClick={closeSidebar}
           >

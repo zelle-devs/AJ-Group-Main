@@ -18,7 +18,7 @@ const DEFAULT_CARDS = [
     title: 'Project Enquiries',
     desc: "Have a project in mind? Tell us what you need and the Group will identify the right capabilities and businesses for the job.",
     buttonText: 'Start a Project',
-    buttonLink: '/contact/project',
+    buttonLink: '/consultation',
     variant: 'primary',
   },
   {
@@ -26,7 +26,7 @@ const DEFAULT_CARDS = [
     title: 'Company Enquiries',
     desc: 'Already know which business you need? You can go direct to the specific company.',
     buttonText: 'Contact a Company',
-    buttonLink: '/companies',
+    buttonLink: '/our-companies',
     variant: 'standard',
   },
   {

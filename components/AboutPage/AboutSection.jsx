@@ -12,7 +12,7 @@ export default function AboutSection({
   body = "A.J Group of Companies is a diversified manufacturing and design group. Under one name we bring together specialists in metal fabrication, commercial print and packaging, advertising production, and consumer design. These businesses look different on the surface, but they share one obsession: getting the details right. We give clients a single partner who can carry an idea from drawing to delivered object, with no compromise along the way.",
   
   // Image Props
-  imageSrc = '/malaysia.jpg',
+  imageSrc = '/AboutHeroIMageSection.jpeg',
   imageAlt = 'A.J Group Manufacturing',
   
   // Features (Pills)

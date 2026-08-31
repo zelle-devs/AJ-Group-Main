@@ -9,7 +9,7 @@ import './FocusCompanies.css';
 export const companiesData = [
   {
     logo: '/Forgentis.png',
-    subtitle: 'FABRICATIONS',
+    subtitle: 'FORGENTIS FABRICATIONS',
     description: "When a project calls for metal, whether structural, architectural, or sculptural, Forgentis brings the engineering and machinery to realize it.",
     buttonText: 'Explore Forgentis',
     buttonLink: '/forgentis',
@@ -23,7 +23,7 @@ export const companiesData = [
     description: "When a brand needs to be seen, held, and remembered, PPA brings the print, packaging, and displays to deliver it.",
     buttonText: 'Explore PPA',
     buttonLink: '/ppa',
-    image: '/usa.jpg',
+    image: '/PPA_Infocus.png',
     imagePosition: 'right',
     shadowColor: 'rgba(234, 179, 8, 0.4)',
   },

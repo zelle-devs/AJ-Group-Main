@@ -271,3 +271,256 @@
     transition: none !important;
   }
 }
+/* ============ ACCORDION STYLES ============ */
+
+.aj-job-wrapper {
+  position: relative;
+}
+
+.aj-job-card.is-open {
+  border-color: var(--color-gold);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+
+.aj-job-btn.is-open {
+  background-color: var(--color-gold);
+  color: var(--color-black);
+}
+
+/* Accordion */
+.aj-job-accordion {
+  overflow: hidden;
+}
+
+.aj-job-accordion-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 28px 24px;
+  border: 1px solid rgba(200, 165, 74, 0.3);
+  border-top: none;
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(30, 30, 30, 0.8));
+}
+
+/* Job Details */
+.aj-job-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aj-job-details-title {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gold);
+  margin: 0;
+}
+
+.aj-job-details-desc {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-beige);
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.aj-job-details-subtitle {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0 6px;
+}
+
+.aj-job-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.aj-job-details-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+  line-height: 1.4;
+}
+
+.aj-job-details-item svg {
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Job Details Info */
+.aj-job-details-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 10px 0;
+  padding: 12px;
+  background: rgba(200, 165, 74, 0.05);
+  border: 1px solid rgba(200, 165, 74, 0.15);
+  border-radius: var(--radius-md);
+}
+
+.aj-job-details-info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+}
+
+.aj-job-details-info-item svg {
+  color: var(--color-gold);
+}
+
+.aj-job-details-info-item strong {
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+}
+/* Application Form */
+.aj-job-application {
+  border-left: 1px solid rgba(200, 165, 74, 0.15);
+  padding-left: 30px;
+}
+
+.aj-job-application-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.aj-job-application-title {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  margin: 0 0 6px;
+}
+
+.aj-job-application-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.aj-job-application-label {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+  font-weight: var(--font-weight-medium);
+}
+
+.aj-job-application-input {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+.aj-job-application-input {
+  /* Ye pehle se hai, bas textarea ke liye bhi kaam karega */
+  resize: vertical; /* ← Add this */
+  min-height: 40px;
+}
+.aj-job-application-input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-light);
+}
+
+.aj-job-application-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px dashed rgba(200, 165, 74, 0.3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.aj-job-application-upload:hover {
+  border-color: var(--color-gold);
+  background: rgba(200, 165, 74, 0.05);
+}
+
+.aj-job-application-upload svg {
+  color: var(--color-gold);
+}
+
+.aj-job-application-upload span {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+}
+
+.aj-job-application-file {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.aj-job-application-submit {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: var(--font-size-xs);
+}
+
+.aj-job-application-success {
+  text-align: center;
+  padding: 30px;
+  color: var(--color-gold);
+}
+
+.aj-job-application-success h4 {
+  font-family: var(--font-family-gotham);
+  color: var(--color-white);
+  margin: 12px 0 6px;
+}
+
+.aj-job-application-success p {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+}
+
+/* ============ RESPONSIVE ACCORDION ============ */
+
+@media (max-width: 767px) {
+  .aj-job-accordion-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+  
+  .aj-job-application {
+    border-left: none;
+    border-top: 1px solid rgba(200, 165, 74, 0.15);
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .aj-job-accordion-inner {
+    padding: 16px 12px;
+  }
+}

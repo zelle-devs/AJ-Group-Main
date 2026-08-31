@@ -33,8 +33,8 @@ const DEFAULT_SOCIALS = [
 ];
 
 const DEFAULT_BUTTONS = [
-  { label: 'Start a Project', href: '/contact', variant: 'gold' },
-  { label: 'Explore Our Companies', href: '/companies', variant: 'outline' },
+  { label: 'Start a Project', href: '/consultation', variant: 'gold' },
+  { label: 'Explore Our Companies', href: '/our-companies', variant: 'outline' },
   { label: 'Talk To Our Team', href: '/contact', variant: 'outline' },
   { label: 'Contact Us', href: '/contact', variant: 'outline' },
 ];
@@ -102,7 +102,7 @@ export default function Footer({
             <ul className={`aj-footer-list ${openSection === 'companies' ? 'open' : ''}`}>
               {companies.map((c) => (
                 <li key={c.name || c}>
-                  <Link href={c.href || '/companies'}>
+                  <Link href={c.href || '/our-companies'}>
                     <ChevronRight size={13} />
                     <span>{c.name || c}</span>
                   </Link>
