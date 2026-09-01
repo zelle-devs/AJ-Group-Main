@@ -6,22 +6,20 @@ import './Footer.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
-
-// Companies with proper routes
+ 
 const DEFAULT_COMPANIES = [
-  { name: 'Forgentis Fabrications', href: '/forgentis' },
-  { name: 'Print Pack Advertising', href: '/ppa' },
-  { name: 'Beyvora Decor', href: '/beyvora' },
-  { name: 'Imprint Galerie', href: '/imprint' },
+  { name: 'Forgentis Fabrications', href: '#' },
+  { name: 'Print Pack Advertising', href: '#' },
+  { name: 'Beyvora Decor', href: '#' },
+  { name: 'Imprint Galerie', href: '#' },
 ];
-
-// Quick links with proper routes
+ 
 const DEFAULT_LINKS = [
   { name: 'About', href: '/about' },
-  { name: 'Capabilities', href: '#' },
-  { name: 'Industries', href: '#' },
+  { name: 'Capabilities', href: '/capabilities' },
+  { name: 'Industries', href: '/industries' },
   { name: 'Approach', href: '/approach' },
-  { name: 'Leadership', href: '/leadership' },
+  // { name: 'Leadership', href: '/leadership' },
   { name: 'Careers', href: '/careers' },
 ];
 
@@ -148,10 +146,10 @@ export default function Footer({
                 <Mail size={15} />
                 <a href={`mailto:${email}`}>{email}</a>
               </li>
-              <li>
+              {/* <li>
                 <MapPin size={15} />
                 <span>{address}</span>
-              </li>
+              </li> */}
             </ul>
           </div>
 

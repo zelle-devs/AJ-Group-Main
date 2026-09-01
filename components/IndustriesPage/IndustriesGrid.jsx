@@ -11,7 +11,7 @@ const INDUSTRIES_DATA = [
     title: 'Retail & Commerce',
     description: "Retail work has to look right in every location and arrive on a demanding schedule. A.J Group produces the fixtures, displays, packaging and signage that make retail spaces work, with consistent quality across a rollout. Much of this is delivered through Print Pack Advertising.",
     points: ['Retail fixtures', 'POSM', 'Packaging', 'In-store branding'],
-    image: '/step1.png',
+    image: '/RetailandEcommerceIndustries.jpg',
     company: 'Print Pack Advertising',
   },
   {
@@ -19,7 +19,7 @@ const INDUSTRIES_DATA = [
     title: 'Corporate & Commercial',
     description: "Corporate spaces need to project the right image consistently, across offices and campuses. A.J Group delivers architectural signage, branded environments and premium print, drawing on Forgentis for metal and signage and Print Pack Advertising for print and presentation.",
     points: ['Architectural signage', 'Wayfinding', 'Corporate branding', 'Premium print'],
-    image: '/step2.png',
+    image: '/CorporateAndCommercialIndustries.jpg',
     company: 'Forgentis + PPA',
   },
   {
@@ -27,7 +27,7 @@ const INDUSTRIES_DATA = [
     title: 'Hospitality',
     description: "Hotels, restaurants and venues depend on atmosphere and detail, and on finishes that stand up to constant use. A.J Group fabricates and finishes the metalwork, feature installations and signage that give hospitality spaces their character, delivered largely through Forgentis Fabrications.",
     points: ['Feature metalwork', 'Backlit installations', 'Signage', 'Bespoke fixtures'],
-    image: '/step3.png',
+    image: '/HospitalityIndustires.jpg',
     company: 'Forgentis Fabrications',
   },
   {
@@ -35,7 +35,7 @@ const INDUSTRIES_DATA = [
     title: 'Events & Exhibitions',
     description: "Events run on tight deadlines and high stakes. A.J Group designs and builds exhibition stands, displays and branded environments that command attention on the floor and are ready on time, delivered through Print Pack Advertising.",
     points: ['Exhibition stands', 'Displays', 'Event branding', 'POSM'],
-    image: '/step4.png',
+    image: '/EventsAndExibitionsindustries.jpg',
     company: 'Print Pack Advertising',
   },
   {
@@ -43,7 +43,7 @@ const INDUSTRIES_DATA = [
     title: 'Real Estate & Development',
     description: "Developers and property teams need work that is engineered to specification and built to last for the life of a building. A.J Group produces the architectural metalwork, facade elements, signage and wayfinding that define a built environment, delivered through Forgentis Fabrications. Real estate is also a sector where the Group is growing its own footprint.",
     points: ['Facade cladding', 'Architectural metal', 'Wayfinding', 'Structural signage'],
-    image: '/step5.png',
+    image: '/RealstateandDevelopmentInsutries.jpg',
     company: 'Forgentis Fabrications',
   },
   {
@@ -59,7 +59,7 @@ const INDUSTRIES_DATA = [
     title: 'Advertising & Marketing',
     description: "For agencies and marketing teams, A.J Group is the production partner that turns creative into physical reality: large-format print, POSM, displays and packaging, produced at the quality and scale a campaign needs. This is delivered through Print Pack Advertising.",
     points: ['Large-format print', 'POSM', 'Packaging', 'Campaign production'],
-    image: '/step1.png',
+    image: '/AdvertisingAndMArketingIndustries.jpg',
     company: 'Print Pack Advertising',
   },
 ];
@@ -119,7 +119,7 @@ export default function IndustriesGrid({
                   
                   {showCompany && industry.company && (
                     <span className="aj-industry-card-company">
-                      Delivered through: <strong>{industry.company}</strong>
+                      {/* Delivered through: <strong>{industry.company}</strong> */}
                     </span>
                   )}
                 </div>

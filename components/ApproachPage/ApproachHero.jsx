@@ -7,7 +7,7 @@ import './ApproachHero.css';
 
 export default function ApproachHero({
   eyebrow = 'Our Approach',
-  headline = 'A Clear Process From Start to Finish.',
+  headline = 'A Clear Process From Start to Finish',
   body = "Good work starts with understanding what is actually required. A.J Group follows the same considered process on every project, so expectations are set early, progress stays visible and the finished work reflects what was agreed at the beginning.",
   imageSrc = '/turkey.jpg',
   imageAlt = 'A.J Group Process',

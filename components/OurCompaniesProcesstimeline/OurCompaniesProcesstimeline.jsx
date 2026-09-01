@@ -34,7 +34,7 @@ const DEFAULT_STEPS = [
 export default function OurCompaniesProcesstimeline({
   // Content Props
   eyebrow = 'What We Do',
-  title = 'The Whole Is Greater Than the Sum.',
+  title = 'The Whole Is Greater Than the Sum',
   description = 'The real advantage of A.J Group shows up when companies combine. Forgentis fabricates a retail structure; PPA clads it in high-definition graphics and supplies the POSM around it. A product from one of our consumer brands arrives in packaging engineered by PPA. Because it is all one group, these handoffs stay clean: one point of accountability, one standard, one timeline.',
   steps = DEFAULT_STEPS,
   

@@ -12,7 +12,7 @@ export default function Contact() {
       {/* 01. CONTACT HERO - Reusing AboutSection */}
       <AboutSection 
         eyebrow="Contact"
-        headline="Let's Talk About Your Project."
+        headline="Let's Talk About Your Project"
         body="Whether you have a defined project, a rough idea, or a question about the Group, A.J Group will get you to the right people. Reach out and we'll respond promptly."
         imageSrc="/australia.jpg"
         imageAlt="A.J Group Contact"
@@ -21,8 +21,8 @@ export default function Contact() {
           { icon: Mail, label: 'hello@ajgroup.com' },
         ]}
         badge1Icon={Clock}
-        badge1Value="Mon-Sat"
-        badge1Label="9AM - 6PM"
+        badge1Value="500+"
+        badge1Label="Happy Clients"
         badge2Value="24hr"
         badge2Label="Response Time"
         useSpacer={true}
@@ -41,7 +41,7 @@ export default function Contact() {
         {/* 08. FIND US - Map section */}
         <CTASection2 
           eyebrow="Find Us"
-          headline="Visit the Group."
+          headline="Visit the Group"
           body="Address:  A.J House, 23/1, Korangi Industrial Area, Karachi 74900, Pakistan"
           primaryButtonText="Get Directions"
           primaryButtonLink="https://maps.google.com"

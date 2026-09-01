@@ -5,11 +5,11 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import './ContactInfo.css';
 
 const DEFAULT_CONTACT_DETAILS = [
-  {
-    icon: MapPin,
-    label: 'Address',
-    value: 'A.J House, 23/1, Korangi Industrial Area, Karachi 74900, Pakistan',
-  },
+  // {
+  //   icon: MapPin,
+  //   label: 'Address',
+  //   value: 'A.J House, 23/1, Korangi Industrial Area, Karachi 74900, Pakistan',
+  // },
   {
     icon: Phone,
     label: 'Phone',
@@ -20,11 +20,11 @@ const DEFAULT_CONTACT_DETAILS = [
     label: 'Email',
     value: 'hello@ajgroup.com',
   },
-  {
-    icon: Clock,
-    label: 'Hours',
-    value: 'Monday - Saturday: 9:00 AM - 6:00 PM',
-  },
+  // {
+  //   icon: Clock,
+  //   label: 'Hours',
+  //   value: 'Monday - Saturday: 9:00 AM - 6:00 PM',
+  // },
 ];
 
 export default function ContactInfo({
@@ -46,7 +46,7 @@ export default function ContactInfo({
           {headline && <h2 className="aj-contact-info-headline">{headline}</h2>}
         </motion.div>
 
-        <div className="aj-contact-info-grid">
+        <div className="aj-contact-info-grid" style={{gridTemplateColumns:'repeat(2, 1fr)'}}>
           {details.map((detail, index) => {
             const Icon = detail.icon;
             return (

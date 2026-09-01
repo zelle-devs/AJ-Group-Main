@@ -11,35 +11,35 @@ const DEFAULT_PROJECTS = [
     title: 'Forgentis Fabrications',
     description: 'Architectural metal fabrication: 5-axis CNC milling, fiber laser cutting, structural signage, and facade cladding for developers, architects, and engineers.',
     image: '/Specialist_Forgentis_Fabrications.jpeg',
-    link: '/forgentis',
+    link: '#',
   },
   {
     id: 2,
     title: 'Imprint Galerie',
     description: 'A direct-to-consumer design house for personal objects and considered gifting: premium cases, gallery wall art, and bespoke keepsakes.',
     image: '/Imprint_Galerie_grid.png',
-    link: '/imprint',
+    link: '#',
   },
   {
     id: 3,
     title: 'Beyvora Decor',
     description: 'A direct-to-consumer design brand: textured, LED, and metal wall art, plus customizable statement pieces for the home.',
     image: '/Beyvora_Decor.png',
-    link: '/beyvora',
+    link: '#',
   },
   {
     id: 4,
     title: 'Print Pack Advertising (PPA)',
     description: 'Print, packaging, and advertising production: large-format UV printing, custom rigid-box packaging, presentation cases, and exhibition displays for brands and agencies.',
     image: '/Print_Pack_Advertising.jpeg',
-    link: '/ppa',
+    link: '#',
   },
 ];
 
 export default function FeaturedProjects({
   // Content Props
   eyebrow = 'Our Companies',
-  headline = 'Different Businesses. Shared Direction.',
+  headline = 'Different Businesses Shared Direction',
   description = "Each company in A.J Group leads in its own field, while drawing on the resources and standards of the wider Group.",
   buttonText = 'Explore Our Companies',
   buttonLink = '/our-companies',

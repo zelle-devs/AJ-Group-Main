@@ -57,7 +57,7 @@ const STORY_MILESTONES = [
     icon: Rocket,
     year: 'Today',
     title: 'A.J Group',
-    desc: 'Four companies. One standard of making.',
+    desc: 'Four companies, One standard of making',
     color: '#C8A54A',
   },
 ];
@@ -65,8 +65,8 @@ const STORY_MILESTONES = [
 export default function OurStory({
   // Content Props
   eyebrow = 'Our story',
-  headline = 'From a single specialism to a group of companies.',
-  body = "A.J Group began in [FOUNDING YEAR] with a focus on [FOUNDING FOCUS] and a simple belief: clients are best served by makers who take responsibility for the whole outcome. As demand grew, so did our capability. We deepened our craft first, then expanded into adjacent disciplines where the same precision and finish set us apart. [YEARS] years on, the group spans four companies across B2B manufacturing and consumer design, still run with the same hands-on care.",
+  headline = 'How the Group Came Together',
+  body = "A.J Group began in [FOUNDING YEAR] with [FOUNDING FOCUS]. Over [YEARS IN OPERATION] years it has grown from a single focus into a diversified business group spanning manufacturing, industrial solutions, print, packaging, advertising and consumer products, with a growing footprint in real estate and emerging sectors. That growth has been deliberate: building and adding businesses where they strengthen what the Group can offer, rather than expanding for its own sake.",
   milestones = STORY_MILESTONES,
   
   // Layout Props

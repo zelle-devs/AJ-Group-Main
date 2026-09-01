@@ -18,7 +18,7 @@ export default function Capabilities() {
     <>
       <AboutSection
         eyebrow="Our Capabilities"
-        headline="The Capability to Make Almost Anything, Properly."
+        headline="The Capability to Make Almost Anything, Properly"
         body="A.J Group's companies run advanced production floors staffed by engineers and craftspeople. Across metal, print, packaging, and branding, we bring the machinery and the method to deliver precise, repeatable work at high quality, whether it's a single architectural commission or a national retail rollout."
 
         // Image
@@ -63,7 +63,7 @@ export default function Capabilities() {
         {/* <OurCompaniesFeaturedProjects/> */}
         <CapabilitiesWhyChooseUs/>
         <CTASection2
-          eyebrow="Get To Know Each Company."
+          eyebrow="Get To Know Each Company"
           headline="Not Sure Where To Start?"
           body="A.J Group's capabilities cross sectors, and some of the Group's best work has been for clients who didn't fit a category. Tell us about your industry and the challenge, and we'll bring the right mix of businesses and capability to it."
           primaryButtonText="Discuss Your Project"

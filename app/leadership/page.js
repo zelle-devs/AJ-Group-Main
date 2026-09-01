@@ -74,7 +74,7 @@ export default function Leadership() {
         {/* 05. ONE STANDARD - Corporate signature */}
         <CapabilitiesSection 
           eyebrow="One Standard"
-          title="One Group. Many Skills. One Standard."
+          title="One Group, Many Skills, One Standard"
           body="The main job of A.J Group's leadership is to keep its expert businesses aligned to a single standard. Each company is free to lead in its own field, but all of them share the same expectations for quality, delivery and how clients are treated. That alignment is what lets the Group offer expert depth and a consistent experience at the same time."
           showButton={false}
           maxWidth={900}

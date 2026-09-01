@@ -40,7 +40,7 @@ const Navbar = () => {
     { href: '/capabilities', label: 'Capabilities' },
     { href: '/industries', label: 'Industries' },
     { href: '/approach', label: 'Approach' },
-    { href: '/leadership', label: 'Leadership' },
+    // { href: '/leadership', label: 'Leadership' },
     { href: '/careers', label: 'Careers' },
   ]
 

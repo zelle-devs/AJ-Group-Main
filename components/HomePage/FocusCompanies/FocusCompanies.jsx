@@ -23,7 +23,7 @@ export const companiesData = [
     description: "When a brand needs to be seen, held, and remembered, PPA brings the print, packaging, and displays to deliver it.",
     buttonText: 'Explore PPA',
     buttonLink: '/ppa',
-    image: '/PPA_Infocus.png',
+    image: '/ppaIndustriesPage.png',
     imagePosition: 'right',
     shadowColor: 'rgba(234, 179, 8, 0.4)',
   },

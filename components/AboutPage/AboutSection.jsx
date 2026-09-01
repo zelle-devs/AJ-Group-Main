@@ -8,8 +8,8 @@ import './AboutSection.css';
 export default function AboutSection({
   // Content Props
   eyebrow = 'About us',
-  headline = 'A group built on the discipline of making things well.',
-  body = "A.J Group of Companies is a diversified manufacturing and design group. Under one name we bring together specialists in metal fabrication, commercial print and packaging, advertising production, and consumer design. These businesses look different on the surface, but they share one obsession: getting the details right. We give clients a single partner who can carry an idea from drawing to delivered object, with no compromise along the way.",
+  headline = 'A Diversified Business Group',
+  body = "A.J Group is a diversified business group. Under one name we bring together expert companies across manufacturing, industrial solutions, print, packaging, advertising and consumer products, with a growing footprint in real estate and emerging sectors. Each company is expert in its own field, and each draws on the resources, infrastructure and standards of the wider Group. What connects them is a shared commitment to building lasting value and making things properly.",
   
   // Image Props
   imageSrc = '/AboutHeroIMageSection.jpeg',
@@ -26,7 +26,7 @@ export default function AboutSection({
   badge1Icon = Award,
   badge1Value = '4+',
   badge1Label = 'Companies',
-  badge2Value = '100+',
+  badge2Value = '500+',
   badge2Label = 'Projects',
   
   // Layout Props

@@ -8,7 +8,7 @@ export default function CTASection2({
   // Content Props
   eyebrow = 'Get In Touch',
   headline = 'Have a Project in Mind?',
-  body = "Tell us what you're building. Whether it's a single commission or a multi-company program, we'll point you to the right team and get moving.",
+  body = "Tell us what you need to build or make. A.J Group will point you to the right capability and the right business.",
   
   // Primary Button
   primaryButtonText = 'Start a Project',

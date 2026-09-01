@@ -69,8 +69,8 @@ const DEFAULT_ITEMS = [
 export default function WhyAJGroup({
   // Content Props
   eyebrow = 'Why A.J Group',
-  title = 'The Advantages of One Group',
-  intro = "Clients come to A.J Group when a project is too important, or too complex, to split across vendors who don't talk to each other.",
+  title = 'A Better Way to Bring Different Capabilities Together',
+  intro = "Bringing several fields together under one group means a client can find the capability they need in one place, delivered to one standard.",
   items = DEFAULT_ITEMS,
   
   // Layout Props

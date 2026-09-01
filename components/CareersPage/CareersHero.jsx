@@ -7,7 +7,7 @@ import './CareersHero.css';
 
 export default function CareersHero({
   eyebrow = 'Careers',
-  headline = 'Build Your Career With the Group.',
+  headline = 'Build Your Career With the Group',
   body = "At A.J Group, you'll work alongside people who take pride in what they make, across manufacturing, industrial solutions, print, packaging and design. If you care about doing work properly and want room to grow, there's a place for you here.",
   imageSrc = '/CareerMainImageSlider.jpeg',
   imageAlt = 'A.J Group Careers',

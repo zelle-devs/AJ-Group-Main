@@ -85,7 +85,7 @@ const DEFAULT_JOBS = [
 
 export default function JobListings({
   eyebrow = 'Open Roles',
-  headline = 'Current Opportunities.',
+  headline = 'Current Opportunities',
   body = "Explore roles open across A.J Group's businesses. New positions are added as the Group grows, so if nothing fits today, submit your CV and we'll keep you in mind.",
   jobs = DEFAULT_JOBS,
 }) {

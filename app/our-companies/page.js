@@ -15,7 +15,7 @@ export default function OurCompanies() {
     <>
       <AboutSection
         eyebrow="Our Companies"
-        headline="Four companies. One standard of making."
+        headline="Four companies, One standard of making"
         body="A.J Group is home to specialist businesses across manufacturing and design. Two serve business clients with industrial-scale capability; two serve consumers directly with design-led products. Each leads in its own field, and each is backed by the resources of the wider group."
 
         // Image
@@ -49,7 +49,7 @@ export default function OurCompanies() {
       <div className="scroll-content-wrapper">
         <CapabilitiesSection
           eyebrow="Built On Expertise"
-          title="Depth In Every Discipline."
+          title="Depth In Every Discipline"
           body="We don't spread ourselves thin. Each company exists because we knew we could be excellent at it: the right machinery, the right specialists, and years of hard-won know-how. That is why clients trust us with work that has no margin for error."
           showButton={false}
           maxWidth={700}
@@ -59,7 +59,7 @@ export default function OurCompanies() {
         <OurCompaniesCapabilities/>
         <OurCompaniesFeaturedProjects/>
         <CTASection2
-          eyebrow="Get To Know Each Company."
+          eyebrow="Get To Know Each Company"
           headline="Not Sure Where To Start?"
           body="A.J Group's capabilities cross sectors, and some of the Group's best work has been for clients who didn't fit a category. Tell us about your industry and the challenge, and we'll bring the right mix of businesses and capability to it."
           primaryButtonText="Discuss Your Project"

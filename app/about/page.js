@@ -20,7 +20,7 @@ export default function About() {
         {/* 03. OUR VISION */}
         <CapabilitiesSection 
           eyebrow="Our Vision"
-          title="Where We Are Headed."
+          title="Where We Are Headed"
           body="To be recognized as a diversified business group that brings genuine expertise together under one vision and one standard, building strong companies and distinctive brands that serve evolving markets, and creating lasting value as we grow."
           showButton={false}
           maxWidth={700}
@@ -29,7 +29,7 @@ export default function About() {
         {/* 04. OUR MISSION */}
         <CapabilitiesSection 
           eyebrow="Our Mission"
-          title="What We Set Out to Do."
+          title="What We Set Out to Do"
           body="To bring diverse businesses and capabilities together under one Group so we create value at every level, for clients, for partners and for the markets we serve, delivering work of a consistently high standard and building businesses that last."
           showButton={false}
           maxWidth={700}
@@ -38,7 +38,7 @@ export default function About() {
         {/* 05. OUR VALUES - Five-value grid */}
         <WhyAJGroup 
           eyebrow="Our Values"
-          title="The Standards Behind the Work."
+          title="The Standards Behind the Work"
           intro="The same values apply across every business in A.J Group."
           columns={5}
           items={[
@@ -53,7 +53,7 @@ export default function About() {
         {/* 06. HOW WE BUILD - Text-led band */}
         <CapabilitiesSection 
           eyebrow="How We Build"
-          title="Building Businesses That Last."
+          title="Building Businesses That Last"
           body="A.J Group is built for the long term. We would rather build strong, capable businesses that hold their standard for years than chase short-term growth. That means investing in people, equipment and process, keeping quality consistent as we grow, letting each business stay genuinely expert in its field while sharing the resources of the Group, and moving into new sectors where we can hold the same standard."
           align="center"
           showButton={false}
@@ -61,7 +61,7 @@ export default function About() {
         />
 
         {/* 07. GROWTH AND SCALE - Milestones timeline */}
-        <OurStory 
+        {/* <OurStory 
           eyebrow="Growth and Scale"
           headline="Growing Capability Over Time."
           body="A.J Group has grown its capability steadily, adding businesses, equipment, expertise and new sectors as the work has called for it. Across the Group we have delivered [PROJECTS DELIVERED] projects and now serve [INDUSTRIES SERVED] industries, with real estate and emerging sectors part of a growing footprint and the capacity to take on more."
@@ -72,7 +72,7 @@ export default function About() {
             { icon: Target, year: '[YEAR 4]', title: 'Consumer Brands', desc: 'Launched design brands' },
             { icon: Rocket, year: 'Today', title: 'Real Estate & Emerging', desc: 'New sectors expansion' },
           ]}
-        />
+        /> */}
 
         {/* 08. BY THE NUMBERS - Six-stat band */}
         <GroupAtGlance 
@@ -93,7 +93,7 @@ export default function About() {
         {/* 09. OUR STRUCTURE - Four businesses */}
         <FocusCompanies 
           eyebrow="Our Structure"
-          headline="One Group, Four Expert Businesses."
+          headline="One Group, Four Expert Businesses"
           companies={[
             {
               logo: '/Forgentis.png',
@@ -111,36 +111,36 @@ export default function About() {
               description: 'Print, packaging, and advertising production: large-format UV printing, custom rigid-box packaging.',
               buttonText: 'Explore PPA',
               buttonLink: '/ppa',
-              image: '/PPA_Infocus.png',
+              image: '/ppaIndustriesPage.png',
               imagePosition: 'right',
               shadowColor: 'rgba(234, 179, 8, 0.4)',
             },
-            {
-              logo: '/Forgentis.png',
-              subtitle: 'Beyvora Decor',
-              description: 'Direct-to-consumer design brands: textured, LED, and metal wall art for the home.',
-              buttonText: 'Explore Beyvora',
-              buttonLink: '/beyvora',
-              image: '/Beyvora_Decor.png',
-              imagePosition: 'left',
-              shadowColor: 'rgba(200, 165, 74, 0.4)',
-            },
-            {
-              logo: '/PPA.png',
-              subtitle: 'Imprint Galerie',
-              description: 'Design house for personal objects and considered gifting: premium cases and bespoke keepsakes.',
-              buttonText: 'Explore Imprint',
-              buttonLink: '/imprint',
+            // {
+            //   logo: '/Forgentis.png',
+            //   subtitle: 'Beyvora Decor',
+            //   description: 'Direct-to-consumer design brands: textured, LED, and metal wall art for the home.',
+            //   buttonText: 'Explore Beyvora',
+            //   buttonLink: '/beyvora',
+            //   image: '/Beyvora_Decor.png',
+            //   imagePosition: 'left',
+            //   shadowColor: 'rgba(200, 165, 74, 0.4)',
+            // },
+            // {
+            //   logo: '/PPA.png',
+            //   subtitle: 'Imprint Galerie',
+            //   description: 'Design house for personal objects and considered gifting: premium cases and bespoke keepsakes.',
+            //   buttonText: 'Explore Imprint',
+            //   buttonLink: '/imprint',
               
-              image: '/Imprint_Galerie_grid.png',
-              imagePosition: 'right',
-              shadowColor: 'rgba(168, 159, 145, 0.4)',
-            },
+            //   image: '/Imprint_Galerie_grid.png',
+            //   imagePosition: 'right',
+            //   shadowColor: 'rgba(168, 159, 145, 0.4)',
+            // },
           ]}
         />
 
         {/* 10. LEADERSHIP - Teaser */}
-        <TeamScrollSlider 
+        {/* <TeamScrollSlider 
           eyebrow="Leadership"
           titleLine1="The People Behind"
           titleLine2="the Group."
@@ -153,12 +153,12 @@ export default function About() {
             { id: 3, image: '/3.jpg', name: '[Leader Name]', designation: '[Title]' },
             { id: 4, image: '/ceo.jpg', name: '[Leader Name]', designation: '[Title]' },
           ]}
-        />
+        /> */}
 
         {/* 11. WHY THE GROUP - Five-pillar band */}
         <ProcessTimeline 
           eyebrow="Why The Group"
-          title="One Group. Many Skills. One Standard."
+          title="One Group, Many Skills, One Standard"
           description="The advantage of A.J Group is simple: expert depth and group range, held to a single standard."
           steps={[
             { num: '01', title: 'Expert Depth', desc: 'Specialists in each field with deep knowledge.' },

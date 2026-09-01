@@ -10,7 +10,7 @@ export default function Approach() {
     <>
       <AboutSection 
   eyebrow="Our Approach"
-  headline="A Clear Process From Start to Finish."
+  headline="A Clear Process From Start to Finish"
   body="Good work starts with understanding what is actually required. A.J Group follows the same considered process on every project, so expectations are set early, progress stays visible and the finished work reflects what was agreed at the beginning."
   
   // Image
@@ -45,7 +45,7 @@ export default function Approach() {
         <ApproachSteps />
         <CTASection2 
           eyebrow="Get In Touch"
-          headline="Start Your Project Today."
+          headline="Start Your Project Today"
           body="For A.J Group, delivery isn't the end. The clients we value most come back, for the next project and the one after, because they know the Group delivers."
           primaryButtonText="Start a Project"
           primaryButtonLink="/consultation"

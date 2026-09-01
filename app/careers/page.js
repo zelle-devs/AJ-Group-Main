@@ -16,7 +16,7 @@ export default function Careers() {
         {/* 02. LIFE AT THE GROUP */}
         <CapabilitiesSection 
           eyebrow="Life at the Group"
-          title="Real Work You Can Point To."
+          title="Real Work You Can Point To"
           body="Working at A.J Group means being part of work that ends in something real, a fabricated facade, a printed campaign, a finished product. Because the Group spans several disciplines, there's variety in the work and the chance to learn from experts in fields next to your own."
           showButton={false}
           maxWidth={800}
@@ -25,7 +25,7 @@ export default function Careers() {
         {/* 03. OUR CULTURE - Values grid */}
         <WhyAJGroup 
           eyebrow="Our Culture"
-          title="High Standards, Treated Like People."
+          title="High Standards, Treated Like People"
           intro="A.J Group holds a high bar for the work, and expects people to be treated well while meeting it. The culture rewards skill, initiative and care, across every business in the Group."
           columns={5}
           items={[
@@ -41,7 +41,7 @@ export default function Careers() {
         <CareersGrid />
         <OurStory 
   eyebrow="Why Join Us"
-  headline="More Than a Job."
+  headline=""
   body="Reasons people build long careers with the Group:"
   milestones={[
     { icon: Award, year: '01', title: 'Skill', desc: 'Expertise is respected and rewarded across every business.' },
@@ -61,7 +61,7 @@ export default function Careers() {
         {/* 06. SUBMIT YOUR CV - Closing CTA */}
         <CTASection2 
           eyebrow="Submit Your CV"
-          headline="Don't See the Right Role? Introduce Yourself."
+          headline="Don't See the Right Role? Introduce Yourself"
           body="A.J Group is always interested in talented, driven people. Send your CV and tell us where you'd fit, and we'll reach out when there's a match."
           primaryButtonText="Submit Application"
           primaryButtonLink="/careers/apply"

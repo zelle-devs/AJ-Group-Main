@@ -38,7 +38,7 @@ export default function Home() {
         align='left'
       /> */}
       <GroupAtGlance/>
-      <TeamScrollSlider/>
+      {/* <TeamScrollSlider/> */}
        {/* <CapabilitiesSection 
         eyebrow="Leadership"
         title="Led by people who know how things are made."
@@ -48,7 +48,7 @@ export default function Home() {
       /> */}
        <FocusCompanies 
         eyebrow="In focus"
-        headline="Two Companies Two Disciplines One Standard."
+        headline="Expert Businesses Within A.J Group"
         companies={companiesData}
       />
       {/* <CTASection/> */}

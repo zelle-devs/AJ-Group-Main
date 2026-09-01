@@ -11,7 +11,7 @@ const INDUSTRIES_DATA = [
     title: 'Fabrication & Manufacturing',
     description: "Precision metalwork is where the group's engineering discipline shows clearest. Through Forgentis Fabrications, we design and manufacture architectural, structural, and decorative metal, cut, milled, welded, and finished to exacting tolerances.",
     points: ['5-axis CNC milling','Fiber laser cutting', 'Architectural metalworking','Structural signage', ' Facade cladding', 'Backlit spatial installations' ],
-    image: '/step1.png',
+    image: '/FabricationandManufacturingcapabilities.png',
     // company: 'Forgentis',
   },
   {
@@ -19,7 +19,7 @@ const INDUSTRIES_DATA = [
     title: 'Packaging Solutions',
     description: "Packaging is engineering and presentation at once. We design and produce custom rigid boxes, luxury presentation cases, and retail-ready packaging that protects the product and elevates the moment it's opened.",
     points: ['Custom rigid-box packaging', ' Luxury presentation cases', 'Structural packaging design', 'Premium finishes & foiling', 'Retail-ready packs'],
-    image: '/step2.png',
+    image: '/PackagingSolutionscapabilities.png',
     // company: 'Print Pack Advertising',
   },
   {
@@ -27,7 +27,7 @@ const INDUSTRIES_DATA = [
     title: ' Printing & Production',
     description: "Through Print Pack Advertising, the group prints at commercial scale without losing detail. Large-format UV flatbed technology delivers sharp, durable, high-definition output across rigid and flexible materials, for brands that care how their work looks up close.",
     points: [' Large-format UV flatbed printing', 'High-definition graphics', 'substrates ', 'Color-accurate reproduction', 'Volume production runs'],
-    image: '/step3.png',
+    image: '/PrintingProductionCapablilities.png',
     // company: 'Forgentis Fabrications',
   },
   {
@@ -35,7 +35,7 @@ const INDUSTRIES_DATA = [
     title: 'Advertising & Branding',
     description: "We produce the physical side of brand presence: the displays, signage, and environments that put a brand in front of people. From point-of-sale media to full exhibition builds, we make brands impossible to miss and consistent everywhere they appear.",
     points: ['Point-of-sale media (POSM)', ' Exhibition displays & stands ', 'Retail fixtures', 'Environmental & structural branding', 'Event production support'],
-    image: '/step4.png',
+    image: '/AdvertisingBrandingCapabilities.jpg',
     // company: 'Print Pack Advertising',
   },
 //   {

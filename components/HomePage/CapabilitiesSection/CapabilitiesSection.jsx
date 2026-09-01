@@ -7,8 +7,8 @@ import './CapabilitiesSection.css';
 export default function CapabilitiesSection({
   // Content Props
   eyebrow = 'Our capabilities',
-  title = 'The Machinery and Method Behind It',
-  body = "Range means little without the plant to back it. Across the group we run 5-axis CNC and fiber laser cutting, large-format UV printing, custom packaging lines, and in-house finishing, all held to one production standard. It's the capability to take on demanding work and hold quality across every unit.",
+  title = 'The People, Equipment and Experience Behind the Work',
+  body = "Good work depends on the people and plant behind it. A.J Group brings together experienced people, capable equipment and established processes across its businesses and sectors, so the standard holds whether a job is a single component, a large production run or a new venture.",
   buttonText = 'See Full Capabilities',
   buttonLink = '/capabilities',
    

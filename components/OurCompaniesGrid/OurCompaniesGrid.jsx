@@ -19,7 +19,7 @@ const INDUSTRIES_DATA = [
     title: 'Print Pack Advertising (PPA)',
     description: "Print Pack Advertising is the group's print, packaging, and advertising company. We produce large-format print, custom packaging, and brand environments at commercial scale, with the finishing quality premium brands demand.",
     points: ['Retail and FMCG', ' Brand and Marketing Teams', 'Creative Agencies', 'Events and Exhibitions'],
-    image: '/step2.png',
+    image: '/ppaIndustriesPage.png',
     // company: 'Print Pack Advertising',
   },
 //   {

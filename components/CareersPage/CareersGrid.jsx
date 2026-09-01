@@ -23,7 +23,7 @@ const DEFAULT_BENEFITS = [
 
 export default function CareersGrid({
   eyebrow = 'Why Join Us',
-  headline = 'More Than a Job.',
+  headline = 'More Than a Job',
   intro = 'Reasons people build long careers with the Group:',
   benefits = DEFAULT_BENEFITS,
   columns = 4,

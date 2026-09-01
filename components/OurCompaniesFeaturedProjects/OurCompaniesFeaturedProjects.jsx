@@ -39,7 +39,7 @@ const DEFAULT_PROJECTS = [
 export default function OurCompaniesFeaturedProjects({
   // Content Props
   eyebrow = 'Our Companies',
-  headline = 'Different Businesses. Shared Direction.',
+  headline = 'Different Businesses Shared Direction',
   description = "Each company in A.J Group leads in its own field, while drawing on the resources and standards of the wider Group.",
   buttonText = 'Explore Our Companies',
   buttonLink = '/our-companies',

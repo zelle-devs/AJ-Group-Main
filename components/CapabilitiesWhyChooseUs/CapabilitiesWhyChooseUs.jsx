@@ -71,7 +71,7 @@ const DEFAULT_STATS = [
 export default function CapabilitiesWhyChooseUs({
   // Content Props
   eyebrow = 'Our Productions',
-  headline = 'Production Infrastructure.',
+  headline = 'Production Infrastructure',
   description = "Capability means nothing without the plant behind it. A.J Group's companies operate [SQ FT] of production space equipped with [KEY MACHINERY], supported by in-house design, engineering, and finishing teams. It's the infrastructure that lets us take on demanding volumes and hold quality across every unit.",
   
   // Bold words in description
@@ -81,7 +81,7 @@ export default function CapabilitiesWhyChooseUs({
   stats = DEFAULT_STATS,
   
   // Image
-  imageSrc = '/Craftmanship_cards_whyAJ.jpeg',
+  imageSrc = '/ajgrouphero2ndimage.png',
   imageAlt = 'Luxury Lounge with City View',
   
   // Visibility

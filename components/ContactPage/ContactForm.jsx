@@ -14,22 +14,11 @@ export default function ContactForm({
     email: '',
     phone: '',
     company: '',
-    enquiryType: 'Business',
+    subject: '', // Changed from enquiryType to subject
     message: '',
   });
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
-  const enquiryTypes = [
-    'Business',
-    'Project',
-    'Forgentis',
-    'PPA',
-    'Beyvora',
-    'Imprint Galerie',
-    'Careers',
-    'Other',
-  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +27,7 @@ export default function ContactForm({
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message && consent) {
+    if (formData.name && formData.email && formData.message && formData.subject && consent) {
       setSubmitted(true);
     }
   };
@@ -143,20 +132,17 @@ export default function ContactForm({
               </div>
             </div>
 
-            {/* Enquiry Type */}
+            {/* Subject */}
             <div className="aj-contact-form-group">
-              <label className="aj-contact-form-label">Enquiry Type *</label>
-              <select
-                name="enquiryType"
-                value={formData.enquiryType}
+              <label className="aj-contact-form-label">Subject *</label>
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
                 onChange={handleChange}
-                className="aj-contact-form-select"
+                className="aj-contact-form-input"
                 required
-              >
-                {enquiryTypes.map((type) => (
-                  <option key={type} value={type}>{type}</option>
-                ))}
-              </select>
+              />
             </div>
 
             {/* Message */}

@@ -10,7 +10,7 @@ export default function Industries() {
     <>
        <AboutSection 
   eyebrow="Industries"
-  headline="Capability Suited to Your Sector."
+  headline="Capability Suited to Your Sector"
   body="A.J Group works across industries where quality, precision and presentation matter. As a diversified business group, we know different sectors need different things, a retail rollout, a structural facade and a hospitality fit-out are not the same job, and the Group brings the right capability and business to each."
   
   // Image

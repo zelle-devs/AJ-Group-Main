@@ -35,7 +35,7 @@ const DEFAULT_STEPS = [
 export default function ProcessTimeline({
   // Content Props
   eyebrow = 'What We Do',
-  title = 'Broad Capabilities Under One Group.',
+  title = 'Broad Capabilities Under One Group',
   description = 'Across the Group we work in manufacturing and industrial solutions, commercial print, packaging, advertising and branding, and consumer products, with real estate and emerging sectors part of a growing footprint. Because these capabilities sit within one Group, a project or a new venture can move between them without leaving A.J Group, combining operational expertise, production, creative thinking and commercial insight to build things that last.',
   steps = DEFAULT_STEPS,
   

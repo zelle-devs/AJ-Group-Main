@@ -62,9 +62,9 @@ const DEFAULT_PROCESS_STEPS = [
 export default function CapabilitiesSectionLeft2({
   // Content Props
   eyebrow = 'How we work',
-  title = 'A Considered Process Start To Finish',
-  body = "Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end.",
-  buttonText = 'Explore Our Process',
+  title = 'A Clear Process From Start to Finish',
+  body = "A.J Group follows the same considered process on every project, from understanding the brief to delivery and beyond. Expectations are set early, progress stays visible, and the finished work reflects what was agreed at the start.",
+  buttonText = 'See How We Work',
   buttonLink = '/approach',
   
   // Steps Props
