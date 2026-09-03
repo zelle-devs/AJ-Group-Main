@@ -193,7 +193,7 @@ const Hero = () => {
         </div>
 
         {/* Video Box - Fades on scroll */}
-        <motion.div 
+        {/* <motion.div 
           className="hero-video-box"
           style={{ opacity: videoOpacity, x: videoX }}
           initial={{ opacity: 0, x: 30 }}
@@ -207,7 +207,7 @@ const Hero = () => {
             <span className="hero-video-title">Watch Full Video</span>
             <span className="hero-video-subtitle">Discover The Experience</span>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Slider Dots - Fade on scroll */}
         {heroImages.length > 1 && (

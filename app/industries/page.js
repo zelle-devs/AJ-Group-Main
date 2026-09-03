@@ -28,8 +28,8 @@ export default function Industries() {
   badge1Icon={Globe}
   badge1Value="7+"
   badge1Label="Industries Served"
-  badge2Value="4"
-  badge2Label="Businesses"
+  badge2Value="2"
+  badge2Label="Companies"
   
   // Layout
   useSpacer={true}

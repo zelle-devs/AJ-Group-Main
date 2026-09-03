@@ -57,7 +57,7 @@ const STORY_MILESTONES = [
     icon: Rocket,
     year: 'Today',
     title: 'A.J Group',
-    desc: 'Four companies, One standard of making',
+    desc: 'Two companies, One standard of making',
     color: '#C8A54A',
   },
 ];

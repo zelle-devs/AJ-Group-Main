@@ -91,7 +91,7 @@ export default function About() {
         />
 
         {/* 09. OUR STRUCTURE - Four businesses */}
-        <FocusCompanies 
+        {/* <FocusCompanies 
           eyebrow="Our Structure"
           headline="One Group, Four Expert Businesses"
           companies={[
@@ -100,7 +100,7 @@ export default function About() {
               subtitle: 'FABRICATIONS',
               description: 'Architectural metal fabrication: 5-axis CNC milling, fiber laser cutting, structural signage, and facade cladding.',
               buttonText: 'Explore Forgentis',
-              buttonLink: '/forgentis',
+              buttonLink: '#',
               image: '/step4.png',
               imagePosition: 'left',
               shadowColor: 'rgba(59, 130, 246, 0.4)',
@@ -110,34 +110,34 @@ export default function About() {
               subtitle: 'PRINT PACK ADVERTISING',
               description: 'Print, packaging, and advertising production: large-format UV printing, custom rigid-box packaging.',
               buttonText: 'Explore PPA',
-              buttonLink: '/ppa',
+              buttonLink: '#',
               image: '/ppaIndustriesPage.png',
               imagePosition: 'right',
               shadowColor: 'rgba(234, 179, 8, 0.4)',
             },
-            // {
-            //   logo: '/Forgentis.png',
-            //   subtitle: 'Beyvora Decor',
-            //   description: 'Direct-to-consumer design brands: textured, LED, and metal wall art for the home.',
-            //   buttonText: 'Explore Beyvora',
-            //   buttonLink: '/beyvora',
-            //   image: '/Beyvora_Decor.png',
-            //   imagePosition: 'left',
-            //   shadowColor: 'rgba(200, 165, 74, 0.4)',
-            // },
-            // {
-            //   logo: '/PPA.png',
-            //   subtitle: 'Imprint Galerie',
-            //   description: 'Design house for personal objects and considered gifting: premium cases and bespoke keepsakes.',
-            //   buttonText: 'Explore Imprint',
-            //   buttonLink: '/imprint',
+            {
+              logo: '/Forgentis.png',
+              subtitle: 'Beyvora Decor',
+              description: 'Direct-to-consumer design brands: textured, LED, and metal wall art for the home.',
+              buttonText: 'Explore Beyvora',
+              buttonLink: '/beyvora',
+              image: '/Beyvora_Decor.png',
+              imagePosition: 'left',
+              shadowColor: 'rgba(200, 165, 74, 0.4)',
+            },
+            {
+              logo: '/PPA.png',
+              subtitle: 'Imprint Galerie',
+              description: 'Design house for personal objects and considered gifting: premium cases and bespoke keepsakes.',
+              buttonText: 'Explore Imprint',
+              buttonLink: '/imprint',
               
-            //   image: '/Imprint_Galerie_grid.png',
-            //   imagePosition: 'right',
-            //   shadowColor: 'rgba(168, 159, 145, 0.4)',
-            // },
+              image: '/Imprint_Galerie_grid.png',
+              imagePosition: 'right',
+              shadowColor: 'rgba(168, 159, 145, 0.4)',
+            },
           ]}
-        />
+        /> */}
 
         {/* 10. LEADERSHIP - Teaser */}
         {/* <TeamScrollSlider 

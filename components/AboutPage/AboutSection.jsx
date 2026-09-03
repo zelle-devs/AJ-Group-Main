@@ -24,7 +24,7 @@ export default function AboutSection({
   
   // Badges
   badge1Icon = Award,
-  badge1Value = '4+',
+  badge1Value = '2',
   badge1Label = 'Companies',
   badge2Value = '500+',
   badge2Label = 'Projects',

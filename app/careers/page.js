@@ -64,7 +64,7 @@ export default function Careers() {
           headline="Don't See the Right Role? Introduce Yourself"
           body="A.J Group is always interested in talented, driven people. Send your CV and tell us where you'd fit, and we'll reach out when there's a match."
           primaryButtonText="Submit Application"
-          primaryButtonLink="/careers/apply"
+          primaryButtonLink="#"
           secondaryButtonText="Contact Us"
           secondaryButtonLink="/contact"
         />

@@ -14,8 +14,8 @@ export default function CareersHero({
   badge1Icon = Users,
   badge1Value = '100+',
   badge1Label = 'Team Members',
-  badge2Value = '4+',
-  badge2Label = 'Businesses',
+  badge2Value = '2',
+  badge2Label = 'Companies',
   useSpacer = true,
 }) {
   return (
@@ -71,7 +71,7 @@ export default function CareersHero({
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                <a href="/careers/roles" className="btn btn-gold aj-careers-btn">
+                <a href="#current" className="btn btn-gold aj-careers-btn">
                   View Open Roles <ArrowRight size={16} />
                 </a>
                 <a href="/careers/apply" className="btn btn-outline-gold aj-careers-btn">

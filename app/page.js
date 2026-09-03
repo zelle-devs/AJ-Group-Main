@@ -20,7 +20,12 @@ export default function Home() {
       <Hero />
       <div className="scroll-content-wrapper">
       <WhyChooseUs/>
-      <FeaturedProjects/>
+      {/* <FeaturedProjects/> */}
+      <FocusCompanies 
+        eyebrow="Our Companies"
+        headline="Expert Businesses Within A.J Group"
+        companies={companiesData}
+      />
       <ProcessTimeline/>
       <CapabilitiesSection/>
       <WhyAJGroup/>
@@ -46,11 +51,7 @@ export default function Home() {
         buttonText="Meet Our Leadership"
         buttonLink="/leadership"
       /> */}
-       <FocusCompanies 
-        eyebrow="In focus"
-        headline="Expert Businesses Within A.J Group"
-        companies={companiesData}
-      />
+       
       {/* <CTASection/> */}
 <CTASection2/>
 </div>

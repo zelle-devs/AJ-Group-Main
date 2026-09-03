@@ -33,7 +33,7 @@ const DEFAULT_STATS = [
   { value: '4+', label: 'Years In Operation' },
   { value: '100', label: 'People Across The Group' },
   { value: '100+', label: 'Projects Delivered' },
-  { value: '4', label: 'Companies In The Group' },
+  { value: '2', label: 'Companies In The Group' },
 ];
 
 const fadeUp = {

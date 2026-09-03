@@ -2,6 +2,7 @@
 import AboutSection from "@/components/AboutPage/AboutSection";
 import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
+import FocusCompanies, { companiesData } from "@/components/HomePage/FocusCompanies/FocusCompanies";
 import IndustriesGrid from "@/components/IndustriesPage/IndustriesGrid";
 import IndustriesHero from "@/components/IndustriesPage/IndustriesHero";
 import OurCompaniesCapabilities from "@/components/OurCompaniesCapabilities/OurCompaniesCapabilities";
@@ -15,7 +16,7 @@ export default function OurCompanies() {
     <>
       <AboutSection
         eyebrow="Our Companies"
-        headline="Four companies, One standard of making"
+        headline="Two companies, One standard of making"
         body="A.J Group is home to specialist businesses across manufacturing and design. Two serve business clients with industrial-scale capability; two serve consumers directly with design-led products. Each leads in its own field, and each is backed by the resources of the wider group."
 
         // Image
@@ -33,8 +34,8 @@ export default function OurCompanies() {
         badge1Icon={Globe}
         badge1Value="500+"
         badge1Label="Happy Clients"
-        badge2Value="4+"
-        badge2Label="Businesses"
+        badge2Value="2"
+        badge2Label="Companies"
 
         // Layout
         useSpacer={true}
@@ -57,7 +58,12 @@ export default function OurCompanies() {
         <OurCompaniesGrid />
         <OurCompaniesProcesstimeline/>
         <OurCompaniesCapabilities/>
-        <OurCompaniesFeaturedProjects/>
+        {/* <OurCompaniesFeaturedProjects/> */}
+        {/* <FocusCompanies 
+        eyebrow="In focus"
+        headline="Expert Businesses Within A.J Group"
+        companies={companiesData}
+      /> */}
         <CTASection2
           eyebrow="Get To Know Each Company"
           headline="Not Sure Where To Start?"

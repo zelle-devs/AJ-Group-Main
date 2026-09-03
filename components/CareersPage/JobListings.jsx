@@ -22,8 +22,8 @@ import './JobListings.css';
 const DEFAULT_JOBS = [
   {
     id: 1,
-    title: 'Designer',
-    department: 'Designing',
+    title: 'Accountant',
+    department: 'Financing',
     location: 'Karachi, Pakistan',
     type: 'Full-time',
     company: '[Company]',
@@ -42,45 +42,45 @@ const DEFAULT_JOBS = [
       'Requirement 3: Qualification or skill',
     ],
   },
-  {
-    id: 2,
-    title: '[Job Title]',
-    department: '[Department]',
-    location: '[Location]',
-    type: '[Full-time]',
-    company: '[Company]',
-    salary: '[Salary Range]', // ← Add this
-    timing: '[Working Hours]', // ← Add this
-    description: 'We are looking for a talented individual to join our team. The ideal candidate will have relevant experience and a passion for quality work. You will work alongside experts in your field and contribute to meaningful projects across the Group.',
-    responsibilities: [
-      'Responsibility 1: Key duty or task',
-      'Responsibility 2: Key duty or task',
-      'Responsibility 3: Key duty or task',
-    ],
-    requirements: [
-      'Requirement 1: Qualification or skill',
-      'Requirement 2: Qualification or skill',
-    ],
-  },
-  {
-    id: 3,
-    title: '[Job Title]',
-    department: '[Department]',
-    location: '[Location]',
-    type: '[Full-time]',
-    company: '[Company]',
-    salary: '[Salary Range]', // ← Add this
-    timing: '[Working Hours]', // ← Add this
-    description: 'We are looking for a talented individual to join our team. The ideal candidate will have relevant experience and a passion for quality work.',
-    responsibilities: [
-      'Responsibility 1: Key duty or task',
-      'Responsibility 2: Key duty or task',
-    ],
-    requirements: [
-      'Requirement 1: Qualification or skill',
-      'Requirement 2: Qualification or skill',
-    ],
-  },
+  // {
+  //   id: 2,
+  //   title: '[Job Title]',
+  //   department: '[Department]',
+  //   location: '[Location]',
+  //   type: '[Full-time]',
+  //   company: '[Company]',
+  //   salary: '[Salary Range]', // ← Add this
+  //   timing: '[Working Hours]', // ← Add this
+  //   description: 'We are looking for a talented individual to join our team. The ideal candidate will have relevant experience and a passion for quality work. You will work alongside experts in your field and contribute to meaningful projects across the Group.',
+  //   responsibilities: [
+  //     'Responsibility 1: Key duty or task',
+  //     'Responsibility 2: Key duty or task',
+  //     'Responsibility 3: Key duty or task',
+  //   ],
+  //   requirements: [
+  //     'Requirement 1: Qualification or skill',
+  //     'Requirement 2: Qualification or skill',
+  //   ],
+  // },
+  // {
+  //   id: 3,
+  //   title: '[Job Title]',
+  //   department: '[Department]',
+  //   location: '[Location]',
+  //   type: '[Full-time]',
+  //   company: '[Company]',
+  //   salary: '[Salary Range]', // ← Add this
+  //   timing: '[Working Hours]', // ← Add this
+  //   description: 'We are looking for a talented individual to join our team. The ideal candidate will have relevant experience and a passion for quality work.',
+  //   responsibilities: [
+  //     'Responsibility 1: Key duty or task',
+  //     'Responsibility 2: Key duty or task',
+  //   ],
+  //   requirements: [
+  //     'Requirement 1: Qualification or skill',
+  //     'Requirement 2: Qualification or skill',
+  //   ],
+  // },
 ];
 
 export default function JobListings({
@@ -88,6 +88,7 @@ export default function JobListings({
   headline = 'Current Opportunities',
   body = "Explore roles open across A.J Group's businesses. New positions are added as the Group grows, so if nothing fits today, submit your CV and we'll keep you in mind.",
   jobs = DEFAULT_JOBS,
+
 }) {
   const [openJobId, setOpenJobId] = useState(null);
   const [applicationData, setApplicationData] = useState({
@@ -132,7 +133,7 @@ export default function JobListings({
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           {eyebrow && <span className="aj-jobs-eyebrow">{eyebrow}</span>}
-          {headline && <h2 className="aj-jobs-headline">{headline}</h2>}
+          {headline && <h2 id='current' className="aj-jobs-headline">{headline}</h2>}
           {body && <p className="aj-jobs-body">{body}</p>}
         </motion.div>
 
