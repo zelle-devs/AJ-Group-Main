@@ -7,36 +7,41 @@ import './Processtimeline.css';
 const DEFAULT_STEPS = [
   {
     num: '01',
-    title: 'Fabrication & Manufacturing',
-    desc: 'Architectural and Structural Metalwork',
+    title: 'IDENTIFY',
+    desc: 'We look for businesses, markets and opportunities with meaningful potential',
   },
   {
     num: '02',
-    title: 'Printing & Production',
-    desc: 'Large-Format High-Definition Commercial Print',
+    title: 'BUILD',
+    desc: 'We turn ideas and opportunities into businesses with strong foundations',
   },
   {
     num: '03',
-    title: 'Packaging',
-    desc: 'Rigid Boxes Presentation Cases Retail-Ready Packs ',
+    title: 'INVEST',
+    desc: 'We commit capital, resources and strategic thinking where they can create lasting value',
   },
   {
     num: '04',
-    title: 'Advertising & Branding',
-    desc: 'POSM Exhibitions and Environmental Branding ',
+    title: 'OWN',
+    desc: 'We take a long-term view of the businesses we build and back',
   },
   {
     num: '05',
-    title: 'Design Brands',
-    desc: 'Finished Products for the Home and Personal Life',
+    title: 'SCALE',
+    desc: 'We strengthen operations, pursue new markets and create platforms for continued growth',
+  },
+  {
+    num: '06',
+    title: 'EXPAND',
+    desc: 'We continuously explore new sectors, businesses and opportunities that can move the Group forward',
   },
 ];
 
 export default function ProcessTimeline({
   // Content Props
-  eyebrow = 'What We Do',
-  title = 'Broad Capabilities Under One Group',
-  description = 'Across the Group we work in manufacturing and industrial solutions, commercial print, packaging, advertising and branding, and consumer products, with real estate and emerging sectors part of a growing footprint. Because these capabilities sit within one Group, a project or a new venture can move between them without leaving A.J Group, combining operational expertise, production, creative thinking and commercial insight to build things that last.',
+  eyebrow = 'Our Approach',
+  title = 'How We Build',
+  description = 'Our approach is designed around long-term ownership and sustainable growth.',
   steps = DEFAULT_STEPS,
   
   // Layout Control

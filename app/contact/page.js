@@ -14,7 +14,7 @@ export default function Contact() {
         eyebrow="Contact"
         headline="Let's Talk About Your Project"
         body="Whether you have a defined project, a rough idea, or a question about the Group, A.J Group will get you to the right people. Reach out and we'll respond promptly."
-        imageSrc="/australia.jpg"
+        imageSrc="/Integrity_cards_whyAJ.jpeg"
         imageAlt="A.J Group Contact"
         features={[
           { icon: Phone, label: '+92 21 111 254 111' },
@@ -30,13 +30,13 @@ export default function Contact() {
       
       <div className="scroll-content-wrapper">
         {/* 02. HEAD OFFICE - Contact Info */}
+
+        <div style={{display:'flex', width:'100%' }}>
+
         <ContactInfo />
 
-        {/* 03-06. ROUTING CARDS */}
-        <ContactCards />
-
-        {/* 07. SEND A MESSAGE - Form */}
         <ContactForm />
+        </div>
 
         {/* 08. FIND US - Map section */}
         <CTASection2 

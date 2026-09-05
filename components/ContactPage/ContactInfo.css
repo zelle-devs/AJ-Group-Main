@@ -9,6 +9,7 @@
   background-color: var(--color-black);
   overflow: hidden;
   isolation: isolate;
+  width: 50%;
 }
 
 .aj-contact-info-section::before {
@@ -50,7 +51,7 @@
 /* Grid */
 .aj-contact-info-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
   perspective: 1000px;
 }
@@ -162,7 +163,7 @@
 
 @media (max-width: 1023px) {
   .aj-contact-info-section { padding: 50px 0; }
-  .aj-contact-info-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .aj-contact-info-grid { grid-template-columns: repeat(1, 1fr); gap: 16px; }
   .aj-contact-info-card { padding: 24px 18px; }
 }
 

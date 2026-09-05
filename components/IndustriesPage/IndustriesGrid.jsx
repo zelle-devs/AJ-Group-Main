@@ -8,60 +8,67 @@ import './IndustriesGrid.css';
 const INDUSTRIES_DATA = [
   {
     icon: ShoppingBag,
-    title: 'Retail & Commerce',
-    description: "Retail work has to look right in every location and arrive on a demanding schedule. A.J Group produces the fixtures, displays, packaging and signage that make retail spaces work, with consistent quality across a rollout. Much of this is delivered through Print Pack Advertising.",
-    points: ['Retail fixtures', 'POSM', 'Packaging', 'In-store branding'],
+    title: 'Building The Foundations of Businesses',
+    eyebrow: 'INDUSTRIAL',
+    description: "Our industrial capabilities give the Group experience in manufacturing, engineering, fabrication and physical production.These capabilities provide a strong operational foundation — while creating opportunities to build and scale businesses within the industrial ecosystem",
+    points: ['Engineering', 'Manufacturing', 'Fabrication', 'Production'],
     image: '/RetailandEcommerceIndustries.jpg',
     company: 'Print Pack Advertising',
   },
   {
     icon: Building2,
-    title: 'Corporate & Commercial',
-    description: "Corporate spaces need to project the right image consistently, across offices and campuses. A.J Group delivers architectural signage, branded environments and premium print, drawing on Forgentis for metal and signage and Print Pack Advertising for print and presentation.",
-    points: ['Architectural signage', 'Wayfinding', 'Corporate branding', 'Premium print'],
+    title: 'Where Business Meet Experiences',
+   eyebrow: 'COMMERCIAL',
+    description: "From corporate environments to retail and commercial spaces, we understand the importance of execution, presentation and consistency. Our operating capabilities allow us to participate across the commercial ecosystem while creating opportunities for broader business growth.",
+   points: ['Retail', 'Corporate', 'Commercial', 'Brand Environment'],
     image: '/CorporateAndCommercialIndustries.jpg',
     company: 'Forgentis + PPA',
   },
   {
     icon: Hotel,
-    title: 'Hospitality',
-    description: "Hotels, restaurants and venues depend on atmosphere and detail, and on finishes that stand up to constant use. A.J Group fabricates and finishes the metalwork, feature installations and signage that give hospitality spaces their character, delivered largely through Forgentis Fabrications.",
-    points: ['Feature metalwork', 'Backlit installations', 'Signage', 'Bespoke fixtures'],
+    title: 'Building for The End Customer',
+    eyebrow: 'Consumer ',
+    description: "Consumer markets create opportunities to build brands, products and businesses around changing customer needs.AJ Group continues to explore opportunities where strong concepts, disciplined execution and long-term ownership can create meaningful consumer businesses.",
+    points: ['Production', 'Brands', 'Lifestyle', 'Commerce'],
     image: '/HospitalityIndustires.jpg',
     company: 'Forgentis Fabrications',
   },
   {
     icon: Calendar,
-    title: 'Events & Exhibitions',
-    description: "Events run on tight deadlines and high stakes. A.J Group designs and builds exhibition stands, displays and branded environments that command attention on the floor and are ready on time, delivered through Print Pack Advertising.",
-    points: ['Exhibition stands', 'Displays', 'Event branding', 'POSM'],
+    title: 'Building Beyond The Business',
+    eyebrow: 'REAL ESTATE',
+    description: "Real estate represents more than physical assets. It creates opportunities to develop, invest, operate and build long-term value. AJ Group sees potential across property, development and the wider ecosystem surrounding the built environment.",
+    points: ['Property', 'Development', 'Investment', 'Opportunity'],
     image: '/EventsAndExibitionsindustries.jpg',
     company: 'Print Pack Advertising',
   },
   {
     icon: Home,
-    title: 'Real Estate & Development',
-    description: "Developers and property teams need work that is engineered to specification and built to last for the life of a building. A.J Group produces the architectural metalwork, facade elements, signage and wayfinding that define a built environment, delivered through Forgentis Fabrications. Real estate is also a sector where the Group is growing its own footprint.",
-    points: ['Facade cladding', 'Architectural metal', 'Wayfinding', 'Structural signage'],
+    title: 'Knowledge , Execution, Scale',
+  eyebrow: 'SERVICES',
+    description: "Businesses increasingly compete through the quality of the services, systems and experiences they provide.We remain open to opportunities across service-driven sectors where strong execution and scalable models can create sustainable growth.",
+    points: ['Services', 'Operations', 'Technology', 'Business Solutions'],
     image: '/RealstateandDevelopmentInsutries.jpg',
     company: 'Forgentis Fabrications',
   },
-  {
-    icon: Factory,
-    title: 'Manufacturing',
-    description: "A.J Group supports other manufacturers and industrial clients with precision fabrication, machined components and volume production, bringing 5-axis CNC and fiber laser capability to briefs that demand tight tolerances and repeatable quality. This work is delivered through Forgentis Fabrications.",
-    points: ['Precision fabrication', 'Machined components', 'Volume production', 'Laser cutting'],
-    image: '/forgentis.jpeg',
-    company: 'Forgentis Fabrications',
-  },
-  {
-    icon: Megaphone,
-    title: 'Advertising & Marketing',
-    description: "For agencies and marketing teams, A.J Group is the production partner that turns creative into physical reality: large-format print, POSM, displays and packaging, produced at the quality and scale a campaign needs. This is delivered through Print Pack Advertising.",
-    points: ['Large-format print', 'POSM', 'Packaging', 'Campaign production'],
-    image: '/AdvertisingAndMArketingIndustries.jpg',
-    company: 'Print Pack Advertising',
-  },
+  // {
+  //   icon: Factory,
+  //   title: 'Manufacturing',
+  //   eyebrow: 'EMERGING OPPORTUNITIES',
+  //   description: "A.J Group supports other manufacturers and industrial clients with precision fabrication, machined components and volume production, bringing 5-axis CNC and fiber laser capability to briefs that demand tight tolerances and repeatable quality. This work is delivered through Forgentis Fabrications.",
+  //   points: ['Precision fabrication', 'Machined components', 'Volume production', 'Laser cutting'],
+  //   image: '/forgentis.jpeg',
+  //   company: 'Forgentis Fabrications',
+  // },
+  // {
+  //   icon: Megaphone,
+  //   title: 'Advertising & Marketing',
+  //  eyebrow: '',
+  //   description: "For agencies and marketing teams, A.J Group is the production partner that turns creative into physical reality: large-format print, POSM, displays and packaging, produced at the quality and scale a campaign needs. This is delivered through Print Pack Advertising.",
+  //   points: ['Large-format print', 'POSM', 'Packaging', 'Campaign production'],
+  //   image: '/AdvertisingAndMArketingIndustries.jpg',
+  //   company: 'Print Pack Advertising',
+  // },
 ];
 
 export default function IndustriesGrid({
@@ -103,10 +110,10 @@ export default function IndustriesGrid({
                     <Icon size={24} />
                   </div>
                   
-                  <h3 className="aj-industry-card-title">{industry.title}</h3>
+                  <span className="aj-cap-eyebrow">{industry.eyebrow}</span>
+                  <h3 className="aj-industry-card-title" style={{marginTop:'-20px'}}>{industry.title}</h3>
                   
                   <p className="aj-industry-card-desc">{industry.description}</p>
-                  
                   {showPoints && industry.points && (
                     <div className="aj-industry-card-points">
                       {industry.points.map((point, i) => (

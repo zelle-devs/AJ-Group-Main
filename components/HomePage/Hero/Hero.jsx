@@ -10,6 +10,7 @@ const Hero = () => {
   const heroImages = [
     '/hero2.png', 
     '/ajgrouphero2ndimage.png', 
+    '/HeroSectionAJGroupThiredImage.jpg', 
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -113,7 +114,6 @@ const Hero = () => {
         {/* Background Slider - Forward only window slide */}
         <div className="hero-slider">
           {isFirstLoad ? (
-            // First load - Shatter effect
             <motion.div
               key={`first-${currentSlide}`}
               className="hero-slider-image active"
@@ -138,7 +138,6 @@ const Hero = () => {
           )}
         </div>
 
-        {/* Overlay - Hamesha visible, scroll par aur dark */}
         <motion.div 
           className="hero-overlay"
           style={{ opacity: overlayOpacity }}
@@ -163,7 +162,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              Building  <span>Sustainable</span> Enterprise
+               <span>Building  </span>What Comes Next
             </motion.h1>
             
             <motion.p 
@@ -172,7 +171,11 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-             A.J Group is a diversified business group of expert companies working across manufacturing, industrial solutions, print, packaging, advertising and consumer products, with real estate and emerging sectors part of a growing footprint. We bring different businesses and capabilities together under one vision, and build strong companies and distinctive brands designed to grow.
+            <strong style={{fontWeight:'800'}}>AJ Group is an investment and operating group building, owning and growing businesses with a long-term vision.</strong> We create opportunities, build businesses from the ground up and pursue strategic expansion across sectors.
+            
+            <br/> <br/>
+            <h2 style={{fontWeight:'700', color:'var(--color-gold)' ,fontFamily:'Gotham'}}>INVEST. BUILD. OWN. GROW.</h2>
+
 
             </motion.p>
             

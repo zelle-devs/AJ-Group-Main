@@ -6,21 +6,7 @@ import {
   Lightbulb,
   PenTool,
   Cog,
-  Package,
-  Truck,
-  CheckCircle2,
   Check,
-  Target,
-  Eye,
-  Award,
-  Star,
-  Handshake,
-  TrendingUp,
-  Users,
-  Globe,
-  Factory,
-  Wrench,
-  Printer,
 } from 'lucide-react';
 
 import './CapabilitiesSectionLeft2.css';
@@ -29,41 +15,29 @@ import './CapabilitiesSectionLeft2.css';
 const DEFAULT_PROCESS_STEPS = [
   {
     icon: Lightbulb,
-    title: 'Brief',
+    title: 'Build From Zero',
     desc: 'Understanding the requirment.',
     color: '#C8A54A',
   },
   {
     icon: PenTool,
-    title: 'Define',
+    title: 'Acquire With Purpose',
     desc: 'Shape the right solution.',
     color: '#C8A54A',
   },
   {
     icon: Cog,
-    title: 'Create',
+    title: 'Growth With Discipline',
     desc: 'Design, engineer or develop.',
-    color: '#C8A54A',
-  },
-  {
-    icon: Package,
-    title: 'Make',
-    desc: 'Produce with precision.',
-    color: '#C8A54A',
-  },
-  {
-    icon: Check,
-    title: 'Deliver',
-    desc: 'Finish, Review & deliver exellence.',
     color: '#C8A54A',
   },
 ];
 
 export default function CapabilitiesSectionLeft2({
   // Content Props
-  eyebrow = 'How we work',
-  title = 'A Clear Process From Start to Finish',
-  body = "A.J Group follows the same considered process on every project, from understanding the brief to delivery and beyond. Expectations are set early, progress stays visible, and the finished work reflects what was agreed at the start.",
+  eyebrow = 'OPPORTUNITY',
+  title = 'We Look Beyond Industries',
+  body = "Opportunity doesn't always fit neatly into a category. That's why AJ Group remains open to new markets, new sectors and new ways to create value. We pursue opportunities where vision, capital and execution can come together to build something enduring.",
   buttonText = 'See How We Work',
   buttonLink = '/approach',
   
@@ -127,6 +101,13 @@ export default function CapabilitiesSectionLeft2({
               {/* Connecting Line */}
               <motion.div
                 className="aj-process-timeline-line"
+                /* Yahan style add kiya hai taake line sirf icons ke darmian rahe */
+                style={{ 
+                  left: '15%', 
+                  width: '72%', 
+                  marginLeft:'45px',
+                  transformOrigin: 'left center' 
+                }}
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}

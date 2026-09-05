@@ -13,7 +13,7 @@
 .why-choose-grid {
   display: grid;
   grid-template-columns: 1.2fr 1.1fr 1.1fr;
-  gap: 0;
+  gap: 0; 
   background: var(--color-black);
   border: 1px solid rgba(200, 165, 74, 0.25);
   border-radius: var(--radius-4xl);

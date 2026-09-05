@@ -1,5 +1,6 @@
 'use client'
 import AboutSection from "@/components/AboutPage/AboutSection";
+import HeroSectionIndustries from "@/components/AboutPage/HeroSectionIndustries";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
 import IndustriesGrid from "@/components/IndustriesPage/IndustriesGrid";
 import IndustriesHero from "@/components/IndustriesPage/IndustriesHero";
@@ -8,16 +9,11 @@ import { Award, Building2, Globe, Hotel, ShoppingBag, TrendingUp, User } from "l
 export default function Industries() {
   return (
     <>
-       <AboutSection 
-  eyebrow="Industries"
-  headline="Capability Suited to Your Sector"
-  body="A.J Group works across industries where quality, precision and presentation matter. As a diversified business group, we know different sectors need different things, a retail rollout, a structural facade and a hospitality fit-out are not the same job, and the Group brings the right capability and business to each."
+       <HeroSectionIndustries
   
-  // Image
   imageSrc="/Capability_suited_sector.jpeg"
   imageAlt="A.J Group Industries"
   
-  // Features - Industry sectors
   features={[
     { icon: ShoppingBag, label: 'Retail' },
     { icon: Building2, label: 'Corporate' },
@@ -43,6 +39,13 @@ export default function Industries() {
 />
       <div className="scroll-content-wrapper">
         <IndustriesGrid />
+                <CapabilitiesSectionPortfolioMain
+                 eyebrow="THE GROUP"
+                  title="Different Businesses, One Long Term Vision"
+                  body="AJ Group operates through wholly owned companies, each with its own capabilities, markets and opportunities. While our businesses operate independently, they are united by the same philosophy"         
+                  showButton={false}
+                  maxWidth={700}
+                />
         <CTASection2 
           eyebrow="Get In Touch"
           headline="Don't See Your Industry?"

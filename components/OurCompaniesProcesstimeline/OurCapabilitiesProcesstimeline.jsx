@@ -6,33 +6,38 @@ import '../../components/HomePage/Processtimeline/Processtimeline.css';
 const DEFAULT_STEPS = [
   {
     num: '01',
-    title: 'Long Term Ownership',
-    desc: 'We build and operate with the future in mind.',
+    title: 'Quality',
+    desc: 'Maintaining high standards from planning through execution',
   },
   {
     num: '02',
-    title: 'Strategic Thinking',
-    desc: 'We focus on opportunities that can create meaningful long-term value.',
+    title: 'Efficiency',
+    desc: 'Building processes designed to operate consistently and improve over time.',
   },
     {
     num: '03',
-    title: 'Operational Excellence',
-    desc: 'We believe sustainable growth starts with strong fundamentals. ',
+    title: 'Precision',
+    desc: 'Paying attention to the details that determine long-term performance. ',
   },
   {
     num: '04',
-    title: 'Entrepreneurial Mindset',
-    desc: 'We remain adaptable, decisive and willing to pursue new opportunities.',
+    title: 'Adaptability',
+    desc: 'Creating businesses capable of responding to changing markets and opportunities.',
+  },  
+  {
+    num: '05',
+    title: 'Scalability',
+    desc: 'Building systems and capabilities that can grow with the business.',
   },
 
 
 ];
 
-export default function OurCompaniesProcesstimeline({
+export default function OurCapabilitiesProcesstimeline({
   // Content Props
-  eyebrow = 'ONE GROUP, ONE STANDARD',
-  title = 'What Connects Our Companies',
-  description = 'Different businesses require different strategies. But every company within AJ Group is built around the same fundamentals',
+  eyebrow = 'Operating Excellence',
+  title = 'Strong Business Starts With Strong Foundations',
+  description = 'We believe sustainable growth begins with disciplined execution.Across our operations, we focus on',
   steps = DEFAULT_STEPS,
   
   // Layout Control

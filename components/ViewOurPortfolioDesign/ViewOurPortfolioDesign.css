@@ -1,0 +1,271 @@
+:root {
+    --color-black: #0D0D0D;
+    --color-gold: #C8A54A;
+    --color-beige: #A89F91;
+    --color-white: #FFFFFF;
+    --color-gold-light: rgba(200, 165, 74, 0.1);
+    --color-gold-medium: rgba(200, 165, 74, 0.3);
+    --color-beige-light: rgba(168, 159, 145, 0.1);
+    --color-black-light: rgba(13, 13, 13, 0.05);
+    --color-overlay: rgba(13, 13, 13, 0.55);
+}
+
+.portfolio-sectionViewOurPortfolioDesign {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--color-black, #0D0D0D);
+    overflow: hidden;
+    font-family: 'Gotham', sans-serif;
+    display: flex;
+    align-items: center;
+    color: var(--color-white, #FFF);
+}
+
+.content-containerViewOurPortfolioDesign {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/* Typography Styles */
+.text-contentViewOurPortfolioDesign {
+    max-width: 600px; 
+}
+
+.section-subtitleViewOurPortfolioDesign {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 1.5rem;
+}
+
+.section-subtitleViewOurPortfolioDesign .numberViewOurPortfolioDesign {
+    color: var(--color-gold, #C8A54A);
+}
+
+.section-subtitleViewOurPortfolioDesign .dividerViewOurPortfolioDesign,
+.section-subtitleViewOurPortfolioDesign .labelViewOurPortfolioDesign {
+    color: var(--color-beige, #A89F91);
+}
+
+.main-titleViewOurPortfolioDesign {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-family: 'Gotham', sans-serif;
+    color: var(--color-gold, #C8A54A);
+}
+
+/* Your requested gradient applied as a sweeping text shine */
+.shine-textViewOurPortfolioDesign {
+    background: linear-gradient(90deg,
+            var(--color-gold) 0%,
+            #e6c869 25%,
+            var(--color-white) 50%,
+            #e6c869 75%,
+            var(--color-gold) 100%);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 5s linear infinite;
+}
+
+.descriptionViewOurPortfolioDesign {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-beige, #A89F91);
+    max-width: 450px;
+    font-weight: 300;
+     font-family: 'Gotham', sans-serif;
+}
+
+/* Cards Layout */
+.cards-containerViewOurPortfolioDesign {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 5rem;
+}
+
+.info-cardViewOurPortfolioDesign {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(200, 165, 74, 0.2);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        border-color 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+     font-family: 'Gotham', sans-serif;
+}
+
+/* Hover states for interactive feel */
+.info-cardViewOurPortfolioDesign:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-gold, #C8A54A);
+    box-shadow: 0 10px 30px rgba(200, 165, 74, 0.15);
+}
+
+/* The custom animated gradient shine on hover */
+.card-glowViewOurPortfolioDesign {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            var(--color-gold) 25%,
+            #e6c869 50%,
+            var(--color-gold) 75%,
+            transparent 100%);
+    opacity: 0.15;
+    transform: skewX(-20deg);
+    transition: all 0.75s ease;
+}
+
+.info-cardViewOurPortfolioDesign:hover .card-glowViewOurPortfolioDesign {
+    left: 200%;
+    transition: all 1s ease-in-out;
+}
+
+/* NEW: Background Icon Styles */
+.bg-icon-wrapperViewOurPortfolioDesign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.04; /* Required opacity */
+    color: var(--color-gold); 
+    z-index: 0;
+    pointer-events: none;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Scale up the background icon on card hover */
+.info-cardViewOurPortfolioDesign:hover .bg-icon-wrapperViewOurPortfolioDesign {
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Foreground Icon Styles */
+.icon-wrapperViewOurPortfolioDesign {
+    color: var(--color-gold, #C8A54A);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1; /* Keep above background icon */
+    transition: transform 0.4s ease;
+}
+
+.info-cardViewOurPortfolioDesign:hover .icon-wrapperViewOurPortfolioDesign {
+    transform: scale(1.15) translateZ(0);
+}
+
+/* Typography for the Card */
+.info-cardViewOurPortfolioDesign h3 {
+    font-size: 1.1rem;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 400;
+    color: var(--color-white, #FFFFFF); /* Updated to White */
+    line-height: 1.4;
+    margin: 0;
+    position: relative;
+    z-index: 1; /* Keep above background icon */
+}
+
+/* Animations */
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-delay-1ViewOurPortfolioDesign {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 0.2s;
+}
+
+.fade-in-delay-2ViewOurPortfolioDesign {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+
+.fade-in-delay-3ViewOurPortfolioDesign {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+
+.fade-in-delay-4ViewOurPortfolioDesign {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
+}
+
+.fade-in-delay-5ViewOurPortfolioDesign {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 1.0s;
+}
+
+.fade-in-delay-6ViewOurPortfolioDesign {
+    animation: fadeInUp 0.8s ease forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .cards-containerViewOurPortfolioDesign {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-titleViewOurPortfolioDesign {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-containerViewOurPortfolioDesign {
+        grid-template-columns: 1fr;
+    }
+
+    .main-titleViewOurPortfolioDesign {
+        font-size: 2.2rem;
+    }
+
+    .content-containerViewOurPortfolioDesign {
+        padding: 2rem 1.5rem;
+    }
+}

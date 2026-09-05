@@ -33,9 +33,10 @@ export default function FocusCompanies({
   // Content Props
   eyebrow = 'Our Companies',
   headline = 'Specialists, not generalists.',
+  headline2 = 'Build With Us',
   companies = companiesData,
   bgColor = 'var(--color-black)',
-  
+  dec= "We are always open to meaningful opportunities. Whether you're building a business, exploring a strategic partnership, considering an acquisition or looking for the right long-term partner, AJ Group welcomes conversations that have the potential to create something bigger.",
   // Layout Props
   showHeader = true,
   showLogo = true,
@@ -60,7 +61,9 @@ export default function FocusCompanies({
           >
             {eyebrow && <span className="aj-focus-eyebrow">{eyebrow}</span>}
             {headline && <h2 className="aj-focus-headline">{headline}</h2>}
-            {showLine && <span className="aj-focus-line" />}
+            {dec && <h2 className="why-choose-description" style={{width:'700px', marginBottom:'20px'}}>{dec}</h2>}
+            {/* {headline2 && <h2 className="aj-focus-headline">{headline2}</h2>} */}
+            {headline2 && <span className="aj-focus-line" style={{marginBottom:'-40px'}} >{headline2}</span>}
           </motion.div>
         )}
 

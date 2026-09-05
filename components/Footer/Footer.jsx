@@ -10,8 +10,6 @@ import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
 const DEFAULT_COMPANIES = [
   { name: 'Forgentis Fabrications', href: '#' },
   { name: 'Print Pack Advertising', href: '#' },
-  { name: 'Beyvora Decor', href: '#' },
-  { name: 'Imprint Galerie', href: '#' },
 ];
  
 const DEFAULT_LINKS = [

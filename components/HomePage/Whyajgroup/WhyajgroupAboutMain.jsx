@@ -64,7 +64,7 @@ const DEFAULT_ITEMS = [
   // },
 ];
 
-export default function WhyAJGroup({
+export default function WhyajgroupAboutMain({
   // Content Props
   eyebrow = 'The A.J Group',
   title = 'One Group, Multiple Opportunities',
@@ -124,7 +124,7 @@ export default function WhyAJGroup({
     };
     
     if (columns === 5) {
-      baseStyle.aspectRatio = '3 / 3.5';
+      baseStyle.aspectRatio = '3 / 3.9';
     }
     if (columns === 3) {
       baseStyle.aspectRatio = '3 / 3.8';
@@ -149,11 +149,11 @@ export default function WhyAJGroup({
           {showIntro && intro && <p className="aj-why-intro">{intro}</p>}
           
         </div>
-        <div>
+        {/* <div>
           <a href='#' className="btn btn-outline-gold aj-cap2-btn">
             VIEW OUR PORTFOLIO <ArrowRight size={16} />
           </a>
-        </div>
+        </div> */}
         </div>
         
         

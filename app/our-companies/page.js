@@ -1,29 +1,33 @@
 'use client'
 import AboutSection from "@/components/AboutPage/AboutSection";
+import HeroSectionPortfolio from "@/components/AboutPage/HeroSectionPortfolio";
+import CareersGridPorfolio from "@/components/CareersPage/CareersGridPorfolio";
 import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection";
+import CapabilitiesSectionPortfolioMain from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionPortfolioMain";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
 import FocusCompanies, { companiesData } from "@/components/HomePage/FocusCompanies/FocusCompanies";
+import GroupatglanceNewUpdatedAboutMain from "@/components/HomePage/Groupatglance/GroupatglanceNewUpdatedAboutMain";
+import WhyChooseUsPortfolioPageMain from "@/components/HomePage/WhyChooseUs/WhyChooseUsPortfolioPageMain";
 import IndustriesGrid from "@/components/IndustriesPage/IndustriesGrid";
 import IndustriesHero from "@/components/IndustriesPage/IndustriesHero";
 import OurCompaniesCapabilities from "@/components/OurCompaniesCapabilities/OurCompaniesCapabilities";
 import OurCompaniesFeaturedProjects from "@/components/OurCompaniesFeaturedProjects/OurCompaniesFeaturedProjects";
 import OurCompaniesGrid from "@/components/OurCompaniesGrid/OurCompaniesGrid";
+import OurCompaniesGridPorfolio from "@/components/OurCompaniesGrid/OurCompaniesGridPorfolio";
 import OurCompaniesProcesstimeline from "@/components/OurCompaniesProcesstimeline/OurCompaniesProcesstimeline";
 import { Award, Building2, Globe, Hotel, ShoppingBag, TrendingUp, User } from "lucide-react";
 
 export default function OurCompanies() {
   return (
     <>
-      <AboutSection
-        eyebrow="Our Companies"
-        headline="Two companies, One standard of making"
-        body="A.J Group is home to specialist businesses across manufacturing and design. Two serve business clients with industrial-scale capability; two serve consumers directly with design-led products. Each leads in its own field, and each is backed by the resources of the wider group."
+      <HeroSectionPortfolio
+        eyebrow="OUR PORTFOLIO"
+        headline="A Portfolio Built for Whats Next"
+        body="AJ Group builds, owns and develops businesses with a long-term view. Our portfolio today represents the foundation of a much larger vision — one focused on strategic growth, new opportunities and building enduring value."
 
-        // Image
         imageSrc="/MainPageOurCopmaniesMainImage.jpeg"
         imageAlt="A.J Group Industries"
 
-        // Features - Industry sectors
         features={[
           { icon: ShoppingBag, label: 'Retail' },
           { icon: Building2, label: 'Corporate' },
@@ -48,27 +52,27 @@ export default function OurCompanies() {
         showImageOverlay={true}
       />
       <div className="scroll-content-wrapper">
-        <CapabilitiesSection
-          eyebrow="Built On Expertise"
-          title="Depth In Every Discipline"
-          body="We don't spread ourselves thin. Each company exists because we knew we could be excellent at it: the right machinery, the right specialists, and years of hard-won know-how. That is why clients trust us with work that has no margin for error."
+        <CapabilitiesSectionPortfolioMain
+         eyebrow="THE GROUP"
+          title="Different Businesses, One Long Term Vision"
+          body="AJ Group operates through wholly owned companies, each with its own capabilities, markets and opportunities. While our businesses operate independently, they are united by the same philosophy"         
           showButton={false}
           maxWidth={700}
         />
-        <OurCompaniesGrid />
+ 
+        <OurCompaniesGridPorfolio />
+        <CareersGridPorfolio/>
         <OurCompaniesProcesstimeline/>
-        <OurCompaniesCapabilities/>
-        {/* <OurCompaniesFeaturedProjects/> */}
-        {/* <FocusCompanies 
-        eyebrow="In focus"
-        headline="Expert Businesses Within A.J Group"
-        companies={companiesData}
-      /> */}
+        <WhyChooseUsPortfolioPageMain/>
+         <GroupatglanceNewUpdatedAboutMain/>
+        
+        {/* <OurCompaniesCapabilities/> */}
+        
         <CTASection2
           eyebrow="Get To Know Each Company"
-          headline="Not Sure Where To Start?"
-          body="A.J Group's capabilities cross sectors, and some of the Group's best work has been for clients who didn't fit a category. Tell us about your industry and the challenge, and we'll bring the right mix of businesses and capability to it."
-          primaryButtonText="Discuss Your Project"
+          headline="The Next Opportunity is Out There"
+          body="AJ Group is always looking ahead. New sectors, New Business, New Possibilities. And we need to built them. "
+          primaryButtonText="Partner With AJ Group"
           primaryButtonLink="/consultation"
           secondaryButtonText="Contact Us"
           secondaryButtonLink="/contact"

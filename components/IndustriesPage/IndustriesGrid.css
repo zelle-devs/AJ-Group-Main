@@ -38,6 +38,20 @@
     0 0 50px rgba(200, 165, 74, 0.1);
 }
 
+/* Eyebrow - Poppins, 13px, semibold, gold, uppercase */
+.aj-cap-eyebrow {
+  display: inline-block;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm); 
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 10px;
+  position: relative;
+  text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
+}
+
 /* Image */
 .aj-industry-card-image {
   position: relative;

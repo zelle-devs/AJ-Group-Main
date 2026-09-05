@@ -14,27 +14,39 @@ import CTASection2 from '@/components/HomePage/CTASection/CTASection2'
 import CapabilitiesSectionChart from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionChart'
 import CapabilitiesSectionChart2 from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionChart2'
 import CapabilitiesSectionLeft2 from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionLeft2'
+import ViewOurPortfolioDesign from '@/components/ViewOurPortfolioDesign/ViewOurPortfolioDesign'
+import GroupatglanceNewUpdated from '@/components/HomePage/Groupatglance/GroupatglanceNewUpdated'
+import CapabilitiesSectionHomeMain from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionHomeMain'
 export default function Home() {
   return (
     <>
       <Hero />
       <div className="scroll-content-wrapper">
-      <WhyChooseUs/>
-      {/* <FeaturedProjects/> */}
-      <FocusCompanies 
-        eyebrow="Our Companies"
-        headline="Expert Businesses Within A.J Group"
-        companies={companiesData}
-      />
-      <ProcessTimeline/>
-      <CapabilitiesSection/>
-      <WhyAJGroup/>
-      {/* <CapabilitiesSectionLeft/> */}
-      <CapabilitiesSectionLeft2/>
+        <WhyChooseUs />
+        <CapabilitiesSectionHomeMain
+          eyebrow="PORTFOLIO"
+          title="A Portfolio In Motion"
+          body="Our portfolio is growing. Across businesses, sectors and markets, each venture represents another step in the evolution of AJ Group"         
+          showButton={false}
+          maxWidth={700}
+        />
+        <WhyAJGroup />
+        {/* <FeaturedProjects/> */}
+        <ProcessTimeline />
+        <FocusCompanies
+          eyebrow="PARTNERSHIPS"
+          headline="Let's Build What's Next"
+          desc="We are always open to meaningful opportunities. Whether you're building a business, exploring a strategic partnership, considering an acquisition or looking for the right long-term partner, AJ Group welcomes conversations that have the potential to create something bigger."
+          companies={companiesData}
+        />
+        {/* <CapabilitiesSection /> */}
+        {/* <ViewOurPortfolioDesign/> */}
+        {/* <CapabilitiesSectionLeft/> */}
+        <CapabilitiesSectionLeft2 />
 
-  {/* <CapabilitiesSectionChart/> */}
-  {/* <CapabilitiesSectionChart2/> */}
-       {/* <CapabilitiesSection 
+        {/* <CapabilitiesSectionChart/> */}
+        {/* <CapabilitiesSectionChart2/> */}
+        {/* <CapabilitiesSection 
         eyebrow="How we work"
         title="A considered process, start to finish."
         body="Every project follows the same deliberate sequence, from brief to delivery, so nothing is left to chance and nothing surprises you at the end."
@@ -42,19 +54,19 @@ export default function Home() {
         buttonLink="/leadership"
         align='left'
       /> */}
-      <GroupAtGlance/>
-      {/* <TeamScrollSlider/> */}
-       {/* <CapabilitiesSection 
+        <GroupatglanceNewUpdated />
+        {/* <TeamScrollSlider/> */}
+        {/* <CapabilitiesSection 
         eyebrow="Leadership"
         title="Led by people who know how things are made."
         body="A.J Group is guided by a leadership team with deep roots in manufacturing, design, and commercial delivery. Their focus is simple: keep raising the standard of what the group makes, and build companies clients return to."
         buttonText="Meet Our Leadership"
         buttonLink="/leadership"
       /> */}
-       
-      {/* <CTASection/> */}
-<CTASection2/>
-</div>
+
+        {/* <CTASection/> */}
+        <CTASection2 />
+      </div>
     </>
   )
 }

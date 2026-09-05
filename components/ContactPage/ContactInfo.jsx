@@ -46,7 +46,7 @@ export default function ContactInfo({
           {headline && <h2 className="aj-contact-info-headline">{headline}</h2>}
         </motion.div>
 
-        <div className="aj-contact-info-grid" style={{gridTemplateColumns:'repeat(2, 1fr)'}}>
+        <div className="aj-contact-info-grid" style={{gridTemplateColumns:'repeat(1, 1fr)', width:'100%'}}>
           {details.map((detail, index) => {
             const Icon = detail.icon;
             return (

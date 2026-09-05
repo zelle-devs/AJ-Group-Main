@@ -9,54 +9,74 @@ import ProcessTimeline from "@/components/HomePage/Processtimeline/Processtimeli
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
 import { Target, Eye, Award, Star, Handshake, Shield, Users, Globe, Factory, Printer, Package, Rocket } from 'lucide-react';
 import WhyAJGroup from "@/components/HomePage/Whyajgroup/Whyajgroup";
+import WhyChooseUs from "@/components/HomePage/WhyChooseUs/WhyChooseUs";
+import WhyChooseUsAboutPageMain from "@/components/HomePage/WhyChooseUs/WhyChooseUsAboutPageMain";
+import ViewOurPortfolioDesignAboutMain from "@/components/ViewOurPortfolioDesign/ViewOurPortfolioDesignAboutMain";
+import CapabilitiesSectionAboutMain from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionAboutMain";
+import WhyajgroupAboutMain from "@/components/HomePage/Whyajgroup/WhyajgroupAboutMain";
+import CapabilitiesSectionAbout2MainPortfolio from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionAbout2MainPortfolio";
+import GroupatglanceNewUpdatedAboutMain from "@/components/HomePage/Groupatglance/GroupatglanceNewUpdatedAboutMain";
+import ProcesstimelineAboutMain from "@/components/HomePage/Processtimeline/ProcesstimelineAboutMain";
 
 export default function About() {
   return (
     <>
       <AboutSection />
       <div className="scroll-content-wrapper">
+        <WhyChooseUsAboutPageMain />
+        <CapabilitiesSectionAboutMain
+          eyebrow="OUR THINKING"
+          title="Think Long Term Build With Purpose"
+          body="We don't believe in building businesses simply to make them bigger.
+We believe in building them better.
+That means making thoughtful investments, developing strong operations, creating capable teams and continuously looking for opportunities to expand.
+Our businesses may operate in different sectors, but the principles behind them remain the same
+"
+          showButton={false}
+          maxWidth={700}
+        />
         <OurStory />
-        
+
         {/* 03. OUR VISION */}
-        <CapabilitiesSection 
+        {/* <CapabilitiesSection
           eyebrow="Our Vision"
           title="Where We Are Headed"
           body="To be recognized as a diversified business group that brings genuine expertise together under one vision and one standard, building strong companies and distinctive brands that serve evolving markets, and creating lasting value as we grow."
           showButton={false}
           maxWidth={700}
-        />
+        /> */}
 
         {/* 04. OUR MISSION */}
-        <CapabilitiesSection 
+        {/* <CapabilitiesSection
           eyebrow="Our Mission"
           title="What We Set Out to Do"
           body="To bring diverse businesses and capabilities together under one Group so we create value at every level, for clients, for partners and for the markets we serve, delivering work of a consistently high standard and building businesses that last."
           showButton={false}
           maxWidth={700}
-        />
+        /> */}
 
         {/* 05. OUR VALUES - Five-value grid */}
-        <WhyAJGroup 
-          eyebrow="Our Values"
-          title="The Standards Behind the Work"
+        <WhyajgroupAboutMain
+          eyebrow="OUR APPROACH"
+          title="Built For The Long Term"
           intro="The same values apply across every business in A.J Group."
           columns={5}
           items={[
-            { num: '01', icon: Shield, title: 'Integrity', desc: 'Honest work, clear communication.', image: '/Integrity_cards_whyAJ.jpeg' },
-            { num: '02', icon: Award, title: 'Excellence', desc: 'Never compromise on quality.', image: '/Excellence_cards_whyAJ.jpeg' },
-            { num: '03', icon: Handshake, title: 'Accountability', desc: 'We own the whole outcome.', image: '/Accountability_cards_whyAJ.jpeg' },
-            { num: '04', icon: Star, title: 'Craftsmanship', desc: 'Every detail matters.', image: '/Craftmanship_cards_whyAJ.jpeg' },
-            { num: '05', icon: Eye, title: 'Vision', desc: 'Building for the long term.', image: '/Vision_cards_whyAJ.jpeg' },
+            { num: '01', icon: Shield, title: 'Long Term Ownership', desc: 'We think beyond immediate returns and build with the future in mind.', image: '/Integrity_cards_whyAJ.jpeg' },
+            { num: '02', icon: Award, title: 'Strategic Invest', desc: 'We look for opportunities where capital, strategy and execution can unlock meaningful potential.', image: '/Excellence_cards_whyAJ.jpeg' },
+            { num: '03', icon: Handshake, title: 'ENTREPRENEURIAL THINKING', desc: 'We move with the mindset of builders — decisive, adaptable and focused on opportunity.', image: '/Accountability_cards_whyAJ.jpeg' },
+            { num: '04', icon: Star, title: 'OPERATIONAL EXCELLENCE', desc: 'We believe strong businesses are built on strong fundamentals, disciplined execution and high standards.', image: '/Craftmanship_cards_whyAJ.jpeg' },
+            { num: '05', icon: Eye, title: 'SUSTAINABLE GROWTH', desc: 'We pursue growth that creates a stronger business, not simply a larger one.', image: '/Vision_cards_whyAJ.jpeg' },
           ]}
         />
 
         {/* 06. HOW WE BUILD - Text-led band */}
-        <CapabilitiesSection 
-          eyebrow="How We Build"
-          title="Building Businesses That Last"
-          body="A.J Group is built for the long term. We would rather build strong, capable businesses that hold their standard for years than chase short-term growth. That means investing in people, equipment and process, keeping quality consistent as we grow, letting each business stay genuinely expert in its field while sharing the resources of the Group, and moving into new sectors where we can hold the same standard."
+        <CapabilitiesSectionAbout2MainPortfolio
+          eyebrow="OUR PORTFOLIO"
+          title="A Diversified Group in The Making "
+          body="AJ Group's portfolio is growing across businesses, sectors and opportunities. Our current businesses represent where we are today.They do not define where we are going."
           align="center"
-          showButton={false}
+          showButton={true}
           maxWidth={800}
         />
 
@@ -75,20 +95,7 @@ export default function About() {
         /> */}
 
         {/* 08. BY THE NUMBERS - Six-stat band */}
-        <GroupAtGlance 
-          eyebrow="By the Numbers"
-          headline="The Group at a Glance."
-          stats={[
-            { value: '2', label: 'Years in operation' },
-            { value: '4', label: 'Expert businesses' },
-            { value: '15', label: 'Projects delivered' },
-            { value: '50+', label: 'People across the Group' },
-            { value: '1.3', label: 'Production space' },
-            { value: '4', label: 'Industries served' },
-          ]}
-          statsGrid="3x2"
-          orbitIcons={[Factory, Printer, Package, Users, Globe, Award]}
-        />
+        <GroupatglanceNewUpdatedAboutMain />
 
         {/* 09. OUR STRUCTURE - Four businesses */}
         {/* <FocusCompanies 
@@ -156,28 +163,28 @@ export default function About() {
         /> */}
 
         {/* 11. WHY THE GROUP - Five-pillar band */}
-        <ProcessTimeline 
-          eyebrow="Why The Group"
-          title="One Group, Many Skills, One Standard"
-          description="The advantage of A.J Group is simple: expert depth and group range, held to a single standard."
+        <ProcesstimelineAboutMain
+          eyebrow="THE FUTURE"
+          title="There is More To Build"
+          description="The businesses we have today are only part of the story. We are continuing to explore new opportunities, new sectors and new ways to create value.Because the goal is not simply to build a collection of businesses."
           steps={[
-            { num: '01', title: 'Expert Depth', desc: 'Specialists in each field with deep knowledge.' },
-            { num: '02', title: 'Group Range', desc: 'Diverse capabilities under one roof.' },
-            { num: '03', title: 'One Standard', desc: 'Consistent quality across every business.' },
-            { num: '04', title: 'Shared Resources', desc: 'Group strength and shared infrastructure.' },
-            { num: '05', title: 'Lasting Value', desc: 'Built for the long term, not short-term.' },
+            { num: '01', title: 'Strength to Grow', desc: 'The capabilities, resources, and scale to keep moving forward.' },
+            { num: '02', title: 'Discipline to Endure', desc: 'Strong foundations, consistent standards, and the discipline to endure.' },
+            { num: '03', title: 'Ambition to Become More', desc: 'A long-term vision to grow beyond individual businesses into something much larger.' },
+            // { num: '04', title: 'Shared Resources', desc: 'Group strength and shared infrastructure.' },
+            // { num: '05', title: 'Lasting Value', desc: 'Built for the long term, not short-term.' },
           ]}
         />
 
         {/* 12. CLOSING CTA */}
-        <CTASection2 
+        <CTASection2
           eyebrow="Get In Touch"
-          headline="Want to Know What the Group Can Do?"
-          body="Whether you have a defined project or are just exploring, A.J Group is glad to talk."
-          primaryButtonText="Start a Project"
-          primaryButtonLink="/consultation"
-          secondaryButtonText="Contact the Group"
-          secondaryButtonLink="/contact"
+          headline="Build Something Bigger"
+          body="If you see an opportunity worth exploring, we want to hear about it. Whether you're an entrepreneur, investor, business owner or strategic partner, AJ Group is open to conversations that can lead to something meaningful"
+          primaryButtonText="Partner With AJ"
+          primaryButtonLink="/contact"
+          secondaryButtonText="Start A Project"
+          secondaryButtonLink="/consultation"
         />
       </div>
     </>

@@ -25,47 +25,47 @@ import './OurStory.css';
 
 // Default Milestones
 const STORY_MILESTONES = [
-  {
-    icon: Factory,
-    year: '[FOUNDING YEAR]',
-    title: 'Foundation',
-    desc: 'Started with a focus on [FOUNDING FOCUS]',
-    color: '#C8A54A',
-  },
+  // {
+  //   icon: Factory,
+  //   year: '[FOUNDING YEAR]',
+  //   title: 'Foundation',
+  //   desc: 'Started with a focus on [FOUNDING FOCUS]',
+  //   color: '#C8A54A',
+  // },
   {
     icon: Wrench,
-    year: '[EXPANSION 1]',
-    title: 'Deepening Craft',
-    desc: 'Refined our core specialism and processes',
+    // year: '[EXPANSION 1]',
+    title: 'Build',
+    desc: 'Some of our strongest opportunities begin with an idea. We build businesses from the ground up, developing the people, systems and capabilities required to create something built to last.',
     color: '#C8A54A',
   },
   {
     icon: Printer,
-    year: '[EXPANSION 2]',
-    title: 'Print & Packaging',
-    desc: 'Expanded into commercial print and packaging',
+    // year: '[EXPANSION 2]',
+    title: 'Invest',
+    desc: 'We commit capital and resources where we see meaningful potential. Our investment decisions are guided by opportunity, strategic fit and the potential to create long-term value',
     color: '#C8A54A',
   },
   {
     icon: Package,
-    year: '[EXPANSION 3]',
-    title: 'Advertising Production',
-    desc: 'Added advertising and display manufacturing',
+    // year: '[EXPANSION 3]',
+    title: 'Own',
+    desc: 'We take a long-term approach to the businesses we build and back.Ownership gives us the ability to think beyond short-term outcomes and make decisions for the future',
     color: '#C8A54A',
   },
   {
     icon: Rocket,
-    year: 'Today',
-    title: 'A.J Group',
-    desc: 'Two companies, One standard of making',
+    // year: 'Today',
+    title: 'Expand',
+    desc: 'We continuously explore new sectors, markets and opportunities. As the Group grows, so does the scope of what we can build',
     color: '#C8A54A',
   },
 ];
 
 export default function OurStory({
   // Content Props
-  eyebrow = 'Our story',
-  headline = 'How the Group Came Together',
+  eyebrow = 'WHAT WE DO',
+  headline = 'We Build, We Invest, We Expand',
   body = "A.J Group began in [FOUNDING YEAR] with [FOUNDING FOCUS]. Over [YEARS IN OPERATION] years it has grown from a single focus into a diversified business group spanning manufacturing, industrial solutions, print, packaging, advertising and consumer products, with a growing footprint in real estate and emerging sectors. That growth has been deliberate: building and adding businesses where they strengthen what the Group can offer, rather than expanding for its own sake.",
   milestones = STORY_MILESTONES,
   
@@ -81,8 +81,8 @@ export default function OurStory({
   animationDelay = 0,
 }) {
   return (
-    <section className="aj-story-section">
-      <div className="container2">
+    <section className="aj-story-section" >
+      <div className="container2" style={{gap:'30px'}}>
         {/* Row 1: Content - Left 50% + Right 50% */}
         {showHeader && (
           <div className="aj-story-top-row">
@@ -120,7 +120,7 @@ export default function OurStory({
             </motion.div>
 
             {/* Right - Body */}
-            {showBody && body && (
+            {/* {showBody && body && (
               <motion.p
                 className="aj-story-body"
                 initial={{ opacity: 0, y: 20 }}
@@ -130,13 +130,14 @@ export default function OurStory({
               >
                 {body}
               </motion.p>
-            )}
+            )} */}
           </div>
         )}
 
         {/* Row 2: Full Width Stepper Timeline */}
         <motion.div
           className="aj-story-timeline"
+          style={{gap:'30px'}}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-10%' }}

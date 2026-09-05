@@ -1,27 +1,32 @@
 'use client'
 import AboutSection from "@/components/AboutPage/AboutSection";
+import HeroSectionCapabilities from "@/components/AboutPage/HeroSectionCapabilities";
 import CapabilitiesCustomSolutions from "@/components/CapabilitiesCustomSolutions/CapabilitiesCustomSolutions";
 import CapabilitiesWhyChooseUs from "@/components/CapabilitiesWhyChooseUs/CapabilitiesWhyChooseUs";
 import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection";
+import CapabilitiesSectionCapabilitiesMain from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionCapabilitiesMain";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
+import WhyajgroupAboutMain from "@/components/HomePage/Whyajgroup/WhyajgroupAboutMain";
+import WhyChooseUsCapabilitiesPageMain from "@/components/HomePage/WhyChooseUs/WhyChooseUsCapabilitiesPageMain";
 import IndustriesGrid from "@/components/IndustriesPage/IndustriesGrid";
 import IndustriesHero from "@/components/IndustriesPage/IndustriesHero";
 import OurCapabilitiesGridSectionsGrid from "@/components/OurCapabilitiesGridSectionsGrid/OurCapabilitiesGridSectionsGrid";
 import OurCompaniesCapabilities from "@/components/OurCompaniesCapabilities/OurCompaniesCapabilities";
 import OurCompaniesFeaturedProjects from "@/components/OurCompaniesFeaturedProjects/OurCompaniesFeaturedProjects";
 import OurCompaniesGrid from "@/components/OurCompaniesGrid/OurCompaniesGrid";
+import OurCompaniesGridCapabilities from "@/components/OurCompaniesGrid/OurCompaniesGridCapabilities";
+import OurCapabilitiesProcesstimeline from "@/components/OurCompaniesProcesstimeline/OurCapabilitiesProcesstimeline";
 import OurCompaniesProcesstimeline from "@/components/OurCompaniesProcesstimeline/OurCompaniesProcesstimeline";
-import { Award, Building2, Globe, Hotel, ShoppingBag, TrendingUp, User } from "lucide-react";
+import { Award, Building2, Eye, Globe, Handshake, Hotel, Shield, ShoppingBag, Star, TrendingUp, User } from "lucide-react";
 
 export default function Capabilities() {
   return (
     <>
-      <AboutSection
+      <HeroSectionCapabilities
         eyebrow="Our Capabilities"
-        headline="The Capability to Make Almost Anything, Properly"
-        body="A.J Group's companies run advanced production floors staffed by engineers and craftspeople. Across metal, print, packaging, and branding, we bring the machinery and the method to deliver precise, repeatable work at high quality, whether it's a single architectural commission or a national retail rollout."
+        headline="Built to Turn Opportunity Into Enterprise"
+        body="AJ Group combines capital, entrepreneurial thinking and operating capability to build businesses from the ground up and create platforms for long-term growth. Our capabilities extend across strategy, operations, manufacturing, production and execution — giving the Group the ability to turn opportunities into functioning businesses"
 
-        // Image
         imageSrc="/capabilitiesmainPage.jpeg"
         imageAlt="A.J Group Industries"
 
@@ -57,11 +62,32 @@ export default function Capabilities() {
           showButton={false}
           maxWidth={700}
           /> */}
-        <OurCapabilitiesGridSectionsGrid />
-          <CapabilitiesCustomSolutions/>
+        <WhyajgroupAboutMain
+          eyebrow="THE AJ GROUP ADVANTAGE"
+          title="Built For The Long Term"
+          intro="Capability Creates The Foundations For GrowBuilding a successful business requires more than an idea. It requires the ability to execute. AJ Group brings together the resources, expertise and operating infrastructure needed to take opportunities from concept to execution — and from execution to growth "
+          columns={4}
+          items={[
+            { num: '01', icon: Shield, title: 'Strategic', desc: 'We identify opportunities and determine where we can create meaningful long-term value.', image: '/Integrity_cards_whyAJ.jpeg' },
+            { num: '02', icon: Award, title: 'Build', desc: 'We develop businesses, capabilities and infrastructure from the ground up.', image: '/Excellence_cards_whyAJ.jpeg' },
+            { num: '03', icon: Handshake, title: 'Operates', desc: 'We establish the systems, processes and standards required to run strong businesses.', image: '/Accountability_cards_whyAJ.jpeg' },
+            
+            { num: '04', icon: Eye, title: 'Scale', desc: 'We strengthen what works, expand into new markets and build platforms for continued growth.', image: '/Vision_cards_whyAJ.jpeg' },
+          ]}
+        />
+        <OurCompaniesGridCapabilities />
+        <CapabilitiesSectionCapabilitiesMain
+         eyebrow="BEYOND INDIVIDUAL CAPABILITIES"
+          title="We Build Around The Opportunity"
+          body="Not every opportunity fits neatly into a category. When a business requires capabilities across multiple disciplines, we bring the right resources together to create an integrated solution."         
+          showButton={false}
+          maxWidth={700}
+        />
         {/* <OurCompaniesProcesstimeline/> */}
         {/* <OurCompaniesFeaturedProjects/> */}
-        <CapabilitiesWhyChooseUs/>
+        {/* <CapabilitiesWhyChooseUs /> */}
+        <OurCapabilitiesProcesstimeline/>
+        <WhyChooseUsCapabilitiesPageMain/>
         <CTASection2
           eyebrow="Get To Know Each Company"
           headline="Not Sure Where To Start?"

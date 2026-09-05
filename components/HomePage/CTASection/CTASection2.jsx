@@ -7,7 +7,7 @@ import './CTASection2.css';
 export default function CTASection2({
   // Content Props
   eyebrow = 'Get In Touch',
-  headline = 'Have a Project in Mind?',
+  headline = 'Built To Grow, Built To Last',
   body = "Tell us what you need to build or make. A.J Group will point you to the right capability and the right business.",
   
   // Primary Button

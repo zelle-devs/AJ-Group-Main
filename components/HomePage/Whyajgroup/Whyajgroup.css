@@ -34,7 +34,7 @@
 
 .aj-why-head {
   margin-bottom: 56px;
-  text-align: center;
+  text-align: left;
 }
 
 .aj-why-eyebrow {
@@ -68,14 +68,14 @@
   color: var(--color-beige);
   font-weight: var(--font-weight-light);
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 ;
 }
 
 /* ---------- Grid ---------- */
 
 .aj-why-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
   align-items: stretch;
 }
@@ -84,7 +84,7 @@
 
 .aj-why-card-wrap {
   position: relative;
-  aspect-ratio: 3 / 4.35;
+  aspect-ratio: 4.25 / 4.35;
   background: linear-gradient(155deg, var(--color-gold), #7a6427);
   clip-path: var(--aj-clip);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
