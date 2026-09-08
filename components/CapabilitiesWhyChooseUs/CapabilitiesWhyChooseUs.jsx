@@ -81,7 +81,7 @@ export default function CapabilitiesWhyChooseUs({
   stats = DEFAULT_STATS,
   
   // Image
-  imageSrc = '/ajgrouphero2ndimage.png',
+  imageSrc = '/ajgrouphero2ndimage.jpg',
   imageAlt = 'Luxury Lounge with City View',
   
   // Visibility

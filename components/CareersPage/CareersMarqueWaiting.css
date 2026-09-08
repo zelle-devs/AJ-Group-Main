@@ -1,0 +1,239 @@
+/* ============ MAIN CONTAINER (WITH ENTRANCE FADE) ============ */
+.section-wrapper-CareersMarqueWaiting {
+  background-color: var(--color-black);
+  padding: var(--container-padding2) 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  font-family: 'Gotham';
+  /* Initial hidden state for entrance animation */
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Active class added via JS Observer */
+.fade-in-active-CareersMarqueWaiting {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ INTRO TITLE ============ */
+.intro-container-CareersMarqueWaiting {
+  text-align: center;
+  padding: 0 var(--container-padding);
+}
+
+.intro-title-CareersMarqueWaiting {
+  font-family: var(--font-family-gotham);
+  color: var(--color-beige);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ============ MARQUEE WRAPPERS & FADING MASK ============ */
+.marquee-wrapper-CareersMarqueWaiting {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 35%, black 65%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 35%, black 65%, transparent 100%);
+  padding: 10px 0;
+}
+
+/* Specific Marquee Tilts */
+.marquee-top-CareersMarqueWaiting {
+  transform: rotate(2deg);
+}
+
+.marquee-bottom-CareersMarqueWaiting {
+  transform: rotate(-2deg);
+}
+
+/* Track moving Left to Right */
+.marquee-track-ltr-CareersMarqueWaiting {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: scroll-left-to-right-CareersMarqueWaiting 20s linear infinite;
+}
+
+/* Track moving Right to Left */
+.marquee-track-rtl-CareersMarqueWaiting {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: scroll-right-to-left-CareersMarqueWaiting 25s linear infinite;
+}
+
+/* Center Gold Text styling */
+.marquee-text-CareersMarqueWaiting {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gold); 
+  padding: 0 5px;
+  text-shadow: var(--text-shadow-btn);
+  font-family: 'Gotham';
+  filter: drop-shadow(0 0 8px var(--color-gold-light));
+}
+
+/* ============ BULLET POINTS SECTION (SPLIT) ============ */
+.bullets-split-container-CareersMarqueWaiting {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 var(--container-padding);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap; /* Helps handle responsiveness safely */
+}
+
+.bullets-column-CareersMarqueWaiting {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+  min-width: 300px;
+  /* This prevents the column from stretching to match the taller column */
+  height: max-content; 
+}
+
+/* The Animated Connecting Vertical Line */
+.connecting-line-CareersMarqueWaiting {
+  position: absolute;
+  left: 24px; /* Align with center of the 50px icon */
+  top: 25px; /* Starts exactly at the center of the first icon */
+  bottom: 25px; /* Ends exactly at the center of the last icon */
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-gold-medium), var(--color-gold), var(--color-gold-medium));
+  transform-origin: top;
+  opacity: 0;
+  z-index: 1; /* Ensures the line stays behind the glowing icons */
+}
+/* Trigger line draw only when section is active */
+.fade-in-active-CareersMarqueWaiting .connecting-line-CareersMarqueWaiting {
+  animation: draw-line-CareersMarqueWaiting 2s var(--transition-slow) forwards;
+}
+
+/* Individual Bullet Item */
+.bullet-item-CareersMarqueWaiting {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* Trigger item fade in only when section is active */
+.fade-in-active-CareersMarqueWaiting .bullet-item-CareersMarqueWaiting {
+  animation: fade-in-slide-CareersMarqueWaiting 0.6s var(--transition-normal) forwards;
+}
+
+/* Icon Container */
+.icon-wrapper-CareersMarqueWaiting {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-black);
+  border: 2px solid var(--color-gold);
+  color: var(--color-gold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px var(--color-gold-light);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.icon-wrapper-CareersMarqueWaiting:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--color-gold-medium);
+  background-color: var(--color-gold-light);
+}
+
+/* Bullet Text */
+.bullet-text-CareersMarqueWaiting {
+  font-family: var(--font-family-body);
+  color: var(--color-white);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============ KEYFRAMES ============ */
+
+/* Left to Right Marquee Animation */
+@keyframes scroll-left-to-right-CareersMarqueWaiting {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* Right to Left Marquee Animation */
+@keyframes scroll-right-to-left-CareersMarqueWaiting {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Line Drawing Animation */
+@keyframes draw-line-CareersMarqueWaiting {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* Bullet Fade In & Slide Animation */
+@keyframes fade-in-slide-CareersMarqueWaiting {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .marquee-text-CareersMarqueWaiting {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .bullet-text-CareersMarqueWaiting {
+    font-size: var(--font-size-base);
+  }
+  
+  .bullets-split-container-CareersMarqueWaiting {
+    gap: 30px;
+  }
+
+  .icon-wrapper-CareersMarqueWaiting {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+  }
+
+.connecting-line-CareersMarqueWaiting {
+    left: 19px; 
+    top: 20px; /* Center of the smaller 40px icon */
+    bottom: 20px; /* Center of the smaller 40px icon */
+  }
+}

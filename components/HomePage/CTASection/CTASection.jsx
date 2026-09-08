@@ -110,7 +110,7 @@ export default function CTASection({
           >
             <span className="aj-cta-info-item">
               <Mail size={16} />
-              info@ajgroup.com
+              info@ajgrouphq.com
             </span>
             <span className="aj-cta-info-divider" />
             <span className="aj-cta-info-item">

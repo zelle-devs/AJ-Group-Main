@@ -9,7 +9,7 @@ export default function HeroSectionPortfolio({
   // Content Props
   eyebrow = 'ABOUT AJ GROUP',
   headline = 'Building A Group For Whats Next',
-  body = "AJ Group is an investment and operating group built to create, own and grow businesses for the long term. We build from the ground up, pursue strategic opportunities and enter new sectors with one objective",
+  body = "AJ Group brings together businesses, people and capabilities under one shared vision, to build better, operate smarter and create lasting value. From the ground up, we focus on quality, capability and long-term growth",
   
   // Image Props
   imageSrc = '/AboutHeroIMageSection.jpeg',

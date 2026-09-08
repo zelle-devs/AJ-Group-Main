@@ -47,7 +47,7 @@ export default function HeroSectionCapabilities({
       
       <section className="aj-about-section">
         <div className="container2">
-          <div className="aj-about-grid" style={{gap:'20px'}}>
+          <div className="aj-about-grid" style={{gap:'50px'}}>
             {/* Left Column - Content */}
             <motion.div
               className="aj-about-content"

@@ -22,15 +22,15 @@ const DEFAULT_LINKS = [
 ];
 
 const DEFAULT_SOCIALS = [
-  { icon: BsLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: BsInstagram, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: BsFacebook, href: 'https://facebook.com', label: 'Facebook' },
-  { icon: BsYoutube, href: 'https://youtube.com', label: 'YouTube' },
+  { icon: BsLinkedin, href: 'https://www.linkedin.com/company/a.jgroup/ ', label: 'LinkedIn' },
+  // { icon: BsInstagram, href: 'https://instagram.com', label: 'Instagram' },
+  // { icon: BsFacebook, href: 'https://facebook.com', label: 'Facebook' },
+  // { icon: BsYoutube, href: 'https://youtube.com', label: 'YouTube' },
 ];
 
 const DEFAULT_BUTTONS = [
   { label: 'Start a Project', href: '/consultation', variant: 'gold' },
-  { label: 'Explore Our Companies', href: '/our-companies', variant: 'outline' },
+  { label: 'Explore Our Portfolio', href: '/our-portfolio', variant: 'outline' },
   { label: 'Talk To Our Team', href: '/contact', variant: 'outline' },
   { label: 'Contact Us', href: '/contact', variant: 'outline' },
 ];
@@ -40,7 +40,7 @@ export default function Footer({
   companies = DEFAULT_COMPANIES,
   links = DEFAULT_LINKS,
   phone = '+92 21 111 254 111',
-  email = 'hello@ajgroup.com',
+  email = 'info@ajgrouphq.com',
   address = 'A.J House, 23/1, Korangi Industrial Area, Karachi 74900, Pakistan',
   socials = DEFAULT_SOCIALS,
   buttons = DEFAULT_BUTTONS,
@@ -76,7 +76,7 @@ export default function Footer({
           <div className="aj-footer-col aj-footer-brand">
             <Link href="/" className="aj-footer-logo">
               <Image
-                src="logo2.png"
+                src="Aj_Main_Footer_Logo_Leftside.png"
                 alt="A.J Group of Companies"
                 width={220}
                 height={80}
@@ -90,7 +90,7 @@ export default function Footer({
           {/* Our Companies */}
           <div className="aj-footer-col">
             <div className="aj-footer-heading-wrapper" onClick={() => toggleSection('companies')}>
-              <span className="aj-footer-heading">Our Companies</span>
+              <span className="aj-footer-heading">Our Portfolio</span>
               <button className="aj-footer-toggle">
                 <ChevronDown size={16} className={`aj-toggle-icon ${openSection === 'companies' ? 'open' : ''}`} />
               </button>
@@ -98,7 +98,7 @@ export default function Footer({
             <ul className={`aj-footer-list ${openSection === 'companies' ? 'open' : ''}`}>
               {companies.map((c) => (
                 <li key={c.name || c}>
-                  <Link href={c.href || '/our-companies'}>
+                  <Link href={c.href || '/our-portfolio'}>
                     <ChevronRight size={13} />
                     <span>{c.name || c}</span>
                   </Link>
@@ -136,10 +136,10 @@ export default function Footer({
               </button>
             </div>
             <ul className={`aj-footer-contact-list ${openSection === 'contact' ? 'open' : ''}`}>
-              <li>
+              {/* <li>
                 <Phone size={15} />
                 <a href={`tel:${phone.replace(/\s+/g, '')}`}>{phone}</a>
-              </li>
+              </li> */}
               <li>
                 <Mail size={15} />
                 <a href={`mailto:${email}`}>{email}</a>
@@ -189,7 +189,7 @@ export default function Footer({
             <span className="aj-footer-dot">|</span>
             <Link href="/contact">Contact</Link>
             <span className="aj-footer-dot">|</span>
-            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/privacy-policy">Privacy Policy</Link>
             <span className="aj-footer-dot">|</span>
             <Link href="/terms">Terms</Link>
           </div>

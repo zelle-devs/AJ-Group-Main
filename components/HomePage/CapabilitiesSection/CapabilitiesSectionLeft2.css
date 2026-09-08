@@ -545,7 +545,8 @@
   .aj-process-title { font-size: var(--font-size-2xl); }
   .aj-process-body { font-size: var(--font-size-xs); }
 
-  .aj-process-timeline-line { left: 22px!important; }
+  .aj-process-timeline-line { left: -26px !important;
+        width: 2px !important;}
   .aj-process-step-icon-wrap { width: 42px; height: 42px; position: relative!important;}
   .aj-process-step-icon-wrap::before { inset: -5px; }
   .aj-process-step-icon-wrap::after { inset: -8px; }

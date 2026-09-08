@@ -26,7 +26,7 @@ const DEFAULT_CARDS = [
     title: 'Company Enquiries',
     desc: 'Already know which business you need? You can go direct to the specific company.',
     buttonText: 'Contact a Company',
-    buttonLink: '/our-companies',
+    buttonLink: '/our-portfolio',
     variant: 'standard',
   },
   {

@@ -1,4 +1,4 @@
-import CapabilitiesSection from '@/components/HomePage/CapabilitiesSection/CapabilitiesSection'
+import CapabilitiesSection from '@/components/HomePage/CapabilitiesSection/CapabilitiesSection.jsx'
 import CapabilitiesSectionLeft from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionLeft'
 import FeaturedProjects from '@/components/HomePage/FeaturedProjects/FeaturedProjects'
 import FocusCompanies from '@/components/HomePage/FocusCompanies/FocusCompanies'
@@ -17,9 +17,27 @@ import CapabilitiesSectionLeft2 from '@/components/HomePage/CapabilitiesSection/
 import ViewOurPortfolioDesign from '@/components/ViewOurPortfolioDesign/ViewOurPortfolioDesign'
 import GroupatglanceNewUpdated from '@/components/HomePage/Groupatglance/GroupatglanceNewUpdated'
 import CapabilitiesSectionHomeMain from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionHomeMain'
+import './globals.css'
+import CapabilitiesSectionGlanceTextHome from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionGlanceTextHome'
 export default function Home() {
   return (
+    
     <>
+    <style>{`
+  .mobile-only-glance {
+    display: none; /* By default hidden on all screens */
+  }
+  
+  /* Sirf 300px se 500px ke darmiyan show hoga */
+  @media screen and (min-width: 300px) and (max-width: 430px) {
+    .mobile-only-glance {
+      display: block;
+    }
+    .mobile-only-glance p{
+    font-size: 15px ;
+    line-height: 18px;}
+  }
+`}</style>
       <Hero />
       <div className="scroll-content-wrapper">
         <WhyChooseUs />
@@ -55,16 +73,20 @@ export default function Home() {
         align='left'
       /> */}
         <GroupatglanceNewUpdated />
-        {/* <TeamScrollSlider/> */}
-        {/* <CapabilitiesSection 
-        eyebrow="Leadership"
-        title="Led by people who know how things are made."
-        body="A.J Group is guided by a leadership team with deep roots in manufacturing, design, and commercial delivery. Their focus is simple: keep raising the standard of what the group makes, and build companies clients return to."
-        buttonText="Meet Our Leadership"
-        buttonLink="/leadership"
-      /> */}
+        <div className="mobile-only-glance">
+  <CapabilitiesSectionGlanceTextHome 
+    eyebrow={false}
+    title={false}
+    body="The Group is building toward a diversified, billion-dollar enterprise. Our ambition is not simply to own more businesses. It is to build better businesses, stronger platforms and lasting value at scale"
+    buttonText="Meet Our Leadership"
+    buttonLink="/leadership"
+    showButton={false}
+  />
+</div>
+       
 
         {/* <CTASection/> */}
+       
         <CTASection2 />
       </div>
     </>

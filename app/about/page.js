@@ -1,7 +1,7 @@
 'use client'
 import AboutSection from "@/components/AboutPage/AboutSection";
 import OurStory from "@/components/AboutPage/OurStory";
-import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection";
+import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection.jsx";
 import GroupAtGlance from "@/components/HomePage/Groupatglance/Groupatglance";
 import FocusCompanies from "@/components/HomePage/FocusCompanies/FocusCompanies";
 import TeamScrollSlider from "@/components/HomePage/Teamscrollslider/Teamscrollslider";
@@ -17,10 +17,26 @@ import WhyajgroupAboutMain from "@/components/HomePage/Whyajgroup/WhyajgroupAbou
 import CapabilitiesSectionAbout2MainPortfolio from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionAbout2MainPortfolio";
 import GroupatglanceNewUpdatedAboutMain from "@/components/HomePage/Groupatglance/GroupatglanceNewUpdatedAboutMain";
 import ProcesstimelineAboutMain from "@/components/HomePage/Processtimeline/ProcesstimelineAboutMain";
+import CapabilitiesSectionGlanceTextHome from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionGlanceTextHome";
 
 export default function About() {
   return (
     <>
+        <style>{`
+  .mobile-only-glance {
+    display: none; /* By default hidden on all screens */
+  }
+  
+  /* Sirf 300px se 500px ke darmiyan show hoga */
+  @media screen and (min-width: 300px) and (max-width: 430px) {
+    .mobile-only-glance {
+      display: block;
+    }
+    .mobile-only-glance p{
+    font-size: 11px ;
+    line-height: 18px;}
+  }
+`}</style>
       <AboutSection />
       <div className="scroll-content-wrapper">
         <WhyChooseUsAboutPageMain />
@@ -29,7 +45,7 @@ export default function About() {
           title="Think Long Term Build With Purpose"
           body="We don't believe in building businesses simply to make them bigger.
 We believe in building them better.
-That means making thoughtful investments, developing strong operations, creating capable teams and continuously looking for opportunities to expand.
+That means making thoughtful Innovations, developing strong operations, creating capable teams and continuously looking for opportunities to expand.
 Our businesses may operate in different sectors, but the principles behind them remain the same
 "
           showButton={false}
@@ -63,10 +79,10 @@ Our businesses may operate in different sectors, but the principles behind them 
           columns={5}
           items={[
             { num: '01', icon: Shield, title: 'Long Term Ownership', desc: 'We think beyond immediate returns and build with the future in mind.', image: '/Integrity_cards_whyAJ.jpeg' },
-            { num: '02', icon: Award, title: 'Strategic Invest', desc: 'We look for opportunities where capital, strategy and execution can unlock meaningful potential.', image: '/Excellence_cards_whyAJ.jpeg' },
-            { num: '03', icon: Handshake, title: 'ENTREPRENEURIAL THINKING', desc: 'We move with the mindset of builders — decisive, adaptable and focused on opportunity.', image: '/Accountability_cards_whyAJ.jpeg' },
-            { num: '04', icon: Star, title: 'OPERATIONAL EXCELLENCE', desc: 'We believe strong businesses are built on strong fundamentals, disciplined execution and high standards.', image: '/Craftmanship_cards_whyAJ.jpeg' },
-            { num: '05', icon: Eye, title: 'SUSTAINABLE GROWTH', desc: 'We pursue growth that creates a stronger business, not simply a larger one.', image: '/Vision_cards_whyAJ.jpeg' },
+            // { num: '02', icon: Award, title: 'Strategic Invest', desc: 'We look for opportunities where capital, strategy and execution can unlock meaningful potential.', image: '/Excellence_cards_whyAJ.jpeg' },
+            { num: '02', icon: Handshake, title: 'Entrepreneurial Thinking', desc: 'We move with the mindset of builders — decisive, adaptable and focused on opportunity.', image: '/Accountability_cards_whyAJ.jpeg' },
+            { num: '03', icon: Star, title: 'Operational Excellence', desc: 'We believe strong businesses are built on strong fundamentals, disciplined execution and high standards.', image: '/Craftmanship_cards_whyAJ.jpeg' },
+            { num: '04', icon: Eye, title: 'Sustainable Growth', desc: 'We pursue growth that creates a stronger business, not simply a larger one.', image: '/Vision_cards_whyAJ.jpeg' },
           ]}
         />
 
@@ -96,7 +112,16 @@ Our businesses may operate in different sectors, but the principles behind them 
 
         {/* 08. BY THE NUMBERS - Six-stat band */}
         <GroupatglanceNewUpdatedAboutMain />
-
+                  <div className="mobile-only-glance">
+            <CapabilitiesSectionGlanceTextHome 
+              eyebrow={false}
+              title="Building Towards Bigger"
+              body="Group is not being built for a single market, a single industry or a single generation of opportunity. We are building a diversified enterprise capable of moving into new sectors,creating new businesses and acquiring established ones. Not through growth for growths sake.Through strong businesses, strategic ownership, disciplined expansion and lasting value creation."
+              buttonText="Meet Our Leadership"
+              buttonLink="/leadership"
+              showButton={false}
+            />
+          </div>
         {/* 09. OUR STRUCTURE - Four businesses */}
         {/* <FocusCompanies 
           eyebrow="Our Structure"

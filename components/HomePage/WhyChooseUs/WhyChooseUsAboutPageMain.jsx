@@ -73,7 +73,7 @@ export default function WhyChooseUsAboutPageMain({
   eyebrow = 'Who we are',
   eyebrows2 = 'Great businesses are built for the long term',
   headline = 'More Than A Holding Company',
-description = "AJ Group is a growing group of businesses built around a long-term view of ownership. \n We identify opportunities, build businesses, invest in growth and create the foundations for sustainable expansion. \n Our approach is entrepreneurial by nature, disciplined by design and focused on what matters most",
+description = "AJ Group is more than a collection of businesses. We bring together people, capabilities and expertise under one shared vision, to build, operate and grow businesses for the long term. Our approach is entrepreneurial by nature, disciplined by design and focused on creating lasting value.",
 
   // Bold words in description
   boldWords = ['', 'businesses', 'building', 'consumer design brands'],

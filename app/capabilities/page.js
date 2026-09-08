@@ -3,7 +3,7 @@ import AboutSection from "@/components/AboutPage/AboutSection";
 import HeroSectionCapabilities from "@/components/AboutPage/HeroSectionCapabilities";
 import CapabilitiesCustomSolutions from "@/components/CapabilitiesCustomSolutions/CapabilitiesCustomSolutions";
 import CapabilitiesWhyChooseUs from "@/components/CapabilitiesWhyChooseUs/CapabilitiesWhyChooseUs";
-import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection";
+import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection.jsx";
 import CapabilitiesSectionCapabilitiesMain from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionCapabilitiesMain";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
 import WhyajgroupAboutMain from "@/components/HomePage/Whyajgroup/WhyajgroupAboutMain";
@@ -24,8 +24,8 @@ export default function Capabilities() {
     <>
       <HeroSectionCapabilities
         eyebrow="Our Capabilities"
-        headline="Built to Turn Opportunity Into Enterprise"
-        body="AJ Group combines capital, entrepreneurial thinking and operating capability to build businesses from the ground up and create platforms for long-term growth. Our capabilities extend across strategy, operations, manufacturing, production and execution — giving the Group the ability to turn opportunities into functioning businesses"
+        headline="Built Opportunity Into Enterprise"
+        body="AJ Group combines capital, entrepreneurial thinking and operating capability to build businesses from the ground up and create platforms for long-term growth. "
 
         imageSrc="/capabilitiesmainPage.jpeg"
         imageAlt="A.J Group Industries"

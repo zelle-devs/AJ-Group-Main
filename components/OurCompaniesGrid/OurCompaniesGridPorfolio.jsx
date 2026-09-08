@@ -72,7 +72,7 @@ export default function OurCompaniesGridPorfolio({
   showCompany = true,
   showPoints = true,
   // Content Props
-  eyebrow = 'Our Companies',
+  eyebrow = 'Our Portfolio',
   headline = 'Built to Grow, Owned for The Long Term',
   headline2 = 'Build With Us',
   bgColor = 'var(--color-black)',

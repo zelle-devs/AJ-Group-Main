@@ -438,3 +438,9 @@
       display: none;
     }
   }
+
+  @media (max-width: 1230px) {
+  .aj-together-heading {
+    display: none !important;
+  }
+}

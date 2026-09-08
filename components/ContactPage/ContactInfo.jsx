@@ -10,15 +10,15 @@ const DEFAULT_CONTACT_DETAILS = [
   //   label: 'Address',
   //   value: 'A.J House, 23/1, Korangi Industrial Area, Karachi 74900, Pakistan',
   // },
-  {
-    icon: Phone,
-    label: 'Phone',
-    value: '+92 21 111 254 111',
-  },
+  // {
+  //   icon: Phone,
+  //   label: 'Phone',
+  //   value: '+92 21 111 254 111',
+  // },
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@ajgroup.com',
+    value: 'info@ajgrouphq.com',
   },
   // {
   //   icon: Clock,

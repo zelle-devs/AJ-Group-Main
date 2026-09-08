@@ -95,8 +95,8 @@
 /* Connecting Line - Circles ke center se center tak */
 .aj-story-timeline-line {
   position: absolute;
-  left: calc(50% / 5 + 30px);
-  right: calc(50% / 5 + 30px);
+  left: calc(50% / 3 + 30px);
+  right: calc(50% / 3 + 30px);
   top: 70px;
   height: 2px;
   background: linear-gradient(90deg,
@@ -202,8 +202,8 @@
   .aj-story-top-row { gap: 60px; }
   .aj-story-timeline { gap: 16px; }
   .aj-story-timeline-line { 
-    left: calc(50% / 5 + 34px); 
-    right: calc(50% / 5 + 34px); 
+    left: calc(50% / 3 + 34px); 
+    right: calc(50% / 3 + 34px); 
     top: 74px;
   }
   .aj-story-step-circle { width: 68px; height: 68px; }
@@ -217,8 +217,8 @@
   .aj-story-section { padding: 60px 0; }
   .aj-story-top-row { gap: 40px; margin-bottom: 50px; }
   .aj-story-timeline-line { 
-    left: calc(50% / 5 + 27px); 
-    right: calc(50% / 5 + 27px); 
+    left: calc(50% / 3 + 27px); 
+    right: calc(50% / 3 + 27px); 
     top: 67px;
   }
   .aj-story-step-circle { width: 54px; height: 54px; }
@@ -233,8 +233,8 @@
   .aj-story-body { font-size: var(--font-size-sm); }
   .aj-story-timeline { gap: 8px; }
   .aj-story-timeline-line { 
-    left: calc(50% / 5 + 21px); 
-    right: calc(50% / 5 + 21px); 
+    left: calc(50% / 3 + 21px); 
+    right: calc(50% / 3 + 21px); 
     top: 61px;
   }
   .aj-story-step-circle { width: 42px; height: 42px; }

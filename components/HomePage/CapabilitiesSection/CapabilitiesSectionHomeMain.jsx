@@ -12,10 +12,10 @@ export default function CapabilitiesSectionHomeMain({
     buttonText = 'See Full Capabilities',
     buttonLink = '/capabilities',
 
-    align = 'center', // 'center' | 'left' | 'right'
+    align = 'center', 
     showButton = true,
-    showArrow = true, // Button mein arrow icon
-    maxWidth = 900, // Content max width
+    showArrow = true, 
+    maxWidth = 900, 
 
     // Animation Props
     animationDelay = 0,

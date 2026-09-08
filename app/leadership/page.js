@@ -1,6 +1,6 @@
 'use client'
 import LeadershipHero from "@/components/LeadershipPage/LeadershipHero";
-import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection";
+import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection.jsx";
 import LeadershipGrid from "@/components/LeadershipPage/LeadershipGrid";
 import WhyAJGroup from "@/components/HomePage/Whyajgroup/Whyajgroup";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";

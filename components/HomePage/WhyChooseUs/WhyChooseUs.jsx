@@ -72,11 +72,12 @@ export default function WhyChooseUs({
   // Content Props
   eyebrow = 'Who we are',
   eyebrows2 = 'Great businesses are built for the long term',
+  subhead = 'AJ Group is built around a simple belief',
   headline = 'More Than A Holding Company',
-  description = "We combine entrepreneurial thinking, strategic investment and operational discipline to create businesses designed to grow, adapt and endure. From building new ventures to expanding into new sectors, we are creating a diversified group with a clear ambition:",
+  description = "We combine entrepreneurial thinking, strategic Innovations and operational discipline to create businesses designed to grow, adapt and endure. From building new ventures to expanding into new sectors, we are creating a diversified group with a clear ambition:",
 
   // Bold words in description
-  boldWords = ['', 'businesses', 'building', 'consumer design brands'],
+  boldWords = ['', '', '', ''],
 
   // Stats
   stats = DEFAULT_STATS,
@@ -204,9 +205,10 @@ export default function WhyChooseUs({
 
               <h2 className="why-choose-headline">{headline}</h2>
 
-              <span className="why-choose-label">{eyebrows2}</span>
+              {/* <p className="why-choose-description" >{subhead}</p> */}
+              
               <p className="why-choose-description">
-                {renderDescription()}
+              {subhead} <span className="why-choose-label" style={{textTransform:'capitalize', letterSpacing:'1px', fontSize:'15px'}}>{eyebrows2}</span>. {renderDescription()}
               </p>
               <h2 style={{ fontWeight: '700', color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '20px' }}>TO BUILD SOMETHING MUCH BIGGER</h2>
             </motion.div>

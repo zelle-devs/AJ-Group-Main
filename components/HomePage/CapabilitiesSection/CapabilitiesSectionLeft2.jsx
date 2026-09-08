@@ -72,7 +72,7 @@ export default function CapabilitiesSectionLeft2({
             }}
           >
             {eyebrow && <span className="aj-process-eyebrow">{eyebrow}</span>}
-            {title && <h2 className="aj-process-title">{title}</h2>}
+            {title && <h2 className="aj-process-title" style={{margin:'0px'}}>{title}</h2>}
             {body && <p className="aj-process-body">{body}</p>}
             
             {showButton && buttonText && (

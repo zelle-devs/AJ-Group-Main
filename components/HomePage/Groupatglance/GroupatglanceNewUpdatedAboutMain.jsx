@@ -30,7 +30,7 @@ const DEFAULT_ORBIT_ICONS = [Factory, Printer, PackageCheck, Megaphone, Users, A
 
 /* ---------- Default Stats ---------- */
 const DEFAULT_STATS = [
-  { value: 'Building Towards Bigger', label: 'AJ Group is not being built for a single market, a single industry or a single generation of opportunity. We are building a diversified enterprise capable of moving into new sectors,creating new businesses and acquiring established ones. Not through growth for growths sake.Through strong businesses, strategic ownership, disciplined expansion and lasting value creation' },
+  { value: 'Building Towards Bigger', label: 'AJ Group is is not being built for a single market, a single industry, or a single generation of opportunity. We are building a diversified enterprise capable of moving into new sectors, creating new businesses, and acquiring established ones. Not through growth for growth\'s sake, but through strong businesses, strategic ownership, disciplined expansion, and lasting value creation' },
 ];
 
 const fadeUp = {
@@ -89,7 +89,7 @@ const CounterValue = ({ value }) => {
     return () => observer.disconnect();
   }, [value]);
   
-  return <span ref={ref} className="aj-glance-stat-value" style={{fontSize:'35px'}}>{displayValue}</span>;
+  return <span ref={ref} className="aj-glance-stat-valueAboutMain" style={{fontSize:'35px'}}>{displayValue}</span>;
 };
 
 export default function GroupatglanceNewUpdatedAboutMain({
@@ -187,9 +187,9 @@ export default function GroupatglanceNewUpdatedAboutMain({
 
           {/* Content - Stats + Headline INSIDE Orbit */}
           <div className="aj-glance-orbit-content">
-            <span className="aj-ptm-line" style={{marginBottom:'-40px', fontSize:'20px', fontWeight:'600'}}>
+            <span className="aj-ptm-lineAboutMain" style={{marginBottom:'-40px', fontSize:'20px', fontWeight:'600'}}>
                             <span className="aj-ptm-word" style={{ '--i': 3 }}>A</span>{' '}
-                            <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 4 }}>$1B</span>{' '} 
+                            <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 4 }}>Boundless</span>{' '} 
                             <span className="aj-ptm-word" style={{ '--i': 5 }}>Future</span>
                         </span>
             {/* Stats Grid */}
@@ -214,7 +214,7 @@ export default function GroupatglanceNewUpdatedAboutMain({
                     <span className="aj-glance-stat-label" >
                       {/* <span className="aj-glance-stat-label-first">{firstWord}</span> */}
                       {restWords && (
-                        <span className="aj-glance-stat-label" style={{width:'620px', whiteSpace:'wrap', lineHeight:'22px'}}>{restWords}</span>
+                        <span className="aj-glance-stat-labelAboutMain" style={{width:'620px', whiteSpace:'wrap', lineHeight:'22px'}}>{restWords}</span>
                       )}
                     </span>
                   </motion.div>

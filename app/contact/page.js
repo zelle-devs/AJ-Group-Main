@@ -17,8 +17,8 @@ export default function Contact() {
         imageSrc="/Integrity_cards_whyAJ.jpeg"
         imageAlt="A.J Group Contact"
         features={[
-          { icon: Phone, label: '+92 21 111 254 111' },
-          { icon: Mail, label: 'hello@ajgroup.com' },
+          // { icon: Phone, label: '+92 21 111 254 111' },
+          { icon: Mail, label: 'info@ajgrouphq.com' },
         ]}
         badge1Icon={Clock}
         badge1Value="500+"
@@ -39,17 +39,17 @@ export default function Contact() {
         </div>
 
         {/* 08. FIND US - Map section */}
-        <CTASection2 
-          eyebrow="Find Us"
-          headline="Visit the Group"
-          body="Address:  A.J House, 23/1, Korangi Industrial Area, Karachi 74900, Pakistan"
-          primaryButtonText="Get Directions"
-          primaryButtonLink="https://maps.google.com"
-          primaryButtonIcon="arrow"
-          secondaryButtonText="Call Us"
-          secondaryButtonLink="tel:+9221111254111"
-          secondaryButtonIcon="phone"
-        />
+      <CTASection2 
+  eyebrow="Get In Touch"
+  headline="Let's Build Something Great"
+  body="Ready to turn your ideas into reality? Whether you want to start a new project or just need some expert advice, our team is here to help. Let's start the conversation."
+  primaryButtonText="Start A Project"
+  primaryButtonLink="/consultation"
+  primaryButtonIcon="arrow"
+  secondaryButtonText="Call Us"
+  secondaryButtonLink="tel:+9221111254111"
+  secondaryButtonIcon="phone"
+/>
       </div>
     </>
   )

@@ -9,7 +9,7 @@ export default function HeroSectionIndustries({
   // Content Props
   eyebrow = 'Industries',
   headline = 'Opportunity Has No Boundaries',
-  body = "AJ Group is building a diversified group with the ambition to operate across industries, markets and opportunities. We don't define ourselves by a single sector. We look for businesses with potential, markets with room to grow and opportunities where our capital, capabilities and entrepreneurial approach can create lasting value",
+  body = "AJ Group is building a diversified group with the ambition to operate across industries, markets and opportunities. We look for businesses with potential, markets with room to grow and opportunities where our capital, capabilities and entrepreneurial approach can create lasting value",
   
   // Image Props
   imageSrc = '/AboutHeroIMageSection.jpeg',
@@ -47,7 +47,7 @@ export default function HeroSectionIndustries({
       
       <section className="aj-about-section">
         <div className="container2">
-          <div className="aj-about-grid" style={{gap:'20px'}}>
+          <div className="aj-about-grid" style={{gap:'50px'}}>
             {/* Left Column - Content */}
             <motion.div
               className="aj-about-content"
@@ -102,7 +102,7 @@ export default function HeroSectionIndustries({
                 </motion.p>
               )}
                
-            <h2 style={{fontWeight:'700', color:'var(--color-gold)' ,fontFamily:'Gotham'}}>WE DON'T FOLLOW INDUSTRIES, WE FOLLOW OPPORTUNITY</h2>
+            <h2 style={{fontWeight:'700', color:'var(--color-gold)' ,fontFamily:'Gotham', fontSize:'20px'}}>WE DON'T FOLLOW INDUSTRIES, WE FOLLOW OPPORTUNITY</h2>
             <br/>
               {/* {showFeatures && features.length > 0 && (
                 <motion.div 

@@ -30,7 +30,7 @@ const DEFAULT_ORBIT_ICONS = [Factory, Printer, PackageCheck, Megaphone, Users, A
 
 /* ---------- Default Stats ---------- */
 const DEFAULT_STATS = [
-  { value: 'A $1B GROUP', label: 'The Group is building toward a diversified, billion-dollar enterprise. Our ambition is not simply to own more businesses. It is to build better businesses, stronger platforms and lasting value at scale' },
+  { value: 'A Global Group', label: 'The Group is building toward a diversified, industry-leading enterprise. Our ambition is not simply to own more businesses. It is to build better businesses, stronger platforms and lasting value at scale' },
 ];
 
 const fadeUp = {

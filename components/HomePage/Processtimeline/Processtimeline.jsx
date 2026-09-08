@@ -17,21 +17,16 @@ const DEFAULT_STEPS = [
   },
   {
     num: '03',
-    title: 'INVEST',
-    desc: 'We commit capital, resources and strategic thinking where they can create lasting value',
-  },
-  {
-    num: '04',
     title: 'OWN',
     desc: 'We take a long-term view of the businesses we build and back',
   },
   {
-    num: '05',
+    num: '04',
     title: 'SCALE',
     desc: 'We strengthen operations, pursue new markets and create platforms for continued growth',
   },
   {
-    num: '06',
+    num: '05',
     title: 'EXPAND',
     desc: 'We continuously explore new sectors, businesses and opportunities that can move the Group forward',
   },
@@ -81,7 +76,7 @@ export default function ProcessTimeline({
       <div className="container2">
         <div className="aj-process-head">
           <span className="aj-process-eyebrow">{eyebrow}</span>
-          <h2 className="aj-process-title">
+          <h2 className="aj-process-title" style={{margin:'0px'}}>
             {leadWords ? `${leadWords} ` : ''}
             {titleAccent ? (
               <span className="aj-process-title-accent">{lastWord}</span>

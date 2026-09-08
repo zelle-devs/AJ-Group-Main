@@ -107,6 +107,7 @@
 }
 
 .hero-primary-btn {
+  line-height: 0;
   padding: 12px 22px;
   font-size: var(--font-size-xs);
   letter-spacing: 1px;

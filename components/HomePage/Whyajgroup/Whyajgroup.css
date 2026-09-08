@@ -70,17 +70,15 @@
   max-width: 600px;
   margin: 0 ;
 }
-
-/* ---------- Grid ---------- */
+ 
 
 .aj-why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 22px;
   align-items: stretch;
 }
-
-/* ---------- Card Outer: Gold Border Layer ---------- */
+ 
 
 .aj-why-card-wrap {
   position: relative;
@@ -345,7 +343,7 @@
   }
 }
 
-/* Tablet (768px - 1023px) - Sab grids 2 columns */
+/* Tablet (768px - 1023px) - Sab grids 2 columns (unchanged) */
 @media (max-width: 1023px) {
   .aj-why-section { padding: 50px 0; }
   
@@ -362,6 +360,37 @@
   .aj-why-card-title { font-size: var(--font-size-lg); }
   .aj-why-card-desc { font-size: var(--font-size-sm); }
 }
+@media (max-width: 767px) {
+  .aj-why-grid {
+    display: flex !important;
+    grid-template-columns: unset !important;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    user-select: none;
+  }
+
+  .aj-why-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .aj-why-grid.aj-dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+  }
+
+  .aj-why-card-wrap {
+    flex: 0 0 calc(50% - 7px);
+    max-width: calc(50% - 7px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
 
 /* Mobile Large (480px - 767px) */
 @media (min-width: 480px) and (max-width: 767px) {
@@ -371,7 +400,6 @@
   .aj-why-intro { font-size: var(--font-size-sm); }
 
   .aj-why-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
     gap: 14px;
   }
 
@@ -395,7 +423,6 @@
   .aj-why-intro { font-size: var(--font-size-xs); }
 
   .aj-why-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
     gap: 10px;
   }
 
@@ -435,5 +462,28 @@
   .aj-why-card-inner::before,
   .aj-why-card-wrap:hover .aj-why-card-inner::before {
     display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .AJWHYContainerMainPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .aj-why-head {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .aj-why-eyebrow {
+    justify-content: center;
+    width: 100%;
+  }
+  .aj-why-intro {
+    margin: 0 auto;
   }
 }

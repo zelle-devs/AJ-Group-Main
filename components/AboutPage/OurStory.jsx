@@ -39,13 +39,13 @@ const STORY_MILESTONES = [
     desc: 'Some of our strongest opportunities begin with an idea. We build businesses from the ground up, developing the people, systems and capabilities required to create something built to last.',
     color: '#C8A54A',
   },
-  {
-    icon: Printer,
-    // year: '[EXPANSION 2]',
-    title: 'Invest',
-    desc: 'We commit capital and resources where we see meaningful potential. Our investment decisions are guided by opportunity, strategic fit and the potential to create long-term value',
-    color: '#C8A54A',
-  },
+  // {
+  //   icon: Printer,
+  //   // year: '[EXPANSION 2]',
+  //   title: 'Invest',
+  //   desc: 'We commit capital and resources where we see meaningful potential. Our investment decisions are guided by opportunity, strategic fit and the potential to create long-term value',
+  //   color: '#C8A54A',
+  // },
   {
     icon: Package,
     // year: '[EXPANSION 3]',
@@ -65,7 +65,7 @@ const STORY_MILESTONES = [
 export default function OurStory({
   // Content Props
   eyebrow = 'WHAT WE DO',
-  headline = 'We Build, We Invest, We Expand',
+  headline = 'We Build, We Own, We Expand',
   body = "A.J Group began in [FOUNDING YEAR] with [FOUNDING FOCUS]. Over [YEARS IN OPERATION] years it has grown from a single focus into a diversified business group spanning manufacturing, industrial solutions, print, packaging, advertising and consumer products, with a growing footprint in real estate and emerging sectors. That growth has been deliberate: building and adding businesses where they strengthen what the Group can offer, rather than expanding for its own sake.",
   milestones = STORY_MILESTONES,
   

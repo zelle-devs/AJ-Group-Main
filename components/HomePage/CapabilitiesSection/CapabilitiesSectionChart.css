@@ -262,7 +262,7 @@
 /* Mobile Small (300px - 479px) */
 @media (max-width: 479px) {
   .aj-process-section { padding: 24px 0; }
-  .aj-process-title { font-size: var(--font-size-2xl); }
+  .aj-process-title { font-size: var(--font-size-2xl); display: flex !important;}
   .aj-process-body { font-size: var(--font-size-xs); }
   .aj-process-btn { font-size: 10px; }
   .aj-process-chart-card { padding: 8px; border-radius: var(--radius-xl); }
@@ -274,7 +274,7 @@
 /* Ultra Small (300px - 350px) */
 @media (max-width: 350px) {
   .aj-process-section { padding: 20px 0; }
-  .aj-process-title { font-size: var(--font-size-xl); }
+  .aj-process-title { font-size: var(--font-size-xl); display: flex;}
   .aj-process-body { font-size: 9px; }
   .aj-process-chart-card { padding: 6px; }
   .aj-process-chart-legend { gap: 6px; }

@@ -38,11 +38,11 @@ const DEFAULT_PROJECTS = [
 
 export default function OurCompaniesFeaturedProjects({
   // Content Props
-  eyebrow = 'Our Companies',
+  eyebrow = 'Our Portfolio',
   headline = 'Different Businesses Shared Direction',
   description = "Each company in A.J Group leads in its own field, while drawing on the resources and standards of the wider Group.",
-  buttonText = 'Explore Our Companies',
-  buttonLink = '/our-companies',
+  buttonText = 'Explore Our Portfolio',
+  buttonLink = '/our-portfolio',
   
   // Projects Data
   projects = DEFAULT_PROJECTS,

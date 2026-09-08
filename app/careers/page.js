@@ -1,54 +1,101 @@
 'use client'
 import CareersHero from "@/components/CareersPage/CareersHero";
-import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection";
+import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection.jsx";
 import WhyAJGroup from "@/components/HomePage/Whyajgroup/Whyajgroup";
 import CareersGrid from "@/components/CareersPage/CareersGrid";
 import JobListings from "@/components/CareersPage/JobListings";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
-import { Target, Award, Shield, TrendingUp, Users, Star, Heart, Briefcase, GraduationCap, Clock } from 'lucide-react';
+import { Target, Award, Shield, TrendingUp, Users, Star, Heart, Briefcase, GraduationCap, Clock, ShoppingBag, Building2, Hotel, Globe, MessageSquare } from 'lucide-react';
 import OurStory from "@/components/AboutPage/OurStory";
+import HeroSectionCareers from "@/components/AboutPage/HeroSectionCareers";
+import WhyChooseUsCareersMain from "@/components/HomePage/WhyChooseUs/WhyChooseUsCareersMain";
+import OurCareersProcesstimeline from "@/components/OurCompaniesProcesstimeline/OurCareersProcesstimeline";
+import CapabilitiesSectionCareers2Main from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionCareers2Main";
+import CareersMarqueWaiting from "@/components/CareersPage/CareersMarqueWaiting";
 
 export default function Careers() {
   return (
     <>
-      <CareersHero />
+      <HeroSectionCareers
+
+        imageSrc="/CareerMainImageSlider.jpeg"
+        imageAlt="A.J Group Industries"
+
+        features={[
+          { icon: ShoppingBag, label: 'Retail' },
+          { icon: Building2, label: 'Corporate' },
+          { icon: Hotel, label: 'Hospitality' },
+        ]}
+
+        // Badges
+        badge1Icon={Globe}
+        badge1Value="100+"
+        badge1Label="Team Members"
+        badge2Value="2"
+        badge2Label="Companies"
+
+        // Layout
+        useSpacer={true}
+        showFeatures={true}
+        showDivider={false}
+        showBadge1={true}
+        showBadge2={true}
+        showDots={true}
+        showFrame={true}
+        showImageOverlay={true}
+      />
       <div className="scroll-content-wrapper">
-        {/* 02. LIFE AT THE GROUP */}
-        <CapabilitiesSection 
-          eyebrow="Life at the Group"
-          title="Real Work You Can Point To"
-          body="Working at A.J Group means being part of work that ends in something real, a fabricated facade, a printed campaign, a finished product. Because the Group spans several disciplines, there's variety in the work and the chance to learn from experts in fields next to your own."
+        <WhyChooseUsCareersMain/>
+        <OurCareersProcesstimeline/>
+        <CapabilitiesSectionCareers2Main
+          eyebrow="YOUR CAREER HERE"
+          title="You Won't Be Building Alone"
+          body="AJ Group brings together people with different skills, experiences and perspectives. As the Group grows, so does the opportunity to work across businesses, functions and challenges that demand new thinking. You may start in one role. But your potential doesn't have to stay there."
           showButton={false}
           maxWidth={800}
         />
 
-        {/* 03. OUR CULTURE - Values grid */}
-        <WhyAJGroup 
-          eyebrow="Our Culture"
+        <WhyAJGroup
+          eyebrow="WHAT YOU CAN EXPECT"
           title="High Standards, Treated Like People"
-          intro="A.J Group holds a high bar for the work, and expects people to be treated well while meeting it. The culture rewards skill, initiative and care, across every business in the Group."
+          intro=""
           columns={5}
           items={[
-            { num: '01', icon: Award, title: 'Skill', desc: 'Expertise is respected and rewarded.', image:'Skills_Careers_Cards.jpeg' },
-            { num: '02', icon: TrendingUp, title: 'Initiative', desc: 'Ideas are welcomed at every level.', image:'Inisiative_Careers_Cards.jpeg' },
-            { num: '03', icon: Heart, title: 'Care', desc: 'People are treated with respect.', image:'Care_Careers_Cards.jpeg' },
-            { num: '04', icon: Shield, title: 'Standards', desc: 'Quality never compromised.', image:'Standerds_Responsibilities_Cards.jpeg' },
-            { num: '05', icon: Users, title: 'Teamwork', desc: 'Experts working together.', image:'TeamWork_Careers_Cards.jpeg' },
+            { num: '01', icon: Award, title: 'Meaningful Responsibility', desc: 'Take ownership of work that matters.', image: 'Skills_Careers_Cards.jpeg' },
+            { num: '02', icon: TrendingUp, title: 'Learning Bt Doing', desc: 'Grow through real challenges, not just training rooms.', image: 'Inisiative_Careers_Cards.jpeg' },
+            { num: '03', icon: Heart, title: 'Exposure To Picture', desc: 'Understand how businesses are built, operated and grown.', image: 'Care_Careers_Cards.jpeg' },
+            { num: '04', icon: Shield, title: 'Room To Move', desc: 'As AJ Group expands, new roles, responsibilities and opportunities will emerge.', image: 'Standerds_Responsibilities_Cards.jpeg' },
+            { num: '05', icon: Users, title: 'Culture Accountability', desc: 'We give people responsibility — and expect them to rise to it.', image: 'TeamWork_Careers_Cards.jpeg' },
           ]}
         />
 
+        <CareersMarqueWaiting/>
+
         {/* 04. WHY JOIN US - Benefits grid */}
         <CareersGrid />
-        <OurStory 
-  eyebrow="Why Join Us"
-  headline=""
-  body="Reasons people build long careers with the Group:"
+       <OurStory
+  eyebrow="THE AJ MINDSET"
+  headline="Think Like An Owner."
+  body="At AJ Group, we believe the best people don't simply complete tasks. They think about the business. They understand the bigger picture."
   milestones={[
-    { icon: Award, year: '01', title: 'Skill', desc: 'Expertise is respected and rewarded across every business.' },
-    { icon: TrendingUp, year: '02', title: 'Initiative', desc: 'Good ideas are welcomed and acted on at every level.' },
-    { icon: Heart, year: '03', title: 'Care', desc: 'People are treated with respect while meeting high standards.' },
-    { icon: Shield, year: '04', title: 'Standards', desc: 'Quality is never compromised, no matter the pressure.' },
-    { icon: Users, year: '05', title: 'Teamwork', desc: 'Experts from different fields work side by side.' },
+    { 
+      icon: Target, 
+      year: '01', 
+      title: 'Question', 
+      desc: 'They question what can be improved.' 
+    },
+    { 
+      icon: Shield, 
+      year: '02', 
+      title: 'Take Responsibility', 
+      desc: 'They take responsibility. And when they see an opportunity, they step forward.' 
+    },
+    { 
+      icon: MessageSquare, 
+      year: '03', 
+      title: 'Make It Better', 
+      desc: 'DON\'T ASK: "Is This My Job?" ASK: "How Can I Make Better?"' 
+    }
   ]}
   showLine={true}
   showYear={true}
@@ -59,7 +106,7 @@ export default function Careers() {
         <JobListings />
 
         {/* 06. SUBMIT YOUR CV - Closing CTA */}
-        <CTASection2 
+        <CTASection2
           eyebrow="Submit Your CV"
           headline="Don't See the Right Role? Introduce Yourself"
           body="A.J Group is always interested in talented, driven people. Send your CV and tell us where you'd fit, and we'll reach out when there's a match."

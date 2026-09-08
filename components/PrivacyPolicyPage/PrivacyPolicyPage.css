@@ -1,0 +1,96 @@
+/* Background requires a dark tone so white and beige text are visible, using your var(--color-black) */
+.wrapperPrivacyPolicyPage {
+  background-color: var(--color-black);
+  min-height: 100vh;
+  padding: var(--container-padding2) 0;
+  font-family: "Gotham", sans-serif;
+  margin-top: 80px;
+}
+
+.containerPrivacyPolicyPage {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.mainTitlePrivacyPolicyPage {
+  color: var(--color-gold);
+  font-family: "Gotham", sans-serif;
+  font-size: var(--font-size-6xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+}
+
+.dateContainerPrivacyPolicyPage {
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--color-gold-medium);
+  padding-bottom: 20px;
+}
+
+.dateTextPrivacyPolicyPage {
+  color: var(--color-beige);
+  font-size: var(--font-size-sm);
+  margin: 4px 0;
+}
+
+.sectionPrivacyPolicyPage {
+  margin-bottom: 35px;
+}
+
+/* Headings in Gold */
+.headingPrivacyPolicyPage {
+  color: var(--color-gold);
+  font-family: "Gotham", sans-serif;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: 15px;
+}
+
+/* Subheadings in White */
+.subHeadingPrivacyPolicyPage {
+  color: var(--color-white);
+  font-family: "Gotham", sans-serif;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* Normal text in Gray/Beige */
+.textPrivacyPolicyPage {
+  color: var(--color-beige);
+  font-size: var(--font-size-base);
+  line-height: 1.7;
+  margin-bottom: 12px;
+ font-family: "Gotham", sans-serif;
+}
+
+/* List styling */
+.listPrivacyPolicyPage {
+  color: var(--color-beige);
+  margin-bottom: 20px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.listItemPrivacyPolicyPage {
+  color: var(--color-beige);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.contactInfoPrivacyPolicyPage {
+  background-color: var(--color-black-light);
+  border: 1px solid var(--color-gold-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.footerPrivacyPolicyPage {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-gold-medium);
+  text-align: center;
+}

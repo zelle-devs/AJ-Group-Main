@@ -8,9 +8,13 @@ import './Hero.css'
 
 const Hero = () => {
   const heroImages = [
-    '/hero2.png', 
-    '/ajgrouphero2ndimage.png', 
-    '/HeroSectionAJGroupThiredImage.jpg', 
+    'HeroSectionMainIMageOutlined1.jpeg',
+    'HeroSectionMainIMageOutlined2.jpeg',
+    'HeroSectionMainIMageOutlined3.jpeg',
+    'HeroSectionMainIMageOutlined4.jpeg',
+    'HeroSectionMainIMageOutlined5.jpeg',
+    'HeroSectionMainIMageOutlined6.jpeg',
+    'HeroSectionMainIMageOutlined7.jpeg',
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -171,10 +175,10 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.15, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-            <strong style={{fontWeight:'800'}}>AJ Group is an investment and operating group building, owning and growing businesses with a long-term vision.</strong> We create opportunities, build businesses from the ground up and pursue strategic expansion across sectors.
+            <strong style={{fontWeight:'800'}}>AJ Group is an operating group building, owning and growing businesses with a long-term vision.</strong> We create opportunities, build businesses from the ground up and pursue strategic expansion across sectors.
             
             <br/> <br/>
-            <h2 style={{fontWeight:'700', color:'var(--color-gold)' ,fontFamily:'Gotham'}}>INVEST. BUILD. OWN. GROW.</h2>
+            <h2 style={{fontWeight:'700', color:'var(--color-gold)' ,fontFamily:'Gotham'}}>OPERATE. BUILD. OWN. GROW.</h2>
 
 
             </motion.p>
@@ -186,10 +190,10 @@ const Hero = () => {
               transition={{ delay: 1.3, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <a href="/consultation" className="btn btn-gold hero-primary-btn">
-                Start a Project <ArrowRight size={16} />
+                 Start A Project <ArrowRight size={16} />
               </a>
-              <a href="/our-companies" className="btn btn-outline-light hero-secondary-btn">
-                Explore Our Companies
+              <a href="/our-portfolio" className="btn btn-outline-light hero-secondary-btn">
+                 Explore AJ Group
               </a>
             </motion.div>
           </motion.div>

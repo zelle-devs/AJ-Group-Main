@@ -38,11 +38,11 @@ const DEFAULT_PROJECTS = [
 
 export default function FeaturedProjects({
   // Content Props
-  eyebrow = 'Our Companies',
+  eyebrow = 'Our Portfolio',
   headline = 'Different Businesses Shared Direction',
   description = "Each company in A.J Group leads in its own field, while drawing on the resources and standards of the wider Group.",
-  buttonText = 'Explore Our Companies',
-  buttonLink = '/our-companies',
+  buttonText = 'Explore Our Portfolio',
+  buttonLink = '/our-portfolio',
   
   // Projects Data
   projects = DEFAULT_PROJECTS,
@@ -261,7 +261,7 @@ export default function FeaturedProjects({
 //             </p>
             
 //             {/* ONLY CHANGE HERE: Link and Text */}
-//             <a href="/our-companies" className="btn btn-outline-gold featured-projects-btn">
+//             <a href="/our-portfolio" className="btn btn-outline-gold featured-projects-btn">
 //               View All Companies <ArrowRight size={16} />
 //             </a>
 //           </motion.div>

@@ -77,6 +77,7 @@ export default function ProcesstimelineAboutMain({
   const leadWords = titleWords.join(' ');
 
   return (
+   
     <section className="aj-cap-section">
       <div className="container2">
         <div className="aj-process-head">
@@ -101,11 +102,11 @@ export default function ProcesstimelineAboutMain({
             const above = alternateCards ? i % 2 === 0 : true;
             return (
               <div className="aj-process-item" key={step.num ?? i}>
-                
+ 
                 {/* ONLY THIS BLOCK WAS ADDED TO SHOW THE HEADING ABOVE STEP 02 */}
                 {i === 1 && (
                   <h3
-                  className='aj-process-title' style={{
+                  className='aj-process-title aj-together-heading' style={{
                     position: 'absolute',
                     bottom: '210px', /* Adjust this value if it needs to move slightly up or down from the line */
                     left: '50%',

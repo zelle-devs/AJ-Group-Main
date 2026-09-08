@@ -524,6 +524,7 @@ p {
     --font-size-3xl: 24px;
   }
   
+  
   .grid-3,
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -539,6 +540,13 @@ p {
   .scroll-content-wrapper {
   border-radius: 30px 30px 0 0!important;
   }
+  
+  .MAINHOMEPAGEUPDATEDGlancE {
+    display: none !important;
+  }
+  
+
+  
   
 .scroll-content-wrapper::before {
   border-radius: 30px 30px 0 0!important;
@@ -577,6 +585,8 @@ p {
 .scroll-content-wrapper::before {
   border-radius: 25px 25px 0 0!important;
 }
+
+
   :root {
     --container-padding: 12px;
     --container-padding2: 32px;
@@ -634,6 +644,7 @@ p {
   .section {
     padding: 32px 0;
   }
+
   
   .btn {
     padding: 8px 16px;

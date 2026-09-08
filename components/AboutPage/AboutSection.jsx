@@ -9,7 +9,7 @@ export default function AboutSection({
  
   eyebrow = 'ABOUT AJ GROUP',
   headline = 'Building A Group For Whats Next',
-  body = "AJ Group is an investment and operating group built to create, own and grow businesses for the long term. We build from the ground up, pursue strategic opportunities and enter new sectors with one objective",
+  body = "AJ Group brings together businesses, people and capabilities under one shared vision, to build better, operate smarter and create lasting value. From the ground up, we focus on quality, capability and long-term growth.",
    
   imageSrc = '/AboutHeroIMageSection.jpeg',
   imageAlt = 'A.J Group Manufacturing',
@@ -103,7 +103,7 @@ export default function AboutSection({
                
             <h2 style={{fontWeight:'700', color:'var(--color-gold)' ,fontFamily:'Gotham'}}>CREATING LASTING VALUE AT SCALE</h2>
             <br/>
-              {showFeatures && features.length > 0 && (
+              {/* {showFeatures && features.length > 0 && (
                 <motion.div 
                   className="aj-about-features"
                   initial={{ opacity: 0, y: 20 }}
@@ -121,7 +121,7 @@ export default function AboutSection({
                     );
                   })}
                 </motion.div>
-              )}
+              )} */}
             </motion.div>
 
             {/* Right Column - Premium Image */}

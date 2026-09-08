@@ -11,20 +11,39 @@ import {
   Heart,
   Shield,
   Star,
+  Layers,
+  Target,
+  Rocket,
 } from 'lucide-react';
 import './CareersGrid.css';
 
 const DEFAULT_BENEFITS = [
-  { icon: TrendingUp, title: 'Career Growth', desc: 'Room to advance as the Group grows.' },
-  { icon: Award, title: 'Real Work', desc: 'Projects that end in something tangible.' },
-  { icon: Users, title: 'Expert Teams', desc: 'Learn from specialists in every field.' },
-  { icon: Clock, title: 'Long-Term', desc: 'Build a career, not just a job.' },
+  { 
+    icon: TrendingUp, 
+    title: 'Larger Future', 
+    desc: 'AJ Group is building toward a much larger future as a diversified group.' 
+  },
+  { 
+    icon: Layers, 
+    title: 'New Horizons', 
+    desc: 'Expanding into new businesses, new industries, and new opportunities.' 
+  },
+  { 
+    icon: Target, 
+    title: 'Visionary Enterprise', 
+    desc: 'Scaling our operations and vision to achieve unprecedented growth and lasting impact.' 
+  },
+  { 
+    icon: Rocket, 
+    title: 'A Different Career', 
+    desc: 'The people who join us along the way will be a core part of that journey.' 
+  },
 ];
 
 export default function CareersGrid({
-  eyebrow = 'Why Join Us',
-  headline = 'More Than a Job',
-  intro = 'Reasons people build long careers with the Group:',
+  eyebrow = 'The Opportunity',
+  headline = 'Help Write The Story',
+  intro = 'You could join after the story is written. Or... you could help write it.',
   benefits = DEFAULT_BENEFITS,
   columns = 4,
 }) {

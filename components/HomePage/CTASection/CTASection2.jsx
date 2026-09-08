@@ -22,7 +22,7 @@ export default function CTASection2({
   
   // Contact Info
   showContactInfo = false,
-  email = 'info@ajgroup.com',
+  email = 'info@ajgrouphq.com',
   phone = '+1 (234) 567-890',
   location = 'Global Operations',
   
@@ -293,7 +293,7 @@ export default function CTASection2({
 //           >
 //             <span className="aj-cta-info-item">
 //               <Mail size={16} />
-//               info@ajgroup.com
+//               info@ajgrouphq.com
 //             </span>
 //             <span className="aj-cta-info-divider" />
 //             <span className="aj-cta-info-item">

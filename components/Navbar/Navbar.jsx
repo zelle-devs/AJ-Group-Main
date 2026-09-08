@@ -36,7 +36,7 @@ const Navbar = () => {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/our-companies', label: 'Our Companies' },
+    { href: '/our-portfolio', label: 'Our Portfolio' },
     { href: '/capabilities', label: 'Capabilities' },
     { href: '/industries', label: 'Industries' },
     { href: '/approach', label: 'Approach' },
@@ -58,7 +58,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="navbar-logo" onClick={closeSidebar}>
             <Image 
-              src="/logo.png"
+              src="/AJ_Icon+Wordmark_Logo_V2.png"
               alt="AJ Group Logo" 
               className="navbar-logo-img"
               width={240}

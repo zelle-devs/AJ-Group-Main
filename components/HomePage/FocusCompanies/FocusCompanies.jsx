@@ -31,7 +31,7 @@ export const companiesData = [
 
 export default function FocusCompanies({
   // Content Props
-  eyebrow = 'Our Companies',
+  eyebrow = 'Our Portfolio',
   headline = 'Specialists, not generalists.',
   headline2 = 'Build With Us',
   companies = companiesData,
@@ -63,7 +63,7 @@ export default function FocusCompanies({
             {headline && <h2 className="aj-focus-headline">{headline}</h2>}
             {dec && <h2 className="why-choose-description" style={{width:'700px', marginBottom:'20px'}}>{dec}</h2>}
             {/* {headline2 && <h2 className="aj-focus-headline">{headline2}</h2>} */}
-            {headline2 && <span className="aj-focus-line" style={{marginBottom:'-40px'}} >{headline2}</span>}
+            {/* {headline2 && <span className="aj-focus-line" style={{marginBottom:'-40px'}} >{headline2}</span>} */}
           </motion.div>
         )}
 
