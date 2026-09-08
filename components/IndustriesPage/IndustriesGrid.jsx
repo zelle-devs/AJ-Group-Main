@@ -12,7 +12,7 @@ const INDUSTRIES_DATA = [
     eyebrow: 'INDUSTRIAL',
     description: "Our industrial capabilities give the Group experience in manufacturing, engineering, fabrication and physical production.These capabilities provide a strong operational foundation — while creating opportunities to build and scale businesses within the industrial ecosystem",
     points: ['Engineering', 'Manufacturing', 'Fabrication', 'Production'],
-    image: '/RetailandEcommerceIndustries.jpg',
+    image: '/BuildingFoundationBusinessUpdatedFinalImages.png',
     company: 'Print Pack Advertising',
   },
   {
@@ -21,7 +21,7 @@ const INDUSTRIES_DATA = [
    eyebrow: 'COMMERCIAL',
     description: "From corporate environments to retail and commercial spaces, we understand the importance of execution, presentation and consistency. Our operating capabilities allow us to participate across the commercial ecosystem while creating opportunities for broader business growth.",
    points: ['Retail', 'Corporate', 'Commercial', 'Brand Environment'],
-    image: '/CorporateAndCommercialIndustries.jpg',
+    image: '/CommercialBusinnessMeetExperience.jpeg',
     company: 'Forgentis + PPA',
   },
   {
@@ -39,7 +39,7 @@ const INDUSTRIES_DATA = [
     eyebrow: 'REAL ESTATE',
     description: "Real estate represents more than physical assets. It creates opportunities to develop, operate and build long-term value. AJ Group sees potential across property, development and the wider ecosystem surrounding the built environment.",
     points: ['Property', 'Development', 'Opportunity'],
-    image: '/EventsAndExibitionsindustries.jpg',
+    image: '/RealEstateFinalUpdatedImage.jpeg',
     company: 'Print Pack Advertising',
   },
   {
@@ -48,7 +48,7 @@ const INDUSTRIES_DATA = [
   eyebrow: 'SERVICES',
     description: "Businesses increasingly compete through the quality of the services, systems and experiences they provide.We remain open to opportunities across service-driven sectors where strong execution and scalable models can create sustainable growth.",
     points: ['Services', 'Operations', 'Technology', 'Business Solutions'],
-    image: '/RealstateandDevelopmentInsutries.jpg',
+    image: '/ServicesFinalUpdatedImage.jpeg',
     company: 'Forgentis Fabrications',
   },
   // {

@@ -17,17 +17,17 @@ import OurCompaniesGrid from "@/components/OurCompaniesGrid/OurCompaniesGrid";
 import OurCompaniesGridCapabilities from "@/components/OurCompaniesGrid/OurCompaniesGridCapabilities";
 import OurCapabilitiesProcesstimeline from "@/components/OurCompaniesProcesstimeline/OurCapabilitiesProcesstimeline";
 import OurCompaniesProcesstimeline from "@/components/OurCompaniesProcesstimeline/OurCompaniesProcesstimeline";
-import { Award, Building2, Eye, Globe, Handshake, Hotel, Shield, ShoppingBag, Star, TrendingUp, User } from "lucide-react";
+import { ArrowUpNarrowWide, Award, Blocks, Building2, Eye, Globe, Handshake, Hotel, Settings, Shield, ShoppingBag, Star, TrendingUp, User } from "lucide-react";
 
 export default function Capabilities() {
   return (
     <>
       <HeroSectionCapabilities
         eyebrow="Our Capabilities"
-        headline="Built Opportunity Into Enterprise"
+        headline="Built to Turn  Opportunity Into Enterprise"
         body="AJ Group combines capital, entrepreneurial thinking and operating capability to build businesses from the ground up and create platforms for long-term growth. "
 
-        imageSrc="/capabilitiesmainPage.jpeg"
+        imageSrc="/CapabilitiesFinalImageUpdated.jpg"
         imageAlt="A.J Group Industries"
 
         // Features - Industry sectors
@@ -39,10 +39,14 @@ export default function Capabilities() {
 
         // Badges
         badge1Icon={Globe}
-        badge1Value="25+"
-        badge1Label="In-House Finishing"
-        badge2Value="30+"
-        badge2Label="Specialist"
+        // badge1Value="25+"
+        // badge1Label="In-House Finishing"
+        // badge2Value="30+"
+        // badge2Label="Specialist"    
+            badge1Value=""
+        badge1Label=""
+        badge2Value=""
+        badge2Label=""
 
         // Layout
         useSpacer={true}
@@ -68,11 +72,11 @@ export default function Capabilities() {
           intro="Capability Creates The Foundations For GrowBuilding a successful business requires more than an idea. It requires the ability to execute. AJ Group brings together the resources, expertise and operating infrastructure needed to take opportunities from concept to execution — and from execution to growth "
           columns={4}
           items={[
-            { num: '01', icon: Shield, title: 'Strategic', desc: 'We identify opportunities and determine where we can create meaningful long-term value.', image: '/Integrity_cards_whyAJ.jpeg' },
-            { num: '02', icon: Award, title: 'Build', desc: 'We develop businesses, capabilities and infrastructure from the ground up.', image: '/Excellence_cards_whyAJ.jpeg' },
-            { num: '03', icon: Handshake, title: 'Operates', desc: 'We establish the systems, processes and standards required to run strong businesses.', image: '/Accountability_cards_whyAJ.jpeg' },
+            { num: '01', icon: ArrowUpNarrowWide, title: 'Strategy', desc: 'We identify opportunities and determine where we can create meaningful long-term value.', image: '/StrategyCapabilitiesFinalUpdatedImage.jpeg' },
+            { num: '02', icon: Blocks, title: 'Build', desc: 'We develop businesses, capabilities and infrastructure from the ground up.', image: '/BuildCapabilitiesFinalUpdatedImage.jpeg' },
+            { num: '03', icon: Settings, title: 'Operates', desc: 'We establish the systems, processes and standards required to run strong businesses.', image: '/OperateCapabilitiesFinalUpdatedImage.jpeg' },
             
-            { num: '04', icon: Eye, title: 'Scale', desc: 'We strengthen what works, expand into new markets and build platforms for continued growth.', image: '/Vision_cards_whyAJ.jpeg' },
+            { num: '04', icon: TrendingUp, title: 'Scale', desc: 'We strengthen what works, expand into new markets and build platforms for continued growth.', image: '/ScaleCapabilitiesFinalUpdatedImage.jpeg' },
           ]}
         />
         <OurCompaniesGridCapabilities />

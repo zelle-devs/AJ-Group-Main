@@ -13,7 +13,7 @@ const INDUSTRIES_DATA = [
     title: 'Fabrication & Manufacturing',
     description: "Advanced fabrication and manufacturing capabilities spanning architectural, structural and decorative metalwork. From precision cutting and milling to welding, finishing and installation, our operating capabilities allow complex physical solutions to move from concept to reality.",
     points: ['Precision', 'Engineering', 'Fabrication', 'Execution',],
-    image: '/step1.png',
+    image: '/FabricationManufacturingFinalImageUpdated.png',
     // company: 'Forgentis',
   },
   {

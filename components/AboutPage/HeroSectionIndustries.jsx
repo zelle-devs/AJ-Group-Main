@@ -24,9 +24,9 @@ export default function HeroSectionIndustries({
   
   // Badges
   badge1Icon = Award,
-  badge1Value = '2',
-  badge1Label = 'Companies',
-  badge2Value = '500+',
+  badge1Value = '',
+  badge1Label = '',
+  badge2Value = '1000+',
   badge2Label = 'Projects',
   
   // Layout Props

@@ -19,7 +19,9 @@ import {
   Package,
   Truck,
   Factory,
-  ArrowRight
+  ArrowRight,
+  Bubbles,
+  Lightbulb
 } from 'lucide-react';
 import './Whyajgroup.css';
 
@@ -37,24 +39,24 @@ const DEFAULT_ITEMS = [
     num: '01',
     icon: Home,
     title: 'We Can Build',
-    desc: 'Design, fabrication, print, packaging, and finishing in one group: fewer suppliers, fewer handoffs, less risk.',
-    image: '/End_to_end_roof_cards.png',
+    desc: 'Creating businesses, platforms and ventures designed for long-term relevance.',
+    image: '/WeCanBuildFinalUpdatedImage.jpeg',
     clip: SHAPE_A,
   },
   {
     num: '02',
-    icon: PenTool,
+    icon: Lightbulb,
     title: 'We Can Innovate',
-    desc: 'We combine practical expertise with modern processes to find smarter ways to make things happen.',
-    image: '/Engineering_LED_Cards.jpeg',
+    desc: 'Exploring new ideas and better ways of doing things to create meaningful progress and lasting value.',
+    image: '/WeCanInnovateFinalUpdatedImage.jpeg',
     clip: SHAPE_B,
   },
   {
     num: '03',
-    icon: Search,
+    icon: TrendingUp,
     title: 'We Can Grow',
-    desc: 'Our reputation lives in the details: clean welds, crisp print, considered edges.',
-    image: '/Finish_survives_Cards.png',
+    desc: 'Scaling businesses and entering markets where sustainable growth can compound over time.',
+    image: '/WeCanGrowFinalUpdatedImage.jpeg',
     clip: SHAPE_C,
   }, 
 ];
@@ -63,6 +65,7 @@ export default function WhyAJGroup({
   // Content Props
   eyebrow = 'The A.J Group',
   title = 'One Group, Multiple Opportunities',
+  subhead2= 'We don\'t limit opportunity to a single industry',
   intro = "AJ Group brings together businesses and ventures across multiple sectors — united by a common approach to ownership, growth and long-term value creation",
   items = DEFAULT_ITEMS,
   
@@ -262,11 +265,12 @@ export default function WhyAJGroup({
   return (
     <section className="aj-why-section">
       <div className="aj-why-container">
-        <div className='AJWHYContainerMainPage' style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
+        <div className='AJWHYContainerMainPage' style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%' }}>
           <div className="aj-why-head">
           {eyebrow && <span className="aj-why-eyebrow">{eyebrow}</span>}
           {title && <h2 className="aj-why-title">{title}</h2>}
-          {showIntro && intro && <p className="aj-why-intro">{intro}</p>}
+          {showIntro && intro && <p className="aj-why-intro">{intro}   {eyebrow && <span className="aj-why-eyebrow" style={{textTransform:'capitalize', letterSpacing:'1px', fontSize:'15px'}}>{subhead2}</span>}</p>}
+        
           
         </div>
         <div>

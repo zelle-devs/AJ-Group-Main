@@ -8,8 +8,8 @@ import Link from 'next/link';
 import { BsFacebook, BsInstagram, BsLinkedin, BsYoutube } from 'react-icons/bs';
  
 const DEFAULT_COMPANIES = [
-  { name: 'Forgentis Fabrications', href: '#' },
-  { name: 'Print Pack Advertising', href: '#' },
+  { name: 'Forgentis Fabrications', href: '/our-portfolio#forgentis' },
+  { name: 'Print Pack Advertising', href: '/our-portfolio#ppa' },
 ];
  
 const DEFAULT_LINKS = [
@@ -36,7 +36,7 @@ const DEFAULT_BUTTONS = [
 ];
 
 export default function Footer({
-  description = 'A.J Group of Companies, a diversified manufacturing and design group. Metal fabrication, print, packaging, advertising, and design brands, under one standard of making.',
+  description = 'AJ Group is an operating group building, owning and growing businesses with a long-term vision. We create opportunities, build businesses from the ground up and pursue strategic expansion across sectors.',
   companies = DEFAULT_COMPANIES,
   links = DEFAULT_LINKS,
   phone = '+92 21 111 254 111',

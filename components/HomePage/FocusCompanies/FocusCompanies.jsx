@@ -5,14 +5,14 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import './FocusCompanies.css';
 
-// Default Companies Data
 export const companiesData = [
   {
     logo: '/Forgentis.png',
     subtitle: 'FORGENTIS FABRICATIONS',
-    description: "When a project calls for metal, whether structural, architectural, or sculptural, Forgentis brings the engineering and machinery to realize it.",
+    description:
+      "When a project calls for metal, whether structural, architectural, or sculptural, Forgentis brings the engineering and machinery to realize it.",
     buttonText: 'Explore Forgentis',
-    buttonLink: '#',
+    buttonLink: '/our-portfolio#forgentis',
     image: '/step4.png',
     imagePosition: 'left',
     shadowColor: 'rgba(59, 130, 246, 0.4)',
@@ -20,15 +20,15 @@ export const companiesData = [
   {
     logo: '/PPA.png',
     subtitle: 'PRINT PACK ADVERTISING',
-    description: "When a brand needs to be seen, held, and remembered, PPA brings the print, packaging, and displays to deliver it.",
+    description:
+      "When a brand needs to be seen, held, and remembered, PPA brings the print, packaging, and displays to deliver it.",
     buttonText: 'Explore PPA',
-    buttonLink: '#',
+    buttonLink: '/our-portfolio#ppa',
     image: '/ppaIndustriesPage.png',
     imagePosition: 'right',
     shadowColor: 'rgba(234, 179, 8, 0.4)',
   },
 ];
-
 export default function FocusCompanies({
   // Content Props
   eyebrow = 'Our Portfolio',

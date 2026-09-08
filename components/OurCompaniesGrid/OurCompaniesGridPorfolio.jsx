@@ -13,7 +13,7 @@ const INDUSTRIES_DATA = [
     title: 'Engineering Possibility',
     description: "A wholly owned AJ Group company operating in architectural and metal fabrication. Forgentis combines technical expertise, precision and execution to deliver complex physical solutions.",
     points: ['Engineering', 'Fabrication', 'Execution',],
-    image: '/step1.png',
+    image: '/EngineeringPossibilityFinalImageUpdated.png',
     // company: 'Forgentis',
   },
   {
@@ -111,6 +111,7 @@ export default function OurCompaniesGridPorfolio({
               return (
                 <motion.div
                   key={index}
+                  id={index === 0 ? 'forgentis' : 'ppa'}
                   className={`aj-industry-card ${isEven ? 'image-left' : 'image-right'}`}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}

@@ -117,12 +117,10 @@ export default function ProcesstimelineAboutMain({
                     fontSize:'25px',
                     fontWeight:'600'
                   }}>
-                    <span className="aj-ptm-word  aj-ptm-accent " style={{ '--i': 2 }}>T</span>
-                    <span className="aj-ptm-word  " style={{ '--i': 2 }}>ogether</span>{' '}
-                    <span className="aj-ptm-word  aj-ptm-accent" style={{ '--i': 2 }}>W </span>
-                    <span className="aj-ptm-word  " style={{ '--i': 2 }}>e </span>{' '}
-                    <span className="aj-ptm-word  aj-ptm-accent" style={{ '--i': 2 }}>A </span>
-                    <span className="aj-ptm-word " style={{ '--i': 2 }}>chieve</span>
+                    <span className="aj-ptm-word  " style={{ '--i': 2 }}>Together</span>{' '}
+                    <span className="aj-ptm-word  " style={{ '--i': 2 }}>We </span>{' '}
+                    <span className="aj-ptm-word  aj-ptm-accent" style={{ '--i': 2 }}>Achieve</span>
+                    <span className="aj-ptm-word " style={{ '--i': 2 }}></span>
                   </h3>
                 )}
                 {/* END OF ADDED BLOCK */}

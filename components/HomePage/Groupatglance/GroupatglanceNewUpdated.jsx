@@ -30,7 +30,7 @@ const DEFAULT_ORBIT_ICONS = [Factory, Printer, PackageCheck, Megaphone, Users, A
 
 /* ---------- Default Stats ---------- */
 const DEFAULT_STATS = [
-  { value: 'A Global Group', label: 'The Group is building toward a diversified, industry-leading enterprise. Our ambition is not simply to own more businesses. It is to build better businesses, stronger platforms and lasting value at scale' },
+  { value: 'A Global Group', label: 'The AJ Group is building toward a diversified, industry-leading enterprise. Our ambition is not simply to own more businesses. It is to build better businesses, stronger platforms and lasting value at scale' },
 ];
 
 const fadeUp = {
@@ -147,7 +147,7 @@ export default function GroupatglanceNewUpdated({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: animationDelay, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Sparkles size={13} />
+              <Target size={13} />
               <span>{eyebrow}</span>
             </motion.div>
           )}
@@ -189,10 +189,6 @@ export default function GroupatglanceNewUpdated({
             {/* Stats Grid */}
             <div className="aj-glance-stats" style={getStatsGridStyle()}>
               {stats.map((s, i) => {
-                const words = s.label.split(' ');
-                const firstWord = words[0];
-                const restWords = words.slice(1).join(' ');
-                
                 return (
                   <motion.div
                     className="aj-glance-stat"
@@ -205,11 +201,11 @@ export default function GroupatglanceNewUpdated({
                     variants={fadeUp}
                   >
                     <CounterValue value={s.value} />
-                    <span className="aj-glance-stat-label" >
-                      {/* <span className="aj-glance-stat-label-first">{firstWord}</span> */}
-                      {restWords && (
-                        <span className="aj-glance-stat-label" style={{width:'450px', whiteSpace:'wrap', lineHeight:'22px'}}>{restWords}</span>
-                      )}
+                    <span 
+                      className="aj-glance-stat-label" 
+                      style={{width:'450px', whiteSpace:'wrap', lineHeight:'22px'}}
+                    >
+                      {s.label}
                     </span>
                   </motion.div>
                 );

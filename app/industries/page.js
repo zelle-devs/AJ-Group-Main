@@ -12,7 +12,7 @@ export default function Industries() {
     <>
       <HeroSectionIndustries
 
-        imageSrc="/Capability_suited_sector.jpeg"
+        imageSrc="/HeroSectionMainIMageOutlined4.jpeg"
         imageAlt="A.J Group Industries"
 
         features={[
@@ -23,10 +23,10 @@ export default function Industries() {
 
         // Badges
         badge1Icon={Globe}
-        badge1Value="7+"
+        badge1Value="10+"
         badge1Label="Industries Served"
-        badge2Value="2"
-        badge2Label="Companies"
+        badge2Value=""
+        badge2Label=""
 
         // Layout
         useSpacer={true}

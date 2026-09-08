@@ -70,25 +70,7 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="navbar-menu">
-  {/* {navLinks.map((link, index) => (
-    <motion.div
-      key={link.href}
-      initial={{ y: 40, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ 
-        duration: 0.5, 
-        delay: 0.9 + index * 0.07,
-        ease: [0.22, 1, 0.36, 1] 
-      }}
-    >
-      <Link 
-        href={link.href}
-        className="navbar-link"
-      >
-        {link.label}
-      </Link>
-    </motion.div>
-  ))} */}
+  
 
   {navLinks.map((link, index) => {
   const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))

@@ -27,10 +27,10 @@ export default function Approach() {
 
         // Badges
         badge1Icon={Globe}
-      badge1Value="7+"
+      badge1Value="6"
         badge1Label="Process Steps"
-        badge2Value="1"
-        badge2Label="Standard"
+        badge2Value=""
+        badge2Label=""
 
         // Layout
         useSpacer={true}
@@ -45,7 +45,7 @@ export default function Approach() {
       <div className="scroll-content-wrapper">
         <CapabilitiesSectionMainApproachTopHalfEagle
           eyebrow="The AJ Advantage"
-          title="We Think Link Owners"
+          title="We Think Like Owners"
           body="Ownership changes the way you think - You think beyond the next quarter - Beyond the next transaction - Beyond the next milestone - You think about what the business can become years from now - That mindset shapes every opportunity we pursue"
           align="center"
           showButton={false}

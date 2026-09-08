@@ -20,6 +20,10 @@ import {
   Cog,
   Truck,
   Lightbulb,
+  Blocks,
+  ShieldAlert,
+  Expand,
+  ShieldIcon,
 } from 'lucide-react';
 import './OurStory.css';
 
@@ -33,7 +37,7 @@ const STORY_MILESTONES = [
   //   color: '#C8A54A',
   // },
   {
-    icon: Wrench,
+    icon: Blocks,
     // year: '[EXPANSION 1]',
     title: 'Build',
     desc: 'Some of our strongest opportunities begin with an idea. We build businesses from the ground up, developing the people, systems and capabilities required to create something built to last.',
@@ -47,17 +51,17 @@ const STORY_MILESTONES = [
   //   color: '#C8A54A',
   // },
   {
-    icon: Package,
+    icon: ShieldIcon,
     // year: '[EXPANSION 3]',
     title: 'Own',
-    desc: 'We take a long-term approach to the businesses we build and back.Ownership gives us the ability to think beyond short-term outcomes and make decisions for the future',
+    desc: 'We take a long-term approach to the businesses we build and back.Ownership gives us the ability to think beyond short-term outcomes and make decisions for the future.',
     color: '#C8A54A',
   },
   {
-    icon: Rocket,
+    icon: Expand,
     // year: 'Today',
     title: 'Expand',
-    desc: 'We continuously explore new sectors, markets and opportunities. As the Group grows, so does the scope of what we can build',
+    desc: 'We continuously explore new sectors, markets and opportunities. As the Group grows, so does the scope of what we can build.',
     color: '#C8A54A',
   },
 ];

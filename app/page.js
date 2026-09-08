@@ -21,9 +21,9 @@ import './globals.css'
 import CapabilitiesSectionGlanceTextHome from '@/components/HomePage/CapabilitiesSection/CapabilitiesSectionGlanceTextHome'
 export default function Home() {
   return (
-    
+
     <>
-    <style>{`
+      <style>{`
   .mobile-only-glance {
     display: none; /* By default hidden on all screens */
   }
@@ -44,23 +44,34 @@ export default function Home() {
         <CapabilitiesSectionHomeMain
           eyebrow="PORTFOLIO"
           title="A Portfolio In Motion"
-          body="Our portfolio is growing. Across businesses, sectors and markets, each venture represents another step in the evolution of AJ Group"         
+          body="Our portfolio is growing. Across businesses, sectors and markets, each venture represents another step in the evolution of AJ Group"
           showButton={false}
           maxWidth={700}
         />
         <WhyAJGroup />
         {/* <FeaturedProjects/> */}
         <ProcessTimeline />
-        <FocusCompanies
+        {/* <FocusCompanies
           eyebrow="PARTNERSHIPS"
           headline="Let's Build What's Next"
           desc="We are always open to meaningful opportunities. Whether you're building a business, exploring a strategic partnership, considering an acquisition or looking for the right long-term partner, AJ Group welcomes conversations that have the potential to create something bigger."
           companies={companiesData}
-        />
+        /> */}
         {/* <CapabilitiesSection /> */}
         {/* <ViewOurPortfolioDesign/> */}
         {/* <CapabilitiesSectionLeft/> */}
-        <CapabilitiesSectionLeft2 />
+        <CapabilitiesSectionLeft2
+          body={
+            <>
+              Opportunity doesn't always fit neatly into a category. That's why{' '}
+              <strong style={{fontWeight:'700'}}>AJ Group</strong> remains open to{' '}
+              new markets, new sectors and new ways to<strong style={{fontWeight:'700'}}> create</strong>  value.
+              We pursue opportunities where{' '}
+              <strong style={{fontWeight:'700'}}>vision, capital and execution</strong> can come together to build
+              something enduring.
+            </>
+          }
+        />
 
         {/* <CapabilitiesSectionChart/> */}
         {/* <CapabilitiesSectionChart2/> */}
@@ -74,19 +85,19 @@ export default function Home() {
       /> */}
         <GroupatglanceNewUpdated />
         <div className="mobile-only-glance">
-  <CapabilitiesSectionGlanceTextHome 
-    eyebrow={false}
-    title={false}
-    body="The Group is building toward a diversified, billion-dollar enterprise. Our ambition is not simply to own more businesses. It is to build better businesses, stronger platforms and lasting value at scale"
-    buttonText="Meet Our Leadership"
-    buttonLink="/leadership"
-    showButton={false}
-  />
-</div>
-       
+          <CapabilitiesSectionGlanceTextHome
+            eyebrow={false}
+            title={false}
+            body="The Group is building toward a diversified, billion-dollar enterprise. Our ambition is not simply to own more businesses. It is to build better businesses, stronger platforms and lasting value at scale"
+            buttonText="Meet Our Leadership"
+            buttonLink="/leadership"
+            showButton={false}
+          />
+        </div>
+
 
         {/* <CTASection/> */}
-       
+
         <CTASection2 />
       </div>
     </>

@@ -26,7 +26,7 @@ export default function HeroSectionApproach({
   badge1Icon = Award,
   badge1Value = '2',
   badge1Label = 'Companies',
-  badge2Value = '500+',
+  badge2Value = '1000+',
   badge2Label = 'Projects',
   
   // Layout Props

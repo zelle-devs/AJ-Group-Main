@@ -154,6 +154,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 html {
@@ -170,6 +171,7 @@ body {
   color: var(--color-white);
   background-color: var(--color-black);
   overflow-x: hidden;
+  background-color: #0D0D0D;
   min-height: 100vh;
 }
 

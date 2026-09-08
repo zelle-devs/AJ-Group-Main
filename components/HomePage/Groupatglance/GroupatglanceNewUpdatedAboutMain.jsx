@@ -22,6 +22,7 @@ import {
   Building,
   Clock,
   Shield,
+  UserStar,
 } from 'lucide-react';
 import './Groupatglance.css';
 
@@ -142,12 +143,12 @@ export default function GroupatglanceNewUpdatedAboutMain({
           {showBadge && (
             <motion.div
               className="aj-glance-badge"
-              initial={{ opacity: 0, y: -12 }}
+              initial={{ opacity: 0, y: -12,  }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: animationDelay, ease: [0.16, 1, 0.3, 1] }}
             >
-              <Sparkles size={13} />
+              <UserStar size={13} />
               <span>{eyebrow}</span>
             </motion.div>
           )}
@@ -202,7 +203,7 @@ export default function GroupatglanceNewUpdatedAboutMain({
                 return (
                   <motion.div
                     className="aj-glance-stat"
-                    style={{marginBottom:'-80px', marginLeft:'30px'}}
+                    style={{marginBottom:'-90px', marginLeft:'30px'}}
                     key={s.label}
                     custom={i}
                     initial="hidden"
@@ -214,7 +215,7 @@ export default function GroupatglanceNewUpdatedAboutMain({
                     <span className="aj-glance-stat-label" >
                       {/* <span className="aj-glance-stat-label-first">{firstWord}</span> */}
                       {restWords && (
-                        <span className="aj-glance-stat-labelAboutMain" style={{width:'620px', whiteSpace:'wrap', lineHeight:'22px'}}>{restWords}</span>
+                        <span className="aj-glance-stat-labelAboutMain" style={{width:'580px', whiteSpace:'wrap', lineHeight:'22px'}}>{restWords}</span>
                       )}
                     </span>
                   </motion.div>

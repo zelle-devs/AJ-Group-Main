@@ -8,13 +8,13 @@ import './Hero.css'
 
 const Hero = () => {
   const heroImages = [
-    'HeroSectionMainIMageOutlined1.jpeg',
-    'HeroSectionMainIMageOutlined2.jpeg',
+    // 'HeroSectionMainIMageOutlined1.jpeg',
     'HeroSectionMainIMageOutlined3.jpeg',
-    'HeroSectionMainIMageOutlined4.jpeg',
+    'HeroSectionMainIMageOutlined2.jpeg',
+    // 'HeroSectionMainIMageOutlined4.jpeg',
     'HeroSectionMainIMageOutlined5.jpeg',
-    'HeroSectionMainIMageOutlined6.jpeg',
-    'HeroSectionMainIMageOutlined7.jpeg',
+    // 'HeroSectionMainIMageOutlined6.jpeg',
+    // 'HeroSectionMainIMageOutlined7.jpeg',
   ]
 
   const [currentSlide, setCurrentSlide] = useState(0)

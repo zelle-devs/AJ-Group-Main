@@ -126,9 +126,9 @@ description = "AJ Group is more than a collection of businesses. We bring togeth
               <h2 className="why-choose-headline">{headline}</h2>
                     
               <p className="why-choose-description">
-                {renderDescription()}
+                {renderDescription()}<span style={{ fontWeight:'500', color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '15px' }} > Building businesses that can become stronger, larger and more valuable over time.</span>
               </p>
-              <h2 style={{ fontWeight: '700', color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '20px' }}>TO BUILD SOMETHING MUCH BIGGER</h2>
+              {/* <h2 style={{  color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '15px' }}>Building businesses that can become stronger, larger and more valuable over time</h2> */}
             </motion.div>
 
             

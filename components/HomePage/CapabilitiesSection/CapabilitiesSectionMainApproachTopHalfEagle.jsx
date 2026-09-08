@@ -53,14 +53,14 @@ export default function CapabilitiesSectionMainApproachTopHalfEagle({
             <div className="aj-cap-container">
                 <div style={{display:'flex', justifyContent:'center', alignItems:'center', width:'100%', marginBottom:'10px'}}>
                     <motion.div
-                        className="aj-approach-step-circle"
+                        className=""
                         initial={{ scale: 0, opacity: 0 }}
                         whileInView={{ scale: 1, opacity: 1 }}
                         viewport={{ once: true }}
                         // Yahan 'delay' ko 'animationDelay' se change kiya gaya hai
                         transition={{ type: 'spring', stiffness: 300, damping: 20, delay: animationDelay + 0.1 }}
                     >
-                        <img src='./AjIconMainLogoHalfEagle.png' alt="AJ Group Logo" className="aj-approach-step-icon" />
+                        <img src='./EagleIconCareersPageFinalUpdated.png' alt="AJ Group Logo" className="aj-approach-step-icon" />
                     </motion.div>
                 </div>
 

@@ -81,7 +81,7 @@ export default function CapabilitiesSectionHomeMain({
                     <h2 className="aj-process-title" style={{ marginTop: '-10px', fontSize: '20px', display:'flex'}}>
                         <span className="aj-ptm-line">
                             <span className="aj-ptm-word" style={{ '--i': 0 }}>Build</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 1 }}>With</span>{' '}
+                            <span className="aj-ptm-word" style={{ '--i': 1 }}>With,</span>{' '}
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 2 }}>Purpose</span>
                         </span>
 
@@ -89,7 +89,7 @@ export default function CapabilitiesSectionHomeMain({
 
                         <span className="aj-ptm-line">
                             <span className="aj-ptm-word" style={{ '--i': 3 }}>Owned</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 4 }}>With</span>{' '}
+                            <span className="aj-ptm-word" style={{ '--i': 4 }}>With,</span>{' '}
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 5 }}>Conviction</span>
                         </span>
 
@@ -98,7 +98,7 @@ export default function CapabilitiesSectionHomeMain({
                         <span className="aj-ptm-line">
                             <span className="aj-ptm-word" style={{ '--i': 6 }}>Developed</span>{' '}
                             <span className="aj-ptm-word" style={{ '--i': 7 }}>For</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 8 }}>the</span>{' '}
+                            <span className="aj-ptm-word" style={{ '--i': 8 }}>the,</span>{' '}
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 9 }}>Long Term</span>
                         </span>
                     </h2>

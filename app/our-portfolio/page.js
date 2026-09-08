@@ -43,7 +43,7 @@ export default function OurCompanies() {
         headline="A Companies Built for Whats Next"
         body="AJ Group builds, owns and develops businesses with a long-term view. Our portfolio today represents the foundation of a much larger vision — one focused on strategic growth, new opportunities and building enduring value."
 
-        imageSrc="/MainPageOurCopmaniesMainImage.jpeg"
+        imageSrc="/PortfolioFinalUpdatedHeroImage.jpeg"
         imageAlt="A.J Group Industries"
 
         features={[
@@ -54,10 +54,10 @@ export default function OurCompanies() {
 
         // Badges
         badge1Icon={Globe}
-        badge1Value="500+"
+        badge1Value="1000+"
         badge1Label="Happy Clients"
-        badge2Value="2"
-        badge2Label="Companies"
+        badge2Value=""
+        badge2Label=""
 
         // Layout
         useSpacer={true}

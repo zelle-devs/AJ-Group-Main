@@ -305,6 +305,7 @@
   opacity: 0;
   transform: translateY(18px);
   filter: blur(6px);
+  font-family: "Gotham";
   animation: aj-ptm-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: calc(var(--i) * 0.07s + 0.15s);
 }

@@ -8,7 +8,7 @@ import './AboutSection.css';
 export default function HeroSectionPortfolio({
   // Content Props
   eyebrow = 'ABOUT AJ GROUP',
-  headline = 'Building A Group For Whats Next',
+  headline = 'Building A Group For What\'s Next',
   body = "AJ Group brings together businesses, people and capabilities under one shared vision, to build better, operate smarter and create lasting value. From the ground up, we focus on quality, capability and long-term growth",
   
   // Image Props

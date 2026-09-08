@@ -78,27 +78,27 @@ export default function CapabilitiesSectionAboutMain({
                             {showArrow && <ArrowRight size={16} />}
                         </a>
                     )}
-                    <h2 className="aj-process-title" style={{ marginTop: '-10px', fontSize: '20px', display:'flex', gap:'20px' }}>
-                        <span className="aj-ptm-line">
-                            <span className="aj-ptm-word" style={{ '--i': 0 }}>Grow</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 1 }}>With</span>{' '}<br/>
-                            <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 2 }}>Purpose</span>
-                        </span>
-
-                        <span className="aj-ptm-connector-mid" aria-hidden="true"></span>
-
-                        <span className="aj-ptm-line">
+                    <h2 className="aj-process-title" style={{ marginTop: '-10px', fontSize: '20px', display: 'flex', gap: '20px' }}>
+                         <span className="aj-ptm-line">
                             <span className="aj-ptm-word" style={{ '--i': 3 }}>Owned</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 4 }}>With</span>{' '}<br/>
+                            <span className="aj-ptm-word" style={{ '--i': 4 }}>With</span>{' '}<br />
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 5 }}>Conviction</span>
                         </span>
+                        
+                        <span className="aj-ptm-connector-mid" aria-hidden="true"></span>
+                        
+                        <span className="aj-ptm-line">
+                            <span className="aj-ptm-word" style={{ '--i': 6 }}>Operate</span>{' '}
+                            <span className="aj-ptm-word" style={{ '--i': 7 }}>With</span>{' '} <br />
+                            <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 8 }}>Discipline</span>
+                        </span>
 
                         <span className="aj-ptm-connector-mid" aria-hidden="true"></span>
 
                         <span className="aj-ptm-line">
-                            <span className="aj-ptm-word" style={{ '--i': 6 }}>Operate</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 7 }}>With</span>{' '} <br/>
-                            <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 8 }}>Discipline</span>
+                            <span className="aj-ptm-word" style={{ '--i': 0 }}>Grow</span>{' '}
+                            <span className="aj-ptm-word" style={{ '--i': 1 }}>With</span>{' '}<br />
+                            <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 2 }}>Purpose</span>
                         </span>
                     </h2>
                     {/* <span className="aj-ptm-connector" aria-hidden="true"></span> */}

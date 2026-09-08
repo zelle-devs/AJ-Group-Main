@@ -18,7 +18,7 @@ export default function Careers() {
     <>
       <HeroSectionCareers
 
-        imageSrc="/CareerMainImageSlider.jpeg"
+        imageSrc="/CareersFinalUpdatedHeroImage.jpeg"
         imageAlt="A.J Group Industries"
 
         features={[
@@ -31,8 +31,8 @@ export default function Careers() {
         badge1Icon={Globe}
         badge1Value="100+"
         badge1Label="Team Members"
-        badge2Value="2"
-        badge2Label="Companies"
+        badge2Value=""
+        badge2Label=""
 
         // Layout
         useSpacer={true}
@@ -103,7 +103,7 @@ export default function Careers() {
 />
 
         {/* 05. OPEN ROLES - Job listings */}
-        <JobListings />
+        {/* <JobListings /> */}
 
         {/* 06. SUBMIT YOUR CV - Closing CTA */}
         <CTASection2

@@ -76,7 +76,7 @@
 .aj-glance-badge {
   position: absolute;
   top: 7%;
-  left: 42%;
+  left: 43.5%;
   transform: translate(-50%, -50%);
   display: inline-flex;
   align-items: center;
@@ -281,9 +281,9 @@
 
 .aj-glance-stat-label {
   font-family: var(--font-family-body2);
-  font-size: var(--font-size-xs);
+  font-size: var(--font-size-xm);
   color: var(--color-beige);
-  text-transform: uppercase;
+  text-transform: default;
   letter-spacing: 0.5px;
   line-height: 1.2;
   white-space: nowrap;

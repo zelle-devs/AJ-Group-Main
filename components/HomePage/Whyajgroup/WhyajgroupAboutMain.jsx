@@ -274,7 +274,7 @@ export default function WhyajgroupAboutMain({
           <div className="aj-why-head">
           {eyebrow && <span className="aj-why-eyebrow">{eyebrow}</span>}
           {title && <h2 className="aj-why-title">{title}</h2>}
-          {showIntro && intro && <p className="aj-why-intro">{intro}</p>}
+          {showIntro && intro && <p className="aj-why-intro" style={{marginBottom:'20px'}}>{intro}</p>}
           
         </div>
         {/* <div>
