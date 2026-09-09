@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './DateStep.css';
 import { ChevronLeft } from 'lucide-react';
 
-const DateStep = ({ currentMonth, setCurrentMonth, selectedDate, setSelectedDate, selectedTime, setSelectedTime, selectedPlatform, setSelectedPlatform, openDropdown, setOpenDropdown }) => {
+const DateStep = ({ currentMonth, setCurrentMonth, selectedDate, setSelectedDate, selectedTime, setSelectedTime, selectedPlatform, setSelectedPlatform,selectedMedium,setSelectedMedium, openDropdown, setOpenDropdown }) => {
     const timeSlots = ["11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM", "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM"];
 
 const platforms = [
     { 
-        id: 'google-meet', 
+        id: 'google_meet', 
         name: 'Google Meet', 
         color: '#c8a44a',
         bgLight: '#c8a44a23',
@@ -23,7 +23,7 @@ const platforms = [
         )
     },
     { 
-        id: 'teams', 
+        id: 'ms_teams', 
         name: 'Microsoft Teams', 
         color: '#c8a44a',
         bgLight: '#c8a44a23',
@@ -101,21 +101,23 @@ const meetingModes = [
     }, [currentMonth]);
 
     const [platformStage, setPlatformStage] = useState(
-    selectedPlatform && selectedPlatform !== 'onsite' ? 'platform' : 'mode'
+    selectedMedium && selectedMedium !== 'onsite' ? 'platform' : 'mode'
 );
 
 const handleModeClick = (modeId) => {
     if (modeId === 'onsite') {
-        setSelectedPlatform('onsite');
+       
+        setSelectedMedium('onsite');
     } else {
-        setSelectedPlatform('');
-        setPlatformStage('platform');
+        setSelectedMedium('online');
+        setPlatformStage("platform")
     }
 };
 
 const handleBackToModes = () => {
     setSelectedPlatform('');
     setPlatformStage('mode');
+    setSelectedMedium("")
 };
 
     return (
@@ -253,7 +255,7 @@ const handleBackToModes = () => {
                             transition={{ duration: 0.3, ease: "easeOut" }}
                         >
                             {meetingModes.map(mode => {
-                                const isSelected = selectedPlatform === mode.id;
+                                const isSelected = selectedMedium === mode.id;
                                 return (
                                     <motion.button
                                         key={mode.id}

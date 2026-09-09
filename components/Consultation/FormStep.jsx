@@ -3,7 +3,7 @@ import { IoIosInformationCircle } from 'react-icons/io';
 import { Check } from 'lucide-react';
 import './FormStep.css';
 
-const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, selectedDate, selectedTime, selectedPlatform }) => {
+const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, selectedDate, selectedTime, selectedPlatform, selectedMedium }) => {
     const [emailError, setEmailError] = useState('');
     const [focusedField, setFocusedField] = useState(null);
 
@@ -239,7 +239,7 @@ const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, select
                     </div>
 
                     <div className="section-label">Business Needs</div>
-                    <RadioGroup label="Primary Goal" options={primaryGoalOptions} fieldName="primaryGoal" required={false} />
+                    {/* <RadioGroup label="Primary Goal" options={primaryGoalOptions} fieldName="primaryGoal" required={false} /> */}
 
                     <div className="input-group">
                         <label>Tell us about your requirements</label>
@@ -299,10 +299,10 @@ const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, select
                         <div className="info-text">
                             <span>Meeting Method</span>
                             <p>
-                                {selectedPlatform === 'onsite' ? 'Onsite'
-                                    : selectedPlatform === 'google-meet' ? 'Google Meet'
+                                {selectedMedium === 'onsite' ? 'Onsite'
+                                    : selectedPlatform === 'google_meet' ? 'Google Meet'
                                     : selectedPlatform === 'zoom' ? 'Zoom'
-                                    : selectedPlatform === 'teams' ? 'Microsoft Teams'
+                                    : selectedPlatform === 'ms_teams' ? 'Microsoft Teams'
                                     : 'Not selected'}
                             </p>
                         </div>

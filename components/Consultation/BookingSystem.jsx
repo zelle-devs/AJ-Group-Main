@@ -137,6 +137,7 @@ const BookingSystem = () => {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [hasLoaded, setHasLoaded] = useState(false);
     const [selectedPlatform, setSelectedPlatform] = useState('');
+    const [selectedMedium, setSelectedMedium] = useState('');
 
 
 useEffect(() => {
@@ -158,7 +159,9 @@ useEffect(() => {
     const [step2Valid, setStep2Valid] = useState(false);
 
   const validateStep1 = () => {
-    const isValid = selectedDate !== null && selectedTime !== null && selectedPlatform !== '';
+    const isValid = selectedDate !== null && selectedTime !== null && selectedMedium !== "" && (selectedMedium === 'online' ? selectedPlatform !== "" : true);;
+    console.log(selectedMedium,"here")
+    //  
     setStep1Valid(isValid);
     return isValid;
 };
@@ -238,15 +241,59 @@ useEffect(() => {
         alert(message);
     };
 
-   const handleConfirm = () => {
+const formatDateForAPI = (date) => {
+    if (!date) return null;
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+};
+
+const handleConfirm = () => {
     if (validateStep2()) {
         setIsConfirming(true);
-        
-        setTimeout(() => {
-            setIsConfirming(false);
-            setIsConfirmed(true);
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 2000);
+
+        const payload = {
+            selected_date: formatDateForAPI(selectedDate),
+            selected_slot: selectedTime,
+            meeting_type: selectedMedium,
+            online_meeting_platform: selectedPlatform,
+
+            first_name: formData.Fname,
+            last_name: formData.Lname,
+            email: formData.workEmail,
+            phone: formData.phone,
+            company_name: formData.companyName,
+            designation: formData.jobTitle,
+            company_size: formData.companySize,
+            industry: formData.industry,
+            // primary_goal: formData.primaryGoal,
+            requirement_detail: formData.notes
+        };
+
+        fetch('https://ajgrouphqapi.zellehost.com/api/consultations', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error('Failed to submit consultation');
+                }
+                return res.json();
+            })
+            .then(() => {
+                setIsConfirming(false);
+                setIsConfirmed(true);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            })
+            .catch((err) => {
+                console.error('Booking submission error:', err);
+                setIsConfirming(false);
+                showErrorToast('Something went wrong while confirming your booking. Please try again.');
+            });
     } else {
         showErrorToast('Please complete all required fields before confirming');
     }
@@ -285,9 +332,9 @@ useEffect(() => {
  const getPlatformName = (id) => {
     switch(id) {
         case 'onsite': return 'Onsite';
-        case 'google-meet': return 'Google Meet';
+        case 'google_meet': return 'Google Meet';
         case 'zoom': return 'Zoom';
-        case 'teams': return 'Microsoft Teams';
+        case 'ms_teams': return 'Microsoft Teams';
         default: return 'Google Meet';
     }
 };
@@ -300,7 +347,7 @@ useEffect(() => {
 
     useEffect(() => {
         validateStep1();
-    }, [selectedDate, selectedTime, selectedPlatform]);
+    }, [selectedDate, selectedTime, selectedPlatform,selectedMedium]);
 
     useEffect(() => {
         validateStep2();
@@ -342,7 +389,7 @@ useEffect(() => {
                         </div>
                         <div className="success-summary-item">
                             <span className="success-summary-label">Meeting Method</span>
-<p className="success-summary-value">{getPlatformName(selectedPlatform)}</p>
+<p className="success-summary-value">{selectedMedium === 'onsite'? "Onsite" : getPlatformName(selectedPlatform)}</p>
                         </div>
                     </div>
 
@@ -396,7 +443,7 @@ useEffect(() => {
                         </div>
                     )}
 
-                    {formData.primaryGoal && (
+                    {/* {formData.primaryGoal && (
                         <div className="success-info-section">
                             <h3 className="success-info-title">Business Needs</h3>
                             <div className="success-info-grid">
@@ -406,7 +453,7 @@ useEffect(() => {
                                 </div>
                             </div>
                         </div>
-                    )}
+                    )} */}
 
                     {formData.notes && (
                         <div className="success-info-section">
@@ -505,6 +552,8 @@ useEffect(() => {
                         setSelectedTime={setSelectedTime}
                         selectedPlatform={selectedPlatform}
                         setSelectedPlatform={setSelectedPlatform}
+                        setSelectedMedium={setSelectedMedium}
+                        selectedMedium={selectedMedium}
                         openDropdown={openDropdown}
                         setOpenDropdown={setOpenDropdown}
                     />
@@ -517,6 +566,7 @@ useEffect(() => {
                         openDropdown={openDropdown}
                         setOpenDropdown={setOpenDropdown}
                         selectedDate={selectedDate}
+                        selectedMedium={selectedMedium}
                         selectedTime={selectedTime}
                         selectedPlatform={selectedPlatform}
                     />
@@ -528,6 +578,7 @@ useEffect(() => {
                         selectedDate={selectedDate}
                         selectedTime={selectedTime}
                         selectedPlatform={selectedPlatform}
+                        selectedMedium={selectedMedium}
                         onEditDate={() => handleStepChange(1)}
                         onEditForm={() => handleStepChange(2)}
                     />

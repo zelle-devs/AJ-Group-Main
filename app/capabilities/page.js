@@ -5,6 +5,7 @@ import CapabilitiesCustomSolutions from "@/components/CapabilitiesCustomSolution
 import CapabilitiesWhyChooseUs from "@/components/CapabilitiesWhyChooseUs/CapabilitiesWhyChooseUs";
 import CapabilitiesSection from "@/components/HomePage/CapabilitiesSection/CapabilitiesSection.jsx";
 import CapabilitiesSectionCapabilitiesMain from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionCapabilitiesMain";
+import CapabilitiesSectionLeft2MainPortfolio from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionLeft2MainPortfolio";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
 import WhyajgroupAboutMain from "@/components/HomePage/Whyajgroup/WhyajgroupAboutMain";
 import WhyChooseUsCapabilitiesPageMain from "@/components/HomePage/WhyChooseUs/WhyChooseUsCapabilitiesPageMain";
@@ -69,12 +70,12 @@ export default function Capabilities() {
         <WhyajgroupAboutMain
           eyebrow="THE AJ GROUP ADVANTAGE"
           title="Built For The Long Term"
-          intro="Capability Creates The Foundations For GrowBuilding a successful business requires more than an idea. It requires the ability to execute. AJ Group brings together the resources, expertise and operating infrastructure needed to take opportunities from concept to execution — and from execution to growth "
+          intro="Capability Creates The Foundations For GrowBuilding a successful business requires more than an idea. It requires the ability to execute. AJ Group brings together the resources, expertise and operating infrastructure needed to take opportunities from concept to execution — and from execution to growth."
           columns={4}
           items={[
             { num: '01', icon: ArrowUpNarrowWide, title: 'Strategy', desc: 'We identify opportunities and determine where we can create meaningful long-term value.', image: '/StrategyCapabilitiesFinalUpdatedImage.jpeg' },
             { num: '02', icon: Blocks, title: 'Build', desc: 'We develop businesses, capabilities and infrastructure from the ground up.', image: '/BuildCapabilitiesFinalUpdatedImage.jpeg' },
-            { num: '03', icon: Settings, title: 'Operates', desc: 'We establish the systems, processes and standards required to run strong businesses.', image: '/OperateCapabilitiesFinalUpdatedImage.jpeg' },
+            { num: '03', icon: Settings, title: 'Operate', desc: 'We establish the systems, processes and standards required to run strong businesses.', image: '/OperateCapabilitiesFinalUpdatedImage.jpeg' },
             
             { num: '04', icon: TrendingUp, title: 'Scale', desc: 'We strengthen what works, expand into new markets and build platforms for continued growth.', image: '/ScaleCapabilitiesFinalUpdatedImage.jpeg' },
           ]}
@@ -92,11 +93,13 @@ export default function Capabilities() {
         {/* <CapabilitiesWhyChooseUs /> */}
         <OurCapabilitiesProcesstimeline/>
         <WhyChooseUsCapabilitiesPageMain/>
+        <CapabilitiesSectionLeft2MainPortfolio/>
+        
         <CTASection2
-          eyebrow="Get To Know Each Company"
-          headline="Not Sure Where To Start?"
-          body="A.J Group's capabilities cross sectors, and some of the Group's best work has been for clients who didn't fit a category. Tell us about your industry and the challenge, and we'll bring the right mix of businesses and capability to it."
-          primaryButtonText="Discuss Your Project"
+          eyebrow="LET'S BUILD WHAT'S NEXT"
+          headline="Have an Opportunity Worth Exploring?"
+          body="We are open to conversations around new ventures, strategic partnerships, acquisitions and opportunities for long-term growth."
+          primaryButtonText="Partner with AJ Group"
           primaryButtonLink="/consultation"
           secondaryButtonText="Contact Us"
           secondaryButtonLink="/contact"

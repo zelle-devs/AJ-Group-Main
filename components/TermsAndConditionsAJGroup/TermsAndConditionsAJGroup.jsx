@@ -248,12 +248,7 @@ function TermsAndConditionsAJGroup() {
           <h2 className="headingTermsAndConditionsAJGroup">22. Contact Us</h2>
           <p className="textTermsAndConditionsAJGroup">If you have questions regarding these Terms & Conditions or the use of the AJ Group website, please contact us through the information below.</p>
           <div className="contactInfoTermsAndConditionsAJGroup">
-            <p className="textTermsAndConditionsAJGroup">AJ Group of Companies</p>
-            <p className="textTermsAndConditionsAJGroup">A.J House</p>
-            <p className="textTermsAndConditionsAJGroup">23/1, Korangi Industrial Area</p>
-            <p className="textTermsAndConditionsAJGroup">Karachi 74900</p>
-            <p className="textTermsAndConditionsAJGroup">Pakistan</p>
-            <p className="textTermsAndConditionsAJGroup">Phone: +92 21 111 254 111</p>
+            <p className="textTermsAndConditionsAJGroup">AJ Group of Companies</p> 
             <p className="textTermsAndConditionsAJGroup">Website: https://ajgrouphq.com/</p>
           </div>
         </section>

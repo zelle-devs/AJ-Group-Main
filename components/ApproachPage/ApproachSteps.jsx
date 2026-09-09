@@ -11,12 +11,21 @@ import {
   Handshake,
   CheckCircle2,
   ArrowRight,
+  Telescope,
+  Compass,
+  Hammer,
+  Infinity,
+  Cuboid,
+  SlidersHorizontal,
+  Workflow,
+  Landmark,
+  Maximize2,
 } from 'lucide-react';
 import './ApproachSteps.css';
 
 const APPROACH_STEPS = [
   {
-    icon: Ear,
+    icon: Compass,
     title: 'See The Opportunity',
     desc: (
       <>
@@ -26,7 +35,7 @@ const APPROACH_STEPS = [
     ),
   },
   {
-    icon: ClipboardList,
+    icon: Workflow,
     title: 'Build With Purpose',
     desc: (
       <>
@@ -46,7 +55,7 @@ const APPROACH_STEPS = [
   //   ),
   // },
   {
-    icon: Cog,
+    icon: Infinity,
     title: 'Own For The Long Term ',
     desc: (
       <>
@@ -56,7 +65,7 @@ const APPROACH_STEPS = [
     ),
   },
   {
-    icon: ClipboardCheck,
+    icon: Landmark,
     title: 'Build The Foundations',
     desc: (
       <>
@@ -66,7 +75,7 @@ const APPROACH_STEPS = [
     ),
   },
   {
-    icon: Truck,
+    icon: Maximize2,
     title: 'Scale What Work\s',
     desc: (
       <>

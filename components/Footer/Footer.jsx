@@ -31,8 +31,8 @@ const DEFAULT_SOCIALS = [
 const DEFAULT_BUTTONS = [
   { label: 'Start a Project', href: '/consultation', variant: 'gold' },
   { label: 'Explore Our Portfolio', href: '/our-portfolio', variant: 'outline' },
-  { label: 'Talk To Our Team', href: '/contact', variant: 'outline' },
-  { label: 'Contact Us', href: '/contact', variant: 'outline' },
+  // { label: 'Talk To Our Team', href: '/contact', variant: 'outline' },
+  // { label: 'Contact Us', href: '/contact', variant: 'outline' },
 ];
 
 export default function Footer({

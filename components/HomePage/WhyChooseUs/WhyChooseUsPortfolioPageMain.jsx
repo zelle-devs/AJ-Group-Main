@@ -82,7 +82,7 @@ description = "The companies within our portfolio are part of the foundation. Ou
   stats = DEFAULT_STATS,
 
   // Image
-  imageSrc = '/Beyvora_Decor.png',
+  imageSrc = '/HeroSectionMainIMageOutlined6.jpeg',
   imageAlt = 'Luxury Lounge with City View',
 
   // Visibility
@@ -126,9 +126,9 @@ description = "The companies within our portfolio are part of the foundation. Ou
               <h2 className="why-choose-headline">{headline}</h2>
                     
               <p className="why-choose-description">
-                {renderDescription()}
+                {renderDescription()}.<span style={{ fontWeight: '700', color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '15px' }}> We are building the diversified group for the long-term</span>
               </p>
-              <h2 style={{ fontWeight: '700', color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '20px' }}>WE ARE BUILDING A DIVERSIFIED GROUP FOR THE LONG TERM</h2>
+              
             </motion.div>
 
             

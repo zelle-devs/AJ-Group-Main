@@ -1,0 +1,35 @@
+/* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io-button {
+  background: var(--color-black);
+  color: var(--color-gold);
+  font-family: "Gotham";
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 0.5em;
+  border: none;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center; 
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  border: 2px dotted var(--color-gold);
+}
+
+.cssbuttons-io-button .icon { 
+  /* margin-left: 1em; */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.8em;
+  width: 1.8em;
+  border-radius: 0.5em;
+  /* box-shadow: 0.1em 0.1em 0.6em 0.1em var(--color-gold); */
+  right: 0.6em;
+  transition: all 0.3s;
+}

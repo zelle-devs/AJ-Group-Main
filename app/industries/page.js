@@ -1,6 +1,9 @@
 'use client'
 import AboutSection from "@/components/AboutPage/AboutSection";
 import HeroSectionIndustries from "@/components/AboutPage/HeroSectionIndustries";
+import CareersGridIndustiresMainSection from "@/components/CareersPage/CareersGridIndustiresMainSection";
+import CapabilitiesSectionLeft2MainApproach from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionLeft2MainApproach";
+import CapabilitiesSectionLeft2MainPortfolio from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionLeft2MainPortfolio";
 import CapabilitiesSectionPortfolioMain from "@/components/HomePage/CapabilitiesSection/CapabilitiesSectionPortfolioMain";
 import CTASection2 from "@/components/HomePage/CTASection/CTASection2";
 import IndustriesGrid from "@/components/IndustriesPage/IndustriesGrid";
@@ -40,13 +43,16 @@ export default function Industries() {
       />
       <div className="scroll-content-wrapper">
         <IndustriesGrid />
-        <CapabilitiesSectionPortfolioMain
+        <CapabilitiesSectionLeft2MainPortfolio/>
+        {/* <CapabilitiesSectionPortfolioMain
           eyebrow="THE GROUP"
-          title="Different Businesses, One Long Term Vision"
+          title="Different Businesses, One Long-Term Vision"
           body="AJ Group operates through wholly owned companies, each with its own capabilities, markets and opportunities. While our businesses operate independently, they are united by the same philosophy"
           showButton={false}
           maxWidth={700}
-        />
+        /> */}
+         {/* <CapabilitiesSectionLeft2MainApproach /> */}
+         <CareersGridIndustiresMainSection/>
         <CTASection2
           eyebrow="Get In Touch"
           headline="Don't See Your Industry?"

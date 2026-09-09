@@ -126,9 +126,9 @@ description = "It is the foundation. The capabilities we have today support the 
               <h2 className="why-choose-headline">{headline}</h2>
                     
               <p className="why-choose-description">
-                {renderDescription()}
+                {renderDescription()}. <span style={{ fontWeight: '700', color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '15px' }}>Today's capabilities, Tomorrow Possibilities.</span>
               </p>
-              <h2 style={{ fontWeight: '700', color: 'var(--color-gold)', fontFamily: 'Gotham', fontSize: '20px' }}>TODAY'S CAPABILITIES, TOMORROW'S POSSIBILITIES</h2>
+              
             </motion.div>
 
             

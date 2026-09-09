@@ -191,8 +191,14 @@
 }
 
 .aj-approach-step-icon {
-  width: 56px;
-  height: 56px;
+  width: 26px;
+  height: 26px;
+  color: var(--color-gold);
+  filter: drop-shadow(0 0 4px rgba(200, 165, 74, 0.4));
+}
+.aj-approach-step-iconEagle {
+  width: 26px;
+  height: 26px;
   color: var(--color-gold);
   filter: drop-shadow(0 0 4px rgba(200, 165, 74, 0.4));
 }
@@ -252,7 +258,8 @@
   .aj-approach-steps-wrapper { padding: 50px 0; }
   .aj-approach-step-card { max-width: 450px; padding: 24px 28px; width: calc(50% - 50px); }
   .aj-approach-step-circle { width: 68px; height: 68px; }
-  .aj-approach-step-icon { width: 70px; height: 70px; }
+  .aj-approach-step-icon { width: 35px; height: 35px; }
+  .aj-approach-step-iconEagle { width: 70px; height: 70px; }
   
   .aj-approach-step.step-left .aj-approach-step-card { margin-right: calc(50% + 50px); }
   .aj-approach-step.step-right .aj-approach-step-card { margin-left: calc(50% + 50px); }
@@ -275,6 +282,7 @@
   .aj-approach-step-card { max-width: 300px; padding: 16px 20px; width: calc(50% - 30px); }
   .aj-approach-step-circle { width: 50px; height: 50px; }
   .aj-approach-step-icon { width: 22px; height: 22px; }
+  .aj-approach-step-iconEagle { width: 22px; height: 22px; }
   .aj-approach-step-title { font-size: var(--font-size-lg); }
   .aj-approach-step-desc { font-size: var(--font-size-xs); }
   
@@ -346,7 +354,8 @@
   }
   
   .aj-approach-step-circle { width: 44px; height: 44px; }
-  .aj-approach-step-icon { width: 40px; height: 40px; }
+  .aj-approach-step-icon { width: 20px; height: 20px; }
+  .aj-approach-step-iconEagle { width: 40px; height: 40px; }
   .aj-approach-step-card { padding: 14px 16px; }
   .aj-approach-step-title { font-size: var(--font-size-base); }
   .aj-approach-step-desc { font-size: var(--font-size-xs); }
@@ -364,7 +373,8 @@
   }
   
   .aj-approach-step-circle { width: 38px; height: 38px; }
-  .aj-approach-step-icon { width: 50px; height: 50px; }
+  .aj-approach-step-icon { width: 20px; height: 20px; }
+  .aj-approach-step-iconEagle { width: 50px; height: 50px; }
   .aj-approach-step-card { padding: 12px 14px; }
   .aj-approach-step-title { font-size: var(--font-size-sm); }
   .aj-approach-step-desc { font-size: 10px; }
@@ -375,6 +385,7 @@
   .aj-approach-steps-section { padding: 20px 0; }
   .aj-approach-step-circle { width: 34px; height: 34px; }
   .aj-approach-step-icon { width: 16px; height: 16px; }
+  .aj-approach-step-iconEagle { width: 16px; height: 16px; }
   .aj-approach-step-title { font-size: 12px; }
   .aj-approach-step-desc { font-size: 9px; }
 }

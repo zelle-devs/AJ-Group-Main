@@ -14,14 +14,14 @@ export default function Contact() {
         eyebrow="Contact"
         headline="Let's Talk About Your Project"
         body="Whether you have a defined project, a rough idea, or a question about the Group, A.J Group will get you to the right people. Reach out and we'll respond promptly."
-        imageSrc="/Integrity_cards_whyAJ.jpeg"
+        imageSrc="/ContactMainImageLastlyFinalUpdated.png"
         imageAlt="A.J Group Contact"
         features={[
           // { icon: Phone, label: '+92 21 111 254 111' },
           { icon: Mail, label: 'info@ajgrouphq.com' },
         ]}
         badge1Icon={Clock}
-        badge1Value="500+"
+        badge1Value="1000+"
         badge1Label="Happy Clients"
         badge2Value="24hr"
         badge2Label="Response Time"
@@ -33,7 +33,7 @@ export default function Contact() {
 
         <div style={{display:'flex', width:'100%' }}>
 
-        <ContactInfo />
+        {/* <ContactInfo /> */}
 
         <ContactForm />
         </div>

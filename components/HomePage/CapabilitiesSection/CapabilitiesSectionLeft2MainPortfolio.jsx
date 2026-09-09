@@ -10,6 +10,10 @@ import {
   Sprout,
   Briefcase,
   TrendingUp,
+  Telescope,
+  Compass,
+  Rocket,
+  Cuboid,
 } from 'lucide-react';
 
 import './CapabilitiesSectionLeft2.css';
@@ -17,30 +21,35 @@ import './CapabilitiesSectionLeft2.css';
 // Default Process Steps
 const DEFAULT_PROCESS_STEPS = [
   {
-    icon: Sprout,
-    title: 'Build From Zero',
-    desc: 'Create new businesses from the ground up.',
+    icon: Rocket,
+    title: 'New Business',
+    desc: '',
     color: '#C8A54A',
   },
   {
-    icon: Briefcase,
-    title: 'Acquire With Purpose',
-    desc: 'Bring established businesses with strong potential into the Group.',
+    icon: Compass,
+    title: 'New Sectors',
+    desc: '',
     color: '#C8A54A',
   },
   {
-    icon: TrendingUp,
-    title: 'Expand With Discipline',
-    desc: 'Develop, scale and enter new markets and sectors.',
+    icon: Cuboid,
+    title: 'New Markets',
+    desc: '',
+    color: '#C8A54A',
+  },  {
+    icon: Telescope,
+    title: 'New Possibilities',
+    desc: '',
     color: '#C8A54A',
   },
 ];
 
-export default function CapabilitiesSectionLeft2MainApproach({
+export default function CapabilitiesSectionLeft2MainPortfolio({
   // Content Props
-  eyebrow = 'THREE PATHS. ONE VISION',
-  title = 'Build, Acquire, Expand',
-  body = "Our growth follows three paths: Build, Acquire and Expand. We create new businesses, bring established businesses with strong potential into the Group, and scale into new markets and sectors. Different paths, one shared objective: building a stronger Group with greater capabilities, reach and long-term value.",
+  eyebrow = 'THE FUTURE',
+  title = 'Build to Enter What\'s Next',
+  body = "AJ Group is continuously looking for opportunities where our capabilities, resources and entrepreneurial approach can create something greater.",
   buttonText = 'See How We Work',
   buttonLink = '/approach',
   
@@ -76,9 +85,9 @@ export default function CapabilitiesSectionLeft2MainApproach({
           >
             {eyebrow && <span className="aj-process-eyebrow">{eyebrow}</span>}
             {title && <h2 className="aj-process-title" style={{margin:'0px'}}>{title}</h2>}
-            {body && <p className="aj-process-body">{body}</p>}
-            <h2 className='aj-process-eyebrow' style={{marginBottom:'-2px'}}>Same Objective</h2>
-            <p className="aj-process-body" style={{fontWeight:'700'}}><strong>Building A Stronger Group</strong></p>
+            {body && <p className="aj-process-body">{body}<span style={{ color:'var(--color-gold)', fontWeight:'700'}}> We don't want to simply operate the business, We want to build business that can grow into something bigger.</span></p>}
+            {/* <h2 className='aj-process-eyebrow' style={{marginBottom:'-2px'}}>Same Objective</h2>
+            <p className="aj-process-body" style={{fontWeight:'700'}}><strong>Building A Stronger Group</strong></p> */}
             {showButton && buttonText && (
               <a href={buttonLink} className="btn btn-outline-gold aj-process-btn">
                 {buttonText}

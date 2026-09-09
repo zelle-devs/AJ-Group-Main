@@ -60,7 +60,7 @@ export default function CapabilitiesSectionMainApproachTopHalfEagle({
                         // Yahan 'delay' ko 'animationDelay' se change kiya gaya hai
                         transition={{ type: 'spring', stiffness: 300, damping: 20, delay: animationDelay + 0.1 }}
                     >
-                        <img src='./EagleIconCareersPageFinalUpdated.png' alt="AJ Group Logo" className="aj-approach-step-icon" />
+                        <img src='./EagleIconCareersPageFinalUpdated.png' alt="AJ Group Logo" className="aj-approach-step-iconEagle" />
                     </motion.div>
                 </div>
 

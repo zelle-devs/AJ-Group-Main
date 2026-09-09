@@ -14,7 +14,7 @@ export default function ContactForm({
     email: '',
     phone: '',
     company: '',
-    subject: '', // Changed from enquiryType to subject
+    subject: '', 
     message: '',
   });
   const [consent, setConsent] = useState(false);
@@ -25,16 +25,40 @@ export default function ContactForm({
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.name && formData.email && formData.message && formData.subject && consent) {
-      setSubmitted(true);
+      try {
+        const response = await fetch('https://ajgrouphqapi.zellehost.com/api/contacts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            full_name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            phone: formData.phone,
+            company: formData.company,
+            agree_pp: consent
+          }),
+        });
+
+        if (response.ok) {
+          setSubmitted(true);
+        } else {
+          console.error('API submission failed');
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+      }
     }
   };
 
   return (
-    <section className="aj-contact-form-section">
-      <div className="container2">
+    <section className="aj-contact-form-section" >
+      <div className="container2" style={{width:'100%'}}>
         <motion.div 
           className="aj-contact-form-header"
           initial={{ opacity: 0, y: 30 }}

@@ -9,6 +9,7 @@
   background-color: var(--color-black);
   overflow: hidden;
   isolation: isolate;
+  width: 100%;
 }
 
 .aj-contact-form-section::before {

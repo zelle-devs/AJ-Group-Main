@@ -6,7 +6,7 @@ import '../../components/HomePage/Processtimeline/Processtimeline.css';
 const DEFAULT_STEPS = [
   {
     num: '01',
-    title: 'Long Term Ownership',
+    title: 'Long-Term Ownership',
     desc: 'We build and operate with the future in mind.',
   },
   {

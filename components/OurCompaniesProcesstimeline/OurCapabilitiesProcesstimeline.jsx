@@ -37,7 +37,7 @@ export default function OurCapabilitiesProcesstimeline({
   // Content Props
   eyebrow = 'Operating Excellence',
   title = 'Strong Business Starts With Strong Foundations',
-  description = 'We believe sustainable growth begins with disciplined execution.Across our operations, we focus on',
+  description = 'We believe sustainable growth begins with disciplined execution.Across our operations, we focus on.',
   steps = DEFAULT_STEPS,
   
   // Layout Control

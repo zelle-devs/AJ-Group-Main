@@ -226,11 +226,7 @@ function PrivacyPolicyPage() {
           <p className="textPrivacyPolicyPage">If you have questions about this Privacy Policy, our privacy practices, or your personal information, you can contact AJ Group using the following details:</p>
           <div className="contactInfoPrivacyPolicyPage">
             <p className="textPrivacyPolicyPage">AJ Group of Companies</p>
-            <p className="textPrivacyPolicyPage">A.J House</p>
-            <p className="textPrivacyPolicyPage">23/1, Korangi Industrial Area</p>
-            <p className="textPrivacyPolicyPage">Karachi 74900</p>
-            <p className="textPrivacyPolicyPage">Pakistan</p>
-            <p className="textPrivacyPolicyPage">Phone: +92 21 111 254 111</p>
+             
             <p className="textPrivacyPolicyPage">Website: https://ajgrouphq.com/</p>
           </div>
           <p className="textPrivacyPolicyPage">For privacy-related inquiries, please contact us through the contact information provided on our website.</p>

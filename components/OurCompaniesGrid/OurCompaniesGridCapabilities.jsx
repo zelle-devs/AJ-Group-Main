@@ -36,7 +36,7 @@ const INDUSTRIES_DATA = [
     {
       icon: ShoppingBag,
       title: 'Brand Environments',
-      description: "Capabilities across signage, displays, retail fixtures, point-of-sale environments and exhibition builds. We translate brand identity into physical spaces and experiences",
+      description: "Capabilities across signage, displays, retail fixtures, point-of-sale environments and exhibition builds. We translate brand identity into physical spaces and experiences.",
       points: ['Signage', 'POSM ', 'Retail', 'Environments'],
       image: '/BrandandEnvironmentsCapabilities.jpg',
       // company: 'Print Pack Advertising',

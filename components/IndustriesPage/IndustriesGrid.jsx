@@ -2,12 +2,12 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowRight, ShoppingBag, Building2, Hotel, Calendar, Home, Factory, Megaphone } from 'lucide-react';
+import { ArrowRight, ShoppingBag, Building2, Hotel, Calendar, Home, Factory, Megaphone, Briefcase, Store, Layers, Layers2 } from 'lucide-react';
 import './IndustriesGrid.css';
 
 const INDUSTRIES_DATA = [
   {
-    icon: ShoppingBag,
+    icon: Factory,
     title: 'Building The Foundations of Businesses',
     eyebrow: 'INDUSTRIAL',
     description: "Our industrial capabilities give the Group experience in manufacturing, engineering, fabrication and physical production.These capabilities provide a strong operational foundation — while creating opportunities to build and scale businesses within the industrial ecosystem",
@@ -16,7 +16,7 @@ const INDUSTRIES_DATA = [
     company: 'Print Pack Advertising',
   },
   {
-    icon: Building2,
+    icon: Briefcase,
     title: 'Where Business Meet Experiences',
    eyebrow: 'COMMERCIAL',
     description: "From corporate environments to retail and commercial spaces, we understand the importance of execution, presentation and consistency. Our operating capabilities allow us to participate across the commercial ecosystem while creating opportunities for broader business growth.",
@@ -25,7 +25,7 @@ const INDUSTRIES_DATA = [
     company: 'Forgentis + PPA',
   },
   {
-    icon: Hotel,
+    icon: Store,
     title: 'Building for The End Customer',
     eyebrow: 'Consumer ',
     description: "Consumer markets create opportunities to build brands, products and businesses around changing customer needs.AJ Group continues to explore opportunities where strong concepts, disciplined execution and long-term ownership can create meaningful consumer businesses.",
@@ -34,7 +34,7 @@ const INDUSTRIES_DATA = [
     company: 'Forgentis Fabrications',
   },
   {
-    icon: Calendar,
+    icon: Home,
     title: 'Building Beyond The Business',
     eyebrow: 'REAL ESTATE',
     description: "Real estate represents more than physical assets. It creates opportunities to develop, operate and build long-term value. AJ Group sees potential across property, development and the wider ecosystem surrounding the built environment.",
@@ -43,7 +43,7 @@ const INDUSTRIES_DATA = [
     company: 'Print Pack Advertising',
   },
   {
-    icon: Home,
+    icon: Layers2,
     title: 'Knowledge , Execution, Scale',
   eyebrow: 'SERVICES',
     description: "Businesses increasingly compete through the quality of the services, systems and experiences they provide.We remain open to opportunities across service-driven sectors where strong execution and scalable models can create sustainable growth.",

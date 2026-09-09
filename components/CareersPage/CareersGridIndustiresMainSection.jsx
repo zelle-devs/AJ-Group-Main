@@ -11,20 +11,39 @@ import {
   Heart,
   Shield,
   Star,
+  Layers,
+  Target,
+  Rocket,
 } from 'lucide-react';
 import './CareersGrid.css';
 
 const DEFAULT_BENEFITS = [
-  { icon: TrendingUp, title: 'Building New Business', desc: 'Creating ventures from the ground up where we see meaningful potential.' },
-  { icon: Award, title: 'Acquiring Established Business', desc: 'Partnering with or acquiring businesses that can become stronger as part of the Group.' },
-  { icon: Users, title: 'New Sectors', desc: 'Exploring industries where long-term opportunity aligns with our capabilities and vision.' },
-//   { icon: Clock, title: 'Long-Term', desc: 'Build a career, not just a job.' },
+  { 
+    icon: Layers, 
+    title: 'Build', 
+    desc: 'When we see an opportunity worth pursuing, we can build from the ground up.' 
+  },
+  { 
+    icon: Award, 
+    title: 'Acquire', 
+    desc: 'We look for established businesses with strong potential and opportunities for long-term growth' 
+  },
+  { 
+    icon: TrendingUp, 
+    title: 'Expand', 
+    desc: 'We develop existing businesses, enter adjacent markets and explore entirely new sectors' 
+  },
+//   { 
+//     icon: Rocket, 
+//     title: 'A Different Career', 
+//     desc: 'The people who join us along the way will be a core part of that journey.' 
+//   },
 ];
 
-export default function CareersGridPorfolio({
-  eyebrow = 'More Than What We Own Today',
-  headline = 'The Portfolio is Only The Beginning',
-  intro = 'AJ Group is not building around a fixed number of companies. We are building a group capable of expanding across sectors, markets and opportunities. That means remaining open to:',
+export default function CareersGridIndustiresMainSection({
+  eyebrow = 'The Opportunity',
+  headline = 'BUILD. ACQUIRE. EXPAND',
+  intro = 'Three ways we enter new opportunities.',
   benefits = DEFAULT_BENEFITS,
   columns = 3,
 }) {

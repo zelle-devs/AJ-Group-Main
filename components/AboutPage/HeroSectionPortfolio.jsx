@@ -42,7 +42,12 @@ export default function HeroSectionPortfolio({
   useSpacer = true,
 }) {
   return (
-    <>
+     <>
+       <style>{`
+    .aj-about-frame::after {
+      display: none;
+    }
+  `}</style>
       {useSpacer && <div className="hero-spacer" />}
       
       <section className="aj-about-section">
@@ -201,7 +206,7 @@ export default function HeroSectionPortfolio({
                 )}
 
                 {/* Corner Dots */}
-                {showDots && (
+                {/* {showDots && (
                   <motion.div 
                     className="aj-about-dots"
                     initial={{ opacity: 0 }}
@@ -219,7 +224,7 @@ export default function HeroSectionPortfolio({
                     <span className="aj-about-dot" />
                     <span className="aj-about-dot" />
                   </motion.div>
-                )}
+                )} */}
               </div>
             </motion.div>
           </div>

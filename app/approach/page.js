@@ -16,7 +16,7 @@ export default function Approach() {
     <>
       <HeroSectionApproach
 
-        imageSrc="/Clear_Process_STF.jpeg"
+        imageSrc="/Clear_Process_STF.png"
         imageAlt="A.J Group Industries"
 
         features={[

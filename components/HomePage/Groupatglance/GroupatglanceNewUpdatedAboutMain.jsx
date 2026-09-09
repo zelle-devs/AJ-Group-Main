@@ -203,7 +203,7 @@ export default function GroupatglanceNewUpdatedAboutMain({
                 return (
                   <motion.div
                     className="aj-glance-stat"
-                    style={{marginBottom:'-90px', marginLeft:'30px'}}
+                    style={{marginBottom:'-113px', marginLeft:'30px'}}
                     key={s.label}
                     custom={i}
                     initial="hidden"
@@ -215,7 +215,7 @@ export default function GroupatglanceNewUpdatedAboutMain({
                     <span className="aj-glance-stat-label" >
                       {/* <span className="aj-glance-stat-label-first">{firstWord}</span> */}
                       {restWords && (
-                        <span className="aj-glance-stat-labelAboutMain" style={{width:'580px', whiteSpace:'wrap', lineHeight:'22px'}}>{restWords}</span>
+                        <span className="aj-glance-stat-labelAboutMain" style={{width:'480px', whiteSpace:'wrap', lineHeight:'22px'}}>{restWords}</span>
                       )}
                     </span>
                   </motion.div>

@@ -192,7 +192,7 @@ export default function GroupatglanceNewUpdated({
                 return (
                   <motion.div
                     className="aj-glance-stat"
-                    style={{marginTop:'-120px', marginLeft:'30px'}}
+                    style={{marginTop:'-150px', marginLeft:'30px'}}
                     key={s.label}
                     custom={i}
                     initial="hidden"

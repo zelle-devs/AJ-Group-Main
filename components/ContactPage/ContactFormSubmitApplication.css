@@ -1,0 +1,379 @@
+/* ============================================
+   contactSubmitApplicantsForm.css
+   Premium 3D contactSubmitApplicants Form
+   ============================================ */
+
+.aj-contactSubmitApplicants-form-section {
+  position: relative;
+  padding: 60px 0;
+  background-color: var(--color-black);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.aj-contactSubmitApplicants-form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: 
+    radial-gradient(ellipse at 30% 50%, rgba(200, 165, 74, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 50%, rgba(200, 165, 74, 0.04) 0%, transparent 50%),
+    linear-gradient(180deg, var(--color-black) 0%, #0D0D0D 50%, var(--color-black) 100%);
+}
+
+/* NEW: Grid Layout for Split View */
+.aj-contactSubmitApplicants-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.aj-contactSubmitApplicants-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.aj-contactSubmitApplicants-right-col {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.5), 
+              0 0 30px rgba(200, 165, 74, 0.08);
+}
+
+.aj-contactSubmitApplicants-image {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+ 
+  /* border: 1px solid rgba(200, 165, 74, 0.25); */
+  
+}
+
+.aj-contactSubmitApplicants-form-header {
+  text-align: left; /* Changed from center */
+  margin-bottom: 40px;
+}
+
+.aj-contactSubmitApplicants-form-eyebrow {
+  display: block;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(200, 165, 74, 0.4);
+}
+
+.aj-contactSubmitApplicants-form-headline {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  font-family: var(--font-family-gotham);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* Form */
+.aj-contactSubmitApplicants-form {
+  width: 100%;
+  max-width: 100%; /* Changed to fill column */
+  margin: 0; /* Changed from margin: 0 auto */
+  padding: 35px;
+  border-radius: var(--radius-2xl);
+  border: 1px solid rgba(200, 165, 74, 0.25);
+  background: linear-gradient(145deg, rgba(13, 13, 13, 0.95), rgba(30, 30, 30, 0.8));
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(200, 165, 74, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.aj-contactSubmitApplicants-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.aj-contactSubmitApplicants-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.aj-contactSubmitApplicants-form-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+  font-weight: var(--font-weight-medium);
+}
+
+.aj-contactSubmitApplicants-form-label svg {
+  color: var(--color-gold);
+}
+
+.aj-contactSubmitApplicants-form-input,
+.aj-contactSubmitApplicants-form-select,
+.aj-contactSubmitApplicants-form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.aj-contactSubmitApplicants-form-input:focus,
+.aj-contactSubmitApplicants-form-select:focus,
+.aj-contactSubmitApplicants-form-textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-light);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ============ SELECT DROPDOWN - PREMIUM ============ */
+
+.aj-contactSubmitApplicants-form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  padding: 12px 40px 12px 14px;
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.05);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C8A54A' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aj-contactSubmitApplicants-form-select:hover {
+  border-color: rgba(200, 165, 74, 0.4);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.aj-contactSubmitApplicants-form-select:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-light);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.aj-contactSubmitApplicants-form-select option {
+  background-color: #1a1a1a;
+  color: var(--color-white);
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  padding: 12px;
+}
+
+.aj-contactSubmitApplicants-form-textarea {
+  resize: vertical;
+}
+
+/* Consent */
+.aj-contactSubmitApplicants-form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.aj-contactSubmitApplicants-form-checkbox {
+  margin-top: 2px;
+  accent-color: var(--color-gold);
+  cursor: pointer;
+}
+
+.aj-contactSubmitApplicants-form-consent-text {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-xs);
+  color: var(--color-beige);
+}
+
+/* Submit Buttons */
+.aj-contactSubmitApplicants-form-submitUploadCV {
+  width: auto; /* Updated from 20% for better layout */
+  padding: 14px 24px;
+  font-size: var(--font-size-sm);
+  background-color: transparent;
+  color: var(--color-gold);
+}
+
+.aj-contactSubmitApplicants-form-submitUploadCV:hover {
+  color: var(--color-black) !important;
+}
+
+.aj-contactSubmitApplicants-form-submit {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: var(--font-size-sm);
+}
+
+/* Success */
+.aj-contactSubmitApplicants-form-success {
+  text-align: center;
+  padding: 50px 30px;
+  max-width: 500px;
+  margin: 0;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-gold);
+  background: linear-gradient(145deg, rgba(200, 165, 74, 0.1), rgba(13, 13, 13, 0.9));
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(200, 165, 74, 0.15);
+}
+
+.aj-contactSubmitApplicants-form-success-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.aj-contactSubmitApplicants-form-success h3 {
+  font-family: var(--font-family-gotham);
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  margin: 0 0 8px;
+}
+
+.aj-contactSubmitApplicants-form-success p {
+  font-family: var(--font-family-body2);
+  font-size: var(--font-size-sm);
+  color: var(--color-beige);
+  margin: 0 0 20px;
+}
+
+/* ============ RESPONSIVE ============ */
+
+@media (min-width: 1440px) {
+  .aj-contactSubmitApplicants-form-section { padding: 70px 0; }
+}
+
+@media (max-width: 991px) {
+  /* On smaller screens, stack the layout into a single column */
+  .aj-contactSubmitApplicants-content-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .aj-contactSubmitApplicants-form-header {
+    text-align: center;
+  }
+
+  .aj-contactSubmitApplicants-form-success {
+    margin: 0 auto;
+  }
+  
+  .aj-contactSubmitApplicants-image {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aj-contactSubmitApplicants-form-section { padding: 40px 0; }
+  .aj-contactSubmitApplicants-form-row { grid-template-columns: 1fr; }
+  .aj-contactSubmitApplicants-form { padding: 24px 20px; }
+}
+
+@media (max-width: 479px) {
+  .aj-contactSubmitApplicants-form-section { padding: 30px 0; }
+  .aj-contactSubmitApplicants-form-headline { font-size: var(--font-size-2xl); }
+  .aj-contactSubmitApplicants-form { padding: 20px 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aj-contactSubmitApplicants-form,
+  .aj-contactSubmitApplicants-form-success,
+  .aj-contactSubmitApplicants-right-col,
+  .aj-contactSubmitApplicants-form-header {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Embedded state */
+.aj-contactSubmitApplicants-form-embedded {
+  position: relative;
+  width: 100%;
+}
+
+/* YAHAN GRID 1fr 1fr KAR DIYA HAI TAAKE IMAGE SATH AAYE */
+.aj-contactSubmitApplicants-form-embedded .aj-contactSubmitApplicants-content-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.aj-contactSubmitApplicants-form-embedded .aj-contactSubmitApplicants-form {
+  max-width: 100%;
+  margin: 0;
+  padding: 44px 30px 28px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.aj-contactSubmitApplicants-form-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(200, 165, 74, 0.4);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-gold);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.aj-contactSubmitApplicants-form-close:hover {
+  background: var(--color-gold);
+  color: var(--color-black);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 991px) {
+  /* Phone/Tablet pe embedded layout ko wapis 1fr pe laane ke liye */
+  .aj-contactSubmitApplicants-form-embedded .aj-contactSubmitApplicants-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 479px) {
+  .aj-contactSubmitApplicants-form-embedded .aj-contactSubmitApplicants-form {
+    padding: 40px 16px 20px;
+  }
+}

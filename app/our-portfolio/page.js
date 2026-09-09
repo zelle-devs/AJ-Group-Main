@@ -72,7 +72,7 @@ export default function OurCompanies() {
       <div className="scroll-content-wrapper">
         <CapabilitiesSectionPortfolioMain
          eyebrow="THE GROUP"
-          title="Different Businesses, One Long Term Vision"
+          title="Different Businesses, One Long-Term Vision"
           body="AJ Group operates through wholly owned companies, each with its own capabilities, markets and opportunities. While our businesses operate independently, they are united by the same philosophy"         
           showButton={false}
           maxWidth={700}

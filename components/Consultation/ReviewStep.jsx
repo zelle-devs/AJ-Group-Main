@@ -3,7 +3,7 @@ import React from 'react';
 import { IoIosInformationCircle } from 'react-icons/io';
 import './ReviewStep.css';
 
-const ReviewStep = ({ formData, selectedDate, selectedTime, onEditDate, onEditForm, selectedPlatform }) => {
+const ReviewStep = ({ formData, selectedDate, selectedTime, onEditDate, onEditForm, selectedPlatform, selectedMedium }) => {
 
     return (
         <div className="review-main">
@@ -171,10 +171,10 @@ const ReviewStep = ({ formData, selectedDate, selectedTime, onEditDate, onEditFo
                             <div className="review-info-text">
                                 <span>Meeting Method</span>
                                 <p>
-                                    {selectedPlatform === 'onsite' ? 'Onsite'
-                                        : selectedPlatform === 'google-meet' ? 'Google Meet'
+                                    {selectedMedium === 'onsite' ? 'Onsite'
+                                        : selectedPlatform === 'google_meet' ? 'Google Meet'
                                         : selectedPlatform === 'zoom' ? 'Zoom'
-                                        : selectedPlatform === 'teams' ? 'Microsoft Teams'
+                                        : selectedPlatform === 'ms_teams' ? 'Microsoft Teams'
                                         : 'Not selected'}
                                 </p>
                             </div>
