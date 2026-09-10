@@ -43,7 +43,7 @@ export default function ProcesstimelineAboutMain({
   title = 'How We Build',
   description = 'Our approach is designed around long-term ownership and sustainable growth.',
   steps = DEFAULT_STEPS,
-  
+
   // Layout Control
   titleAccent = true, // Last word ko gold color mein show karna
   showNumbers = true, // Step numbers show/hide
@@ -77,12 +77,12 @@ export default function ProcesstimelineAboutMain({
   const leadWords = titleWords.join(' ');
 
   return (
-   
+
     <section className="aj-cap-section">
       <div className="container2">
         <div className="aj-process-head">
           <span className="aj-process-eyebrow" >{eyebrow}</span>
-          <h2 className="aj-process-title" style={{marginTop:'0'}}>
+          <h2 className="aj-process-title" style={{ marginTop: '0' }}>
             {leadWords ? `${leadWords} ` : ''}
             {titleAccent ? (
               <span className="aj-process-title-accent">{lastWord}</span>
@@ -90,8 +90,27 @@ export default function ProcesstimelineAboutMain({
               lastWord
             )}
           </h2>
-          {description && <p className="aj-process-desc" style={{width:'900px'}}>{description}</p>}
+          {description && <p className="aj-process-desc" style={{ width: '900px' }}>{description}</p>}
+          <h3
+          className='aj-process-title aj-together-heading' style={{
+            position: 'absolute',
+            bottom: '250px', /* Adjust this value if it needs to move slightly up or down from the line */
+            left: '50%',
+            transform: 'translateX(-22%)',
+            whiteSpace: 'nowrap',
+            margin: 0,
+            zIndex: 10,
+            fontSize: '25px',
+            fontWeight: '600'
+          }}>
+          <span className="aj-ptm-word  " style={{ '--i': 2 }}>Together</span>{' '}
+          <span className="aj-ptm-word  " style={{ '--i': 2 }}>We </span>{' '}
+          <span className="aj-ptm-word  aj-ptm-accent" style={{ '--i': 2 }}>Achieve</span>
+          <span className="aj-ptm-word " style={{ '--i': 2 }}></span>
+        </h3>
         </div>
+
+        
 
         <div className="aj-process-track" ref={trackRef}>
           <div className="aj-process-line">
@@ -102,32 +121,14 @@ export default function ProcesstimelineAboutMain({
             const above = alternateCards ? i % 2 === 0 : true;
             return (
               <div className="aj-process-item" key={step.num ?? i}>
- 
+
                 {/* ONLY THIS BLOCK WAS ADDED TO SHOW THE HEADING ABOVE STEP 02 */}
-                {i === 1 && (
-                  <h3
-                  className='aj-process-title aj-together-heading' style={{
-                    position: 'absolute',
-                    bottom: '210px', /* Adjust this value if it needs to move slightly up or down from the line */
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    whiteSpace: 'nowrap',
-                    margin: 0,
-                    zIndex: 10,
-                    fontSize:'25px',
-                    fontWeight:'600'
-                  }}>
-                    <span className="aj-ptm-word  " style={{ '--i': 2 }}>Together</span>{' '}
-                    <span className="aj-ptm-word  " style={{ '--i': 2 }}>We </span>{' '}
-                    <span className="aj-ptm-word  aj-ptm-accent" style={{ '--i': 2 }}>Achieve</span>
-                    <span className="aj-ptm-word " style={{ '--i': 2 }}></span>
-                  </h3>
-                )}
+
                 {/* END OF ADDED BLOCK */}
 
                 <div
                   className={`aj-process-card ${above ? 'is-above' : 'is-below'}`}
-                  style={{ transitionDelay: `${0.05 + i * 0.2}s` , width:'300px'}}
+                  style={{ transitionDelay: `${0.05 + i * 0.2}s`, width: '300px' }}
                 >
                   {showNumbers && <div className="aj-process-num">{step.num}</div>}
                   <div className="aj-process-card-title">{step.title}</div>
