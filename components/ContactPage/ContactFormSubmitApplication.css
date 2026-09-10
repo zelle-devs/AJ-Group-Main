@@ -33,6 +33,10 @@
 .aj-contactSubmitApplicants-left-col {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-height: 700px;
 }
 
 .aj-contactSubmitApplicants-right-col {
@@ -115,7 +119,7 @@
   gap: 6px;
   font-family: var(--font-family-body2);
   font-size: var(--font-size-xs);
-  color: var(--color-beige);
+  color: var(--color-gold);
   font-weight: var(--font-weight-medium);
 }
 
@@ -298,8 +302,8 @@
 }
 
 @media (max-width: 767px) {
-  .aj-contactSubmitApplicants-form-section { padding: 40px 0; }
-  .aj-contactSubmitApplicants-form-row { grid-template-columns: 1fr; }
+  .aj-contactSubmitApplicants-form-section { padding: 20px 0; }
+  .aj-contactSubmitApplicants-form-row { grid-template-columns: 1fr 1fr; }
   .aj-contactSubmitApplicants-form { padding: 24px 20px; }
 }
 
@@ -307,6 +311,18 @@
   .aj-contactSubmitApplicants-form-section { padding: 30px 0; }
   .aj-contactSubmitApplicants-form-headline { font-size: var(--font-size-2xl); }
   .aj-contactSubmitApplicants-form { padding: 20px 16px; }
+
+  /* Tighten the 2-column rows further on very small phones */
+  .aj-contactSubmitApplicants-form-row {
+    gap: 8px;
+    margin-bottom: 0;
+  }
+
+  .aj-contactSubmitApplicants-form-input,
+  .aj-contactSubmitApplicants-form-textarea {
+    padding: 10px 10px;
+    font-size: var(--font-size-xs);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -369,11 +385,18 @@
   /* Phone/Tablet pe embedded layout ko wapis 1fr pe laane ke liye */
   .aj-contactSubmitApplicants-form-embedded .aj-contactSubmitApplicants-content-grid {
     grid-template-columns: 1fr;
+    .aj-contactSubmitApplicants-left-col{
+      min-height: 100%;
+    }
   }
 }
 
 @media (max-width: 479px) {
   .aj-contactSubmitApplicants-form-embedded .aj-contactSubmitApplicants-form {
-    padding: 40px 16px 20px;
+    padding: 50px 16px 20px;
+
+  }
+  .aj-contactSubmitApplicants-right-col{
+    display: none !important;
   }
 }

@@ -12,7 +12,7 @@ export default function CapabilitiesSectionApproachMain({
     title2 = 'Potential Is Where We Start, \n  \n Execution is How We Create Value',
     dec2 = 'As new opportunities emerge, AJ Group will continue to build, acquire and develop businesses that strengthen the Group and contribute to its long-term vision',
     buttonText = 'Explore Our Portfolio',
-    buttonLink = '#',
+    buttonLink = '/our-portfolio',
 
     align = 'center', // 'center' | 'left' | 'right'
     showButton = true,

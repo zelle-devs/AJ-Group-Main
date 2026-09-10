@@ -538,6 +538,7 @@
   
   .stepper::before, .stepper::after {
     top: 12px;
+    
   }
   
   .step-label {
@@ -560,6 +561,7 @@
   
   .final-success-card {
     padding: 20px 16px;
+    margin-top: 80px;
   }
   
   .success-title {
@@ -604,6 +606,8 @@
 
 @media (max-width: 480px) {
   .stepper {
+    top: 60px;
+    margin-bottom: 80px;
     padding: 0 10px 10px 10px;
   }
   
@@ -632,7 +636,7 @@
   }
   
   .action-area-inner {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 12px;
     width: 100%;
   }

@@ -296,6 +296,7 @@
   font-weight: 700;
   line-height: 1.35;
   color: #f5f2ea;
+  width: 600px !important;
 }
 
 .aj-ptm-line { display: block; }
@@ -383,6 +384,7 @@
     font-size: 20px !important;
     margin: 0;
     display: flex;
+    width: auto !important;
     flex-direction: column;
   }
 }

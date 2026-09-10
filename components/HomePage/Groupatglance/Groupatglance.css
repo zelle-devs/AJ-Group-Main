@@ -575,8 +575,11 @@
   }
 
   .aj-ptm-lineAboutMain{
-    margin-top: -60px;
-    font-size: 25px !important;
+    margin-top: -70px;
+    width: 150px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 22px !important;
   }
   
   .aj-glance-orbit-bubble svg {
@@ -599,7 +602,7 @@
     padding: 5px 8px;
     font-size: 6px;
     top: 7%;
-    left: 37% !important;
+    left: 39% !important;
     letter-spacing: 0.5px;
     gap: 3px;
   }

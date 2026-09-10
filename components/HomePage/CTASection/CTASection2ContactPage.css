@@ -253,7 +253,7 @@
   
   /* Buttons stack */
   .aj-ctaSubmitApplicants-buttons-row {
-    flex-direction: column;
+    flex-direction: column ;
     gap: 12px;
   }
   .aj-ctaSubmitApplicants-primary-btn,
@@ -284,6 +284,10 @@
   }
   .aj-ctaSubmitApplicants-info-row { gap: 10px; }
   .aj-ctaSubmitApplicants-info-item { font-size: 9px; }
+  .aj-ctaSubmitApplicants-buttons-row{
+    display: flex;
+    flex-direction: column !important;
+  }
 }
 
 /* Ultra Small (300px - 350px) */
@@ -337,8 +341,12 @@
 }
 
 @media (max-width: 767px) {
+  .aj-ctaSubmitApplicants-primary-panel{
+    width:100%;
+  }
   .aj-ctaSubmitApplicants-primary-panel.is-open {
     width: 100%;
+
   }
   .aj-ctaSubmitApplicants-inline-form {
     border-radius: var(--radius-xl);

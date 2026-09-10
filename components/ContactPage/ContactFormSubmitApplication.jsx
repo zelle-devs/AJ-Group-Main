@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Send, CheckCircle2, Mail, Phone, User, Building2, X, FileUser } from 'lucide-react';
 import './ContactFormSubmitApplication.css';
 import SubmitApllicationResumeButton from './SubmitApllicationResumeButton/SubmitApllicationResumeButton';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const API_URL = 'https://ajgrouphqapi.zellehost.com/api/applications';
 const MAX_CV_SIZE = 2 * 1024 * 1024; // 2MB
@@ -34,7 +35,13 @@ export default function ContactFormSubmitApplication({
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+ 
+    if (name === 'phone') {
+      const onlyNumbers = value.replace(/[^0-9]/g, '');  
+      setFormData((prev) => ({ ...prev, [name]: onlyNumbers }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleCvSelected = (file) => {
@@ -79,7 +86,7 @@ export default function ContactFormSubmitApplication({
     }
 
     setSubmitting(true);
-
+    
     try {
       const payload = new FormData();
       payload.append('first_name', formData.firstName);
@@ -128,19 +135,48 @@ export default function ContactFormSubmitApplication({
           : 'aj-contactSubmitApplicants-form-section'
       }
     >
-      <div className={embedded ? '' : 'container2'}>
+      <div 
+        className={embedded ? '' : 'container2'} 
+        style={{ position: 'relative' }} // Added relative positioning for the absolute loader overlay
+      >
         {onClose && (
           <button
             type="button"
             className="aj-contactSubmitApplicants-form-close"
             onClick={onClose}
             aria-label="Close form"
+            disabled={submitting} // Disable close button while submitting
           >
             <X size={18} />
           </button>
         )}
 
-        <div className="aj-contactSubmitApplicants-content-grid">
+        {/* Loader Overlay */}
+        {submitting && (
+          <div
+            style={{
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: 99,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <LoadingSpinner />
+          </div>
+        )}
+
+        <div 
+          className="aj-contactSubmitApplicants-content-grid"
+          style={{
+            opacity: submitting ? 0.4 : 1, // Dims the component when submitting
+            pointerEvents: submitting ? 'none' : 'auto', // Prevents clicks while loading
+            transition: 'opacity 0.3s ease',
+          }}
+        >
           {/* LEFT COLUMN: Header & Form */}
           <div className="aj-contactSubmitApplicants-left-col">
             {!embedded && (
@@ -166,14 +202,14 @@ export default function ContactFormSubmitApplication({
                 <div className="aj-contactSubmitApplicants-form-success-icon">
                   <CheckCircle2 size={40} />
                 </div>
-                <h3>Message Sent!</h3>
-                <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
-                <button
+                <h3>Application Submitted!</h3>
+                <p>Your application has been received successfully. Our team will review it and get back to you shortly.</p>
+                {/* <button
                   className="btn btn-outline-gold aj-contactSubmitApplicants-form-reset"
                   onClick={() => setSubmitted(false)}
                 >
                   Send Another Message
-                </button>
+                </button> */}
               </motion.div>
             ) : (
               <motion.form

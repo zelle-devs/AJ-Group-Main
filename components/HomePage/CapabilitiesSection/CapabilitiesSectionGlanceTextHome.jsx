@@ -50,6 +50,7 @@ export default function CapabilitiesSectionGlanceTextHome({
 
   return (
     <section className="aj-glance-section">
+      
       <div className="aj-cap-container">
         <motion.div
           className="aj-cap-wrapper"
@@ -68,9 +69,9 @@ export default function CapabilitiesSectionGlanceTextHome({
         >
           {eyebrow && <span className="aj-cap-eyebrow">{eyebrow}</span>}
           
-          <h2 className="aj-cap-title">{title}</h2>
+          <h2 className="aj-cap-title" style={{marginTop:'20px'}}>{title}</h2>
           
-          {body && <p className="aj-cap-body">{body}</p>}
+          {body && <p className="aj-cap-body" style={{marginTop:'-10px'}}>{body}</p>}
           
           {showButton && buttonText && (
             <a href={buttonLink} className="btn btn-outline-gold aj-cap-btn">

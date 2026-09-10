@@ -412,8 +412,8 @@
     
     .review-note-content {
         padding: 8px;
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
         gap: 4px;
     }
     

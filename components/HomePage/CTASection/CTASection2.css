@@ -232,6 +232,7 @@
   .aj-cta-primary-btn,
   .aj-cta-secondary-btn { 
     padding: 14px 22px; 
+    width: 100%;
     font-size: var(--font-size-xs);
     /* min-width: 180px; */
   }
@@ -252,10 +253,14 @@
   .aj-cta-body2 { text-align: center; padding-bottom: 0; }
   
   /* Buttons stack */
-  .aj-cta-buttons-row {
+  .aj-cta-buttons-row{
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    gap: 12px;
+    width: 100%;
   }
+  
+  
   .aj-cta-primary-btn,
   .aj-cta-secondary-btn { max-width: 100%; width: 100%; }
   
@@ -275,7 +280,7 @@
     padding: 12px 18px; 
     font-size: 10px; 
     width: 100%;
-    min-width: unset;
+    min-width: 100%;
   }
    .aj-cta-top-row {
     grid-template-columns: 1fr;
@@ -303,5 +308,13 @@
   .aj-cta-info-row {
     opacity: 1 !important;
     transform: none !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aj-cta-buttons-row{
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
   }
 }

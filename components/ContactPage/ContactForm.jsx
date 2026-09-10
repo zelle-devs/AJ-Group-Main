@@ -20,9 +20,15 @@ export default function ContactForm({
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
+const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+ 
+    if (name === 'phone') {
+      const onlyNumbers = value.replace(/[^0-9]/g, '');  
+      setFormData((prev) => ({ ...prev, [name]: onlyNumbers }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = async (e) => {

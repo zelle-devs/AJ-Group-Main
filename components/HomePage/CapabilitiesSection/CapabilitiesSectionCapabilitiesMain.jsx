@@ -80,21 +80,21 @@ export default function CapabilitiesSectionCapabilitiesMain({
                     )}
                     <h2 className="aj-process-title" style={{ marginTop: '-10px', fontSize: '20px', display:'flex', gap:'20px' }}>
                         <span className="aj-ptm-line">
-                            <span className="aj-ptm-word" style={{ '--i': 0 }}>One</span>{' '}<br/> 
+                            <span className="aj-ptm-word" style={{ '--i': 0 }}>One Strategic</span>{' '}
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 2 }}>Opportunity</span>
                         </span>
 
                         <span className="aj-ptm-connector-mid" aria-hidden="true"></span>
 
                         <span className="aj-ptm-line">
-                            <span className="aj-ptm-word" style={{ '--i': 3 }}>Multiple </span>{' '} <br/>
+                            <span className="aj-ptm-word" style={{ '--i': 3 }}>Multiple Proven </span>{' '} 
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 5 }}>Capabilities</span>
                         </span>
 
                         <span className="aj-ptm-connector-mid" aria-hidden="true"></span>
 
                         <span className="aj-ptm-line">
-                            <span className="aj-ptm-word" style={{ '--i': 6 }}>One</span>{' '}<br/> 
+                            <span className="aj-ptm-word" style={{ '--i': 6 }}>One Unified </span>{' '}
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 8 }}>Group</span>
                         </span>
                     </h2>

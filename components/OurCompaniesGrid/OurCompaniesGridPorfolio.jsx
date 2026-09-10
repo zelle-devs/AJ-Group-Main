@@ -13,7 +13,7 @@ const INDUSTRIES_DATA = [
     title: 'Engineering Possibility',
     description: "A wholly owned AJ Group company operating in architectural and metal fabrication. Forgentis combines technical expertise, precision and execution to deliver complex physical solutions.",
     points: ['Engineering', 'Fabrication', 'Execution',],
-    image: '/EngineeringPossibilityFinalImageUpdated.png',
+    image: '/EngineeringPossibilityFinalImageUpdated.jpg',
     // company: 'Forgentis',
   },
   {

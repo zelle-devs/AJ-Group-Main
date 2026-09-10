@@ -184,7 +184,7 @@ const ReviewStep = ({ formData, selectedDate, selectedTime, onEditDate, onEditFo
                     <div className="review-selection-note">
                         <div className="review-note-content">
                             <IoIosInformationCircle className="review-note-icon" />
-                            <span>A product specialist will contact you shortly before your scheduled demo.</span>
+                             <span>Our representative will contact you shortly before your scheduled demo.</span>
                         </div>
                     </div>
                 </div>

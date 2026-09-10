@@ -312,7 +312,7 @@ const FormStep = ({ formData, setFormData, openDropdown, setOpenDropdown, select
                 <div className="selection-note">
                     <div className="note-content">
                         <IoIosInformationCircle className="note-icon" />
-                        <span>A product specialist will contact you shortly before your scheduled demo.</span>
+                        <span>Our representative will contact you shortly before your scheduled demo.</span>
                     </div>
                 </div>
             </div>

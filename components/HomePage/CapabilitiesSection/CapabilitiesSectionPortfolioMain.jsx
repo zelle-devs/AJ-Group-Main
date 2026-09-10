@@ -81,7 +81,7 @@ export default function CapabilitiesSectionPortfolioMain({
                     <h2 className="aj-process-title" style={{ marginTop: '-10px', fontSize: '20px', display:'flex', gap:'20px' }}>
                         <span className="aj-ptm-line">
                             <span className="aj-ptm-word" style={{ '--i': 0 }}>Think</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 1 }}>Long </span>{' '}<br/>
+                            <span className="aj-ptm-word" style={{ '--i': 1 }}>Long </span>{' '} 
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 2 }}>Term</span>
                         </span>
 
@@ -89,7 +89,7 @@ export default function CapabilitiesSectionPortfolioMain({
 
                         <span className="aj-ptm-line">
                             <span className="aj-ptm-word" style={{ '--i': 3 }}>Built</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 4 }}>with</span>{' '}<br/>
+                            <span className="aj-ptm-word" style={{ '--i': 4 }}>with</span>{' '} 
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 5 }}>Purpose</span>
                         </span>
 
@@ -97,7 +97,7 @@ export default function CapabilitiesSectionPortfolioMain({
 
                         <span className="aj-ptm-line">
                             <span className="aj-ptm-word" style={{ '--i': 6 }}>Grow</span>{' '}
-                            <span className="aj-ptm-word" style={{ '--i': 7 }}>with</span>{' '} <br/>
+                            <span className="aj-ptm-word" style={{ '--i': 7 }}>with</span>{' '}  
                             <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 8 }}>Discipline</span>
                         </span>
                     </h2>

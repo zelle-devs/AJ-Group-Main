@@ -191,7 +191,7 @@ export default function Footer({
             <span className="aj-footer-dot">|</span>
             <Link href="/privacy-policy">Privacy Policy</Link>
             <span className="aj-footer-dot">|</span>
-            <Link href="/terms">Terms</Link>
+            <Link href="/terms-and-conditions">Terms & Conditions</Link>
           </div>
         </div>
       </div>

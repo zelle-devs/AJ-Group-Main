@@ -46,11 +46,11 @@ const fadeUp = {
 const CounterValue = ({ value }) => {
   const [displayValue, setDisplayValue] = useState('0');
   const ref = useRef(null);
-  
+
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-    
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -60,20 +60,20 @@ const CounterValue = ({ value }) => {
               setDisplayValue(value);
               return;
             }
-            
+
             const target = parseInt(match[1]);
             const suffix = match[2] || '';
             const duration = 2000;
             const startTime = Date.now();
-            
+
             const interval = setInterval(() => {
               const elapsed = Date.now() - startTime;
               const progress = Math.min(elapsed / duration, 1);
               const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
               const current = Math.floor(eased * target);
-              
+
               setDisplayValue(current + suffix);
-              
+
               if (progress >= 1) {
                 clearInterval(interval);
                 setDisplayValue(target + suffix);
@@ -84,12 +84,12 @@ const CounterValue = ({ value }) => {
       },
       { threshold: 0.3 }
     );
-    
+
     observer.observe(element);
     return () => observer.disconnect();
   }, [value]);
-  
-  return <span ref={ref} className="aj-glance-stat-value">{displayValue}</span>;
+
+  return <span ref={ref} className="aj-glance-stat-valueAboutMain">{displayValue}</span>;
 };
 
 export default function GroupatglanceNewUpdated({
@@ -99,13 +99,13 @@ export default function GroupatglanceNewUpdated({
   stats = DEFAULT_STATS,
   orbitIcons = DEFAULT_ORBIT_ICONS,
   orbitDuration = 26,
-  
+
   // Layout Props
   showHeadline = true,
   showBadge = true,
   showOrbitIcons = true,
   statsGrid = '2x2', // '2x2' | '3x2' | '1x6' | '2x3'
-  
+
   // Animation Props
   animationDelay = 0,
 }) {
@@ -127,7 +127,7 @@ export default function GroupatglanceNewUpdated({
       case '2x3':
         return { gridTemplateColumns: 'repeat(2, max-content)', gridTemplateRows: 'repeat(3, 1fr)' };
       default: // 2x2
-        return { gridTemplateColumns: 'max-content max-content', gridTemplateRows: 'repeat(2, 1fr)' };
+        return { gridTemplateColumns: 'max-content max-content', gridTemplateRows: 'repeat(1, 1fr)' };
     }
   };
 
@@ -186,13 +186,18 @@ export default function GroupatglanceNewUpdated({
 
           {/* Content - Stats + Headline INSIDE Orbit */}
           <div className="aj-glance-orbit-content">
+            <span className="aj-ptm-lineAboutMain" style={{ marginBottom: '-40px', fontSize: '20px', fontWeight: '600'}}>
+              <span className="aj-ptm-word" style={{ '--i': 3 }}>A</span>{' '}
+              <span className="aj-ptm-word aj-ptm-accent" style={{ '--i': 4 }}>Bigger</span>{' '}
+              <span className="aj-ptm-word" style={{ '--i': 5 }}>Vision</span>
+            </span>
             {/* Stats Grid */}
             <div className="aj-glance-stats" style={getStatsGridStyle()}>
               {stats.map((s, i) => {
                 return (
                   <motion.div
                     className="aj-glance-stat"
-                    style={{marginTop:'-150px', marginLeft:'30px'}}
+                    style={{ marginTop: '-10px', marginLeft: '30px', gridTemplateRows:'repeat(1, 1fr)'  }}
                     key={s.label}
                     custom={i}
                     initial="hidden"
@@ -201,9 +206,9 @@ export default function GroupatglanceNewUpdated({
                     variants={fadeUp}
                   >
                     <CounterValue value={s.value} />
-                    <span 
-                      className="aj-glance-stat-label" 
-                      style={{width:'450px', whiteSpace:'wrap', lineHeight:'22px'}}
+                    <span
+                      className="aj-glance-stat-label"
+                      style={{ width: '450px', whiteSpace: 'wrap', lineHeight: '22px' }}
                     >
                       {s.label}
                     </span>
