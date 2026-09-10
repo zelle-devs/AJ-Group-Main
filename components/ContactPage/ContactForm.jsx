@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, CheckCircle2, Mail, Phone, User, Building2 } from 'lucide-react';
 import './ContactForm.css';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+
 
 export default function ContactForm({
   eyebrow = 'Send a Message',
@@ -19,7 +21,7 @@ export default function ContactForm({
   });
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
+  const [submitting, setSubmitting] = useState(false);
 const handleChange = (e) => {
     const { name, value } = e.target;
  
@@ -34,6 +36,7 @@ const handleChange = (e) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.name && formData.email && formData.message && formData.subject && consent) {
+      setSubmitting(true);
       try {
         const response = await fetch('https://ajgrouphqapi.zellehost.com/api/contacts', {
           method: 'POST',
@@ -56,8 +59,10 @@ const handleChange = (e) => {
         } else {
           console.error('API submission failed');
         }
-      } catch (error) {
+       } catch (error) {
         console.error('Error sending message:', error);
+      } finally {
+        setSubmitting(false);   // <-- yeh line add karein
       }
     }
   };
@@ -65,6 +70,25 @@ const handleChange = (e) => {
   return (
     <section className="aj-contact-form-section" >
       <div className="container2" style={{width:'100%'}}>
+
+      {submitting && (
+          <div
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              zIndex: 99,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <LoadingSpinner />
+          </div>
+        )}
+
         <motion.div 
           className="aj-contact-form-header"
           initial={{ opacity: 0, y: 30 }}
@@ -88,12 +112,12 @@ const handleChange = (e) => {
             </div>
             <h3>Message Sent!</h3>
             <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
-            <button 
+            {/* <button 
               className="btn btn-outline-gold aj-contact-form-reset"
               onClick={() => setSubmitted(false)}
             >
               Send Another Message
-            </button>
+            </button> */}
           </motion.div>
         ) : (
           <motion.form 
