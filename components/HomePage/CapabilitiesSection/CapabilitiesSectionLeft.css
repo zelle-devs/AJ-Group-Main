@@ -399,7 +399,7 @@
   .old-aj-process-title { font-size: var(--font-size-2xl); }
   .old-aj-process-body { font-size: var(--font-size-xs); }
 
-  .old-aj-process-timeline-line { left: 22px; }
+  .old-aj-process-timeline-line { left: 22px; width: 1px !important; }
   .old-aj-process-step-icon-wrap { width: 42px; height: 42px; }
   .old-aj-process-timeline-step { gap: 14px; padding: 11px 0; }
 

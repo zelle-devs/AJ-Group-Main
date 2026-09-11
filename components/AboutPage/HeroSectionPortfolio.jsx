@@ -152,8 +152,9 @@ export default function HeroSectionPortfolio({
                     alt={imageAlt}
                     className="aj-about-image"
                     fill
-                    quality={100}
+                    // // quality={100}
                     priority
+                    
                   />
                   {showImageOverlay && <div className="aj-about-image-overlay" />}
                 </motion.div>

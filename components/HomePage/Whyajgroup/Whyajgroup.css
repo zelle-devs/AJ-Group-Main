@@ -401,6 +401,7 @@
 
   .aj-why-grid {
     gap: 14px;
+    overflow: hidden;
   }
 
   .aj-why-card-wrap { aspect-ratio: 3 / 3.2; }

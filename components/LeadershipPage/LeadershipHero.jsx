@@ -77,7 +77,7 @@ export default function LeadershipHero({
                     alt={imageAlt}
                     className="aj-leadership-image"
                     fill
-                    quality={100}
+                    // quality={100}
                     priority
                   />
                   <div className="aj-leadership-image-overlay" />

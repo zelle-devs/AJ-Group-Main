@@ -148,7 +148,7 @@ description = "The companies within our portfolio are part of the foundation. Ou
                   className="why-choose-image"
                   width={600}
                   height={800}
-                  quality={100}
+                  // quality={100}
                   priority
                 />
                 <div className="why-choose-image-overlay" style={{ width:'40%'}} />

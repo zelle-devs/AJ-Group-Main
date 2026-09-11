@@ -102,7 +102,7 @@ export default function CareersHero({
                     alt={imageAlt}
                     className="aj-careers-image"
                     fill
-                    quality={100}
+                    // quality={100}
                     priority
                   />
                   <div className="aj-careers-image-overlay" />

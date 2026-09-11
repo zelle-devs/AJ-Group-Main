@@ -390,6 +390,7 @@
     .aj-process-track.in-view .aj-process-card.is-above,
     .aj-process-track.in-view .aj-process-card.is-below {
       transform: translateX(0);
+      width: 100% !important;
     }
 
     /* Mobile stub: horizontal line */

@@ -64,7 +64,7 @@ const Navbar = () => {
               width={240}
               height={120}
               priority
-              quality={100}
+              // quality={100}
             />
           </Link>
 
@@ -131,7 +131,7 @@ const Navbar = () => {
               width={140}
               height={70}
               priority
-              quality={100}
+              // quality={100}
             />
           </Link>
           <button 

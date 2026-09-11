@@ -180,7 +180,7 @@ export default function WhyChooseUs({
                   className="why-choose-image"
                   width={600}
                   height={800}
-                  quality={100}
+                  // quality={100}
                   priority
                 />
                 <div className="why-choose-image-overlay" />
@@ -265,7 +265,7 @@ export default function WhyChooseUs({
                   className="why-choose-image"
                   width={600}
                   height={800}
-                  quality={100}
+                  // quality={100}
                   priority
                 />
                 <div className="why-choose-image-overlay" style={{ width:'40%'}} />

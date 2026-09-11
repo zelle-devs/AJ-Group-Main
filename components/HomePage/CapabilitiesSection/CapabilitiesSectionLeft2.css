@@ -538,6 +538,8 @@
   .aj-process-step-number { font-size: var(--font-size-base); }
   .aj-process-step-title { font-size: var(--font-size-sm); }
   .aj-process-step-desc { font-size: var(--font-size-xs); }
+   .aj-process-timeline-line { left: -23px !important;
+        width: 2px !important;}
 }
 
 /* Mobile Small (351px - 479px) */

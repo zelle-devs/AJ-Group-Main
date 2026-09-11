@@ -78,7 +78,7 @@ export default function ApproachHero({
                     alt={imageAlt}
                     className="aj-approach-image"
                     fill
-                    quality={100}
+                    // quality={100}
                     priority
                   />
                   <div className="aj-approach-image-overlay" />

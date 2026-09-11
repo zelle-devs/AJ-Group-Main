@@ -148,7 +148,7 @@ description = "AJ Group is more than a collection of businesses. We bring togeth
                   className="why-choose-image"
                   width={600}
                   height={800}
-                  quality={100}
+                  // quality={100}
                   priority
                 />
                 <div className="why-choose-image-overlay" style={{ width:'40%'}} />

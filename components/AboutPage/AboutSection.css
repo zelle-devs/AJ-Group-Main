@@ -322,10 +322,25 @@
 
 /* Mobile Small (300px - 479px) */
 @media (max-width: 479px) {
-  .aj-about-section { padding: 30px 0; }
-  .aj-about-headline { font-size: var(--font-size-4xl); }
-  .aj-about-body { font-size: var(--font-size-xs); }
-  .aj-about-image-container { max-width: 300px; margin-top: -50px;}
+  .aj-about-section {
+    padding: clamp(24px, 6vw, 30px) 0;
+    margin-top: clamp(-25px, -3vw, -5px);
+  }
+
+  .aj-about-headline {
+    font-size: var(--font-size-4xl);
+  }
+
+  .aj-about-body {
+    font-size: var(--font-size-xs);
+  }
+
+  .aj-about-image-container {
+    width: 100%;
+    max-width: 100%;
+    margin-top: clamp(-55px, -10vw, -25px);
+    max-height: clamp(250px, 90vw, 350px);
+  }
   .aj-about-image-main { inset: 15px; }
   .aj-about-badge { padding: 10px 14px; }
   .aj-about-badge:first-of-type { bottom: -15px; left: 0; }

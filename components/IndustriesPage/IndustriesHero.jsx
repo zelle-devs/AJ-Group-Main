@@ -78,7 +78,7 @@ export default function IndustriesHero({
                     alt={imageAlt}
                     className="aj-industries-image"
                     fill
-                    quality={100}
+                    // quality={100}
                     priority
                   />
                   <div className="aj-industries-image-overlay" />
